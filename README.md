@@ -6,4 +6,5 @@ We have used the Xcore syntax, a concrete syntax for Ecore (https://wiki.eclipse
   - Write a Name for the generated (genmodel) file -> Next
   - XCore -> Load -> Select the root package -> Finish
   
-  
+You will have to install XCore Tools, OCL Tools, and Ecore Tools.
+
