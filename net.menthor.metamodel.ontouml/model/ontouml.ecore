@@ -755,6 +755,7 @@
     <eLiterals name="MemberOf"/>
     <eLiterals name="SubCollectionOf"/>
     <eLiterals name="SubQuantityOf"/>
+    <eLiterals name="QuaPartOf"/>
     <eLiterals name="Constitution"/>
     <eLiterals name="Characterization"/>
     <eLiterals name="Mediation"/>
@@ -834,6 +835,11 @@
     <eOperations name="isSubQuantityOf" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="&lt;%net.menthor.metamodel.ontouml.RelationshipStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.metamodel.ontouml.RelationshipStereotype%>.SUB_QUANTITY_OF);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isQuaPartOf" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.metamodel.ontouml.RelationshipStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.metamodel.ontouml.RelationshipStereotype%>.QUA_PART_OF);"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="isConstitution" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">

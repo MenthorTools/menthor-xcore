@@ -1847,7 +1847,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsConstitution() {
+	public EOperation getRelationship__IsQuaPartOf() {
 		return relationshipEClass.getEOperations().get(4);
 	}
 
@@ -1856,7 +1856,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsCharacterization() {
+	public EOperation getRelationship__IsConstitution() {
 		return relationshipEClass.getEOperations().get(5);
 	}
 
@@ -1865,7 +1865,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsMediation() {
+	public EOperation getRelationship__IsCharacterization() {
 		return relationshipEClass.getEOperations().get(6);
 	}
 
@@ -1874,7 +1874,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsMaterial() {
+	public EOperation getRelationship__IsMediation() {
 		return relationshipEClass.getEOperations().get(7);
 	}
 
@@ -1883,7 +1883,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsFormal() {
+	public EOperation getRelationship__IsMaterial() {
 		return relationshipEClass.getEOperations().get(8);
 	}
 
@@ -1892,7 +1892,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsStructuration() {
+	public EOperation getRelationship__IsFormal() {
 		return relationshipEClass.getEOperations().get(9);
 	}
 
@@ -1901,7 +1901,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsParticipation() {
+	public EOperation getRelationship__IsStructuration() {
 		return relationshipEClass.getEOperations().get(10);
 	}
 
@@ -1910,7 +1910,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsSubEventOf() {
+	public EOperation getRelationship__IsParticipation() {
 		return relationshipEClass.getEOperations().get(11);
 	}
 
@@ -1919,7 +1919,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsCausation() {
+	public EOperation getRelationship__IsSubEventOf() {
 		return relationshipEClass.getEOperations().get(12);
 	}
 
@@ -1928,7 +1928,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsTemporal() {
+	public EOperation getRelationship__IsCausation() {
 		return relationshipEClass.getEOperations().get(13);
 	}
 
@@ -1937,7 +1937,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsInstanceOf() {
+	public EOperation getRelationship__IsTemporal() {
 		return relationshipEClass.getEOperations().get(14);
 	}
 
@@ -1946,7 +1946,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsMeronymic() {
+	public EOperation getRelationship__IsInstanceOf() {
 		return relationshipEClass.getEOperations().get(15);
 	}
 
@@ -1955,7 +1955,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsBinary() {
+	public EOperation getRelationship__IsMeronymic() {
 		return relationshipEClass.getEOperations().get(16);
 	}
 
@@ -1964,7 +1964,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsTernary() {
+	public EOperation getRelationship__IsBinary() {
 		return relationshipEClass.getEOperations().get(17);
 	}
 
@@ -1973,7 +1973,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsStarts() {
+	public EOperation getRelationship__IsTernary() {
 		return relationshipEClass.getEOperations().get(18);
 	}
 
@@ -1982,7 +1982,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsPrecedes() {
+	public EOperation getRelationship__IsStarts() {
 		return relationshipEClass.getEOperations().get(19);
 	}
 
@@ -1991,7 +1991,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsEquals() {
+	public EOperation getRelationship__IsPrecedes() {
 		return relationshipEClass.getEOperations().get(20);
 	}
 
@@ -2000,7 +2000,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsMeets() {
+	public EOperation getRelationship__IsEquals() {
 		return relationshipEClass.getEOperations().get(21);
 	}
 
@@ -2009,7 +2009,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsFinishes() {
+	public EOperation getRelationship__IsMeets() {
 		return relationshipEClass.getEOperations().get(22);
 	}
 
@@ -2018,7 +2018,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsOverlaps() {
+	public EOperation getRelationship__IsFinishes() {
 		return relationshipEClass.getEOperations().get(23);
 	}
 
@@ -2027,7 +2027,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsDuring() {
+	public EOperation getRelationship__IsOverlaps() {
 		return relationshipEClass.getEOperations().get(24);
 	}
 
@@ -2036,7 +2036,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsCreation() {
+	public EOperation getRelationship__IsDuring() {
 		return relationshipEClass.getEOperations().get(25);
 	}
 
@@ -2045,7 +2045,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsDestruction() {
+	public EOperation getRelationship__IsCreation() {
 		return relationshipEClass.getEOperations().get(26);
 	}
 
@@ -2054,7 +2054,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsChange() {
+	public EOperation getRelationship__IsDestruction() {
 		return relationshipEClass.getEOperations().get(27);
 	}
 
@@ -2063,7 +2063,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__SourceEnd() {
+	public EOperation getRelationship__IsChange() {
 		return relationshipEClass.getEOperations().get(28);
 	}
 
@@ -2072,7 +2072,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__TargetEnd() {
+	public EOperation getRelationship__SourceEnd() {
 		return relationshipEClass.getEOperations().get(29);
 	}
 
@@ -2081,7 +2081,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__Source() {
+	public EOperation getRelationship__TargetEnd() {
 		return relationshipEClass.getEOperations().get(30);
 	}
 
@@ -2090,7 +2090,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__Target() {
+	public EOperation getRelationship__Source() {
 		return relationshipEClass.getEOperations().get(31);
 	}
 
@@ -2099,7 +2099,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__SourceClass() {
+	public EOperation getRelationship__Target() {
 		return relationshipEClass.getEOperations().get(32);
 	}
 
@@ -2108,7 +2108,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__TargetClass() {
+	public EOperation getRelationship__SourceClass() {
 		return relationshipEClass.getEOperations().get(33);
 	}
 
@@ -2117,7 +2117,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__SourceDataType() {
+	public EOperation getRelationship__TargetClass() {
 		return relationshipEClass.getEOperations().get(34);
 	}
 
@@ -2126,7 +2126,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__TargetDataType() {
+	public EOperation getRelationship__SourceDataType() {
 		return relationshipEClass.getEOperations().get(35);
 	}
 
@@ -2135,7 +2135,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__SourceRelationship() {
+	public EOperation getRelationship__TargetDataType() {
 		return relationshipEClass.getEOperations().get(36);
 	}
 
@@ -2144,7 +2144,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__TargetRelationship() {
+	public EOperation getRelationship__SourceRelationship() {
 		return relationshipEClass.getEOperations().get(37);
 	}
 
@@ -2153,7 +2153,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsDerived() {
+	public EOperation getRelationship__TargetRelationship() {
 		return relationshipEClass.getEOperations().get(38);
 	}
 
@@ -2162,7 +2162,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsEnd__Classifier() {
+	public EOperation getRelationship__IsDerived() {
 		return relationshipEClass.getEOperations().get(39);
 	}
 
@@ -2171,7 +2171,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsPartEssential() {
+	public EOperation getRelationship__IsEnd__Classifier() {
 		return relationshipEClass.getEOperations().get(40);
 	}
 
@@ -2180,7 +2180,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsPartInseparable() {
+	public EOperation getRelationship__IsPartEssential() {
 		return relationshipEClass.getEOperations().get(41);
 	}
 
@@ -2189,7 +2189,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsPartImmutable() {
+	public EOperation getRelationship__IsPartInseparable() {
 		return relationshipEClass.getEOperations().get(42);
 	}
 
@@ -2198,7 +2198,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsWholeImmutable() {
+	public EOperation getRelationship__IsPartImmutable() {
 		return relationshipEClass.getEOperations().get(43);
 	}
 
@@ -2207,7 +2207,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsPartMandatory() {
+	public EOperation getRelationship__IsWholeImmutable() {
 		return relationshipEClass.getEOperations().get(44);
 	}
 
@@ -2216,7 +2216,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsWholeMandatory() {
+	public EOperation getRelationship__IsPartMandatory() {
 		return relationshipEClass.getEOperations().get(45);
 	}
 
@@ -2225,8 +2225,17 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRelationship__IsPartShareable() {
+	public EOperation getRelationship__IsWholeMandatory() {
 		return relationshipEClass.getEOperations().get(46);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRelationship__IsPartShareable() {
+		return relationshipEClass.getEOperations().get(47);
 	}
 
 	/**
@@ -2575,6 +2584,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		createEOperation(relationshipEClass, RELATIONSHIP___IS_MEMBER_OF);
 		createEOperation(relationshipEClass, RELATIONSHIP___IS_SUB_COLLECTION_OF);
 		createEOperation(relationshipEClass, RELATIONSHIP___IS_SUB_QUANTITY_OF);
+		createEOperation(relationshipEClass, RELATIONSHIP___IS_QUA_PART_OF);
 		createEOperation(relationshipEClass, RELATIONSHIP___IS_CONSTITUTION);
 		createEOperation(relationshipEClass, RELATIONSHIP___IS_CHARACTERIZATION);
 		createEOperation(relationshipEClass, RELATIONSHIP___IS_MEDIATION);
@@ -2981,6 +2991,8 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 
 		initEOperation(getRelationship__IsSubQuantityOf(), theEcorePackage.getEBoolean(), "isSubQuantityOf", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getRelationship__IsQuaPartOf(), theEcorePackage.getEBoolean(), "isQuaPartOf", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEOperation(getRelationship__IsConstitution(), theEcorePackage.getEBoolean(), "isConstitution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getRelationship__IsCharacterization(), theEcorePackage.getEBoolean(), "isCharacterization", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3131,6 +3143,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.MEMBER_OF);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.SUB_COLLECTION_OF);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.SUB_QUANTITY_OF);
+		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.QUA_PART_OF);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.CONSTITUTION);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.CHARACTERIZATION);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.MEDIATION);

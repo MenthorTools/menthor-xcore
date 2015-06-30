@@ -210,6 +210,14 @@ abstract class Container extends NamedElement
 		allTypes(this, result.toEList)
 		return result.toEList;
 	}	
+	
+	//rigidTypes()
+	//allRigidTypes()
+	
+	//antirigidTypes()
+	//allAntiRigidTypes()
+	
+	//
 }
 
 /** =========================================
@@ -799,7 +807,7 @@ class Class extends Type, NamedElement
 			}	
 		}
 		return result.toEList;			
-	}	
+	} 
 }
 
 /** =========================================
@@ -826,6 +834,7 @@ enum RelationshipStereotype
 	MemberOf
 	SubCollectionOf
 	SubQuantityOf
+	QuaPartOf
 	Constitution
 	Characterization
 	Mediation
@@ -922,6 +931,7 @@ class Relationship extends Classifier, NamedElement
 	op boolean isMemberOf(){stereotype==RelationshipStereotype.MEMBER_OF}
 	op boolean isSubCollectionOf(){stereotype==RelationshipStereotype.SUB_COLLECTION_OF}
 	op boolean isSubQuantityOf(){stereotype==RelationshipStereotype.SUB_QUANTITY_OF}
+	op boolean isQuaPartOf(){stereotype==RelationshipStereotype.QUA_PART_OF}
 	op boolean isConstitution(){stereotype==RelationshipStereotype.CONSTITUTION}	
 	op boolean isCharacterization(){stereotype==RelationshipStereotype.CHARACTERIZATION}
 	op boolean isMediation(){stereotype==RelationshipStereotype.MEDIATION}

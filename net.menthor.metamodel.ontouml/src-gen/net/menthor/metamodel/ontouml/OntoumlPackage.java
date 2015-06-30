@@ -3209,13 +3209,22 @@ public interface OntoumlPackage extends EPackage {
 	int RELATIONSHIP___IS_SUB_QUANTITY_OF = CLASSIFIER_OPERATION_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Is Qua Part Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___IS_QUA_PART_OF = CLASSIFIER_OPERATION_COUNT + 4;
+
+	/**
 	 * The operation id for the '<em>Is Constitution</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CONSTITUTION = CLASSIFIER_OPERATION_COUNT + 4;
+	int RELATIONSHIP___IS_CONSTITUTION = CLASSIFIER_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Is Characterization</em>' operation.
@@ -3224,7 +3233,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CHARACTERIZATION = CLASSIFIER_OPERATION_COUNT + 5;
+	int RELATIONSHIP___IS_CHARACTERIZATION = CLASSIFIER_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Is Mediation</em>' operation.
@@ -3233,7 +3242,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_MEDIATION = CLASSIFIER_OPERATION_COUNT + 6;
+	int RELATIONSHIP___IS_MEDIATION = CLASSIFIER_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Is Material</em>' operation.
@@ -3242,7 +3251,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_MATERIAL = CLASSIFIER_OPERATION_COUNT + 7;
+	int RELATIONSHIP___IS_MATERIAL = CLASSIFIER_OPERATION_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Is Formal</em>' operation.
@@ -3251,7 +3260,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_FORMAL = CLASSIFIER_OPERATION_COUNT + 8;
+	int RELATIONSHIP___IS_FORMAL = CLASSIFIER_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Is Structuration</em>' operation.
@@ -3260,7 +3269,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_STRUCTURATION = CLASSIFIER_OPERATION_COUNT + 9;
+	int RELATIONSHIP___IS_STRUCTURATION = CLASSIFIER_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Is Participation</em>' operation.
@@ -3269,7 +3278,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PARTICIPATION = CLASSIFIER_OPERATION_COUNT + 10;
+	int RELATIONSHIP___IS_PARTICIPATION = CLASSIFIER_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Is Sub Event Of</em>' operation.
@@ -3278,7 +3287,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_SUB_EVENT_OF = CLASSIFIER_OPERATION_COUNT + 11;
+	int RELATIONSHIP___IS_SUB_EVENT_OF = CLASSIFIER_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Is Causation</em>' operation.
@@ -3287,7 +3296,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CAUSATION = CLASSIFIER_OPERATION_COUNT + 12;
+	int RELATIONSHIP___IS_CAUSATION = CLASSIFIER_OPERATION_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Is Temporal</em>' operation.
@@ -3296,7 +3305,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_TEMPORAL = CLASSIFIER_OPERATION_COUNT + 13;
+	int RELATIONSHIP___IS_TEMPORAL = CLASSIFIER_OPERATION_COUNT + 14;
 
 	/**
 	 * The operation id for the '<em>Is Instance Of</em>' operation.
@@ -3305,7 +3314,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_INSTANCE_OF = CLASSIFIER_OPERATION_COUNT + 14;
+	int RELATIONSHIP___IS_INSTANCE_OF = CLASSIFIER_OPERATION_COUNT + 15;
 
 	/**
 	 * The operation id for the '<em>Is Meronymic</em>' operation.
@@ -3314,7 +3323,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_MERONYMIC = CLASSIFIER_OPERATION_COUNT + 15;
+	int RELATIONSHIP___IS_MERONYMIC = CLASSIFIER_OPERATION_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Is Binary</em>' operation.
@@ -3323,7 +3332,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_BINARY = CLASSIFIER_OPERATION_COUNT + 16;
+	int RELATIONSHIP___IS_BINARY = CLASSIFIER_OPERATION_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Is Ternary</em>' operation.
@@ -3332,7 +3341,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_TERNARY = CLASSIFIER_OPERATION_COUNT + 17;
+	int RELATIONSHIP___IS_TERNARY = CLASSIFIER_OPERATION_COUNT + 18;
 
 	/**
 	 * The operation id for the '<em>Is Starts</em>' operation.
@@ -3341,7 +3350,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_STARTS = CLASSIFIER_OPERATION_COUNT + 18;
+	int RELATIONSHIP___IS_STARTS = CLASSIFIER_OPERATION_COUNT + 19;
 
 	/**
 	 * The operation id for the '<em>Is Precedes</em>' operation.
@@ -3350,7 +3359,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PRECEDES = CLASSIFIER_OPERATION_COUNT + 19;
+	int RELATIONSHIP___IS_PRECEDES = CLASSIFIER_OPERATION_COUNT + 20;
 
 	/**
 	 * The operation id for the '<em>Is Equals</em>' operation.
@@ -3359,7 +3368,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_EQUALS = CLASSIFIER_OPERATION_COUNT + 20;
+	int RELATIONSHIP___IS_EQUALS = CLASSIFIER_OPERATION_COUNT + 21;
 
 	/**
 	 * The operation id for the '<em>Is Meets</em>' operation.
@@ -3368,7 +3377,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_MEETS = CLASSIFIER_OPERATION_COUNT + 21;
+	int RELATIONSHIP___IS_MEETS = CLASSIFIER_OPERATION_COUNT + 22;
 
 	/**
 	 * The operation id for the '<em>Is Finishes</em>' operation.
@@ -3377,7 +3386,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_FINISHES = CLASSIFIER_OPERATION_COUNT + 22;
+	int RELATIONSHIP___IS_FINISHES = CLASSIFIER_OPERATION_COUNT + 23;
 
 	/**
 	 * The operation id for the '<em>Is Overlaps</em>' operation.
@@ -3386,7 +3395,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_OVERLAPS = CLASSIFIER_OPERATION_COUNT + 23;
+	int RELATIONSHIP___IS_OVERLAPS = CLASSIFIER_OPERATION_COUNT + 24;
 
 	/**
 	 * The operation id for the '<em>Is During</em>' operation.
@@ -3395,7 +3404,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DURING = CLASSIFIER_OPERATION_COUNT + 24;
+	int RELATIONSHIP___IS_DURING = CLASSIFIER_OPERATION_COUNT + 25;
 
 	/**
 	 * The operation id for the '<em>Is Creation</em>' operation.
@@ -3404,7 +3413,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CREATION = CLASSIFIER_OPERATION_COUNT + 25;
+	int RELATIONSHIP___IS_CREATION = CLASSIFIER_OPERATION_COUNT + 26;
 
 	/**
 	 * The operation id for the '<em>Is Destruction</em>' operation.
@@ -3413,7 +3422,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DESTRUCTION = CLASSIFIER_OPERATION_COUNT + 26;
+	int RELATIONSHIP___IS_DESTRUCTION = CLASSIFIER_OPERATION_COUNT + 27;
 
 	/**
 	 * The operation id for the '<em>Is Change</em>' operation.
@@ -3422,7 +3431,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CHANGE = CLASSIFIER_OPERATION_COUNT + 27;
+	int RELATIONSHIP___IS_CHANGE = CLASSIFIER_OPERATION_COUNT + 28;
 
 	/**
 	 * The operation id for the '<em>Source End</em>' operation.
@@ -3431,7 +3440,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_END = CLASSIFIER_OPERATION_COUNT + 28;
+	int RELATIONSHIP___SOURCE_END = CLASSIFIER_OPERATION_COUNT + 29;
 
 	/**
 	 * The operation id for the '<em>Target End</em>' operation.
@@ -3440,7 +3449,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_END = CLASSIFIER_OPERATION_COUNT + 29;
+	int RELATIONSHIP___TARGET_END = CLASSIFIER_OPERATION_COUNT + 30;
 
 	/**
 	 * The operation id for the '<em>Source</em>' operation.
@@ -3449,7 +3458,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE = CLASSIFIER_OPERATION_COUNT + 30;
+	int RELATIONSHIP___SOURCE = CLASSIFIER_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Target</em>' operation.
@@ -3458,7 +3467,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET = CLASSIFIER_OPERATION_COUNT + 31;
+	int RELATIONSHIP___TARGET = CLASSIFIER_OPERATION_COUNT + 32;
 
 	/**
 	 * The operation id for the '<em>Source Class</em>' operation.
@@ -3467,7 +3476,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_CLASS = CLASSIFIER_OPERATION_COUNT + 32;
+	int RELATIONSHIP___SOURCE_CLASS = CLASSIFIER_OPERATION_COUNT + 33;
 
 	/**
 	 * The operation id for the '<em>Target Class</em>' operation.
@@ -3476,7 +3485,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_CLASS = CLASSIFIER_OPERATION_COUNT + 33;
+	int RELATIONSHIP___TARGET_CLASS = CLASSIFIER_OPERATION_COUNT + 34;
 
 	/**
 	 * The operation id for the '<em>Source Data Type</em>' operation.
@@ -3485,7 +3494,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 34;
+	int RELATIONSHIP___SOURCE_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 35;
 
 	/**
 	 * The operation id for the '<em>Target Data Type</em>' operation.
@@ -3494,7 +3503,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 35;
+	int RELATIONSHIP___TARGET_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 36;
 
 	/**
 	 * The operation id for the '<em>Source Relationship</em>' operation.
@@ -3503,7 +3512,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 36;
+	int RELATIONSHIP___SOURCE_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 37;
 
 	/**
 	 * The operation id for the '<em>Target Relationship</em>' operation.
@@ -3512,7 +3521,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 37;
+	int RELATIONSHIP___TARGET_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 38;
 
 	/**
 	 * The operation id for the '<em>Is Derived</em>' operation.
@@ -3521,7 +3530,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DERIVED = CLASSIFIER_OPERATION_COUNT + 38;
+	int RELATIONSHIP___IS_DERIVED = CLASSIFIER_OPERATION_COUNT + 39;
 
 	/**
 	 * The operation id for the '<em>Is End</em>' operation.
@@ -3530,7 +3539,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_END__CLASSIFIER = CLASSIFIER_OPERATION_COUNT + 39;
+	int RELATIONSHIP___IS_END__CLASSIFIER = CLASSIFIER_OPERATION_COUNT + 40;
 
 	/**
 	 * The operation id for the '<em>Is Part Essential</em>' operation.
@@ -3539,7 +3548,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_ESSENTIAL = CLASSIFIER_OPERATION_COUNT + 40;
+	int RELATIONSHIP___IS_PART_ESSENTIAL = CLASSIFIER_OPERATION_COUNT + 41;
 
 	/**
 	 * The operation id for the '<em>Is Part Inseparable</em>' operation.
@@ -3548,7 +3557,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_INSEPARABLE = CLASSIFIER_OPERATION_COUNT + 41;
+	int RELATIONSHIP___IS_PART_INSEPARABLE = CLASSIFIER_OPERATION_COUNT + 42;
 
 	/**
 	 * The operation id for the '<em>Is Part Immutable</em>' operation.
@@ -3557,7 +3566,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 42;
+	int RELATIONSHIP___IS_PART_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 43;
 
 	/**
 	 * The operation id for the '<em>Is Whole Immutable</em>' operation.
@@ -3566,7 +3575,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_WHOLE_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 43;
+	int RELATIONSHIP___IS_WHOLE_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 44;
 
 	/**
 	 * The operation id for the '<em>Is Part Mandatory</em>' operation.
@@ -3575,7 +3584,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_MANDATORY = CLASSIFIER_OPERATION_COUNT + 44;
+	int RELATIONSHIP___IS_PART_MANDATORY = CLASSIFIER_OPERATION_COUNT + 45;
 
 	/**
 	 * The operation id for the '<em>Is Whole Mandatory</em>' operation.
@@ -3584,7 +3593,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_WHOLE_MANDATORY = CLASSIFIER_OPERATION_COUNT + 45;
+	int RELATIONSHIP___IS_WHOLE_MANDATORY = CLASSIFIER_OPERATION_COUNT + 46;
 
 	/**
 	 * The operation id for the '<em>Is Part Shareable</em>' operation.
@@ -3593,7 +3602,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_SHAREABLE = CLASSIFIER_OPERATION_COUNT + 46;
+	int RELATIONSHIP___IS_PART_SHAREABLE = CLASSIFIER_OPERATION_COUNT + 47;
 
 	/**
 	 * The number of operations of the '<em>Relationship</em>' class.
@@ -3602,7 +3611,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 47;
+	int RELATIONSHIP_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 48;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.PrimitiveStereotype <em>Primitive Stereotype</em>}' enum.
@@ -5485,6 +5494,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRelationship__IsSubQuantityOf();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Relationship#isQuaPartOf() <em>Is Qua Part Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Qua Part Of</em>' operation.
+	 * @see net.menthor.metamodel.ontouml.Relationship#isQuaPartOf()
+	 * @generated
+	 */
+	EOperation getRelationship__IsQuaPartOf();
 
 	/**
 	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Relationship#isConstitution() <em>Is Constitution</em>}' operation.
@@ -7458,6 +7477,14 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation RELATIONSHIP___IS_SUB_QUANTITY_OF = eINSTANCE.getRelationship__IsSubQuantityOf();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Qua Part Of</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RELATIONSHIP___IS_QUA_PART_OF = eINSTANCE.getRelationship__IsQuaPartOf();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Constitution</b></em>' operation.

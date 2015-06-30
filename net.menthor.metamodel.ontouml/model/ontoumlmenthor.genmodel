@@ -86,6 +86,7 @@
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/MemberOf"/>
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/SubCollectionOf"/>
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/SubQuantityOf"/>
+      <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/QuaPartOf"/>
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/Constitution"/>
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/Characterization"/>
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//RelationshipStereotype/Mediation"/>
@@ -340,6 +341,7 @@
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isMemberOf"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isSubCollectionOf"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isSubQuantityOf"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Relationship/isQuaPartOf"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isConstitution"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isCharacterization"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isMediation"/>

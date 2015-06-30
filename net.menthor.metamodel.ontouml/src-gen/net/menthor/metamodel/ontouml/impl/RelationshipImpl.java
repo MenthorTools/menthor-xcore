@@ -471,6 +471,16 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isQuaPartOf() {
+		RelationshipStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, RelationshipStereotype.QUA_PART_OF);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isConstitution() {
 		RelationshipStereotype _stereotype = this.getStereotype();
 		return Objects.equal(_stereotype, RelationshipStereotype.CONSTITUTION);
@@ -1386,6 +1396,8 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 				return isSubCollectionOf();
 			case OntoumlPackage.RELATIONSHIP___IS_SUB_QUANTITY_OF:
 				return isSubQuantityOf();
+			case OntoumlPackage.RELATIONSHIP___IS_QUA_PART_OF:
+				return isQuaPartOf();
 			case OntoumlPackage.RELATIONSHIP___IS_CONSTITUTION:
 				return isConstitution();
 			case OntoumlPackage.RELATIONSHIP___IS_CHARACTERIZATION:

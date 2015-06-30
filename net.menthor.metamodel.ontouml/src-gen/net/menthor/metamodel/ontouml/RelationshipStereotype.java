@@ -64,6 +64,16 @@ public enum RelationshipStereotype implements Enumerator {
 	SUB_QUANTITY_OF(0, "SubQuantityOf", "SubQuantityOf"),
 
 	/**
+	 * The '<em><b>Qua Part Of</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #QUA_PART_OF_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	QUA_PART_OF(0, "QuaPartOf", "QuaPartOf"),
+
+	/**
 	 * The '<em><b>Constitution</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +252,21 @@ public enum RelationshipStereotype implements Enumerator {
 	 * @ordered
 	 */
 	public static final int SUB_QUANTITY_OF_VALUE = 0;
+
+	/**
+	 * The '<em><b>Qua Part Of</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Qua Part Of</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #QUA_PART_OF
+	 * @model name="QuaPartOf"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int QUA_PART_OF_VALUE = 0;
 
 	/**
 	 * The '<em><b>Constitution</b></em>' literal value.
@@ -435,6 +460,7 @@ public enum RelationshipStereotype implements Enumerator {
 			MEMBER_OF,
 			SUB_COLLECTION_OF,
 			SUB_QUANTITY_OF,
+			QUA_PART_OF,
 			CONSTITUTION,
 			CHARACTERIZATION,
 			MEDIATION,
