@@ -12,7 +12,6 @@ import net.menthor.metamodel.ontouml.Ciclicity;
 import net.menthor.metamodel.ontouml.Classifier;
 import net.menthor.metamodel.ontouml.DataType;
 import net.menthor.metamodel.ontouml.EndPoint;
-import net.menthor.metamodel.ontouml.NamedElement;
 import net.menthor.metamodel.ontouml.OntoumlPackage;
 import net.menthor.metamodel.ontouml.ParticipationNature;
 import net.menthor.metamodel.ontouml.Reflexivity;
@@ -42,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.menthor.metamodel.ontouml.impl.RelationshipImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.RelationshipImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.RelationshipImpl#getReflexivity <em>Reflexivity</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.RelationshipImpl#getSymmetry <em>Symmetry</em>}</li>
@@ -57,26 +55,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class RelationshipImpl extends ClassifierImpl implements Relationship {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -244,27 +222,6 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	@Override
 	protected EClass eStaticClass() {
 		return OntoumlPackage.Literals.RELATIONSHIP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.RELATIONSHIP__NAME, oldName, name));
 	}
 
 	/**
@@ -584,6 +541,16 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	public boolean isInstanceOf() {
 		RelationshipStereotype _stereotype = this.getStereotype();
 		return Objects.equal(_stereotype, RelationshipStereotype.INSTANCE_OF);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDerivation() {
+		RelationshipStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, RelationshipStereotype.DERIVATION);
 	}
 
 	/**
@@ -1216,8 +1183,6 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case OntoumlPackage.RELATIONSHIP__NAME:
-				return getName();
 			case OntoumlPackage.RELATIONSHIP__STEREOTYPE:
 				return getStereotype();
 			case OntoumlPackage.RELATIONSHIP__REFLEXIVITY:
@@ -1247,9 +1212,6 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case OntoumlPackage.RELATIONSHIP__NAME:
-				setName((String)newValue);
-				return;
 			case OntoumlPackage.RELATIONSHIP__STEREOTYPE:
 				setStereotype((RelationshipStereotype)newValue);
 				return;
@@ -1287,9 +1249,6 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case OntoumlPackage.RELATIONSHIP__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case OntoumlPackage.RELATIONSHIP__STEREOTYPE:
 				setStereotype(STEREOTYPE_EDEFAULT);
 				return;
@@ -1326,8 +1285,6 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case OntoumlPackage.RELATIONSHIP__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OntoumlPackage.RELATIONSHIP__STEREOTYPE:
 				return stereotype != STEREOTYPE_EDEFAULT;
 			case OntoumlPackage.RELATIONSHIP__REFLEXIVITY:
@@ -1346,38 +1303,6 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 				return participationNature != PARTICIPATION_NATURE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (derivedFeatureID) {
-				case OntoumlPackage.RELATIONSHIP__NAME: return OntoumlPackage.NAMED_ELEMENT__NAME;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (baseFeatureID) {
-				case OntoumlPackage.NAMED_ELEMENT__NAME: return OntoumlPackage.RELATIONSHIP__NAME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -1420,6 +1345,8 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 				return isTemporal();
 			case OntoumlPackage.RELATIONSHIP___IS_INSTANCE_OF:
 				return isInstanceOf();
+			case OntoumlPackage.RELATIONSHIP___IS_DERIVATION:
+				return isDerivation();
 			case OntoumlPackage.RELATIONSHIP___IS_MERONYMIC:
 				return isMeronymic();
 			case OntoumlPackage.RELATIONSHIP___IS_BINARY:
@@ -1498,9 +1425,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", stereotype: ");
+		result.append(" (stereotype: ");
 		result.append(stereotype);
 		result.append(", reflexivity: ");
 		result.append(reflexivity);

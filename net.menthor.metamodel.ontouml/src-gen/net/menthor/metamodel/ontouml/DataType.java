@@ -35,7 +35,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DataType extends Type, NamedElement {
+public interface DataType extends Type {
 	/**
 	 * Returns the value of the '<em><b>Stereotype</b></em>' attribute.
 	 * The literals are from the enumeration {@link net.menthor.metamodel.ontouml.DataTypeStereotype}.
@@ -488,5 +488,14 @@ public interface DataType extends Type, NamedElement {
 	 * @generated
 	 */
 	boolean isRationalReal();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _or = false;\nboolean _isDimension = this.isDimension();\nif (_isDimension)\n{\n\t_or = true;\n} else\n{\n\tboolean _isDomain = this.isDomain();\n\t_or = _isDomain;\n}\nreturn _or;'"
+	 * @generated
+	 */
+	boolean isStructure();
 
 } // DataType

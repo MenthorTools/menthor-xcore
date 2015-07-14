@@ -5,6 +5,7 @@ package net.menthor.metamodel.ontouml.util;
 import net.menthor.metamodel.ontouml.Attribute;
 import net.menthor.metamodel.ontouml.Classifier;
 import net.menthor.metamodel.ontouml.Comment;
+import net.menthor.metamodel.ontouml.Constraint;
 import net.menthor.metamodel.ontouml.ContainedElement;
 import net.menthor.metamodel.ontouml.Container;
 import net.menthor.metamodel.ontouml.DataType;
@@ -129,6 +130,10 @@ public class OntoumlAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGeneralizationSet(GeneralizationSet object) {
 				return createGeneralizationSetAdapter();
+			}
+			@Override
+			public Adapter caseConstraint(Constraint object) {
+				return createConstraintAdapter();
 			}
 			@Override
 			public Adapter caseLiteral(Literal object) {
@@ -335,6 +340,20 @@ public class OntoumlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeneralizationSetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link net.menthor.metamodel.ontouml.Constraint <em>Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see net.menthor.metamodel.ontouml.Constraint
+	 * @generated
+	 */
+	public Adapter createConstraintAdapter() {
 		return null;
 	}
 

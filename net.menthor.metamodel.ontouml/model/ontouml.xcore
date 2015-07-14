@@ -9,15 +9,15 @@
 	editorDirectory="/net.menthor.metamodel.ontouml.editor/src-gen",
 	fileExtensions="mouml"
 )
- 
+
 package net.menthor.metamodel.ontouml
 
 /** ======================================================================================================= 
- *  OntoUML 2.0 
+ *  OntoUML2.0 
  * 
- * 	author: John Guerson [JG]	
- * 	author: Tiago Prince Sales [TS] 	  
- *  co-author: Joao Paulo Andrade Almeida [JP]
+ * 	@author: John Guerson	
+ * 	@author: Tiago Prince Sales 	  
+ *  @co-author: Joao Paulo Andrade Almeida
  *  ======================================================================================================== */
  
 /** ======================================================================================================== 
@@ -42,7 +42,7 @@ abstract class NamedElement extends Element { String name }
 
 /** =========================================
  *  Container: is a Named Element that can contain a set of: 
- *             Packages, Generalization Sets, Relationships, Classes and DataTypes  
+ *             Packages, Generalization Sets, Relationships, Classes, DataTypes and Constraints  
  *  ======================================== */
  
 abstract class Container extends NamedElement 
@@ -210,14 +210,6 @@ abstract class Container extends NamedElement
 		allTypes(this, result.toEList)
 		return result.toEList;
 	}	
-	
-	//rigidTypes()
-	//allRigidTypes()
-	
-	//antirigidTypes()
-	//allAntiRigidTypes()
-	
-	//
 }
 
 /** =========================================
@@ -256,7 +248,14 @@ class Comment extends Element
  *  Model: is just a Container
  *  ======================================== */
 
-class Model extends Container { }
+class Model extends Container { 
+	
+	//generate a validator for OCL
+	op boolean initializeValidator(org.eclipse.emf.ecore.EDiagnosticChain diagnostics, org.eclipse.emf.ecore.EMap<Object, Object> context)
+    {
+        return true
+    }
+}
 
 /** =========================================
  *  Package: is both a Container and a ContainedElement
@@ -268,7 +267,7 @@ class Package extends Container, ContainedElement { }
  *  Classifier: is a type (class or dataType) or a relationship. 
  *  ======================================== */
  
-abstract class Classifier extends ContainedElement 
+abstract class Classifier extends ContainedElement, NamedElement 
 {
 	String[*] definitions
 	String[*] synonyms
@@ -453,6 +452,24 @@ class GeneralizationSet extends NamedElement, ContainedElement
 }
 
 /** =========================================
+ *  Constraint: is a constraint usually written in OCL.
+ *  Here we support static invariants and derivations from standard OCL
+ *  And also, temporal invariants and definition of historical relationships
+ *  ======================================== */
+
+enum ConstraintSteteotype
+{
+	Invariant, Derivation, Temporal, Historical
+}
+
+class Constraint extends ContainedElement
+{
+	ConstraintSteteotype stereotype
+	String[?] name
+	String ruleAsString
+}
+
+/** =========================================
  *  Class Stereotype
  *  ======================================== */
 
@@ -505,7 +522,7 @@ enum Measurement
  *  DataType: is a Domain, Dimension, Enumeration or DataType
  *  ======================================== */
  
-class DataType extends Type, NamedElement
+class DataType extends Type
 {
 	DataTypeStereotype stereotype	
 	
@@ -515,9 +532,9 @@ class DataType extends Type, NamedElement
 	//Dimension
 	Scale[?] scale 
 	Measurement[?] measurement
-	String unitOfMeasure
-	float lowerBoundRegion 
-	float upperBoundRegion
+	String[?] unitOfMeasure
+	float[?] lowerBoundRegion 
+	float[?] upperBoundRegion
 	refers DataType[?] ownerDomain opposite dimensions	
 	
 	//Enumeration
@@ -549,6 +566,8 @@ class DataType extends Type, NamedElement
 	op boolean isIntervalReal() { isInterval() && isReal() }
 	op boolean isOrdinalReal() { isOrdinal() && isReal() }
 	op boolean isRationalReal() { isRational() && isReal() }
+	
+	op boolean isStructure() { isDimension() || isDomain() }
 }
 
 /** =========================================
@@ -582,7 +601,7 @@ enum Existence
  *  Class: is an Endurant, Perdurant or a HighOrder class.
  *  ======================================== */
 
-class Class extends Type, NamedElement
+class Class extends Type
 {
 	ClassStereotype[?] stereotype	
 	boolean isAbstract	
@@ -710,25 +729,25 @@ class Class extends Type, NamedElement
 	
 	/** 
 	 * Checks if this element is a moment  i.e.
-	 * 1) if it is a moment, mode or quality element, or, 
+	 * 1) if it is a relator, mode or quality element, or, 
 	 * 2) if it is a subKind or role/phase with exactly one identity provider being a relator, mode or quality, or,
 	 * 3) if it is a mixin class in which all their children are relators, qualities or modes.
 	 */
 	op boolean isMoment()
 	{
-		if(isMoment()) return true;		
+		if(isMomentClass()) return true;		
 		if(isRole() || isPhase() || isSubKind()) 
 		{ 
 			var Class[] providers
 			providers.addAll(identityProviders());			
-			for(Class c: providers) if (c.isMoment()) return true;
+			for(Class c: providers) if (c.isMomentClass()) return true;
 		}			
 		if(isMixinClass())
 		{			
 			if(children().size()==0) return false;			
 			for (Classifier child : children()) 
 			{
-				if(child instanceof Class) if(!child.isMoment()) return false;
+				if(child instanceof Class) if(!child.isMomentClass()) return false;
 			}
 			return true;
 		}		
@@ -756,6 +775,33 @@ class Class extends Type, NamedElement
 			for (Classifier child : children()) 
 			{
 				if(child instanceof Class) if(!child.isRelator()) return false;
+			}
+			return true;
+		}		
+		return false;		
+	}	
+	
+	/** 
+	 * Checks if this element is a non qualitative instrinsic moment (mode) i.e.
+	 * 1) if it is a instrinsic moment which is a non qualitative element, or, 
+	 * 2) if it is a subKind or role/phase with exactly one identity provider being a non qualitative intrinsic moment, or,
+	 * 3) if it is a mixin class in which all their children are non qualitative intrinsic moment.
+	 */
+	op boolean isNonQualitativeIntrinsicMoment()
+	{
+		if(isMode()) return true;		
+		if(isRole() || isPhase() || isSubKind()) 
+		{ 
+			var Class[] providers
+			providers.addAll(identityProviders());			
+			for(Class c: providers) if (c.isMode()) return true;
+		}			
+		if(isMixinClass())
+		{			
+			if(children().size()==0) return false;			
+			for (Classifier child : children()) 
+			{
+				if(child instanceof Class) if(!child.isMode()) return false;
 			}
 			return true;
 		}		
@@ -912,7 +958,7 @@ enum ParticipationNature
  *  Relationship 
  *  ======================================== */
  
-class Relationship extends Classifier, NamedElement
+class Relationship extends Classifier
 {		
 	RelationshipStereotype[?] stereotype	
 	Reflexivity[?] reflexivity
@@ -942,11 +988,12 @@ class Relationship extends Classifier, NamedElement
 	op boolean isSubEventOf(){stereotype==RelationshipStereotype.SUB_EVENT_OF}
 	op boolean isCausation(){stereotype==RelationshipStereotype.CAUSATION}
 	op boolean isTemporal(){stereotype==RelationshipStereotype.TEMPORAL}
-	op boolean isInstanceOf(){stereotype==RelationshipStereotype.INSTANCE_OF}	
+	op boolean isInstanceOf(){stereotype==RelationshipStereotype.INSTANCE_OF}
+	op boolean isDerivation(){stereotype==RelationshipStereotype.DERIVATION}	
 	op boolean isMeronymic() { isComponentOf() || isMemberOf() || isSubQuantityOf() || isSubCollectionOf() || isConstitution() || isSubEventOf() }	
 	op boolean isBinary() { return endPoints.size()==2 }
 	op boolean isTernary() { return endPoints.size()==3 }
-		
+	
 	op boolean isStarts(){isTemporal() && temporalNature==TemporalNature.STARTS }
 	op boolean isPrecedes(){isTemporal() && temporalNature==TemporalNature.PRECEDES}
 	op boolean isEquals(){isTemporal() && temporalNature==TemporalNature.EQUALS}

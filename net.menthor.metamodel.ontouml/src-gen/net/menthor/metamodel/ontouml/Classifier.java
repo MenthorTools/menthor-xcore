@@ -30,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Classifier extends ContainedElement {
+public interface Classifier extends ContainedElement, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Definitions</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.

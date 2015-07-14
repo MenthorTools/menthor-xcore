@@ -32,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Class extends Type, NamedElement {
+public interface Class extends Type {
 	/**
 	 * Returns the value of the '<em><b>Stereotype</b></em>' attribute.
 	 * The literals are from the enumeration {@link net.menthor.metamodel.ontouml.ClassStereotype}.
@@ -497,12 +497,12 @@ public interface Class extends Type, NamedElement {
 	 * <!-- begin-model-doc -->
 	 * *
 	 * Checks if this element is a moment  i.e.
-	 * 1) if it is a moment, mode or quality element, or,
+	 * 1) if it is a relator, mode or quality element, or,
 	 * 2) if it is a subKind or role/phase with exactly one identity provider being a relator, mode or quality, or,
 	 * 3) if it is a mixin class in which all their children are relators, qualities or modes.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMoment = this.isMoment();\nif (_isMoment)\n{\n\treturn true;\n}\nboolean _or = false;\nboolean _or_1 = false;\nboolean _isRole = this.isRole();\nif (_isRole)\n{\n\t_or_1 = true;\n} else\n{\n\tboolean _isPhase = this.isPhase();\n\t_or_1 = _isPhase;\n}\nif (_or_1)\n{\n\t_or = true;\n} else\n{\n\tboolean _isSubKind = this.isSubKind();\n\t_or = _isSubKind;\n}\nif (_or)\n{\n\t<%net.menthor.metamodel.ontouml.Class%>[] providers = null;\n\tfinal <%net.menthor.metamodel.ontouml.Class%>[] _converted_providers = (<%net.menthor.metamodel.ontouml.Class%>[])providers;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Class%>> _identityProviders = this.identityProviders();\n\t((<%java.util.List%><<%net.menthor.metamodel.ontouml.Class%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);\n\tfor (final <%net.menthor.metamodel.ontouml.Class%> c : providers)\n\t{\n\t\tboolean _isMoment_1 = c.isMoment();\n\t\tif (_isMoment_1)\n\t\t{\n\t\t\treturn true;\n\t\t}\n\t}\n}\nboolean _isMixinClass = this.isMixinClass();\nif (_isMixinClass)\n{\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Classifier%>> _children = this.children();\n\tint _size = _children.size();\n\tboolean _equals = (_size == 0);\n\tif (_equals)\n\t{\n\t\treturn false;\n\t}\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Classifier%>> _children_1 = this.children();\n\tfor (final <%net.menthor.metamodel.ontouml.Classifier%> child : _children_1)\n\t{\n\t\tif ((child instanceof <%net.menthor.metamodel.ontouml.Class%>))\n\t\t{\n\t\t\tboolean _isMoment_2 = ((<%net.menthor.metamodel.ontouml.Class%>)child).isMoment();\n\t\t\tboolean _not = (!_isMoment_2);\n\t\t\tif (_not)\n\t\t\t{\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n\treturn true;\n}\nreturn false;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMomentClass = this.isMomentClass();\nif (_isMomentClass)\n{\n\treturn true;\n}\nboolean _or = false;\nboolean _or_1 = false;\nboolean _isRole = this.isRole();\nif (_isRole)\n{\n\t_or_1 = true;\n} else\n{\n\tboolean _isPhase = this.isPhase();\n\t_or_1 = _isPhase;\n}\nif (_or_1)\n{\n\t_or = true;\n} else\n{\n\tboolean _isSubKind = this.isSubKind();\n\t_or = _isSubKind;\n}\nif (_or)\n{\n\t<%net.menthor.metamodel.ontouml.Class%>[] providers = null;\n\tfinal <%net.menthor.metamodel.ontouml.Class%>[] _converted_providers = (<%net.menthor.metamodel.ontouml.Class%>[])providers;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Class%>> _identityProviders = this.identityProviders();\n\t((<%java.util.List%><<%net.menthor.metamodel.ontouml.Class%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);\n\tfor (final <%net.menthor.metamodel.ontouml.Class%> c : providers)\n\t{\n\t\tboolean _isMomentClass_1 = c.isMomentClass();\n\t\tif (_isMomentClass_1)\n\t\t{\n\t\t\treturn true;\n\t\t}\n\t}\n}\nboolean _isMixinClass = this.isMixinClass();\nif (_isMixinClass)\n{\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Classifier%>> _children = this.children();\n\tint _size = _children.size();\n\tboolean _equals = (_size == 0);\n\tif (_equals)\n\t{\n\t\treturn false;\n\t}\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Classifier%>> _children_1 = this.children();\n\tfor (final <%net.menthor.metamodel.ontouml.Classifier%> child : _children_1)\n\t{\n\t\tif ((child instanceof <%net.menthor.metamodel.ontouml.Class%>))\n\t\t{\n\t\t\tboolean _isMomentClass_2 = ((<%net.menthor.metamodel.ontouml.Class%>)child).isMomentClass();\n\t\t\tboolean _not = (!_isMomentClass_2);\n\t\t\tif (_not)\n\t\t\t{\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n\treturn true;\n}\nreturn false;'"
 	 * @generated
 	 */
 	boolean isMoment();
@@ -522,6 +522,22 @@ public interface Class extends Type, NamedElement {
 	 * @generated
 	 */
 	boolean isTruthMaker();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Checks if this element is a non qualitative instrinsic moment (mode) i.e.
+	 * 1) if it is a instrinsic moment which is a non qualitative element, or,
+	 * 2) if it is a subKind or role/phase with exactly one identity provider being a non qualitative intrinsic moment, or,
+	 * 3) if it is a mixin class in which all their children are non qualitative intrinsic moment.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMode = this.isMode();\nif (_isMode)\n{\n\treturn true;\n}\nboolean _or = false;\nboolean _or_1 = false;\nboolean _isRole = this.isRole();\nif (_isRole)\n{\n\t_or_1 = true;\n} else\n{\n\tboolean _isPhase = this.isPhase();\n\t_or_1 = _isPhase;\n}\nif (_or_1)\n{\n\t_or = true;\n} else\n{\n\tboolean _isSubKind = this.isSubKind();\n\t_or = _isSubKind;\n}\nif (_or)\n{\n\t<%net.menthor.metamodel.ontouml.Class%>[] providers = null;\n\tfinal <%net.menthor.metamodel.ontouml.Class%>[] _converted_providers = (<%net.menthor.metamodel.ontouml.Class%>[])providers;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Class%>> _identityProviders = this.identityProviders();\n\t((<%java.util.List%><<%net.menthor.metamodel.ontouml.Class%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);\n\tfor (final <%net.menthor.metamodel.ontouml.Class%> c : providers)\n\t{\n\t\tboolean _isMode_1 = c.isMode();\n\t\tif (_isMode_1)\n\t\t{\n\t\t\treturn true;\n\t\t}\n\t}\n}\nboolean _isMixinClass = this.isMixinClass();\nif (_isMixinClass)\n{\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Classifier%>> _children = this.children();\n\tint _size = _children.size();\n\tboolean _equals = (_size == 0);\n\tif (_equals)\n\t{\n\t\treturn false;\n\t}\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.metamodel.ontouml.Classifier%>> _children_1 = this.children();\n\tfor (final <%net.menthor.metamodel.ontouml.Classifier%> child : _children_1)\n\t{\n\t\tif ((child instanceof <%net.menthor.metamodel.ontouml.Class%>))\n\t\t{\n\t\t\tboolean _isMode_2 = ((<%net.menthor.metamodel.ontouml.Class%>)child).isMode();\n\t\t\tboolean _not = (!_isMode_2);\n\t\t\tif (_not)\n\t\t\t{\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n\treturn true;\n}\nreturn false;'"
+	 * @generated
+	 */
+	boolean isNonQualitativeIntrinsicMoment();
 
 	/**
 	 * <!-- begin-user-doc -->

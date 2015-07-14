@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- begin-model-doc -->
  * * =========================================
  *  Container: is a Named Element that can contain a set of:
- *             Packages, Generalization Sets, Relationships, Classes and DataTypes
+ *             Packages, Generalization Sets, Relationships, Classes, DataTypes and Constraints
  *  ========================================
  * <!-- end-model-doc -->
  *

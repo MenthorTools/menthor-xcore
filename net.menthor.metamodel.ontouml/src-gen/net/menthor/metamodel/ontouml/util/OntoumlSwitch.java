@@ -5,6 +5,7 @@ package net.menthor.metamodel.ontouml.util;
 import net.menthor.metamodel.ontouml.Attribute;
 import net.menthor.metamodel.ontouml.Classifier;
 import net.menthor.metamodel.ontouml.Comment;
+import net.menthor.metamodel.ontouml.Constraint;
 import net.menthor.metamodel.ontouml.ContainedElement;
 import net.menthor.metamodel.ontouml.Container;
 import net.menthor.metamodel.ontouml.DataType;
@@ -139,6 +140,7 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				Classifier classifier = (Classifier)theEObject;
 				T result = caseClassifier(classifier);
 				if (result == null) result = caseContainedElement(classifier);
+				if (result == null) result = caseNamedElement(classifier);
 				if (result == null) result = caseElement(classifier);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -148,6 +150,7 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				T result = caseType(type);
 				if (result == null) result = caseClassifier(type);
 				if (result == null) result = caseContainedElement(type);
+				if (result == null) result = caseNamedElement(type);
 				if (result == null) result = caseElement(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -178,6 +181,14 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OntoumlPackage.CONSTRAINT: {
+				Constraint constraint = (Constraint)theEObject;
+				T result = caseConstraint(constraint);
+				if (result == null) result = caseContainedElement(constraint);
+				if (result == null) result = caseElement(constraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OntoumlPackage.LITERAL: {
 				Literal literal = (Literal)theEObject;
 				T result = caseLiteral(literal);
@@ -189,9 +200,9 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				DataType dataType = (DataType)theEObject;
 				T result = caseDataType(dataType);
 				if (result == null) result = caseType(dataType);
-				if (result == null) result = caseNamedElement(dataType);
 				if (result == null) result = caseClassifier(dataType);
 				if (result == null) result = caseContainedElement(dataType);
+				if (result == null) result = caseNamedElement(dataType);
 				if (result == null) result = caseElement(dataType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -200,9 +211,9 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				net.menthor.metamodel.ontouml.Class class_ = (net.menthor.metamodel.ontouml.Class)theEObject;
 				T result = caseClass(class_);
 				if (result == null) result = caseType(class_);
-				if (result == null) result = caseNamedElement(class_);
 				if (result == null) result = caseClassifier(class_);
 				if (result == null) result = caseContainedElement(class_);
+				if (result == null) result = caseNamedElement(class_);
 				if (result == null) result = caseElement(class_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -220,8 +231,8 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				Relationship relationship = (Relationship)theEObject;
 				T result = caseRelationship(relationship);
 				if (result == null) result = caseClassifier(relationship);
-				if (result == null) result = caseNamedElement(relationship);
 				if (result == null) result = caseContainedElement(relationship);
+				if (result == null) result = caseNamedElement(relationship);
 				if (result == null) result = caseElement(relationship);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -407,6 +418,21 @@ public class OntoumlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeneralizationSet(GeneralizationSet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstraint(Constraint object) {
 		return null;
 	}
 

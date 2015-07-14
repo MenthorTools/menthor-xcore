@@ -15,6 +15,7 @@ import net.menthor.metamodel.ontouml.Classifier;
 import net.menthor.metamodel.ontouml.EndPoint;
 import net.menthor.metamodel.ontouml.GeneralizationSet;
 import net.menthor.metamodel.ontouml.Model;
+import net.menthor.metamodel.ontouml.NamedElement;
 import net.menthor.metamodel.ontouml.OntoumlPackage;
 import net.menthor.metamodel.ontouml.Relationship;
 
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassifierImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassifierImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassifierImpl#getSynonyms <em>Synonyms</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassifierImpl#getText <em>Text</em>}</li>
@@ -51,6 +53,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class ClassifierImpl extends ContainedElementImpl implements Classifier {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getDefinitions() <em>Definitions</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -128,6 +150,27 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	@Override
 	protected EClass eStaticClass() {
 		return OntoumlPackage.Literals.CLASSIFIER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CLASSIFIER__NAME, oldName, name));
 	}
 
 	/**
@@ -411,6 +454,8 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case OntoumlPackage.CLASSIFIER__NAME:
+				return getName();
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				return getDefinitions();
 			case OntoumlPackage.CLASSIFIER__SYNONYMS:
@@ -434,6 +479,9 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case OntoumlPackage.CLASSIFIER__NAME:
+				setName((String)newValue);
+				return;
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				getDefinitions().clear();
 				getDefinitions().addAll((Collection<? extends String>)newValue);
@@ -465,6 +513,9 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case OntoumlPackage.CLASSIFIER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				getDefinitions().clear();
 				return;
@@ -492,6 +543,8 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case OntoumlPackage.CLASSIFIER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				return definitions != null && !definitions.isEmpty();
 			case OntoumlPackage.CLASSIFIER__SYNONYMS:
@@ -504,6 +557,38 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 				return specializesVia != null && !specializesVia.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (derivedFeatureID) {
+				case OntoumlPackage.CLASSIFIER__NAME: return OntoumlPackage.NAMED_ELEMENT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (baseFeatureID) {
+				case OntoumlPackage.NAMED_ELEMENT__NAME: return OntoumlPackage.CLASSIFIER__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -549,7 +634,9 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (definitions: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", definitions: ");
 		result.append(definitions);
 		result.append(", synonyms: ");
 		result.append(synonyms);

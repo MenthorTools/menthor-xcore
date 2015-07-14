@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <!-- begin-model-doc -->
  * * =======================================================================================================
- *  OntoUML 2.0
+ *  OntoUML2.0
  * 
- * 	author: John Guerson [JG]
- * 	author: Tiago Prince Sales [TS]
- *  co-author: Joao Paulo Andrade Almeida [JP]
+ * 	@author: John Guerson
+ * 	@author: Tiago Prince Sales
+ *  @co-author: Joao Paulo Andrade Almeida
  *  ========================================================================================================
  * <!-- end-model-doc -->
  *

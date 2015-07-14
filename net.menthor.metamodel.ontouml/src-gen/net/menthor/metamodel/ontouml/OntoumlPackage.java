@@ -642,13 +642,22 @@ public interface OntoumlPackage extends EPackage {
 	int MODEL___ALL_TYPES = CONTAINER___ALL_TYPES;
 
 	/**
+	 * The operation id for the '<em>Initialize Validator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL___INITIALIZE_VALIDATOR__DIAGNOSTICCHAIN_MAP = CONTAINER_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_OPERATION_COUNT = CONTAINER_OPERATION_COUNT + 0;
+	int MODEL_OPERATION_COUNT = CONTAINER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.impl.PackageImpl <em>Package</em>}' class.
@@ -923,13 +932,22 @@ public interface OntoumlPackage extends EPackage {
 	int CLASSIFIER__COMMENTS = CONTAINED_ELEMENT__COMMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__DEFINITIONS = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
+	int CLASSIFIER__DEFINITIONS = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Synonyms</b></em>' attribute list.
@@ -938,7 +956,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__SYNONYMS = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+	int CLASSIFIER__SYNONYMS = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -947,7 +965,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__TEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
+	int CLASSIFIER__TEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Is Specialized Via</b></em>' reference list.
@@ -956,7 +974,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__IS_SPECIALIZED_VIA = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
+	int CLASSIFIER__IS_SPECIALIZED_VIA = CONTAINED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Specializes Via</b></em>' reference list.
@@ -965,7 +983,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__SPECIALIZES_VIA = CONTAINED_ELEMENT_FEATURE_COUNT + 4;
+	int CLASSIFIER__SPECIALIZES_VIA = CONTAINED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Classifier</em>' class.
@@ -974,7 +992,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 5;
+	int CLASSIFIER_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -1111,6 +1129,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TYPE__COMMENTS = CLASSIFIER__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__NAME = CLASSIFIER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -1620,6 +1647,97 @@ public interface OntoumlPackage extends EPackage {
 	int GENERALIZATION_SET_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.impl.ConstraintImpl <em>Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.metamodel.ontouml.impl.ConstraintImpl
+	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getConstraint()
+	 * @generated
+	 */
+	int CONSTRAINT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Holder</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__HOLDER = CONTAINED_ELEMENT__HOLDER;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__COMMENTS = CONTAINED_ELEMENT__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Stereotype</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__STEREOTYPE = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Rule As String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__RULE_AS_STRING = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Constraint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
+
+	/**
+	 * The number of operations of the '<em>Constraint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_OPERATION_COUNT = CONTAINED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.impl.LiteralImpl <em>Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1627,7 +1745,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getLiteral()
 	 * @generated
 	 */
-	int LITERAL = 12;
+	int LITERAL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1691,7 +1809,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getDataType()
 	 * @generated
 	 */
-	int DATA_TYPE = 13;
+	int DATA_TYPE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Holder</b></em>' container reference.
@@ -1710,6 +1828,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE__COMMENTS = TYPE__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -1766,22 +1893,13 @@ public interface OntoumlPackage extends EPackage {
 	int DATA_TYPE__ATTRIBUTES = TYPE__ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE__NAME = TYPE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Stereotype</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__STEREOTYPE = TYPE_FEATURE_COUNT + 1;
+	int DATA_TYPE__STEREOTYPE = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Dimensions</b></em>' reference list.
@@ -1790,7 +1908,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__DIMENSIONS = TYPE_FEATURE_COUNT + 2;
+	int DATA_TYPE__DIMENSIONS = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Scale</b></em>' attribute.
@@ -1799,7 +1917,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__SCALE = TYPE_FEATURE_COUNT + 3;
+	int DATA_TYPE__SCALE = TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Measurement</b></em>' attribute.
@@ -1808,7 +1926,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__MEASUREMENT = TYPE_FEATURE_COUNT + 4;
+	int DATA_TYPE__MEASUREMENT = TYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Unit Of Measure</b></em>' attribute.
@@ -1817,7 +1935,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__UNIT_OF_MEASURE = TYPE_FEATURE_COUNT + 5;
+	int DATA_TYPE__UNIT_OF_MEASURE = TYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound Region</b></em>' attribute.
@@ -1826,7 +1944,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__LOWER_BOUND_REGION = TYPE_FEATURE_COUNT + 6;
+	int DATA_TYPE__LOWER_BOUND_REGION = TYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Upper Bound Region</b></em>' attribute.
@@ -1835,7 +1953,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__UPPER_BOUND_REGION = TYPE_FEATURE_COUNT + 7;
+	int DATA_TYPE__UPPER_BOUND_REGION = TYPE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Owner Domain</b></em>' reference.
@@ -1844,7 +1962,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__OWNER_DOMAIN = TYPE_FEATURE_COUNT + 8;
+	int DATA_TYPE__OWNER_DOMAIN = TYPE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
@@ -1853,7 +1971,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__LITERALS = TYPE_FEATURE_COUNT + 9;
+	int DATA_TYPE__LITERALS = TYPE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Structure</b></em>' reference.
@@ -1862,7 +1980,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE__STRUCTURE = TYPE_FEATURE_COUNT + 10;
+	int DATA_TYPE__STRUCTURE = TYPE_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Data Type</em>' class.
@@ -1871,7 +1989,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 11;
+	int DATA_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -2189,13 +2307,22 @@ public interface OntoumlPackage extends EPackage {
 	int DATA_TYPE___IS_RATIONAL_REAL = TYPE_OPERATION_COUNT + 21;
 
 	/**
+	 * The operation id for the '<em>Is Structure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___IS_STRUCTURE = TYPE_OPERATION_COUNT + 22;
+
+	/**
 	 * The number of operations of the '<em>Data Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 22;
+	int DATA_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 23;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.impl.ClassImpl <em>Class</em>}' class.
@@ -2205,7 +2332,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getClass_()
 	 * @generated
 	 */
-	int CLASS = 14;
+	int CLASS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Holder</b></em>' container reference.
@@ -2224,6 +2351,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS__COMMENTS = TYPE__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -2280,22 +2416,13 @@ public interface OntoumlPackage extends EPackage {
 	int CLASS__ATTRIBUTES = TYPE__ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__NAME = TYPE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Stereotype</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__STEREOTYPE = TYPE_FEATURE_COUNT + 1;
+	int CLASS__STEREOTYPE = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
@@ -2304,7 +2431,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_ABSTRACT = TYPE_FEATURE_COUNT + 2;
+	int CLASS__IS_ABSTRACT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Derived</b></em>' attribute.
@@ -2313,7 +2440,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_DERIVED = TYPE_FEATURE_COUNT + 3;
+	int CLASS__IS_DERIVED = TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Is Extensional</b></em>' attribute.
@@ -2322,7 +2449,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_EXTENSIONAL = TYPE_FEATURE_COUNT + 4;
+	int CLASS__IS_EXTENSIONAL = TYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Quality Nature</b></em>' attribute.
@@ -2331,7 +2458,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__QUALITY_NATURE = TYPE_FEATURE_COUNT + 5;
+	int CLASS__QUALITY_NATURE = TYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Existence</b></em>' attribute.
@@ -2340,7 +2467,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__EXISTENCE = TYPE_FEATURE_COUNT + 6;
+	int CLASS__EXISTENCE = TYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Classification</b></em>' attribute.
@@ -2349,7 +2476,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__CLASSIFICATION = TYPE_FEATURE_COUNT + 7;
+	int CLASS__CLASSIFICATION = TYPE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -2358,7 +2485,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = TYPE_FEATURE_COUNT + 8;
+	int CLASS_FEATURE_COUNT = TYPE_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -2739,13 +2866,22 @@ public interface OntoumlPackage extends EPackage {
 	int CLASS___IS_TRUTH_MAKER = TYPE_OPERATION_COUNT + 28;
 
 	/**
+	 * The operation id for the '<em>Is Non Qualitative Intrinsic Moment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 29;
+
+	/**
 	 * The operation id for the '<em>Identity Providers At All Parents</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS = TYPE_OPERATION_COUNT + 29;
+	int CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS = TYPE_OPERATION_COUNT + 30;
 
 	/**
 	 * The operation id for the '<em>Identity Providers At All Children</em>' operation.
@@ -2754,7 +2890,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN = TYPE_OPERATION_COUNT + 30;
+	int CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN = TYPE_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Identity Providers</em>' operation.
@@ -2763,7 +2899,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS = TYPE_OPERATION_COUNT + 31;
+	int CLASS___IDENTITY_PROVIDERS = TYPE_OPERATION_COUNT + 32;
 
 	/**
 	 * The number of operations of the '<em>Class</em>' class.
@@ -2772,7 +2908,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_COUNT = TYPE_OPERATION_COUNT + 32;
+	int CLASS_OPERATION_COUNT = TYPE_OPERATION_COUNT + 33;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.impl.EndPointImpl <em>End Point</em>}' class.
@@ -2782,7 +2918,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getEndPoint()
 	 * @generated
 	 */
-	int END_POINT = 15;
+	int END_POINT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2918,7 +3054,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getRelationship()
 	 * @generated
 	 */
-	int RELATIONSHIP = 16;
+	int RELATIONSHIP = 17;
 
 	/**
 	 * The feature id for the '<em><b>Holder</b></em>' container reference.
@@ -2937,6 +3073,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP__COMMENTS = CLASSIFIER__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__NAME = CLASSIFIER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -2984,22 +3129,13 @@ public interface OntoumlPackage extends EPackage {
 	int RELATIONSHIP__SPECIALIZES_VIA = CLASSIFIER__SPECIALIZES_VIA;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATIONSHIP__NAME = CLASSIFIER_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Stereotype</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__STEREOTYPE = CLASSIFIER_FEATURE_COUNT + 1;
+	int RELATIONSHIP__STEREOTYPE = CLASSIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Reflexivity</b></em>' attribute.
@@ -3008,7 +3144,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__REFLEXIVITY = CLASSIFIER_FEATURE_COUNT + 2;
+	int RELATIONSHIP__REFLEXIVITY = CLASSIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Symmetry</b></em>' attribute.
@@ -3017,7 +3153,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__SYMMETRY = CLASSIFIER_FEATURE_COUNT + 3;
+	int RELATIONSHIP__SYMMETRY = CLASSIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Transitivity</b></em>' attribute.
@@ -3026,7 +3162,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__TRANSITIVITY = CLASSIFIER_FEATURE_COUNT + 4;
+	int RELATIONSHIP__TRANSITIVITY = CLASSIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Ciclicity</b></em>' attribute.
@@ -3035,7 +3171,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__CICLICITY = CLASSIFIER_FEATURE_COUNT + 5;
+	int RELATIONSHIP__CICLICITY = CLASSIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>End Points</b></em>' containment reference list.
@@ -3044,7 +3180,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__END_POINTS = CLASSIFIER_FEATURE_COUNT + 6;
+	int RELATIONSHIP__END_POINTS = CLASSIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Temporal Nature</b></em>' attribute.
@@ -3053,7 +3189,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__TEMPORAL_NATURE = CLASSIFIER_FEATURE_COUNT + 7;
+	int RELATIONSHIP__TEMPORAL_NATURE = CLASSIFIER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Participation Nature</b></em>' attribute.
@@ -3062,7 +3198,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__PARTICIPATION_NATURE = CLASSIFIER_FEATURE_COUNT + 8;
+	int RELATIONSHIP__PARTICIPATION_NATURE = CLASSIFIER_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Relationship</em>' class.
@@ -3071,7 +3207,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 9;
+	int RELATIONSHIP_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -3317,13 +3453,22 @@ public interface OntoumlPackage extends EPackage {
 	int RELATIONSHIP___IS_INSTANCE_OF = CLASSIFIER_OPERATION_COUNT + 15;
 
 	/**
+	 * The operation id for the '<em>Is Derivation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___IS_DERIVATION = CLASSIFIER_OPERATION_COUNT + 16;
+
+	/**
 	 * The operation id for the '<em>Is Meronymic</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_MERONYMIC = CLASSIFIER_OPERATION_COUNT + 16;
+	int RELATIONSHIP___IS_MERONYMIC = CLASSIFIER_OPERATION_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Is Binary</em>' operation.
@@ -3332,7 +3477,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_BINARY = CLASSIFIER_OPERATION_COUNT + 17;
+	int RELATIONSHIP___IS_BINARY = CLASSIFIER_OPERATION_COUNT + 18;
 
 	/**
 	 * The operation id for the '<em>Is Ternary</em>' operation.
@@ -3341,7 +3486,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_TERNARY = CLASSIFIER_OPERATION_COUNT + 18;
+	int RELATIONSHIP___IS_TERNARY = CLASSIFIER_OPERATION_COUNT + 19;
 
 	/**
 	 * The operation id for the '<em>Is Starts</em>' operation.
@@ -3350,7 +3495,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_STARTS = CLASSIFIER_OPERATION_COUNT + 19;
+	int RELATIONSHIP___IS_STARTS = CLASSIFIER_OPERATION_COUNT + 20;
 
 	/**
 	 * The operation id for the '<em>Is Precedes</em>' operation.
@@ -3359,7 +3504,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PRECEDES = CLASSIFIER_OPERATION_COUNT + 20;
+	int RELATIONSHIP___IS_PRECEDES = CLASSIFIER_OPERATION_COUNT + 21;
 
 	/**
 	 * The operation id for the '<em>Is Equals</em>' operation.
@@ -3368,7 +3513,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_EQUALS = CLASSIFIER_OPERATION_COUNT + 21;
+	int RELATIONSHIP___IS_EQUALS = CLASSIFIER_OPERATION_COUNT + 22;
 
 	/**
 	 * The operation id for the '<em>Is Meets</em>' operation.
@@ -3377,7 +3522,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_MEETS = CLASSIFIER_OPERATION_COUNT + 22;
+	int RELATIONSHIP___IS_MEETS = CLASSIFIER_OPERATION_COUNT + 23;
 
 	/**
 	 * The operation id for the '<em>Is Finishes</em>' operation.
@@ -3386,7 +3531,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_FINISHES = CLASSIFIER_OPERATION_COUNT + 23;
+	int RELATIONSHIP___IS_FINISHES = CLASSIFIER_OPERATION_COUNT + 24;
 
 	/**
 	 * The operation id for the '<em>Is Overlaps</em>' operation.
@@ -3395,7 +3540,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_OVERLAPS = CLASSIFIER_OPERATION_COUNT + 24;
+	int RELATIONSHIP___IS_OVERLAPS = CLASSIFIER_OPERATION_COUNT + 25;
 
 	/**
 	 * The operation id for the '<em>Is During</em>' operation.
@@ -3404,7 +3549,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DURING = CLASSIFIER_OPERATION_COUNT + 25;
+	int RELATIONSHIP___IS_DURING = CLASSIFIER_OPERATION_COUNT + 26;
 
 	/**
 	 * The operation id for the '<em>Is Creation</em>' operation.
@@ -3413,7 +3558,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CREATION = CLASSIFIER_OPERATION_COUNT + 26;
+	int RELATIONSHIP___IS_CREATION = CLASSIFIER_OPERATION_COUNT + 27;
 
 	/**
 	 * The operation id for the '<em>Is Destruction</em>' operation.
@@ -3422,7 +3567,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DESTRUCTION = CLASSIFIER_OPERATION_COUNT + 27;
+	int RELATIONSHIP___IS_DESTRUCTION = CLASSIFIER_OPERATION_COUNT + 28;
 
 	/**
 	 * The operation id for the '<em>Is Change</em>' operation.
@@ -3431,7 +3576,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_CHANGE = CLASSIFIER_OPERATION_COUNT + 28;
+	int RELATIONSHIP___IS_CHANGE = CLASSIFIER_OPERATION_COUNT + 29;
 
 	/**
 	 * The operation id for the '<em>Source End</em>' operation.
@@ -3440,7 +3585,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_END = CLASSIFIER_OPERATION_COUNT + 29;
+	int RELATIONSHIP___SOURCE_END = CLASSIFIER_OPERATION_COUNT + 30;
 
 	/**
 	 * The operation id for the '<em>Target End</em>' operation.
@@ -3449,7 +3594,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_END = CLASSIFIER_OPERATION_COUNT + 30;
+	int RELATIONSHIP___TARGET_END = CLASSIFIER_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Source</em>' operation.
@@ -3458,7 +3603,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE = CLASSIFIER_OPERATION_COUNT + 31;
+	int RELATIONSHIP___SOURCE = CLASSIFIER_OPERATION_COUNT + 32;
 
 	/**
 	 * The operation id for the '<em>Target</em>' operation.
@@ -3467,7 +3612,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET = CLASSIFIER_OPERATION_COUNT + 32;
+	int RELATIONSHIP___TARGET = CLASSIFIER_OPERATION_COUNT + 33;
 
 	/**
 	 * The operation id for the '<em>Source Class</em>' operation.
@@ -3476,7 +3621,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_CLASS = CLASSIFIER_OPERATION_COUNT + 33;
+	int RELATIONSHIP___SOURCE_CLASS = CLASSIFIER_OPERATION_COUNT + 34;
 
 	/**
 	 * The operation id for the '<em>Target Class</em>' operation.
@@ -3485,7 +3630,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_CLASS = CLASSIFIER_OPERATION_COUNT + 34;
+	int RELATIONSHIP___TARGET_CLASS = CLASSIFIER_OPERATION_COUNT + 35;
 
 	/**
 	 * The operation id for the '<em>Source Data Type</em>' operation.
@@ -3494,7 +3639,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 35;
+	int RELATIONSHIP___SOURCE_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 36;
 
 	/**
 	 * The operation id for the '<em>Target Data Type</em>' operation.
@@ -3503,7 +3648,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 36;
+	int RELATIONSHIP___TARGET_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 37;
 
 	/**
 	 * The operation id for the '<em>Source Relationship</em>' operation.
@@ -3512,7 +3657,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 37;
+	int RELATIONSHIP___SOURCE_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 38;
 
 	/**
 	 * The operation id for the '<em>Target Relationship</em>' operation.
@@ -3521,7 +3666,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 38;
+	int RELATIONSHIP___TARGET_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 39;
 
 	/**
 	 * The operation id for the '<em>Is Derived</em>' operation.
@@ -3530,7 +3675,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DERIVED = CLASSIFIER_OPERATION_COUNT + 39;
+	int RELATIONSHIP___IS_DERIVED = CLASSIFIER_OPERATION_COUNT + 40;
 
 	/**
 	 * The operation id for the '<em>Is End</em>' operation.
@@ -3539,7 +3684,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_END__CLASSIFIER = CLASSIFIER_OPERATION_COUNT + 40;
+	int RELATIONSHIP___IS_END__CLASSIFIER = CLASSIFIER_OPERATION_COUNT + 41;
 
 	/**
 	 * The operation id for the '<em>Is Part Essential</em>' operation.
@@ -3548,7 +3693,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_ESSENTIAL = CLASSIFIER_OPERATION_COUNT + 41;
+	int RELATIONSHIP___IS_PART_ESSENTIAL = CLASSIFIER_OPERATION_COUNT + 42;
 
 	/**
 	 * The operation id for the '<em>Is Part Inseparable</em>' operation.
@@ -3557,7 +3702,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_INSEPARABLE = CLASSIFIER_OPERATION_COUNT + 42;
+	int RELATIONSHIP___IS_PART_INSEPARABLE = CLASSIFIER_OPERATION_COUNT + 43;
 
 	/**
 	 * The operation id for the '<em>Is Part Immutable</em>' operation.
@@ -3566,7 +3711,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 43;
+	int RELATIONSHIP___IS_PART_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 44;
 
 	/**
 	 * The operation id for the '<em>Is Whole Immutable</em>' operation.
@@ -3575,7 +3720,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_WHOLE_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 44;
+	int RELATIONSHIP___IS_WHOLE_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 45;
 
 	/**
 	 * The operation id for the '<em>Is Part Mandatory</em>' operation.
@@ -3584,7 +3729,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_MANDATORY = CLASSIFIER_OPERATION_COUNT + 45;
+	int RELATIONSHIP___IS_PART_MANDATORY = CLASSIFIER_OPERATION_COUNT + 46;
 
 	/**
 	 * The operation id for the '<em>Is Whole Mandatory</em>' operation.
@@ -3593,7 +3738,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_WHOLE_MANDATORY = CLASSIFIER_OPERATION_COUNT + 46;
+	int RELATIONSHIP___IS_WHOLE_MANDATORY = CLASSIFIER_OPERATION_COUNT + 47;
 
 	/**
 	 * The operation id for the '<em>Is Part Shareable</em>' operation.
@@ -3602,7 +3747,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_SHAREABLE = CLASSIFIER_OPERATION_COUNT + 47;
+	int RELATIONSHIP___IS_PART_SHAREABLE = CLASSIFIER_OPERATION_COUNT + 48;
 
 	/**
 	 * The number of operations of the '<em>Relationship</em>' class.
@@ -3611,7 +3756,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 48;
+	int RELATIONSHIP_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 49;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.PrimitiveStereotype <em>Primitive Stereotype</em>}' enum.
@@ -3621,7 +3766,17 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getPrimitiveStereotype()
 	 * @generated
 	 */
-	int PRIMITIVE_STEREOTYPE = 17;
+	int PRIMITIVE_STEREOTYPE = 18;
+
+	/**
+	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.ConstraintSteteotype <em>Constraint Steteotype</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.metamodel.ontouml.ConstraintSteteotype
+	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getConstraintSteteotype()
+	 * @generated
+	 */
+	int CONSTRAINT_STETEOTYPE = 19;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.ClassStereotype <em>Class Stereotype</em>}' enum.
@@ -3631,7 +3786,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getClassStereotype()
 	 * @generated
 	 */
-	int CLASS_STEREOTYPE = 18;
+	int CLASS_STEREOTYPE = 20;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.DataTypeStereotype <em>Data Type Stereotype</em>}' enum.
@@ -3641,7 +3796,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getDataTypeStereotype()
 	 * @generated
 	 */
-	int DATA_TYPE_STEREOTYPE = 19;
+	int DATA_TYPE_STEREOTYPE = 21;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Scale <em>Scale</em>}' enum.
@@ -3651,7 +3806,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getScale()
 	 * @generated
 	 */
-	int SCALE = 20;
+	int SCALE = 22;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Measurement <em>Measurement</em>}' enum.
@@ -3661,7 +3816,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getMeasurement()
 	 * @generated
 	 */
-	int MEASUREMENT = 21;
+	int MEASUREMENT = 23;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.QualityNature <em>Quality Nature</em>}' enum.
@@ -3671,7 +3826,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getQualityNature()
 	 * @generated
 	 */
-	int QUALITY_NATURE = 22;
+	int QUALITY_NATURE = 24;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Classification <em>Classification</em>}' enum.
@@ -3681,7 +3836,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getClassification()
 	 * @generated
 	 */
-	int CLASSIFICATION = 23;
+	int CLASSIFICATION = 25;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Existence <em>Existence</em>}' enum.
@@ -3691,7 +3846,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getExistence()
 	 * @generated
 	 */
-	int EXISTENCE = 24;
+	int EXISTENCE = 26;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.RelationshipStereotype <em>Relationship Stereotype</em>}' enum.
@@ -3701,7 +3856,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getRelationshipStereotype()
 	 * @generated
 	 */
-	int RELATIONSHIP_STEREOTYPE = 25;
+	int RELATIONSHIP_STEREOTYPE = 27;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.TemporalNature <em>Temporal Nature</em>}' enum.
@@ -3711,7 +3866,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getTemporalNature()
 	 * @generated
 	 */
-	int TEMPORAL_NATURE = 26;
+	int TEMPORAL_NATURE = 28;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.ParticipationNature <em>Participation Nature</em>}' enum.
@@ -3721,7 +3876,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getParticipationNature()
 	 * @generated
 	 */
-	int PARTICIPATION_NATURE = 27;
+	int PARTICIPATION_NATURE = 29;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Reflexivity <em>Reflexivity</em>}' enum.
@@ -3731,7 +3886,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getReflexivity()
 	 * @generated
 	 */
-	int REFLEXIVITY = 28;
+	int REFLEXIVITY = 30;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Symmetry <em>Symmetry</em>}' enum.
@@ -3741,7 +3896,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getSymmetry()
 	 * @generated
 	 */
-	int SYMMETRY = 29;
+	int SYMMETRY = 31;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Transitivity <em>Transitivity</em>}' enum.
@@ -3751,7 +3906,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getTransitivity()
 	 * @generated
 	 */
-	int TRANSITIVITY = 30;
+	int TRANSITIVITY = 32;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.metamodel.ontouml.Ciclicity <em>Ciclicity</em>}' enum.
@@ -3761,7 +3916,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getCiclicity()
 	 * @generated
 	 */
-	int CICLICITY = 31;
+	int CICLICITY = 33;
 
 
 	/**
@@ -4089,6 +4244,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getModel();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Model#initializeValidator(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Initialize Validator</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Initialize Validator</em>' operation.
+	 * @see net.menthor.metamodel.ontouml.Model#initializeValidator(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getModel__InitializeValidator__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.metamodel.ontouml.Package <em>Package</em>}'.
@@ -4479,6 +4644,49 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGeneralizationSet_HighOrder();
+
+	/**
+	 * Returns the meta object for class '{@link net.menthor.metamodel.ontouml.Constraint <em>Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constraint</em>'.
+	 * @see net.menthor.metamodel.ontouml.Constraint
+	 * @generated
+	 */
+	EClass getConstraint();
+
+	/**
+	 * Returns the meta object for the attribute '{@link net.menthor.metamodel.ontouml.Constraint#getStereotype <em>Stereotype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Stereotype</em>'.
+	 * @see net.menthor.metamodel.ontouml.Constraint#getStereotype()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EAttribute getConstraint_Stereotype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link net.menthor.metamodel.ontouml.Constraint#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see net.menthor.metamodel.ontouml.Constraint#getName()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EAttribute getConstraint_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link net.menthor.metamodel.ontouml.Constraint#getRuleAsString <em>Rule As String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rule As String</em>'.
+	 * @see net.menthor.metamodel.ontouml.Constraint#getRuleAsString()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EAttribute getConstraint_RuleAsString();
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.metamodel.ontouml.Literal <em>Literal</em>}'.
@@ -4875,6 +5083,16 @@ public interface OntoumlPackage extends EPackage {
 	EOperation getDataType__IsRationalReal();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.DataType#isStructure() <em>Is Structure</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Structure</em>' operation.
+	 * @see net.menthor.metamodel.ontouml.DataType#isStructure()
+	 * @generated
+	 */
+	EOperation getDataType__IsStructure();
+
+	/**
 	 * Returns the meta object for class '{@link net.menthor.metamodel.ontouml.Class <em>Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5252,6 +5470,16 @@ public interface OntoumlPackage extends EPackage {
 	EOperation getClass__IsTruthMaker();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Class#isNonQualitativeIntrinsicMoment() <em>Is Non Qualitative Intrinsic Moment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Non Qualitative Intrinsic Moment</em>' operation.
+	 * @see net.menthor.metamodel.ontouml.Class#isNonQualitativeIntrinsicMoment()
+	 * @generated
+	 */
+	EOperation getClass__IsNonQualitativeIntrinsicMoment();
+
+	/**
 	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Class#identityProvidersAtAllParents() <em>Identity Providers At All Parents</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5616,6 +5844,16 @@ public interface OntoumlPackage extends EPackage {
 	EOperation getRelationship__IsInstanceOf();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Relationship#isDerivation() <em>Is Derivation</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Derivation</em>' operation.
+	 * @see net.menthor.metamodel.ontouml.Relationship#isDerivation()
+	 * @generated
+	 */
+	EOperation getRelationship__IsDerivation();
+
+	/**
 	 * Returns the meta object for the '{@link net.menthor.metamodel.ontouml.Relationship#isMeronymic() <em>Is Meronymic</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5944,6 +6182,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getPrimitiveStereotype();
+
+	/**
+	 * Returns the meta object for enum '{@link net.menthor.metamodel.ontouml.ConstraintSteteotype <em>Constraint Steteotype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Constraint Steteotype</em>'.
+	 * @see net.menthor.metamodel.ontouml.ConstraintSteteotype
+	 * @generated
+	 */
+	EEnum getConstraintSteteotype();
 
 	/**
 	 * Returns the meta object for enum '{@link net.menthor.metamodel.ontouml.ClassStereotype <em>Class Stereotype</em>}'.
@@ -6377,6 +6625,14 @@ public interface OntoumlPackage extends EPackage {
 		EClass MODEL = eINSTANCE.getModel();
 
 		/**
+		 * The meta object literal for the '<em><b>Initialize Validator</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL___INITIALIZE_VALIDATOR__DIAGNOSTICCHAIN_MAP = eINSTANCE.getModel__InitializeValidator__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link net.menthor.metamodel.ontouml.impl.PackageImpl <em>Package</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6683,6 +6939,40 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GENERALIZATION_SET__HIGH_ORDER = eINSTANCE.getGeneralizationSet_HighOrder();
+
+		/**
+		 * The meta object literal for the '{@link net.menthor.metamodel.ontouml.impl.ConstraintImpl <em>Constraint</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see net.menthor.metamodel.ontouml.impl.ConstraintImpl
+		 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getConstraint()
+		 * @generated
+		 */
+		EClass CONSTRAINT = eINSTANCE.getConstraint();
+
+		/**
+		 * The meta object literal for the '<em><b>Stereotype</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTRAINT__STEREOTYPE = eINSTANCE.getConstraint_Stereotype();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTRAINT__NAME = eINSTANCE.getConstraint_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Rule As String</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTRAINT__RULE_AS_STRING = eINSTANCE.getConstraint_RuleAsString();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.metamodel.ontouml.impl.LiteralImpl <em>Literal</em>}' class.
@@ -6993,6 +7283,14 @@ public interface OntoumlPackage extends EPackage {
 		EOperation DATA_TYPE___IS_RATIONAL_REAL = eINSTANCE.getDataType__IsRationalReal();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Structure</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DATA_TYPE___IS_STRUCTURE = eINSTANCE.getDataType__IsStructure();
+
+		/**
 		 * The meta object literal for the '{@link net.menthor.metamodel.ontouml.impl.ClassImpl <em>Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7291,6 +7589,14 @@ public interface OntoumlPackage extends EPackage {
 		EOperation CLASS___IS_TRUTH_MAKER = eINSTANCE.getClass__IsTruthMaker();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Non Qualitative Intrinsic Moment</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = eINSTANCE.getClass__IsNonQualitativeIntrinsicMoment();
+
+		/**
 		 * The meta object literal for the '<em><b>Identity Providers At All Parents</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7575,6 +7881,14 @@ public interface OntoumlPackage extends EPackage {
 		EOperation RELATIONSHIP___IS_INSTANCE_OF = eINSTANCE.getRelationship__IsInstanceOf();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Derivation</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RELATIONSHIP___IS_DERIVATION = eINSTANCE.getRelationship__IsDerivation();
+
+		/**
 		 * The meta object literal for the '<em><b>Is Meronymic</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7839,6 +8153,16 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum PRIMITIVE_STEREOTYPE = eINSTANCE.getPrimitiveStereotype();
+
+		/**
+		 * The meta object literal for the '{@link net.menthor.metamodel.ontouml.ConstraintSteteotype <em>Constraint Steteotype</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see net.menthor.metamodel.ontouml.ConstraintSteteotype
+		 * @see net.menthor.metamodel.ontouml.impl.OntoumlPackageImpl#getConstraintSteteotype()
+		 * @generated
+		 */
+		EEnum CONSTRAINT_STETEOTYPE = eINSTANCE.getConstraintSteteotype();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.metamodel.ontouml.ClassStereotype <em>Class Stereotype</em>}' enum.

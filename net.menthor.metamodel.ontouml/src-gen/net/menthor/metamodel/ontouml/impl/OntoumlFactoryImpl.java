@@ -7,6 +7,8 @@ import net.menthor.metamodel.ontouml.Ciclicity;
 import net.menthor.metamodel.ontouml.ClassStereotype;
 import net.menthor.metamodel.ontouml.Classification;
 import net.menthor.metamodel.ontouml.Comment;
+import net.menthor.metamodel.ontouml.Constraint;
+import net.menthor.metamodel.ontouml.ConstraintSteteotype;
 import net.menthor.metamodel.ontouml.DataType;
 import net.menthor.metamodel.ontouml.DataTypeStereotype;
 import net.menthor.metamodel.ontouml.EndPoint;
@@ -86,6 +88,7 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 			case OntoumlPackage.PACKAGE: return createPackage();
 			case OntoumlPackage.ATTRIBUTE: return createAttribute();
 			case OntoumlPackage.GENERALIZATION_SET: return createGeneralizationSet();
+			case OntoumlPackage.CONSTRAINT: return createConstraint();
 			case OntoumlPackage.LITERAL: return createLiteral();
 			case OntoumlPackage.DATA_TYPE: return createDataType();
 			case OntoumlPackage.CLASS: return createClass();
@@ -106,6 +109,8 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 		switch (eDataType.getClassifierID()) {
 			case OntoumlPackage.PRIMITIVE_STEREOTYPE:
 				return createPrimitiveStereotypeFromString(eDataType, initialValue);
+			case OntoumlPackage.CONSTRAINT_STETEOTYPE:
+				return createConstraintSteteotypeFromString(eDataType, initialValue);
 			case OntoumlPackage.CLASS_STEREOTYPE:
 				return createClassStereotypeFromString(eDataType, initialValue);
 			case OntoumlPackage.DATA_TYPE_STEREOTYPE:
@@ -149,6 +154,8 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 		switch (eDataType.getClassifierID()) {
 			case OntoumlPackage.PRIMITIVE_STEREOTYPE:
 				return convertPrimitiveStereotypeToString(eDataType, instanceValue);
+			case OntoumlPackage.CONSTRAINT_STETEOTYPE:
+				return convertConstraintSteteotypeToString(eDataType, instanceValue);
 			case OntoumlPackage.CLASS_STEREOTYPE:
 				return convertClassStereotypeToString(eDataType, instanceValue);
 			case OntoumlPackage.DATA_TYPE_STEREOTYPE:
@@ -237,6 +244,16 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Constraint createConstraint() {
+		ConstraintImpl constraint = new ConstraintImpl();
+		return constraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Literal createLiteral() {
 		LiteralImpl literal = new LiteralImpl();
 		return literal;
@@ -299,6 +316,26 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 	 * @generated
 	 */
 	public String convertPrimitiveStereotypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstraintSteteotype createConstraintSteteotypeFromString(EDataType eDataType, String initialValue) {
+		ConstraintSteteotype result = ConstraintSteteotype.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConstraintSteteotypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

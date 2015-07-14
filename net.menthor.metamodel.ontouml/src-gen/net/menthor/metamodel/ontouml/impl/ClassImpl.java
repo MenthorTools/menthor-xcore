@@ -14,7 +14,6 @@ import net.menthor.metamodel.ontouml.ClassStereotype;
 import net.menthor.metamodel.ontouml.Classification;
 import net.menthor.metamodel.ontouml.Classifier;
 import net.menthor.metamodel.ontouml.Existence;
-import net.menthor.metamodel.ontouml.NamedElement;
 import net.menthor.metamodel.ontouml.OntoumlPackage;
 import net.menthor.metamodel.ontouml.QualityNature;
 
@@ -34,7 +33,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassImpl#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.ClassImpl#isIsDerived <em>Is Derived</em>}</li>
@@ -48,26 +46,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml.Class {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -225,27 +203,6 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 	@Override
 	protected EClass eStaticClass() {
 		return OntoumlPackage.Literals.CLASS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CLASS__NAME, oldName, name));
 	}
 
 	/**
@@ -1009,8 +966,8 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 	 * @generated
 	 */
 	public boolean isMoment() {
-		boolean _isMoment = this.isMoment();
-		if (_isMoment) {
+		boolean _isMomentClass = this.isMomentClass();
+		if (_isMomentClass) {
 			return true;
 		}
 		boolean _or = false;
@@ -1034,8 +991,8 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 			EList<net.menthor.metamodel.ontouml.Class> _identityProviders = this.identityProviders();
 			((List<net.menthor.metamodel.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
 			for (final net.menthor.metamodel.ontouml.Class c : providers) {
-				boolean _isMoment_1 = c.isMoment();
-				if (_isMoment_1) {
+				boolean _isMomentClass_1 = c.isMomentClass();
+				if (_isMomentClass_1) {
 					return true;
 				}
 			}
@@ -1051,8 +1008,8 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 			EList<Classifier> _children_1 = this.children();
 			for (final Classifier child : _children_1) {
 				if ((child instanceof net.menthor.metamodel.ontouml.Class)) {
-					boolean _isMoment_2 = ((net.menthor.metamodel.ontouml.Class)child).isMoment();
-					boolean _not = (!_isMoment_2);
+					boolean _isMomentClass_2 = ((net.menthor.metamodel.ontouml.Class)child).isMomentClass();
+					boolean _not = (!_isMomentClass_2);
 					if (_not) {
 						return false;
 					}
@@ -1113,6 +1070,66 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 				if ((child instanceof net.menthor.metamodel.ontouml.Class)) {
 					boolean _isRelator_2 = ((net.menthor.metamodel.ontouml.Class)child).isRelator();
 					boolean _not = (!_isRelator_2);
+					if (_not) {
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNonQualitativeIntrinsicMoment() {
+		boolean _isMode = this.isMode();
+		if (_isMode) {
+			return true;
+		}
+		boolean _or = false;
+		boolean _or_1 = false;
+		boolean _isRole = this.isRole();
+		if (_isRole) {
+			_or_1 = true;
+		} else {
+			boolean _isPhase = this.isPhase();
+			_or_1 = _isPhase;
+		}
+		if (_or_1) {
+			_or = true;
+		} else {
+			boolean _isSubKind = this.isSubKind();
+			_or = _isSubKind;
+		}
+		if (_or) {
+			net.menthor.metamodel.ontouml.Class[] providers = null;
+			final net.menthor.metamodel.ontouml.Class[] _converted_providers = (net.menthor.metamodel.ontouml.Class[])providers;
+			EList<net.menthor.metamodel.ontouml.Class> _identityProviders = this.identityProviders();
+			((List<net.menthor.metamodel.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			for (final net.menthor.metamodel.ontouml.Class c : providers) {
+				boolean _isMode_1 = c.isMode();
+				if (_isMode_1) {
+					return true;
+				}
+			}
+		}
+		boolean _isMixinClass = this.isMixinClass();
+		if (_isMixinClass) {
+			EList<Classifier> _children = this.children();
+			int _size = _children.size();
+			boolean _equals = (_size == 0);
+			if (_equals) {
+				return false;
+			}
+			EList<Classifier> _children_1 = this.children();
+			for (final Classifier child : _children_1) {
+				if ((child instanceof net.menthor.metamodel.ontouml.Class)) {
+					boolean _isMode_2 = ((net.menthor.metamodel.ontouml.Class)child).isMode();
+					boolean _not = (!_isMode_2);
 					if (_not) {
 						return false;
 					}
@@ -1243,8 +1260,6 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case OntoumlPackage.CLASS__NAME:
-				return getName();
 			case OntoumlPackage.CLASS__STEREOTYPE:
 				return getStereotype();
 			case OntoumlPackage.CLASS__IS_ABSTRACT:
@@ -1271,9 +1286,6 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case OntoumlPackage.CLASS__NAME:
-				setName((String)newValue);
-				return;
 			case OntoumlPackage.CLASS__STEREOTYPE:
 				setStereotype((ClassStereotype)newValue);
 				return;
@@ -1307,9 +1319,6 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case OntoumlPackage.CLASS__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case OntoumlPackage.CLASS__STEREOTYPE:
 				setStereotype(STEREOTYPE_EDEFAULT);
 				return;
@@ -1343,8 +1352,6 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case OntoumlPackage.CLASS__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OntoumlPackage.CLASS__STEREOTYPE:
 				return stereotype != STEREOTYPE_EDEFAULT;
 			case OntoumlPackage.CLASS__IS_ABSTRACT:
@@ -1361,38 +1368,6 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 				return classification != CLASSIFICATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (derivedFeatureID) {
-				case OntoumlPackage.CLASS__NAME: return OntoumlPackage.NAMED_ELEMENT__NAME;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (baseFeatureID) {
-				case OntoumlPackage.NAMED_ELEMENT__NAME: return OntoumlPackage.CLASS__NAME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -1461,6 +1436,8 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 				return isMoment();
 			case OntoumlPackage.CLASS___IS_TRUTH_MAKER:
 				return isTruthMaker();
+			case OntoumlPackage.CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT:
+				return isNonQualitativeIntrinsicMoment();
 			case OntoumlPackage.CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS:
 				return identityProvidersAtAllParents();
 			case OntoumlPackage.CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN:
@@ -1481,9 +1458,7 @@ public class ClassImpl extends TypeImpl implements net.menthor.metamodel.ontouml
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", stereotype: ");
+		result.append(" (stereotype: ");
 		result.append(stereotype);
 		result.append(", isAbstract: ");
 		result.append(isAbstract);

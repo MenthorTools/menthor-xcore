@@ -12,7 +12,6 @@ import net.menthor.metamodel.ontouml.DataType;
 import net.menthor.metamodel.ontouml.DataTypeStereotype;
 import net.menthor.metamodel.ontouml.Literal;
 import net.menthor.metamodel.ontouml.Measurement;
-import net.menthor.metamodel.ontouml.NamedElement;
 import net.menthor.metamodel.ontouml.OntoumlPackage;
 import net.menthor.metamodel.ontouml.Scale;
 
@@ -37,7 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.menthor.metamodel.ontouml.impl.DataTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.DataTypeImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.DataTypeImpl#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link net.menthor.metamodel.ontouml.impl.DataTypeImpl#getScale <em>Scale</em>}</li>
@@ -54,26 +52,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class DataTypeImpl extends TypeImpl implements DataType {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -251,27 +229,6 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	@Override
 	protected EClass eStaticClass() {
 		return OntoumlPackage.Literals.DATA_TYPE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.DATA_TYPE__NAME, oldName, name));
 	}
 
 	/**
@@ -889,6 +846,23 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isStructure() {
+		boolean _or = false;
+		boolean _isDimension = this.isDimension();
+		if (_isDimension) {
+			_or = true;
+		} else {
+			boolean _isDomain = this.isDomain();
+			_or = _isDomain;
+		}
+		return _or;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -931,8 +905,6 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case OntoumlPackage.DATA_TYPE__NAME:
-				return getName();
 			case OntoumlPackage.DATA_TYPE__STEREOTYPE:
 				return getStereotype();
 			case OntoumlPackage.DATA_TYPE__DIMENSIONS:
@@ -968,9 +940,6 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case OntoumlPackage.DATA_TYPE__NAME:
-				setName((String)newValue);
-				return;
 			case OntoumlPackage.DATA_TYPE__STEREOTYPE:
 				setStereotype((DataTypeStereotype)newValue);
 				return;
@@ -1015,9 +984,6 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case OntoumlPackage.DATA_TYPE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case OntoumlPackage.DATA_TYPE__STEREOTYPE:
 				setStereotype(STEREOTYPE_EDEFAULT);
 				return;
@@ -1060,8 +1026,6 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case OntoumlPackage.DATA_TYPE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OntoumlPackage.DATA_TYPE__STEREOTYPE:
 				return stereotype != STEREOTYPE_EDEFAULT;
 			case OntoumlPackage.DATA_TYPE__DIMENSIONS:
@@ -1084,38 +1048,6 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 				return structure != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (derivedFeatureID) {
-				case OntoumlPackage.DATA_TYPE__NAME: return OntoumlPackage.NAMED_ELEMENT__NAME;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (baseFeatureID) {
-				case OntoumlPackage.NAMED_ELEMENT__NAME: return OntoumlPackage.DATA_TYPE__NAME;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -1170,6 +1102,8 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 				return isOrdinalReal();
 			case OntoumlPackage.DATA_TYPE___IS_RATIONAL_REAL:
 				return isRationalReal();
+			case OntoumlPackage.DATA_TYPE___IS_STRUCTURE:
+				return isStructure();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1184,9 +1118,7 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", stereotype: ");
+		result.append(" (stereotype: ");
 		result.append(stereotype);
 		result.append(", scale: ");
 		result.append(scale);

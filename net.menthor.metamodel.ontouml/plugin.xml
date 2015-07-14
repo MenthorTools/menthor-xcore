@@ -19,7 +19,7 @@
       <package
             uri="http://menthor.net/"
             class="net.menthor.metamodel.ontouml.OntoumlPackage"
-            genModel="model/ontoumlmenthor.xcore"/>
+            genModel="model/ontouml.xcore"/>
    </extension>
 
 

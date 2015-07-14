@@ -33,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Relationship extends Classifier, NamedElement {
+public interface Relationship extends Classifier {
 	/**
 	 * Returns the value of the '<em><b>Stereotype</b></em>' attribute.
 	 * The literals are from the enumeration {@link net.menthor.metamodel.ontouml.RelationshipStereotype}.
@@ -398,6 +398,15 @@ public interface Relationship extends Classifier, NamedElement {
 	 * @generated
 	 */
 	boolean isInstanceOf();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.metamodel.ontouml.RelationshipStereotype%> _stereotype = this.getStereotype();\nreturn <%com.google.common.base.Objects%>.equal(_stereotype, <%net.menthor.metamodel.ontouml.RelationshipStereotype%>.DERIVATION);'"
+	 * @generated
+	 */
+	boolean isDerivation();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -67,6 +67,15 @@ public interface OntoumlFactory extends EFactory {
 	GeneralizationSet createGeneralizationSet();
 
 	/**
+	 * Returns a new object of class '<em>Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constraint</em>'.
+	 * @generated
+	 */
+	Constraint createConstraint();
+
+	/**
 	 * Returns a new object of class '<em>Literal</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
