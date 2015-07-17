@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.menthor.metamodel.ontouml/src" editDirectory="/net.menthor.metamodel.ontouml.edit/src-gen"
-    editorDirectory="/net.menthor.metamodel.ontouml.editor/src-gen" modelPluginID="net.menthor.metamodel.ontouml"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.menthor.onto2.ontouml/src" editDirectory="/net.menthor.onto2.ontouml.edit/src-gen"
+    editorDirectory="/net.menthor.onto2.ontouml.editor/src-gen" modelPluginID="net.menthor.onto2.ontouml"
     runtimeJar="true" modelName="Ontouml" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    testsDirectory="/net.menthor.metamodel.ontouml.tests/src-gen" booleanFlagsField="eFlags"
+    testsDirectory="/net.menthor.onto2.ontouml.tests/src-gen" booleanFlagsField="eFlags"
     booleanFlagsReservedBits="8" importerID="org.eclipse.emf.ecore.xcore.importer"
     containmentProxies="true" complianceLevel="8.0" language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true" decoration="Live" oSGiCompatible="true">
@@ -22,7 +22,7 @@
   <foreignModel>ontouml.xcore</foreignModel>
   <modelPluginVariables>org.eclipse.xtext.xbase.lib</modelPluginVariables>
   <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
-  <genPackages prefix="Ontouml" basePackage="net.menthor.metamodel" disposableProviderFactory="true"
+  <genPackages prefix="Ontouml" basePackage="net.menthor.onto2" disposableProviderFactory="true"
       fileExtensions="mouml" ecorePackage="ontouml.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ontouml.ecore#//PrimitiveStereotype">
       <genEnumLiterals ecoreEnumLiteral="ontouml.ecore#//PrimitiveStereotype/Boolean"/>
@@ -196,7 +196,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Comment/content"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ontouml.ecore#//Comment/owner"/>
     </genClasses>
-    <genClasses ecoreClass="ontouml.ecore#//Model"/>
+    <genClasses ecoreClass="ontouml.ecore#//Model">
+      <genOperations ecoreOperation="ontouml.ecore#//Model/initializeValidator">
+        <genParameters ecoreParameter="ontouml.ecore#//Model/initializeValidator/diagnostics"/>
+        <genParameters ecoreParameter="ontouml.ecore#//Model/initializeValidator/context"/>
+      </genOperations>
+    </genClasses>
     <genClasses ecoreClass="ontouml.ecore#//Package"/>
     <genClasses image="false" ecoreClass="ontouml.ecore#//Classifier">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Classifier/definitions"/>
@@ -289,6 +294,7 @@
       <genOperations ecoreOperation="ontouml.ecore#//DataType/isIntervalReal"/>
       <genOperations ecoreOperation="ontouml.ecore#//DataType/isOrdinalReal"/>
       <genOperations ecoreOperation="ontouml.ecore#//DataType/isRationalReal"/>
+      <genOperations ecoreOperation="ontouml.ecore#//DataType/isStructure"/>
     </genClasses>
     <genClasses ecoreClass="ontouml.ecore#//Class">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Class/stereotype"/>
@@ -327,6 +333,7 @@
       <genOperations ecoreOperation="ontouml.ecore#//Class/isCollection"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isMoment"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isTruthMaker"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isNonQualitativeIntrinsicMoment"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/identityProvidersAtAllParents"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/identityProvidersAtAllChildren"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/identityProviders"/>
@@ -364,6 +371,7 @@
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isCausation"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isTemporal"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isInstanceOf"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Relationship/isDerivation"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isMeronymic"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isBinary"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isTernary"/>

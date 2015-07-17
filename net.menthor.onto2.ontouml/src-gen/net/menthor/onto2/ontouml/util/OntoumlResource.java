@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 public class OntoumlResource {
 
 	/** Load model to a resource. */
-	public static Resource load (String refontoumlpath) throws IOException
+	public static Resource load (String ontoumlPath) throws IOException
 	{
 		ResourceSet rset = new ResourceSetImpl();			
 		rset.getResourceFactoryRegistry().getExtensionToFactoryMap().put("mouml",new XMIResourceFactoryImpl());
 		rset.getPackageRegistry().put(OntoumlPackage.eNS_URI,	OntoumlPackage.eINSTANCE);		
-	    File file = new File(refontoumlpath);
+	    File file = new File(ontoumlPath);
 		URI fileURI = URI.createFileURI(file.getAbsolutePath());		
 		Resource resource = rset.createResource(fileURI);		
 		/**Load options that significantly improved the performance of loading EMF Model instances*/
@@ -35,19 +35,15 @@ public class OntoumlResource {
 	}
 	
 	/** Save model to a resource. */	
-	public static Resource save (String refontoumlpath, Model refmodel) 
+	public static Resource save (String ontoumlPath, Model ontomodel) throws IOException 
 	{
 		ResourceSet rset = new ResourceSetImpl();				
 		rset.getResourceFactoryRegistry().getExtensionToFactoryMap().put("mouml",new XMIResourceFactoryImpl());
 		rset.getPackageRegistry().put(OntoumlPackage.eNS_URI,OntoumlPackage.eINSTANCE);
-		URI fileURI = URI.createFileURI(refontoumlpath);    
+		URI fileURI = URI.createFileURI(ontoumlPath);    
 	    final Resource resource = rset.createResource(fileURI);    	
-	    resource.getContents().add(refmodel);    	
-	    try{
-	    	resource.save(Collections.emptyMap());
-	    }catch(IOException e){
-	    	e.printStackTrace();
-	    }
+	    resource.getContents().add(ontomodel);    	
+    	resource.save(Collections.emptyMap());
 	    return resource;		   	
 	}
 }

@@ -49,7 +49,7 @@ public interface OntoumlPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ontouml-menthor";
+	String eNS_PREFIX = "menthor";
 
 	/**
 	 * The singleton instance of the package.

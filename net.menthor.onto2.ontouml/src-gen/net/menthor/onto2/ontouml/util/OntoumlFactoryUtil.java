@@ -49,7 +49,10 @@ public class OntoumlFactoryUtil {
 		GeneralizationSet gs = factory.createGeneralizationSet();
 		gs.setIsCovering(isCovering);		
 		gs.setName("");
-		if(container!=null) container.getElements().add(gs);		
+		if(container!=null) {
+			container.getElements().add(gs);
+			gs.setHolder(container);
+		}
 		return gs;
 	}
 	
@@ -59,7 +62,10 @@ public class OntoumlFactoryUtil {
 		gs.setIsCovering(isCovering);
 		if(name!=null) gs.setName(name);
 		else gs.setName("");
-		if(container!=null)container.getElements().add(gs);
+		if(container!=null){
+			container.getElements().add(gs);
+			gs.setHolder(container);
+		}
 		return gs;
 	}
 	
@@ -68,7 +74,10 @@ public class OntoumlFactoryUtil {
 		GeneralizationSet gs = factory.createGeneralizationSet();		
 		gs.setSpecializedClassifier(general);
 		gs.getSpecializingClassifier().add(specific);	
-		if(container!=null)container.getElements().add(gs);
+		if(container!=null){
+			container.getElements().add(gs);
+			gs.setHolder(container);
+		}
 		return gs;
 	}
 	
@@ -79,7 +88,10 @@ public class OntoumlFactoryUtil {
 		gs.setIsCovering(isCovering);
 		if(name!=null) gs.setName(name);
 		else gs.setName("");				
-		if(container!=null)container.getElements().add(gs);
+		if(container!=null){
+			container.getElements().add(gs);
+			gs.setHolder(container);
+		}
 		return gs;
 	}
 	
@@ -88,10 +100,12 @@ public class OntoumlFactoryUtil {
 		GeneralizationSet gs = factory.createGeneralizationSet();		
 		gs.setSpecializedClassifier(general);
 		gs.getSpecializingClassifier().addAll(specifics);	
-		if(container!=null) container.getElements().add(gs);		
 		if(name!=null)gs.setName(name);
 		else gs.setName("");
-		if(container!=null)container.getElements().add(gs);
+		if(container!=null){
+			container.getElements().add(gs);
+			gs.setHolder(container);
+		}
 		return gs;
 	}
 	
@@ -108,7 +122,10 @@ public class OntoumlFactoryUtil {
 	{
 		Relationship assoc = factory.createRelationship();
 		addEndPoints(assoc, source, target);
-		if(container!=null)container.getElements().add(assoc);
+		if(container!=null){
+			container.getElements().add(assoc);
+			assoc.setHolder(container);
+		}
 		return assoc;
 	}
 	
@@ -121,7 +138,10 @@ public class OntoumlFactoryUtil {
 		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
 		if(name!=null) relationship.setName(name);
 		else relationship.setName("");
-		if(container!=null)container.getElements().add(relationship);
+		if(container!=null){
+			container.getElements().add(relationship);
+			relationship.setHolder(container);
+		}
 		return relationship;
 	}
 	
@@ -132,7 +152,10 @@ public class OntoumlFactoryUtil {
 		relationship.setStereotype(stereotype);		
 		if(shouldInvert(relationship,source,target)) addEndPoints(relationship, target, source); 
 		else addEndPoints(relationship, source, target);
-		if(container!=null)container.getElements().add(relationship);
+		if(container!=null){
+			container.getElements().add(relationship);
+			relationship.setHolder(container);
+		}
 		return relationship;
 	}
 	
@@ -171,7 +194,10 @@ public class OntoumlFactoryUtil {
 		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
 		if(name!=null) relationship.setName(name);
 		else relationship.setName("");
-		if(container!=null)container.getElements().add(relationship);
+		if(container!=null){
+			container.getElements().add(relationship);
+			relationship.setHolder(container);
+		}
 		return relationship;
 	}
 	
@@ -183,7 +209,24 @@ public class OntoumlFactoryUtil {
 		if(class_.isMixinClass()) class_.setIsAbstract(true);
 		if(name!=null) class_.setName(name);
 		else class_.setName("");
-		if(container!=null)container.getElements().add(class_);
+		if(container!=null){
+			container.getElements().add(class_);
+			class_.setHolder(container);
+		}
+		return class_;
+	}
+
+	public static Class createClass(ClassStereotype stereotype, String name, boolean isAbstract, Container container)
+	{
+		Class class_ = factory.createClass();
+		class_.setStereotype(stereotype);
+		class_.setIsAbstract(isAbstract);
+		if(name!=null) class_.setName(name);
+		else class_.setName("");
+		if(container!=null){
+			container.getElements().add(class_);
+			class_.setHolder(container);
+		}
 		return class_;
 	}
 	
@@ -218,7 +261,10 @@ public class OntoumlFactoryUtil {
 		datatype.setStereotype(stereotype);
 		if(name!=null) datatype.setName(name);
 		else datatype.setName("");		
-		if(container!=null)container.getElements().add(datatype);
+		if(container!=null){
+			container.getElements().add(datatype);
+			datatype.setHolder(container);
+		}
 		return datatype;
 	}	
 	
@@ -244,7 +290,10 @@ public class OntoumlFactoryUtil {
 		List<Literal> literals = createLiterals(values);
 		enumeration.getLiterals().addAll(literals);
 		for(Literal lit: literals) lit.setOwner(enumeration);				
-		if(container!=null)container.getElements().add(enumeration);
+		if(container!=null){
+			container.getElements().add(enumeration);
+			enumeration.setHolder(container);
+		}
 		return enumeration;
 	}	
 
@@ -255,7 +304,8 @@ public class OntoumlFactoryUtil {
 	public static Attribute createAttribute (Type owner, PrimitiveStereotype primitive)
 	{
 		Attribute attribute = createAttribute(owner, primitive, 1, 1, "", false, false);
-		owner.getAttributes().add(attribute);
+		if(owner!=null)owner.getAttributes().add(attribute);
+		attribute.setOwner(owner);
 		return attribute;		
 	}
 	
@@ -269,7 +319,8 @@ public class OntoumlFactoryUtil {
 		attribute.setUpperBound(upper);		
 		if(owner!=null && owner.getName()!=null) attribute.setName(owner.getName().trim().toLowerCase());
 		else attribute.setName("");
-		owner.getAttributes().add(attribute);
+		if(owner!=null)owner.getAttributes().add(attribute);
+		attribute.setOwner(owner);
 		return attribute;		
 	}
 		
@@ -281,7 +332,8 @@ public class OntoumlFactoryUtil {
 		else if(name!=null) attribute.setName(name);
 		attribute.setIsDerived(isDerived);
 		attribute.setIsDependency(isDependency);
-		owner.getAttributes().add(attribute);		
+		if(owner!=null)owner.getAttributes().add(attribute);
+		attribute.setOwner(owner);
 		return attribute;
 	}
 
@@ -289,7 +341,8 @@ public class OntoumlFactoryUtil {
 	public static Attribute createAttribute (Type owner, PrimitiveStereotype primitive, int lower, int upper, String name, boolean isDerived)
 	{				
 		Attribute attribute = createAttribute(owner, primitive, lower, upper, name, isDerived, false);
-		owner.getAttributes().add(attribute);
+		if(owner!=null)owner.getAttributes().add(attribute);
+		attribute.setOwner(owner);
 		return attribute;
 	}
 	

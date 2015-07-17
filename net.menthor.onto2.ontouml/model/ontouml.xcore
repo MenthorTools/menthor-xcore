@@ -1,5 +1,5 @@
 @Ecore(
-	nsPrefix="ontouml-menthor", //Used for XMI serialization
+	nsPrefix="menthor", //Used for XMI serialization
 	nsURI="http://menthor.net/" 
 )
 
@@ -9,7 +9,7 @@
 	editorDirectory="/net.menthor.onto2.ontouml.editor/src-gen",
 	fileExtensions="mouml"
 )
-
+ 
 package net.menthor.onto2.ontouml 
 
 /** ======================================================================================================= 
