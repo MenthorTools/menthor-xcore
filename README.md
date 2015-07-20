@@ -1,4 +1,4 @@
-# ontouml-metamodel
+# ontouml
 
 We have used the Xcore syntax, a concrete syntax for Ecore (https://wiki.eclipse.org/Xcore). In order to generate the GenModel and Ecore file from it, do as follows:
 
