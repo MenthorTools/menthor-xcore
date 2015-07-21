@@ -22,13 +22,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.LiteralImpl#getValue <em>Value</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.LiteralImpl#getOwner <em>Owner</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.LiteralImpl#getUpperBoundRegion <em>Upper Bound Region</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.LiteralImpl#getLowerBoundRegion <em>Lower Bound Region</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

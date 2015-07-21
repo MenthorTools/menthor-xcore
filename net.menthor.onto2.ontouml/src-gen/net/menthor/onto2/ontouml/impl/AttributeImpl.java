@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getSynonyms <em>Synonyms</em>}</li>
@@ -36,6 +35,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getOwner <em>Owner</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

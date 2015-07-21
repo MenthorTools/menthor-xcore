@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getSynonyms <em>Synonyms</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getIsSpecializedVia <em>Is Specialized Via</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getSpecializesVia <em>Specializes Via</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getClassifier()
  * @model abstract="true"

@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.EndPoint#getOwner <em>Owner</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.EndPoint#getEndType <em>End Type</em>}</li>
@@ -26,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.EndPoint#getIsSubsettedBy <em>Is Subsetted By</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.EndPoint#getIsRedefinedBy <em>Is Redefined By</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getEndPoint()
  * @model

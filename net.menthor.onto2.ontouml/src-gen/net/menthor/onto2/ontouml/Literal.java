@@ -16,13 +16,13 @@ package net.menthor.onto2.ontouml;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Literal#getValue <em>Value</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Literal#getOwner <em>Owner</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Literal#getUpperBoundRegion <em>Upper Bound Region</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Literal#getLowerBoundRegion <em>Lower Bound Region</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getLiteral()
  * @model

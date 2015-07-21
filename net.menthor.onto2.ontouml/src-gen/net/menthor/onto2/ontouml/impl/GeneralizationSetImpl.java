@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationSetImpl#getHolder <em>Holder</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationSetImpl#getComments <em>Comments</em>}</li>
@@ -43,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationSetImpl#getSpecializingClassifier <em>Specializing Classifier</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationSetImpl#getHighOrder <em>High Order</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

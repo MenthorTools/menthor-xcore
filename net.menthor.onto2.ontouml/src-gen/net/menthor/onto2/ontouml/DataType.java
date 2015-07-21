@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.DataType#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.DataType#getDimensions <em>Dimensions</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.DataType#getLiterals <em>Literals</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.DataType#getStructure <em>Structure</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getDataType()
  * @model

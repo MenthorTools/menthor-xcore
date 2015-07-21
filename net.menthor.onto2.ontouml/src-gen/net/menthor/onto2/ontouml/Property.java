@@ -16,7 +16,6 @@ package net.menthor.onto2.ontouml;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Property#isIsOrdered <em>Is Ordered</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Property#isIsDerived <em>Is Derived</em>}</li>
@@ -24,6 +23,7 @@ package net.menthor.onto2.ontouml;
  *   <li>{@link net.menthor.onto2.ontouml.Property#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Property#isIsDependency <em>Is Dependency</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getProperty()
  * @model abstract="true"

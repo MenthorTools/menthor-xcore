@@ -11,7 +11,8 @@ import RefOntoUML.util.RefOntoUMLResourceUtil;
 
 public class Ref2Ontouml {
 
-	public static void main(String[] args){
+	public static void main(String[] args)
+	{
 		run("src/net/menthor/onto2/mapping/ref2ontouml/ontoemerge.refontouml", 
 			"src/net/menthor/onto2/mapping/ref2ontouml/ontoemerge.mouml");
 	}
@@ -20,10 +21,8 @@ public class Ref2Ontouml {
 	{	
 		try {
 			Resource resource = RefOntoUMLResourceUtil.loadModel(refontoPath);
-			RefOntoUML.Package refmodel = (RefOntoUML.Package)resource.getContents().get(0);
-						
-			run(refmodel, ontoPath);
-			
+			RefOntoUML.Package refmodel = (RefOntoUML.Package)resource.getContents().get(0);						
+			run(refmodel, ontoPath);			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -31,13 +30,9 @@ public class Ref2Ontouml {
 	
 	public static void run(RefOntoUML.Package refmodel, String ontoPath) throws IOException
 	{	
-		Transformer t = new Transformer(refmodel);
-		
-		Model ontomodel = t.run();
-		
-		OntoumlResource.save(ontoPath,ontomodel);
-		
-		System.out.println("executed succesfully");
-		//System.out.println(ontomodel.getElements());
+		Transformer t = new Transformer(refmodel);		
+		Model ontomodel = t.run();		
+		OntoumlResource.save(ontoPath,ontomodel);		
+		System.out.println("Ref2Ontouml: Executed succesfully.");
 	}
 }

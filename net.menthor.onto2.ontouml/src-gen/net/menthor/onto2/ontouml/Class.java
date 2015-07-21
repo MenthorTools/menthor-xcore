@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Class#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isIsAbstract <em>Is Abstract</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.Class#getExistence <em>Existence</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#getClassification <em>Classification</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getClass_()
  * @model

@@ -122,10 +122,23 @@ public class OntoumlFactoryUtil {
 		return gs;
 	}
 	
+	public static Relationship createRelationship (RelationshipStereotype stereotype, String name, Container container)
+	{
+		Relationship relationship = factory.createRelationship();
+		relationship.setStereotype(stereotype);
+		if(name!=null) relationship.setName(name);
+		else relationship.setName("");
+		if(container!=null){
+			container.getElements().add(relationship);
+			relationship.setHolder(container);
+		}
+		return relationship;
+	}
+	
 	public static Relationship createRelationship (Classifier source, Classifier target, Container container)
 	{
 		Relationship assoc = factory.createRelationship();
-		addEndPoints(assoc, source, target);
+		createEndPoints(assoc, source, target);
 		if(container!=null){
 			container.getElements().add(assoc);
 			assoc.setHolder(container);
@@ -137,7 +150,7 @@ public class OntoumlFactoryUtil {
 	public static Relationship createRelationship (Classifier source, int srcLower, int srcUpper, String name, Classifier target, int tgtLower, int tgtUpper, Container container)
 	{
 		Relationship relationship = factory.createRelationship();
-		List<EndPoint> ends = addEndPoints(relationship, source, target);
+		List<EndPoint> ends = createEndPoints(relationship, source, target);
 		setMultiplicity(ends.get(0), srcLower, srcUpper);
 		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
 		if(name!=null) relationship.setName(name);
@@ -154,8 +167,8 @@ public class OntoumlFactoryUtil {
 	{
 		Relationship relationship = factory.createRelationship();
 		relationship.setStereotype(stereotype);		
-		if(shouldInvert(relationship,source,target)) addEndPoints(relationship, target, source); 
-		else addEndPoints(relationship, source, target);
+		if(shouldInvert(relationship,source,target)) createEndPoints(relationship, target, source); 
+		else createEndPoints(relationship, source, target);
 		if(container!=null){
 			container.getElements().add(relationship);
 			relationship.setHolder(container);
@@ -192,8 +205,8 @@ public class OntoumlFactoryUtil {
 		Relationship relationship = factory.createRelationship();
 		relationship.setStereotype(stereotype);		
 		List<EndPoint> ends;
-		if(shouldInvert(relationship,source,target)) ends = addEndPoints(relationship, target, source); 
-		else ends = addEndPoints(relationship, source, target);		
+		if(shouldInvert(relationship,source,target)) ends = createEndPoints(relationship, target, source); 
+		else ends = createEndPoints(relationship, source, target);		
 		setMultiplicity(ends.get(0), srcLower, srcUpper);
 		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
 		if(name!=null) relationship.setName(name);
@@ -353,7 +366,7 @@ public class OntoumlFactoryUtil {
 	}
 	
 	/**
-	 * Create an end-point of a relationship 
+	 * Create an end-point 
 	 * with a default name which is the classifier name in lower case 
 	 */
 	public static EndPoint createEndPoint(Classifier classifier, int lower, int upper) 
@@ -367,7 +380,7 @@ public class OntoumlFactoryUtil {
 		return endpoint;
 	}
 
-	/** Create an end-point of a relationship. */
+	/** Create an end-point */
 	public static EndPoint createEndPoint(Classifier classifier, int lower, int upper, String name) 
 	{
 		EndPoint p = createEndPoint(classifier, lower, upper);
@@ -376,7 +389,7 @@ public class OntoumlFactoryUtil {
 		return p;
 	}
 	
-	/** Create an end-point of a relationship */
+	/** Create an end-point */
 	public static EndPoint createEndPoint(Classifier classifier, int lower, int upper, String name, boolean isDerived, boolean isDependency)
 	{
 		EndPoint p = createEndPoint(classifier, lower, upper, name);
@@ -384,20 +397,20 @@ public class OntoumlFactoryUtil {
 		p.setIsDependency(isDependency);		
 		return p;
 	}
-		
-	/** Add end points to this relationship */
-	public static void addEndPoints(Relationship relationship, EndPoint sourceEnd, EndPoint targetEnd) 
+	
+	/** Create an end-point of a relationship */
+	public static EndPoint createEndPoint(Relationship rel, Classifier classifier, int lower, int upper, String name, boolean isDerived, boolean isDependency)
 	{
-		relationship.getEndPoints().add(sourceEnd);
-		relationship.getEndPoints().add(targetEnd);
-		sourceEnd.setOwner(relationship);
-		targetEnd.setOwner(relationship);
+		EndPoint p = createEndPoint(classifier, lower, upper, name, isDerived, isDependency);
+		rel.getEndPoints().add(p);
+		p.setOwner(rel);
+		return p;
 	}
 	
 	/** Add end-points from and to these given types in this relationship.*/
-	public static List<EndPoint> addEndPoints(Relationship relationship, Classifier source, Classifier target)
+	public static List<EndPoint> createEndPoints(Relationship relationship, Classifier source, Classifier target)
 	{
-		List<EndPoint> endpoints = addEndPoints(relationship);
+		List<EndPoint> endpoints = createEndPoints(relationship);
 		endpoints.get(0).setEndType(source);
 		endpoints.get(1).setEndType(target);
 		if(source.getName()!=null) endpoints.get(0).setName(source.getName().trim().toLowerCase());
@@ -405,7 +418,7 @@ public class OntoumlFactoryUtil {
 		return endpoints;
 	}
 	
-	public static List<EndPoint> addEndPoints(Relationship relationship) 
+	public static List<EndPoint> createEndPoints(Relationship relationship) 
 	{
 		List<EndPoint> endpoints = new ArrayList<EndPoint>();
 
@@ -452,6 +465,15 @@ public class OntoumlFactoryUtil {
 		addEndPoints(relationship, ep1, ep1);
 		
 		return endpoints;
+	}
+	
+	/** Add end points to this relationship */
+	public static void addEndPoints(Relationship relationship, EndPoint sourceEnd, EndPoint targetEnd) 
+	{
+		relationship.getEndPoints().add(sourceEnd);
+		relationship.getEndPoints().add(targetEnd);
+		sourceEnd.setOwner(relationship);
+		targetEnd.setOwner(relationship);
 	}
 	
 	/** Set multiplicity of an end-point or attribute */
