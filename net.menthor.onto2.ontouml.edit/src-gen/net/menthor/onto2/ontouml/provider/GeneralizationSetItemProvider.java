@@ -9,6 +9,7 @@ import java.util.List;
 import net.menthor.onto2.ontouml.GeneralizationSet;
 import net.menthor.onto2.ontouml.OntoumlFactory;
 import net.menthor.onto2.ontouml.OntoumlPackage;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -212,14 +213,11 @@ public class GeneralizationSetItemProvider extends NamedElementItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((GeneralizationSet)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_GeneralizationSet_type") :
-			getString("_UI_GeneralizationSet_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.GeneralizationSet)object);
 	}
 	
 

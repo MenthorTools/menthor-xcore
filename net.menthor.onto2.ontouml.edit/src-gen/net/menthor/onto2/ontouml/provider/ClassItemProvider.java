@@ -6,15 +6,15 @@ package net.menthor.onto2.ontouml.provider;
 import java.util.Collection;
 import java.util.List;
 
-import net.menthor.onto2.ontouml.OntoumlPackage;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import net.menthor.onto2.ontouml.OntoumlPackage;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 /**
  * This is the item provider adapter for a {@link net.menthor.onto2.ontouml.Class} object.
@@ -224,14 +224,11 @@ public class ClassItemProvider extends TypeItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 *
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((net.menthor.onto2.ontouml.Class)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Class_type") :
-			getString("_UI_Class_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Class)object);
 	}
 	
 

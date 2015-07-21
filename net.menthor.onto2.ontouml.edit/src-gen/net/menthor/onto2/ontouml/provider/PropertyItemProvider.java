@@ -8,6 +8,7 @@ import java.util.List;
 
 import net.menthor.onto2.ontouml.OntoumlPackage;
 import net.menthor.onto2.ontouml.Property;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -172,10 +173,7 @@ public class PropertyItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Property)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Property_type") :
-			getString("_UI_Property_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Property)object);
 	}
 	
 

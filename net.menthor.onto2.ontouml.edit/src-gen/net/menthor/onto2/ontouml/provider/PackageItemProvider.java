@@ -8,6 +8,7 @@ import java.util.List;
 
 import net.menthor.onto2.ontouml.OntoumlFactory;
 import net.menthor.onto2.ontouml.OntoumlPackage;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -118,14 +119,11 @@ public class PackageItemProvider extends ContainerItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((net.menthor.onto2.ontouml.Package)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Package_type") :
-			getString("_UI_Package_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Package)object);
 	}
 	
 

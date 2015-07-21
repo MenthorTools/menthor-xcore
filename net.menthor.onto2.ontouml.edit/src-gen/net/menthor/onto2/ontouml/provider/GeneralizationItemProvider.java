@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 import net.menthor.onto2.ontouml.OntoumlPackage;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -130,11 +131,11 @@ public class GeneralizationItemProvider extends ContainedElementItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Generalization_type");
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Generalization)object);
 	}
 	
 

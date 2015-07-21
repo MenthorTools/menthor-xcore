@@ -6,14 +6,13 @@ package net.menthor.onto2.ontouml.provider;
 import java.util.Collection;
 import java.util.List;
 
-import net.menthor.onto2.ontouml.EndPoint;
-import net.menthor.onto2.ontouml.OntoumlPackage;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import net.menthor.onto2.ontouml.OntoumlPackage;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 /**
  * This is the item provider adapter for a {@link net.menthor.onto2.ontouml.EndPoint} object.
@@ -200,14 +199,11 @@ public class EndPointItemProvider extends PropertyItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EndPoint)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_EndPoint_type") :
-			getString("_UI_EndPoint_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.EndPoint)object);
 	}
 	
 

@@ -8,6 +8,7 @@ import java.util.List;
 
 import net.menthor.onto2.ontouml.Literal;
 import net.menthor.onto2.ontouml.OntoumlPackage;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -156,14 +157,11 @@ public class LiteralItemProvider extends ElementItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Literal)object).getValue();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Literal_type") :
-			getString("_UI_Literal_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Literal)object);
 	}
 	
 
