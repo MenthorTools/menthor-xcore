@@ -28,11 +28,15 @@ public class OntoumlFactoryUtil {
 	
 	public static OntoumlFactory factory = OntoumlFactory.eINSTANCE;
 
-	public static Package createPackage(String name)
+	public static Package createPackage(String name, Container ontomodel)
 	{
 		Package p = factory.createPackage();
 		if(name!=null)p.setName(name);
 		else p.setName("");
+		if(ontomodel!=null) {
+			ontomodel.getElements().add(p);
+			p.setHolder(ontomodel);
+		}
 		return p;
 	}
 	
@@ -332,8 +336,10 @@ public class OntoumlFactoryUtil {
 		else if(name!=null) attribute.setName(name);
 		attribute.setIsDerived(isDerived);
 		attribute.setIsDependency(isDependency);
-		if(owner!=null)owner.getAttributes().add(attribute);
-		attribute.setOwner(owner);
+		if(owner!=null){
+			owner.getAttributes().add(attribute);
+			attribute.setOwner(owner);
+		}		
 		return attribute;
 	}
 

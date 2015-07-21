@@ -16,10 +16,10 @@ package net.menthor.onto2.ontouml;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.NamedElement#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getNamedElement()
  * @model abstract="true"

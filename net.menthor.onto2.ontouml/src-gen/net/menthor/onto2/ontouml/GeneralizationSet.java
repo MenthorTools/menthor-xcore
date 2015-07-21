@@ -19,13 +19,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#isIsCovering <em>Is Covering</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#getSpecializedClassifier <em>Specialized Classifier</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#getSpecializingClassifier <em>Specializing Classifier</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#getHighOrder <em>High Order</em>}</li>
  * </ul>
- * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getGeneralizationSet()
  * @model

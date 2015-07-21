@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getRuleAsString <em>Rule As String</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
