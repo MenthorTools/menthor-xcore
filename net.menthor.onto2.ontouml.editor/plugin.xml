@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ontouml -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="net.menthor.onto2.ontouml.presentation.OntoumlModelWizardID"
+            name="%_UI_OntoumlModelWizard_label"
+            class="net.menthor.onto2.ontouml.presentation.OntoumlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OntoumlModelFile.gif">
+         <description>%_UI_OntoumlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ontouml -->
+      <editor
+            id="net.menthor.onto2.ontouml.presentation.OntoumlEditorID"
+            name="%_UI_OntoumlEditor_label"
+            icon="icons/full/obj16/OntoumlModelFile.gif"
+            extensions="mouml"
+            class="net.menthor.onto2.ontouml.presentation.OntoumlEditor"
+            contributorClass="net.menthor.onto2.ontouml.presentation.OntoumlActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

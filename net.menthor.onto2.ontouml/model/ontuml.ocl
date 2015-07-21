@@ -1,0 +1,76 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Class
+
+--@extensional: The meta-attribute "isExtensional" can only be set to classes stereotyped as <<collective>>
+inv extensional: isExtensional implies stereotype=ClassStereotype::Collective
+
+--@qualityNature: The meta-attribute "qualityNature" can only be set to classes stereotyped as <<quality>>
+inv qualityNature: not qualityNature.oclIsUndefined() implies stereotype=ClassStereotype::Quality
+
+--@existence: The meta-attribute "existence" can only be set to identity providers
+inv existence: not existence.oclIsUndefined() implies isIdentityProviderClass()
+
+--@classification: The meta-attribute "classification" can only be set to anti-rigid types
+inv classification: not classification.oclIsUndefined() implies isAntiRigid()
+
+context Relationship
+
+--@temporalNature: The meta-attribute "temporalNature" can only be set to relationships stereotyped as <<temporal>>
+inv temporalNature: not temporalNature.oclIsUndefined() implies stereotype=RelationshipStereotype::Temporal
+
+--@participationNature: The meta-attribute "participationNature" can only be set to relationships stereotyped as <<participation>>
+inv participationNature: not participationNature.oclIsUndefined() implies stereotype=RelationshipStereotype::Participation
+
+context DataType
+
+--@dimensions: The meta-attribute "dimensions" can only be set to dataTypes stereotyped as <<Domain>>
+inv dimensions: dimensions->size()>0 implies stereotype=DataTypeStereotype::Domain
+
+--@scale: The meta-attribute "scale" can only be set to dataTypes stereotyped as <<Dimension>>
+inv scale: not scale.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+
+--@measurement: The meta-attribute "measurement" can only be set to dataTypes stereotyped as <<Dimension>>
+inv measurement: not measurement.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+
+--@ownedDomain: The meta-attribute "ownerDomain" can only be set to dataTypes stereotyped as <<Dimension>>
+inv ownerDomain: not ownerDomain.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+
+--@unitOfMeasure: The meta-attribute "unitOfMeasure" can only be set to dataTypes stereotyped as <<Dimension>>
+inv unitOfMeasure: not unitOfMeasure.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+
+--@lowerBoundRegion: The meta-attribute "lowerBoundRegion" can only be set to dataTypes stereotyped as <<Dimension>>
+inv lowerBoundRegion: not lowerBoundRegion.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+
+--@upperBoundRegion: The meta-attribute "upperBoundRegion" can only be set to dataTypes stereotyped as <<Dimension>>
+inv upperBoundRegion: not upperBoundRegion.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+
+--@structure: The meta-attribute "structure" can only be set to dataTypes stereotyped as <<Enumeration>>
+inv structure: not structure.oclIsUndefined() implies stereotype=DataTypeStereotype::Enumeration
+
+--@literals: The meta-attribute "literals" can only be set to dataTypes stereotyped as <<Enumeration>>
+inv literals: literals->size()>0 implies stereotype=DataTypeStereotype::Enumeration
+
+context Generalization
+
+--@specializeRelationship: A relationship can only be specialized by another relationship
+inv specializeRelationship: general.oclIsKindOf(Relationship) implies specific.oclIsKindOf(Relationship)
+
+--@generalizeRelationship: A relationship can only be generalized by another relationship
+inv generalizeRelationship: specific.oclIsKindOf(Relationship) implies general.oclIsKindOf(Relationship)
+
+--@specializeClass: A class can only be specialized by another class
+inv specializeClass: general.oclIsKindOf(Class) implies specific.oclIsKindOf(Class)
+
+--@generalizeClass: A class can only be generalized by another class
+inv generalizeClass: specific.oclIsKindOf(Class) implies general.oclIsKindOf(Class)
+
+--@specializeDataType: A dataType can only be specialized by another dataType
+inv specializeDataType: general.oclIsKindOf(DataType) implies specific.oclIsKindOf(DataType)
+
+--@generalizeDataType: A dataType can only be generalized by another dataType
+inv generalizeDataType: specific.oclIsKindOf(DataType) implies general.oclIsKindOf(DataType)
+
+endpackage

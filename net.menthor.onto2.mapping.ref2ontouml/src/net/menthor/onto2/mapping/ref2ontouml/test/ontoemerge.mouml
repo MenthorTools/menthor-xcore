@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="ASCII"?>
+<menthor:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:menthor="http://menthor.net/" name="OntoEmerge">
+  <elements xsi:type="menthor:Package" name="Plans, Processes e Activities">
+    <elements xsi:type="menthor:Class" name="Action"/>
+    <elements xsi:type="menthor:Class" name="Action"/>
+    <elements xsi:type="menthor:Class" name="Atomic Commitment" stereotype="Mode" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Atomic E Standard Activity" isGeneralIn="//@elements.0/@elements.88"/>
+    <elements xsi:type="menthor:Class" name="Atomic E Standard Activity" isGeneralIn="//@elements.0/@elements.89"/>
+    <elements xsi:type="menthor:Class" name="Atomic OE Activity" isGeneralIn="//@elements.0/@elements.90" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Atomic OE Activity" isGeneralIn="//@elements.0/@elements.91" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Closed Commitment" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Commitment" stereotype="Mode" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Complex Commitment" stereotype="Mode" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Complex E Standard Activity" isGeneralIn="//@elements.0/@elements.92"/>
+    <elements xsi:type="menthor:Class" name="Complex E Standard Activity" isGeneralIn="//@elements.0/@elements.93"/>
+    <elements xsi:type="menthor:Class" name="Complex OE Activity" isGeneralIn="//@elements.0/@elements.94" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Complex OE Activity" isGeneralIn="//@elements.0/@elements.95" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="E Standard Activity" isSpecificIn="//@elements.0/@elements.88 //@elements.0/@elements.89 //@elements.0/@elements.92 //@elements.0/@elements.93"/>
+    <elements xsi:type="menthor:Class" name="E Standard Activity"/>
+    <elements xsi:type="menthor:Class" name="E Standard Process" isSpecificIn="//@elements.0/@elements.96 //@elements.0/@elements.97 //@elements.0/@elements.102 //@elements.0/@elements.103"/>
+    <elements xsi:type="menthor:Class" name="E Standard Process"/>
+    <elements xsi:type="menthor:Class" name="E Standard Process Definition Document"/>
+    <elements xsi:type="menthor:Class" name="E Standard Process Definition Document"/>
+    <elements xsi:type="menthor:Class" name="E Standard Process Definition Document Type"/>
+    <elements xsi:type="menthor:Class" name="E Standard Process Definition Document Type"/>
+    <elements xsi:type="menthor:Class" name="General E Standard Process" isGeneralIn="//@elements.0/@elements.96"/>
+    <elements xsi:type="menthor:Class" name="General E Standard Process" isGeneralIn="//@elements.0/@elements.97"/>
+    <elements xsi:type="menthor:Class" name="General OE Process" isGeneralIn="//@elements.0/@elements.98" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="General OE Process" isGeneralIn="//@elements.0/@elements.99" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Goal"/>
+    <elements xsi:type="menthor:Class" name="Intention (Internal Commitment)" stereotype="Mode" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.0/@elements.90 //@elements.0/@elements.94" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.7/@elements.59 //@elements.7/@elements.60 //@elements.7/@elements.62 //@elements.0/@elements.91 //@elements.0/@elements.95" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="OE Activity Goal"/>
+    <elements xsi:type="menthor:Class" name="OE Activity Goal"/>
+    <elements xsi:type="menthor:Class" name="OE Process" isSpecificIn="//@elements.0/@elements.98 //@elements.0/@elements.104" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="OE Process" isSpecificIn="//@elements.0/@elements.99 //@elements.0/@elements.105" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="OE Process Definition Document"/>
+    <elements xsi:type="menthor:Class" name="OE Process Definition Document"/>
+    <elements xsi:type="menthor:Class" name="RoESPDD" isGeneralIn="//@elements.0/@elements.100" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="RoESPDD" isGeneralIn="//@elements.0/@elements.101" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Specific E Standard Process" isGeneralIn="//@elements.0/@elements.102"/>
+    <elements xsi:type="menthor:Class" name="Specific E Standard Process" isGeneralIn="//@elements.0/@elements.103"/>
+    <elements xsi:type="menthor:Class" name="Specific OE Process" isGeneralIn="//@elements.0/@elements.104" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Specific OE Process" isGeneralIn="//@elements.0/@elements.105" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Main Organization"/>
+    <elements xsi:type="menthor:Class" name="Regulatory Organization"/>
+    <elements xsi:type="menthor:DataType" name="Enumeration1" stereotype="Enumeration"/>
+    <elements xsi:type="menthor:Relationship" name="caused by" stereotype="Material">
+      <endPoints name="specific e standard process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.39"/>
+      <endPoints name="action" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="caused by" stereotype="Material">
+      <endPoints name="specific e standard process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.38"/>
+      <endPoints name="action" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="propositional content of" stereotype="Formal">
+      <endPoints name="goal" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.26"/>
+      <endPoints name="commitment" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.8"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="complex oe activity" upperBound="-1" endType="//@elements.0/@elements.12"/>
+      <endPoints name="oe activity" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.28"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="complex oe activity" upperBound="-1" endType="//@elements.0/@elements.13"/>
+      <endPoints name="oe activity" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.29"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="is to be performed using" stereotype="Formal">
+      <endPoints name="e standard activity" upperBound="-1" endType="//@elements.0/@elements.14"/>
+      <endPoints name="business emergency material resource type" upperBound="-1" endType="//@elements.3/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="is to be performed by" stereotype="Formal">
+      <endPoints name="e standard activity" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.14"/>
+      <endPoints name="human resource role" lowerBound="1" upperBound="1" endType="//@elements.4/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="specific e standard process" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.39"/>
+      <endPoints name="e standard activity" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Formal">
+      <endPoints name="specific e standard process" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.38"/>
+      <endPoints name="e standard activity" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors activities" stereotype="Formal">
+      <endPoints name="oe activity" upperBound="-1" endType="//@elements.0/@elements.29"/>
+      <endPoints name="e standard activity" upperBound="-1" endType="//@elements.0/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors activities" stereotype="Formal">
+      <endPoints name="oe activity" upperBound="-1" endType="//@elements.0/@elements.28"/>
+      <endPoints name="e standard activity" upperBound="-1" endType="//@elements.0/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="defines" stereotype="Formal">
+      <endPoints name="job plan" lowerBound="1" upperBound="1" endType="//@elements.3/@elements.1"/>
+      <endPoints name="e standard activity" upperBound="-1" endType="//@elements.0/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="describes" stereotype="Formal">
+      <endPoints name="e standard process definition document" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="e standard process" upperBound="-1" endType="//@elements.0/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors processes">
+      <endPoints name="pIntention" upperBound="-1" endType="//@elements.0/@elements.32"/>
+      <endPoints name="pPlan" upperBound="-1" endType="//@elements.0/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors processes" stereotype="Formal">
+      <endPoints name="pIntention" upperBound="-1" endType="//@elements.0/@elements.33"/>
+      <endPoints name="pPlan" upperBound="-1" endType="//@elements.0/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="describes" stereotype="Formal">
+      <endPoints name="e standard process definition document" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="e standard process" upperBound="-1" endType="//@elements.0/@elements.17"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instance of" stereotype="Formal">
+      <endPoints name="e standard process definition document" upperBound="-1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="e standard process definition document type" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.20"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="regulates" stereotype="Formal">
+      <endPoints name="e standard process definition document" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="business activity type" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="regulates" stereotype="Formal">
+      <endPoints name="e standard process definition document" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="installation type" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="e standard process definition document" upperBound="-1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="e standard process definition document type" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.20"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instance of" stereotype="Formal">
+      <endPoints name="e standard process definition document" upperBound="-1" endType="//@elements.0/@elements.18"/>
+      <endPoints name="e standard process definition document type" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.21"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="regonized by" stereotype="Material">
+      <endPoints name="roespdd" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.36"/>
+      <endPoints name="e standard process definition document" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.18"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="e standard process definition document" upperBound="-1" endType="//@elements.0/@elements.19"/>
+      <endPoints name="e standard process definition document type" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.21"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="regonized by" stereotype="Material">
+      <endPoints name="roespdd" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.36"/>
+      <endPoints name="e standard process definition document" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.19"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors general processes">
+      <endPoints name="general oe process" upperBound="-1" endType="//@elements.0/@elements.24"/>
+      <endPoints name="general e standard process" upperBound="-1" endType="//@elements.0/@elements.22"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors general processes" stereotype="Formal">
+      <endPoints name="general oe process" upperBound="-1" endType="//@elements.0/@elements.25"/>
+      <endPoints name="general e standard process" upperBound="-1" endType="//@elements.0/@elements.23"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="general oe process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.24"/>
+      <endPoints name="specific oe process" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.40"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="subprocesses" stereotype="Formal">
+      <endPoints name="general oe process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.25"/>
+      <endPoints name="specific oe process" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.41"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="is to be performed by" stereotype="Formal">
+      <endPoints name="oe activity" upperBound="-1" endType="//@elements.0/@elements.28"/>
+      <endPoints name="business emergency human resource" upperBound="-1" endType="//@elements.4/@elements.1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="is to be performed using" stereotype="Formal">
+      <endPoints name="oe activity" upperBound="-1" endType="//@elements.0/@elements.28"/>
+      <endPoints name="business emergency material resource" upperBound="-1" endType="//@elements.4/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="specific oe process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.40"/>
+      <endPoints name="oe activity" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.28"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="propositional content of" stereotype="Formal">
+      <endPoints name="oe activity goal" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.30"/>
+      <endPoints name="oe activity" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.28"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="dependenceof" stereotype="Formal">
+      <endPoints name="depender" upperBound="-1" endType="//@elements.0/@elements.29"/>
+      <endPoints name="dependee" upperBound="-1" endType="//@elements.0/@elements.29"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="treats" stereotype="Formal">
+      <endPoints name="oe activity" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.29"/>
+      <endPoints name="risk" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.24"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Formal">
+      <endPoints name="specific oe process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.41"/>
+      <endPoints name="oe activity" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.29"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="propositional content of" stereotype="Formal">
+      <endPoints name="oe activity goal" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.31"/>
+      <endPoints name="oe activity" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.29"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="defined for" stereotype="Characterization">
+      <endPoints name="oe process" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.32"/>
+      <endPoints name="main organization" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.26"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="describes">
+      <endPoints name="oe process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.32"/>
+      <endPoints name="oe process definition document" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.34"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="defined for" stereotype="Characterization">
+      <endPoints name="oe process" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.33"/>
+      <endPoints name="main organization" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.26"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="describes" stereotype="Formal">
+      <endPoints name="oe process definition document" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.34"/>
+      <endPoints name="oe process" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.33"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="deployment" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.4"/>
+      <endPoints name="oe process definition document" lowerBound="1" upperBound="-1" isDependency="true" endType="//@elements.0/@elements.34"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors specific processes" stereotype="Formal">
+      <endPoints name="specific oe process" upperBound="-1" endType="//@elements.0/@elements.41"/>
+      <endPoints name="specific e standard process" upperBound="-1" endType="//@elements.0/@elements.38"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="tailors specific processes">
+      <endPoints name="specific oe process" upperBound="-1" endType="//@elements.0/@elements.40"/>
+      <endPoints name="specific e standard process" upperBound="-1" endType="//@elements.0/@elements.39"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.3" specific="//@elements.0/@elements.14" generalizationSet="//@elements.0/@elements.106"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.4" specific="//@elements.0/@elements.14" generalizationSet="//@elements.0/@elements.106"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.5" specific="//@elements.0/@elements.28"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.6" specific="//@elements.0/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.10" specific="//@elements.0/@elements.14" generalizationSet="//@elements.0/@elements.106"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.11" specific="//@elements.0/@elements.14" generalizationSet="//@elements.0/@elements.106"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.12" specific="//@elements.0/@elements.28"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.13" specific="//@elements.0/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.22" specific="//@elements.0/@elements.16"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.23" specific="//@elements.0/@elements.16"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.24" specific="//@elements.0/@elements.32" generalizationSet="//@elements.0/@elements.107"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.25" specific="//@elements.0/@elements.33" generalizationSet="//@elements.0/@elements.107"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.36" specific="//@elements.2/@elements.31"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.37" specific="//@elements.2/@elements.31"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.38" specific="//@elements.0/@elements.16"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.39" specific="//@elements.0/@elements.16"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.40" specific="//@elements.0/@elements.32" generalizationSet="//@elements.0/@elements.107"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.0/@elements.41" specific="//@elements.0/@elements.33" generalizationSet="//@elements.0/@elements.107"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-standard-e-activity" generalizations="//@elements.0/@elements.88 //@elements.0/@elements.89 //@elements.0/@elements.92 //@elements.0/@elements.93"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-oe-process" generalizations="//@elements.0/@elements.98 //@elements.0/@elements.99 //@elements.0/@elements.104 //@elements.0/@elements.105"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Goals, Intentions and Delegations">
+    <elements xsi:type="menthor:Class" name="Category1" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Civil Defense Organization" isGeneralIn="//@elements.1/@elements.31"/>
+    <elements xsi:type="menthor:Class" name="Civil Defense Organization Intention" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Closed Commitment" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Delegation" isSpecificIn="//@elements.1/@elements.34 //@elements.1/@elements.36"/>
+    <elements xsi:type="menthor:Class" name="Delegatum"/>
+    <elements xsi:type="menthor:Class" name="EP Agent" isSpecificIn="//@elements.1/@elements.31 //@elements.1/@elements.32 //@elements.1/@elements.33 //@elements.1/@elements.37" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="EP Agent delegatee" isGeneralIn="//@elements.1/@elements.32" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="EP Agent delegator" isGeneralIn="//@elements.1/@elements.33" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="EP Delegatum" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="EP Goal" isSpecificIn="//@elements.5/@elements.48 //@elements.1/@elements.35"/>
+    <elements xsi:type="menthor:Class" name="EP Goal Delegation" isGeneralIn="//@elements.1/@elements.34"/>
+    <elements xsi:type="menthor:Class" name="EP Main Goal" isGeneralIn="//@elements.1/@elements.35"/>
+    <elements xsi:type="menthor:Class" name="EP Plan" isSpecificIn="//@elements.6/@elements.8"/>
+    <elements xsi:type="menthor:Class" name="EP Plan Delegation" isGeneralIn="//@elements.1/@elements.36"/>
+    <elements xsi:type="menthor:Class" name="EP Situation Individual"/>
+    <elements xsi:type="menthor:Class" name="Organization Holder" isGeneralIn="//@elements.1/@elements.37" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Organization Holder Intention" stereotype="Mode"/>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+      <endPoints name="civil defense organization intention" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.2"/>
+      <endPoints name="civil defense organization" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.1/@elements.1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="propositional content of" stereotype="Formal">
+      <endPoints name="civil defense organization intention" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.2"/>
+      <endPoints name="ep main goal" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.12"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="causes" stereotype="Formal">
+      <endPoints name="civil defense organization intention" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.2"/>
+      <endPoints name="ep plan" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.13"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="based on" stereotype="Formal">
+      <endPoints name="closed commitment" upperBound="-1" endType="//@elements.1/@elements.3"/>
+      <endPoints name="ep plan" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.13"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="derived from" stereotype="Formal">
+      <endPoints name="delegation" upperBound="-1" endType="//@elements.1/@elements.4"/>
+      <endPoints name="delegatum" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.5"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="delegatum" stereotype="Formal">
+      <endPoints name="ep goal" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.10"/>
+      <endPoints name="ep goal delegation" upperBound="-1" endType="//@elements.1/@elements.11"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="satisfies" stereotype="Formal">
+      <endPoints name="ep situation individual" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.15"/>
+      <endPoints name="ep goal" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="propositional content of" stereotype="Formal">
+      <endPoints name="organization holder intention" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.17"/>
+      <endPoints name="ep goal" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="delegatum" stereotype="Formal">
+      <endPoints name="ep main goal" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.12"/>
+      <endPoints name="ep plan delegation" upperBound="-1" endType="//@elements.1/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="satisfies" stereotype="Formal">
+      <endPoints name="ep situation individual" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.15"/>
+      <endPoints name="ep main goal" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.12"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="creates" stereotype="Formal">
+      <endPoints name="ep plan" upperBound="-1" endType="//@elements.1/@elements.13"/>
+      <endPoints name="ep situation individual" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="causes" stereotype="Formal">
+      <endPoints name="organization holder intention" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.17"/>
+      <endPoints name="ep plan" lowerBound="1" upperBound="-1" endType="//@elements.1/@elements.13"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+      <endPoints name="organization holder intention" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.17"/>
+      <endPoints name="organization holder" lowerBound="1" upperBound="1" endType="//@elements.1/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.1" specific="//@elements.1/@elements.6"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.7" specific="//@elements.1/@elements.6"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.8" specific="//@elements.1/@elements.6"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.11" specific="//@elements.1/@elements.4"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.12" specific="//@elements.1/@elements.10"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.14" specific="//@elements.1/@elements.4"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.1/@elements.16" specific="//@elements.1/@elements.6"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Installation">
+    <elements xsi:type="menthor:Class" name="Acess Infrastructure" isGeneralIn="//@elements.2/@elements.61" isSpecificIn="//@elements.2/@elements.69 //@elements.2/@elements.73" stereotype="Mixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Business Activitiy" isSpecificIn="//@elements.2/@elements.71 //@elements.2/@elements.72" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Business Activity Type"/>
+    <elements xsi:type="menthor:Class" name="Businessman" isGeneralIn="//@elements.2/@elements.62" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Deployment" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Closed Area" isGeneralIn="//@elements.2/@elements.63" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Geographical Region" isGeneralIn="//@elements.2/@elements.64 //@elements.2/@elements.65" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Installation" isGeneralIn="//@elements.2/@elements.66 //@elements.2/@elements.67" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Local" isSpecificIn="//@elements.2/@elements.63 //@elements.2/@elements.65 //@elements.2/@elements.66 //@elements.2/@elements.68" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Local Definition" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Occurrence" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Evacuation Open Area" isGeneralIn="//@elements.2/@elements.68" stereotype="SubKind"/>
+    <elements xsi:type="menthor:Class" name="Evacuation at Installation" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Geographical Region" isSpecificIn="//@elements.2/@elements.64"/>
+    <elements xsi:type="menthor:Class" name="Horizontal Acess" isGeneralIn="//@elements.2/@elements.69" stereotype="Mixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Installation Type"/>
+    <elements xsi:type="menthor:Class" name="Owner" isGeneralIn="//@elements.2/@elements.70" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Place of Business" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Primary Business Activity" isGeneralIn="//@elements.2/@elements.71" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Secondary Business Activity" isGeneralIn="//@elements.2/@elements.72" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Vertical Acess" isGeneralIn="//@elements.2/@elements.73" stereotype="Mixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Atomic Installation" isGeneralIn="//@elements.2/@elements.74" stereotype="SubKind"/>
+    <elements xsi:type="menthor:Class" name="Civil Defense Organization" isGeneralIn="//@elements.2/@elements.75"/>
+    <elements xsi:type="menthor:Class" name="Complex Installation" isGeneralIn="//@elements.2/@elements.76" stereotype="SubKind"/>
+    <elements xsi:type="menthor:Class" name="Holder" isSpecificIn="//@elements.2/@elements.62 //@elements.2/@elements.70 //@elements.2/@elements.79 //@elements.2/@elements.81" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Installation" isGeneralIn="//@elements.2/@elements.77" isSpecificIn="//@elements.2/@elements.67 //@elements.2/@elements.74 //@elements.2/@elements.76"/>
+    <elements xsi:type="menthor:Class" name="Main Organization" isGeneralIn="//@elements.2/@elements.78"/>
+    <elements xsi:type="menthor:Class" name="Organization" isSpecificIn="//@elements.2/@elements.75 //@elements.2/@elements.78 //@elements.2/@elements.80 //@elements.2/@elements.83" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Organization Holder" isGeneralIn="//@elements.2/@elements.79 //@elements.2/@elements.80" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Person Holder" isGeneralIn="//@elements.2/@elements.81 //@elements.2/@elements.82" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Possesion" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Regulatory Organization" isGeneralIn="//@elements.2/@elements.83" isSpecificIn="//@elements.0/@elements.100 //@elements.0/@elements.101"/>
+    <elements xsi:type="menthor:Relationship" name="posses" stereotype="Formal">
+      <endPoints name="geographical region" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.13"/>
+      <endPoints name="acess infrastructure" upperBound="-1" endType="//@elements.2/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has acess" stereotype="Formal">
+      <endPoints name="installation" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.25"/>
+      <endPoints name="acess infrastructure" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has acess by" stereotype="Formal">
+      <endPoints name="evacuation local" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.8"/>
+      <endPoints name="acess infrastructure" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="business activitiy" upperBound="-1" endType="//@elements.2/@elements.1"/>
+      <endPoints name="business activity type" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="business activitiy" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.1"/>
+      <endPoints name="installation" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="business activitiy" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.1"/>
+      <endPoints name="businessman" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.3"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="can be developed in" stereotype="Formal">
+      <endPoints name="business activity type" upperBound="-1" endType="//@elements.2/@elements.2"/>
+      <endPoints name="installation type" upperBound="-1" endType="//@elements.2/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="primary business activity" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.18"/>
+      <endPoints name="businessman" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.2/@elements.3"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="secondary business activity" upperBound="-1" endType="//@elements.2/@elements.19"/>
+      <endPoints name="businessman" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.2/@elements.3"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="deployment" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.4"/>
+      <endPoints name="installation" lowerBound="1" upperBound="-1" isDependency="true" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="evacuation at installation" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.12"/>
+      <endPoints name="evacuation closed area" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.5"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has business activity" stereotype="Formal">
+      <endPoints name="evacuation installation" upperBound="-1" endType="//@elements.2/@elements.7"/>
+      <endPoints name="evacuation closed area" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.5"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="acts as" stereotype="Formal">
+      <endPoints name="evacuation open area" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.11"/>
+      <endPoints name="evacuation geographical region" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.6"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="evacuation local definition" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.9"/>
+      <endPoints name="evacuation local" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.8"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="evacuation occurrence" upperBound="-1" endType="//@elements.2/@elements.10"/>
+      <endPoints name="evacuation local" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.8"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="evacuation local definition" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.9"/>
+      <endPoints name="installation" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="evacuation occurrence" upperBound="-1" endType="//@elements.2/@elements.10"/>
+      <endPoints name="installation" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="evacuation at installation" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.12"/>
+      <endPoints name="installation" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="is located in" stereotype="Formal">
+      <endPoints name="installation" upperBound="-1" endType="//@elements.2/@elements.25"/>
+      <endPoints name="geographical region" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.13"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="installation" upperBound="-1" endType="//@elements.2/@elements.25"/>
+      <endPoints name="installation type" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="possesion" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.30"/>
+      <endPoints name="owner" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.2/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="belongs" stereotype="Material">
+      <endPoints name="public emergency material resource" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.15"/>
+      <endPoints name="civil defense organization" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.22"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="allocation" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.0"/>
+      <endPoints name="civil defense organization" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.22"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="complex installation" upperBound="1" endType="//@elements.2/@elements.23"/>
+      <endPoints name="installation" lowerBound="2" upperBound="-1" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="exposed to" stereotype="Formal">
+      <endPoints name="installation" upperBound="-1" endType="//@elements.2/@elements.25"/>
+      <endPoints name="emergency event with planned type" lowerBound="1" upperBound="-1" endType="//@elements.6/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="located in" stereotype="Formal">
+      <endPoints name="user" lowerBound="1" upperBound="1" endType="//@elements.4/@elements.16"/>
+      <endPoints name="installation" upperBound="-1" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="possesion" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.30"/>
+      <endPoints name="installation" lowerBound="1" upperBound="-1" endType="//@elements.2/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="internal allocation" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.11"/>
+      <endPoints name="organization holder" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.28"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="belongs" stereotype="Material">
+      <endPoints name="business emergency material resource" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.2"/>
+      <endPoints name="organization holder" lowerBound="1" upperBound="1" endType="//@elements.2/@elements.28"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.0" specific="//@elements.5/@elements.5"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.3" specific="//@elements.2/@elements.24" generalizationSet="//@elements.2/@elements.84"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.5" specific="//@elements.2/@elements.8" generalizationSet="//@elements.2/@elements.85"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.6" specific="//@elements.2/@elements.13"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.6" specific="//@elements.2/@elements.8"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.7" specific="//@elements.2/@elements.8"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.7" specific="//@elements.2/@elements.25"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.11" specific="//@elements.2/@elements.8" generalizationSet="//@elements.2/@elements.85"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.14" specific="//@elements.2/@elements.0" generalizationSet="//@elements.2/@elements.86"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.16" specific="//@elements.2/@elements.24" generalizationSet="//@elements.2/@elements.84"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.18" specific="//@elements.2/@elements.1"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.19" specific="//@elements.2/@elements.1"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.20" specific="//@elements.2/@elements.0" generalizationSet="//@elements.2/@elements.86"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.21" specific="//@elements.2/@elements.25"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.22" specific="//@elements.2/@elements.27"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.23" specific="//@elements.2/@elements.25"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.25" specific="//@elements.5/@elements.5"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.26" specific="//@elements.2/@elements.27"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.28" specific="//@elements.2/@elements.24" generalizationSet="//@elements.2/@elements.87"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.28" specific="//@elements.2/@elements.27"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.29" specific="//@elements.2/@elements.24" generalizationSet="//@elements.2/@elements.87"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.29" specific="//@elements.5/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.2/@elements.31" specific="//@elements.2/@elements.27"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-holderFunction" generalizations="//@elements.2/@elements.62 //@elements.2/@elements.70"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-evacutaionLocal" generalizations="//@elements.2/@elements.63 //@elements.2/@elements.68"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-acessInfra" generalizations="//@elements.2/@elements.69 //@elements.2/@elements.73"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-holderType" generalizations="//@elements.2/@elements.79 //@elements.2/@elements.81"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Resource, Types of Resources and Roles">
+    <elements xsi:type="menthor:Class" name="Business Emergency Material Resource Type"/>
+    <elements xsi:type="menthor:Class" name="Job Plan"/>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="business emergency material resource" upperBound="-1" endType="//@elements.4/@elements.2"/>
+      <endPoints name="business emergency material resource type" lowerBound="1" upperBound="-1" endType="//@elements.3/@elements.0"/>
+    </elements>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Human Resources and Materials">
+    <elements xsi:type="menthor:Class" name="Allocation" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Business Emergency Human Resource" isGeneralIn="//@elements.4/@elements.29" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Business Emergency Material Resource" isGeneralIn="//@elements.4/@elements.30" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Business Human Resource" isGeneralIn="//@elements.4/@elements.31" isSpecificIn="//@elements.4/@elements.29 //@elements.4/@elements.34" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Business Human Resource Role" isGeneralIn="//@elements.4/@elements.32"/>
+    <elements xsi:type="menthor:Class" name="Business Non Emergency Human Resource" isGeneralIn="//@elements.4/@elements.33 //@elements.4/@elements.34" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Emergency Human Resource Role" isGeneralIn="//@elements.4/@elements.35"/>
+    <elements xsi:type="menthor:Class" name="Emergency Team" stereotype="Collective"/>
+    <elements xsi:type="menthor:Class" name="Function of Role"/>
+    <elements xsi:type="menthor:Class" name="Human Resource" isGeneralIn="//@elements.4/@elements.36" isSpecificIn="//@elements.4/@elements.31 //@elements.4/@elements.37" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Human Resource Role" isSpecificIn="//@elements.4/@elements.32 //@elements.4/@elements.35"/>
+    <elements xsi:type="menthor:Class" name="Internal Allocation" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Material Resource" isSpecificIn="//@elements.4/@elements.30 //@elements.4/@elements.38" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Positions Plan"/>
+    <elements xsi:type="menthor:Class" name="Public Emergency Human Resource" isGeneralIn="//@elements.4/@elements.37" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Public Emergency Material Resource" isGeneralIn="//@elements.4/@elements.38" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="User" isGeneralIn="//@elements.4/@elements.39" isSpecificIn="//@elements.4/@elements.33 //@elements.4/@elements.40" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Visitor" isGeneralIn="//@elements.4/@elements.40" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Visitor Type"/>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="allocation" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.0"/>
+      <endPoints name="public emergency human resource" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.4/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="internal allocation" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.11"/>
+      <endPoints name="business human resource" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.4/@elements.3"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf">
+      <endPoints name="emergency team" lowerBound="1" upperBound="1" endType="//@elements.4/@elements.7"/>
+      <endPoints name="human resource" lowerBound="2" upperBound="-1" endType="//@elements.4/@elements.9"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="defines responsabilities for" stereotype="Formal">
+      <endPoints name="function of role" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.8"/>
+      <endPoints name="human resource role" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="located in" stereotype="Formal">
+      <endPoints name="human resource" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.9"/>
+      <endPoints name="geographical region" lowerBound="1" upperBound="1" endType="//@elements.8/@elements.9"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="human resource" upperBound="-1" endType="//@elements.4/@elements.9"/>
+      <endPoints name="human resource role" lowerBound="1" upperBound="1" endType="//@elements.4/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="defines" stereotype="Formal">
+      <endPoints name="positions plan" lowerBound="1" upperBound="1" endType="//@elements.4/@elements.13"/>
+      <endPoints name="human resource role" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="located in" stereotype="Formal">
+      <endPoints name="material resource" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.12"/>
+      <endPoints name="geographical region" lowerBound="1" upperBound="1" endType="//@elements.8/@elements.9"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="located in" stereotype="Formal">
+      <endPoints name="user" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.16"/>
+      <endPoints name="geographical region" lowerBound="1" upperBound="1" endType="//@elements.8/@elements.9"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="instantiates" stereotype="Formal">
+      <endPoints name="visitor" upperBound="-1" endType="//@elements.4/@elements.17"/>
+      <endPoints name="visitor type" lowerBound="1" upperBound="-1" endType="//@elements.4/@elements.18"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.1" specific="//@elements.4/@elements.3" generalizationSet="//@elements.4/@elements.41"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.2" specific="//@elements.4/@elements.12"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.3" specific="//@elements.4/@elements.9" generalizationSet="//@elements.4/@elements.42"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.4" specific="//@elements.4/@elements.10"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.5" specific="//@elements.4/@elements.16" generalizationSet="//@elements.4/@elements.43"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.5" specific="//@elements.4/@elements.3" generalizationSet="//@elements.4/@elements.41"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.6" specific="//@elements.4/@elements.10"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.9" specific="//@elements.5/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.14" specific="//@elements.4/@elements.9" generalizationSet="//@elements.4/@elements.42"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.15" specific="//@elements.4/@elements.12"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.16" specific="//@elements.5/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.4/@elements.17" specific="//@elements.4/@elements.16" generalizationSet="//@elements.4/@elements.43"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-businessResource" generalizations="//@elements.4/@elements.29 //@elements.4/@elements.34"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-resource" generalizations="//@elements.4/@elements.31 //@elements.4/@elements.37"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-User" generalizations="//@elements.4/@elements.33 //@elements.4/@elements.40"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Environment">
+    <elements xsi:type="menthor:Class" name="Abiotic Component" isGeneralIn="//@elements.5/@elements.45" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Action Universal"/>
+    <elements xsi:type="menthor:Class" name="Agent" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Agreement" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Biotic Component" isGeneralIn="//@elements.5/@elements.46" isSpecificIn="//@elements.5/@elements.64" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Built Component" isSpecificIn="//@elements.2/@elements.61 //@elements.2/@elements.77 //@elements.5/@elements.57" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Component" isSpecificIn="//@elements.5/@elements.58" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="EP Goal" isSpecificIn="//@elements.5/@elements.47"/>
+    <elements xsi:type="menthor:Class" name="EP Main Goal" isGeneralIn="//@elements.5/@elements.47 //@elements.5/@elements.48"/>
+    <elements xsi:type="menthor:Class" name="EP Situation Individual" isGeneralIn="//@elements.5/@elements.49"/>
+    <elements xsi:type="menthor:Class" name="Endangered Component" isGeneralIn="//@elements.5/@elements.50 //@elements.5/@elements.51" isSpecificIn="//@elements.7/@elements.46 //@elements.7/@elements.55" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Environment" isSpecificIn="//@elements.7/@elements.51 //@elements.7/@elements.56"/>
+    <elements xsi:type="menthor:Class" name="Intention" isSpecificIn="//@elements.5/@elements.53" stereotype="Mode" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Natural Component" isSpecificIn="//@elements.5/@elements.45 //@elements.5/@elements.46 //@elements.5/@elements.59" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Plan (Action Universal)" isSpecificIn="//@elements.5/@elements.54"/>
+    <elements xsi:type="menthor:Class" name="Protect Intention" isGeneralIn="//@elements.5/@elements.52 //@elements.5/@elements.53" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Protected Environment" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Protection"/>
+    <elements xsi:type="menthor:Class" name="Protection Action" isGeneralIn="//@elements.5/@elements.54"/>
+    <elements xsi:type="menthor:Class" name="Protector" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Proteger" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Safe Component" isGeneralIn="//@elements.5/@elements.55" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Situation Individual" isSpecificIn="//@elements.5/@elements.49"/>
+    <elements xsi:type="menthor:Class" name="UFO-C::Open Commitment" isSpecificIn="//@elements.5/@elements.52" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Under Protection Built Object" isGeneralIn="//@elements.5/@elements.56 //@elements.5/@elements.57" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Under Protection Component" isGeneralIn="//@elements.5/@elements.58" isSpecificIn="//@elements.5/@elements.51 //@elements.5/@elements.55 //@elements.5/@elements.56 //@elements.5/@elements.60 //@elements.5/@elements.63" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Under Protection Natural Object" isGeneralIn="//@elements.5/@elements.59 //@elements.5/@elements.60" isSpecificIn="//@elements.5/@elements.62" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Under Protection Person" isGeneralIn="//@elements.5/@elements.61 //@elements.5/@elements.62" stereotype="Role"/>
+    <elements xsi:type="menthor:Class" name="Under Protection Social Object" isGeneralIn="//@elements.5/@elements.63" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Person" isGeneralIn="//@elements.5/@elements.64" isSpecificIn="//@elements.2/@elements.82 //@elements.5/@elements.61 //@elements.4/@elements.36 //@elements.4/@elements.39"/>
+    <elements xsi:type="menthor:Relationship" name="instance of" stereotype="Formal">
+      <endPoints name="protection" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.17"/>
+      <endPoints name="action universal" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="agreement" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.3"/>
+      <endPoints name="protector" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.19"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+      <endPoints name="agreement" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.3"/>
+      <endPoints name="under protection component" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.25"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="environment" upperBound="-1" endType="//@elements.5/@elements.11"/>
+      <endPoints name="Component" lowerBound="2" upperBound="-1" endType="//@elements.5/@elements.6"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="propositional content of" stereotype="Formal">
+      <endPoints name="protect intention" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.15"/>
+      <endPoints name="ep main goal" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.8"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="satisfies" stereotype="Formal">
+      <endPoints name="situation individual" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.22"/>
+      <endPoints name="ep main goal" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.8"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+      <endPoints name="endangered component" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.10"/>
+      <endPoints name="individual vulnerability" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.7/@elements.21"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+      <endPoints name="environmental vulnerability" upperBound="-1" endType="//@elements.7/@elements.8"/>
+      <endPoints name="environment" lowerBound="1" upperBound="1" isDependency="true" endType="//@elements.5/@elements.11"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="environment" upperBound="-1" endType="//@elements.5/@elements.11"/>
+      <endPoints name="component" lowerBound="2" upperBound="-1" endType="//@elements.7/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="changes" stereotype="Formal">
+      <endPoints name="impact type" upperBound="-1" endType="//@elements.6/@elements.4"/>
+      <endPoints name="environment" upperBound="-1" endType="//@elements.5/@elements.11"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has location" stereotype="Formal">
+      <endPoints name="environment" upperBound="-1" endType="//@elements.5/@elements.11"/>
+      <endPoints name="geographical region" upperBound="-1" endType="//@elements.8/@elements.9"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="causes" stereotype="Formal">
+      <endPoints name="protect intention" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.15"/>
+      <endPoints name="protection action" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.18"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="inherents in" stereotype="Formal">
+      <endPoints name="protector" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.19"/>
+      <endPoints name="protect intention" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="caused by" stereotype="Formal">
+      <endPoints name="protection action" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.18"/>
+      <endPoints name="proteger" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.20"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="creates" stereotype="Formal">
+      <endPoints name="protection action" upperBound="-1" endType="//@elements.5/@elements.18"/>
+      <endPoints name="situation individual" lowerBound="1" upperBound="-1" endType="//@elements.5/@elements.22"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.0" specific="//@elements.5/@elements.13" generalizationSet="//@elements.5/@elements.65"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.4" specific="//@elements.5/@elements.13" generalizationSet="//@elements.5/@elements.65"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.8" specific="//@elements.5/@elements.7"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.8" specific="//@elements.1/@elements.10"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.9" specific="//@elements.5/@elements.22"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.10" specific="//@elements.7/@elements.0"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.10" specific="//@elements.5/@elements.25" generalizationSet="//@elements.5/@elements.66"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.15" specific="//@elements.5/@elements.23"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.15" specific="//@elements.5/@elements.12"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.18" specific="//@elements.5/@elements.14"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.21" specific="//@elements.5/@elements.25" generalizationSet="//@elements.5/@elements.66"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.24" specific="//@elements.5/@elements.25"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.24" specific="//@elements.5/@elements.5"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.25" specific="//@elements.5/@elements.6"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.26" specific="//@elements.5/@elements.13"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.26" specific="//@elements.5/@elements.25"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.27" specific="//@elements.5/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.27" specific="//@elements.5/@elements.26"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.28" specific="//@elements.5/@elements.25"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.5/@elements.29" specific="//@elements.5/@elements.4"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-liveness" generalizations="//@elements.5/@elements.45 //@elements.5/@elements.46"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-SituationObject" generalizations="//@elements.5/@elements.51 //@elements.5/@elements.55"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Emergency Event">
+    <elements xsi:type="menthor:Class" name="EP Plan" isGeneralIn="//@elements.6/@elements.8"/>
+    <elements xsi:type="menthor:Class" name="Emergency Event Type" isGeneralIn="//@elements.6/@elements.9" isSpecificIn="//@elements.6/@elements.10"/>
+    <elements xsi:type="menthor:Class" name="Emergency Event with Planned Type" isGeneralIn="//@elements.6/@elements.10"/>
+    <elements xsi:type="menthor:Class" name="Identified Risk" isGeneralIn="//@elements.6/@elements.11" stereotype="Relator"/>
+    <elements xsi:type="menthor:Class" name="Impact Type"/>
+    <elements xsi:type="menthor:Class" name="Risk" isSpecificIn="//@elements.6/@elements.11" stereotype="Relator"/>
+    <elements xsi:type="menthor:Relationship" name="causes" stereotype="Formal">
+      <endPoints name="emergency event type" upperBound="-1" endType="//@elements.6/@elements.1"/>
+      <endPoints name="impact type" upperBound="-1" endType="//@elements.6/@elements.4"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="generically dependent on" stereotype="Formal">
+      <endPoints name="identified risk" lowerBound="1" upperBound="-1" endType="//@elements.6/@elements.3"/>
+      <endPoints name="emergency event with planned type" upperBound="-1" endType="//@elements.6/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.6/@elements.0" specific="//@elements.1/@elements.13"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.6/@elements.1" specific="//@elements.7/@elements.9"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.6/@elements.2" specific="//@elements.6/@elements.1"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.6/@elements.3" specific="//@elements.6/@elements.5"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Risks and Planned Activities">
+    <elements xsi:type="menthor:Class" name="Component" isSpecificIn="//@elements.5/@elements.50" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Damage" isGeneralIn="//@elements.7/@elements.45"/>
+    <elements xsi:type="menthor:Class" name="Damage Type"/>
+    <elements xsi:type="menthor:Class" name="Damaged Component" isGeneralIn="//@elements.7/@elements.46 //@elements.7/@elements.47 //@elements.7/@elements.48" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Damaged Environment" isGeneralIn="//@elements.7/@elements.49 //@elements.7/@elements.50 //@elements.7/@elements.51" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Damaged Participant" isGeneralIn="//@elements.7/@elements.52" isSpecificIn="//@elements.7/@elements.48 //@elements.7/@elements.49" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Emergency Event Type"/>
+    <elements xsi:type="menthor:Class" name="Enviromental Vulnerability"/>
+    <elements xsi:type="menthor:Class" name="Environmental Vulnerability" isGeneralIn="//@elements.7/@elements.53"/>
+    <elements xsi:type="menthor:Class" name="Event Type" isSpecificIn="//@elements.6/@elements.9"/>
+    <elements xsi:type="menthor:Class" name="Hazard"/>
+    <elements xsi:type="menthor:Class" name="Hazard " stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Hazard Type"/>
+    <elements xsi:type="menthor:Class" name="Hazardous Event"/>
+    <elements xsi:type="menthor:Class" name="Hazardous Event Type"/>
+    <elements xsi:type="menthor:Class" name="Impact" isSpecificIn="//@elements.7/@elements.45"/>
+    <elements xsi:type="menthor:Class" name="Impact Type"/>
+    <elements xsi:type="menthor:Class" name="Impacted Component" isGeneralIn="//@elements.7/@elements.54 //@elements.7/@elements.55" isSpecificIn="//@elements.7/@elements.47" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Impacted Environment" isGeneralIn="//@elements.7/@elements.56 //@elements.7/@elements.57" isSpecificIn="//@elements.7/@elements.50" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Impacted Participant" isSpecificIn="//@elements.7/@elements.52 //@elements.7/@elements.54 //@elements.7/@elements.57" stereotype="RoleMixin" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Individual Vulnerability" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Individual Vulnerability" isGeneralIn="//@elements.7/@elements.58"/>
+    <elements xsi:type="menthor:Class" name="Mitigation activity" isGeneralIn="//@elements.7/@elements.59" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Preventive activity" isGeneralIn="//@elements.7/@elements.60" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Risk" isGeneralIn="//@elements.7/@elements.61"/>
+    <elements xsi:type="menthor:Class" name="Risk Type"/>
+    <elements xsi:type="menthor:Class" name="Transfer activity" isGeneralIn="//@elements.7/@elements.62" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="Vulnerability" isSpecificIn="//@elements.7/@elements.53 //@elements.7/@elements.58 //@elements.7/@elements.61"/>
+    <elements xsi:type="menthor:Relationship" name="classifies" stereotype="Formal">
+      <endPoints name="damage" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.1"/>
+      <endPoints name="damage type" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="manifested_by">
+      <endPoints name="damage" upperBound="-1" endType="//@elements.7/@elements.1"/>
+      <endPoints name="vulnerability" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.27"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Formal">
+      <endPoints name="damage" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.1"/>
+      <endPoints name="damaged" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.5"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="hazardous event" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.13"/>
+      <endPoints name="damage" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="enables" stereotype="Formal">
+      <endPoints name="hazard" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.10"/>
+      <endPoints name="damage" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="determines" stereotype="Formal">
+      <endPoints name="vulnerability" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.27"/>
+      <endPoints name="damage type" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.2"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="environmental vulnerability" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.8"/>
+      <endPoints name="individual vulnerability" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.21"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="enables" stereotype="Formal">
+      <endPoints name="preState" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.10"/>
+      <endPoints name="hazardous event" upperBound="-1" endType="//@elements.7/@elements.13"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="activates" stereotype="Formal">
+      <endPoints name="hazard" upperBound="-1" endType="//@elements.7/@elements.10"/>
+      <endPoints name="vulnerability" upperBound="-1" endType="//@elements.7/@elements.27"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Formal">
+      <endPoints name="hazardous event" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.13"/>
+      <endPoints name="hazard" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="classifies" stereotype="Formal">
+      <endPoints name="hazard type" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.12"/>
+      <endPoints name="hazard" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="">
+      <endPoints name="hazardous event" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.13"/>
+      <endPoints name="impact" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="classifies" stereotype="Formal">
+      <endPoints name="hazardous event" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.13"/>
+      <endPoints name="hazardous event type" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.14"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="can cause" stereotype="Formal">
+      <endPoints name="hazardous event type" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.14"/>
+      <endPoints name="impact type" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="classifies" stereotype="Formal">
+      <endPoints name="impact" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.15"/>
+      <endPoints name="impact type" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.16"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="participationof (changes)" stereotype="Formal">
+      <endPoints name="impacted" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.19"/>
+      <endPoints name="impact" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.15"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="classifies" stereotype="Formal">
+      <endPoints name="risk type" lowerBound="1" upperBound="1" endType="//@elements.7/@elements.25"/>
+      <endPoints name="risk" lowerBound="1" upperBound="-1" endType="//@elements.7/@elements.24"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.1" specific="//@elements.7/@elements.15"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.3" specific="//@elements.5/@elements.10"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.3" specific="//@elements.7/@elements.17"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.3" specific="//@elements.7/@elements.5"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.4" specific="//@elements.7/@elements.5"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.4" specific="//@elements.7/@elements.18"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.4" specific="//@elements.5/@elements.11"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.5" specific="//@elements.7/@elements.19"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.8" specific="//@elements.7/@elements.27" generalizationSet="//@elements.7/@elements.63"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.17" specific="//@elements.7/@elements.19"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.17" specific="//@elements.5/@elements.10"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.18" specific="//@elements.5/@elements.11"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.18" specific="//@elements.7/@elements.19"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.21" specific="//@elements.7/@elements.27" generalizationSet="//@elements.7/@elements.63"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.22" specific="//@elements.0/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.23" specific="//@elements.0/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.24" specific="//@elements.7/@elements.27" generalizationSet="//@elements.7/@elements.64"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.7/@elements.26" specific="//@elements.0/@elements.29"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-Vulnerability" generalizations="//@elements.7/@elements.53 //@elements.7/@elements.58"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-LevelOfVulnerability" generalizations="//@elements.7/@elements.61"/>
+  </elements>
+  <elements xsi:type="menthor:Package" name="Geographical Region">
+    <elements xsi:type="menthor:Class" name="Authority" isSpecificIn="//@elements.8/@elements.25" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Geographical Point" isGeneralIn="//@elements.8/@elements.20" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Jurisdiction" isGeneralIn="//@elements.8/@elements.21" isSpecificIn="//@elements.8/@elements.26" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Macro Political Region" isGeneralIn="//@elements.8/@elements.22" stereotype="Category" isAbstract="true">
+      <attributes name="name" lowerBound="1" upperBound="1"/>
+    </elements>
+    <elements xsi:type="menthor:Class" name="Micro Political Region" isGeneralIn="//@elements.8/@elements.23" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Non Political Region" isGeneralIn="//@elements.8/@elements.24" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Political Body" isGeneralIn="//@elements.8/@elements.25" stereotype="Category" isAbstract="true">
+      <attributes name="name" lowerBound="1" upperBound="1"/>
+    </elements>
+    <elements xsi:type="menthor:Class" name="Political Region" isGeneralIn="//@elements.8/@elements.26 //@elements.8/@elements.27" isSpecificIn="//@elements.8/@elements.22 //@elements.8/@elements.23" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Spatial Location" isSpecificIn="//@elements.8/@elements.20 //@elements.8/@elements.28" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Geographical Region" isGeneralIn="//@elements.8/@elements.28" isSpecificIn="//@elements.8/@elements.21 //@elements.8/@elements.24 //@elements.8/@elements.27" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:DataType" name="Adress Domain" stereotype="DataType"/>
+    <elements xsi:type="menthor:DataType" name="Location Coordinates" stereotype="DataType">
+      <attributes name="altitude" lowerBound="1" upperBound="1"/>
+      <attributes name="latitude" lowerBound="1" upperBound="1"/>
+      <attributes name="longitude" lowerBound="1" upperBound="1"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="controlled by" stereotype="Material">
+      <endPoints name="jurisdiction" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.2"/>
+      <endPoints name="authority" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.0"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has location" stereotype="Formal">
+      <endPoints name="geographical point" upperBound="-1" endType="//@elements.8/@elements.1"/>
+      <endPoints name="location coordinates" lowerBound="1" upperBound="1" endType="//@elements.8/@elements.11"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Formal">
+      <endPoints name="micro political region" upperBound="-1" endType="//@elements.8/@elements.4"/>
+      <endPoints name="adress domain" lowerBound="1" upperBound="1" endType="//@elements.8/@elements.10"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="is subordinated to" stereotype="Material">
+      <endPoints name="political body" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.6"/>
+      <endPoints name="political body" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.6"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="controlled by" stereotype="Material">
+      <endPoints name="political region" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.7"/>
+      <endPoints name="political body" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.6"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has location" stereotype="Formal">
+      <endPoints name="spatialLocation" upperBound="-1" endType="//@elements.8/@elements.8"/>
+      <endPoints name="location coordinates" lowerBound="1" upperBound="-1" endType="//@elements.8/@elements.11"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="spatially subsumes" stereotype="Formal">
+      <endPoints name="spatial location" upperBound="-1" endType="//@elements.8/@elements.8"/>
+      <endPoints name="spatial location" upperBound="-1" endType="//@elements.8/@elements.8"/>
+    </elements>
+    <elements xsi:type="menthor:Relationship" name="has location" stereotype="Formal">
+      <endPoints name="geographical region" upperBound="-1" endType="//@elements.8/@elements.9"/>
+      <endPoints name="location coordinates" lowerBound="2" upperBound="-1" endType="//@elements.8/@elements.11"/>
+    </elements>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.1" specific="//@elements.8/@elements.8" generalizationSet="//@elements.8/@elements.29"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.2" specific="//@elements.8/@elements.9"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.3" specific="//@elements.8/@elements.7" generalizationSet="//@elements.8/@elements.30"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.4" specific="//@elements.8/@elements.7" generalizationSet="//@elements.8/@elements.30"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.5" specific="//@elements.8/@elements.9" generalizationSet="//@elements.8/@elements.31"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.6" specific="//@elements.8/@elements.0"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.7" specific="//@elements.8/@elements.2"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.7" specific="//@elements.8/@elements.9" generalizationSet="//@elements.8/@elements.31"/>
+    <elements xsi:type="menthor:Generalization" general="//@elements.8/@elements.9" specific="//@elements.8/@elements.8" generalizationSet="//@elements.8/@elements.29"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-spatial" generalizations="//@elements.8/@elements.20 //@elements.8/@elements.28"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-politicalRegion" generalizations="//@elements.8/@elements.22 //@elements.8/@elements.23"/>
+    <elements xsi:type="menthor:GeneralizationSet" name="gs-geographicalRegion" generalizations="//@elements.8/@elements.24 //@elements.8/@elements.27"/>
+  </elements>
+</menthor:Model>

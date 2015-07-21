@@ -1,0 +1,30 @@
+
+
+--context Relationship --(Derivation)
+--
+---- A derivation relationship must be binary 
+--inv C14: isDerivation() implies isBinary()
+--
+---- A derivation relationship must have as its source a material relationship 
+--inv C15: isDerivation() implies not sourceRelationship().oclIsUndefined() and sourceRelationship().isMaterial()
+--
+---- A derivation relationship must have as its target a truth maker class e.g. a relator
+--inv C16: isDerivation() implies not targetClass().oclIsUndefined() and targetClass().isTruthMaker()
+--
+----========================================
+--
+--context Structure
+--
+---- A reference structure, if grounded, must be grounded in a Enumeration
+--inv C18: not groundedEnumeration.oclIsUndefined() implies groundedEnumeration.isEnumeration()
+--
+----========================================
+--
+--context Dimension
+--
+---- A Dimension might define only a basic (primitive) Region as lower bound
+--inv C19: upperBound.oclIsUndefined() implies upperBound.isBasic()
+--
+---- A Dimension might define only a basic (primitive) Region as upper bound 
+--inv C20: lowerBound.oclIsUndefined() implies lowerBound.isBasic()
+ 

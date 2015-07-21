@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: net.menthor.onto2.mapping.ref2ontouml
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Export-Package: net.menthor.onto2.mapping.ref2ontouml
+Bundle-Vendor: %providerName
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ com.google.guava,
+ org.eclipse.ocl;bundle-version="3.4.2",
+ org.eclipse.ocl.ecore;bundle-version="3.3.100"
