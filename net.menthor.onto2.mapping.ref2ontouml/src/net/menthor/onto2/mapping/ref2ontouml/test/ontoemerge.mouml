@@ -30,7 +30,7 @@
     <elements xsi:type="menthor:Class" name="Goal"/>
     <elements xsi:type="menthor:Class" name="Intention (Internal Commitment)" stereotype="Mode" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.0/@elements.90 //@elements.0/@elements.94" stereotype="Mode"/>
-    <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.7/@elements.59 //@elements.7/@elements.60 //@elements.7/@elements.62 //@elements.0/@elements.91 //@elements.0/@elements.95" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.0/@elements.91 //@elements.0/@elements.95 //@elements.7/@elements.59 //@elements.7/@elements.60 //@elements.7/@elements.62" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="OE Activity Goal"/>
     <elements xsi:type="menthor:Class" name="OE Activity Goal"/>
     <elements xsi:type="menthor:Class" name="OE Process" isSpecificIn="//@elements.0/@elements.98 //@elements.0/@elements.104" stereotype="Mode"/>
@@ -585,7 +585,7 @@
     <elements xsi:type="menthor:Class" name="Agent" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="Agreement" stereotype="Relator"/>
     <elements xsi:type="menthor:Class" name="Biotic Component" isGeneralIn="//@elements.5/@elements.46" isSpecificIn="//@elements.5/@elements.64" stereotype="Category" isAbstract="true"/>
-    <elements xsi:type="menthor:Class" name="Built Component" isSpecificIn="//@elements.2/@elements.61 //@elements.2/@elements.77 //@elements.5/@elements.57" stereotype="Category" isAbstract="true"/>
+    <elements xsi:type="menthor:Class" name="Built Component" isSpecificIn="//@elements.5/@elements.57 //@elements.2/@elements.61 //@elements.2/@elements.77" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="Component" isSpecificIn="//@elements.5/@elements.58" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="EP Goal" isSpecificIn="//@elements.5/@elements.47"/>
     <elements xsi:type="menthor:Class" name="EP Main Goal" isGeneralIn="//@elements.5/@elements.47 //@elements.5/@elements.48"/>
@@ -609,7 +609,7 @@
     <elements xsi:type="menthor:Class" name="Under Protection Natural Object" isGeneralIn="//@elements.5/@elements.59 //@elements.5/@elements.60" isSpecificIn="//@elements.5/@elements.62" stereotype="RoleMixin" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="Under Protection Person" isGeneralIn="//@elements.5/@elements.61 //@elements.5/@elements.62" stereotype="Role"/>
     <elements xsi:type="menthor:Class" name="Under Protection Social Object" isGeneralIn="//@elements.5/@elements.63" stereotype="RoleMixin" isAbstract="true"/>
-    <elements xsi:type="menthor:Class" name="Person" isGeneralIn="//@elements.5/@elements.64" isSpecificIn="//@elements.2/@elements.82 //@elements.5/@elements.61 //@elements.4/@elements.36 //@elements.4/@elements.39"/>
+    <elements xsi:type="menthor:Class" name="Person" isGeneralIn="//@elements.5/@elements.64" isSpecificIn="//@elements.5/@elements.61 //@elements.4/@elements.36 //@elements.4/@elements.39 //@elements.2/@elements.82"/>
     <elements xsi:type="menthor:Relationship" name="instance of" stereotype="Formal">
       <endPoints name="protection" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.17"/>
       <endPoints name="action universal" lowerBound="1" upperBound="1" endType="//@elements.5/@elements.1"/>

@@ -9,8 +9,6 @@ import java.util.List;
 import net.menthor.onto2.ontouml.OntoumlFactory;
 import net.menthor.onto2.ontouml.OntoumlPackage;
 import net.menthor.onto2.ontouml.Relationship;
-import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -263,7 +261,10 @@ public class RelationshipItemProvider extends ClassifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Relationship)object);
+		String label = ((Relationship)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Relationship_type") :
+			getString("_UI_Relationship_type") + " " + label;
 	}
 	
 
