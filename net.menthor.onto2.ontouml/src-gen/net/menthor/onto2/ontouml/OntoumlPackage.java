@@ -1529,13 +1529,67 @@ public interface OntoumlPackage extends EPackage {
 	int ATTRIBUTE_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Is Integer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE___IS_INTEGER = PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Boolean</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE___IS_BOOLEAN = PROPERTY_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Real</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE___IS_REAL = PROPERTY_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Is Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE___IS_DATE = PROPERTY_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Date Time</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE___IS_DATE_TIME = PROPERTY_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is String</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE___IS_STRING = PROPERTY_OPERATION_COUNT + 5;
+
+	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_OPERATION_COUNT = PROPERTY_OPERATION_COUNT + 0;
+	int ATTRIBUTE_OPERATION_COUNT = PROPERTY_OPERATION_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.onto2.ontouml.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -2667,13 +2721,40 @@ public interface OntoumlPackage extends EPackage {
 	int CLASS___IS_SEMI_RIGID = TYPE_OPERATION_COUNT + 18;
 
 	/**
+	 * The operation id for the '<em>Is Perceivable Quality</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_PERCEIVABLE_QUALITY = TYPE_OPERATION_COUNT + 19;
+
+	/**
+	 * The operation id for the '<em>Is Non Perceivable Quality</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_NON_PERCEIVABLE_QUALITY = TYPE_OPERATION_COUNT + 20;
+
+	/**
+	 * The operation id for the '<em>Is Nominal Quality</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_NOMINAL_QUALITY = TYPE_OPERATION_COUNT + 21;
+
+	/**
 	 * The operation id for the '<em>Is Substance Sortal Class</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_SUBSTANCE_SORTAL_CLASS = TYPE_OPERATION_COUNT + 19;
+	int CLASS___IS_SUBSTANCE_SORTAL_CLASS = TYPE_OPERATION_COUNT + 22;
 
 	/**
 	 * The operation id for the '<em>Is Moment Class</em>' operation.
@@ -2682,7 +2763,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_MOMENT_CLASS = TYPE_OPERATION_COUNT + 20;
+	int CLASS___IS_MOMENT_CLASS = TYPE_OPERATION_COUNT + 23;
 
 	/**
 	 * The operation id for the '<em>Is Identity Provider Class</em>' operation.
@@ -2691,7 +2772,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_IDENTITY_PROVIDER_CLASS = TYPE_OPERATION_COUNT + 21;
+	int CLASS___IS_IDENTITY_PROVIDER_CLASS = TYPE_OPERATION_COUNT + 24;
 
 	/**
 	 * The operation id for the '<em>Is Mixin Class</em>' operation.
@@ -2700,7 +2781,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_MIXIN_CLASS = TYPE_OPERATION_COUNT + 22;
+	int CLASS___IS_MIXIN_CLASS = TYPE_OPERATION_COUNT + 25;
 
 	/**
 	 * The operation id for the '<em>Is Anti Rigid Mixin Class</em>' operation.
@@ -2709,7 +2790,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_ANTI_RIGID_MIXIN_CLASS = TYPE_OPERATION_COUNT + 23;
+	int CLASS___IS_ANTI_RIGID_MIXIN_CLASS = TYPE_OPERATION_COUNT + 26;
 
 	/**
 	 * The operation id for the '<em>Is Amount Of Matter</em>' operation.
@@ -2718,7 +2799,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_AMOUNT_OF_MATTER = TYPE_OPERATION_COUNT + 24;
+	int CLASS___IS_AMOUNT_OF_MATTER = TYPE_OPERATION_COUNT + 27;
 
 	/**
 	 * The operation id for the '<em>Is Functional Complex</em>' operation.
@@ -2727,7 +2808,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_FUNCTIONAL_COMPLEX = TYPE_OPERATION_COUNT + 25;
+	int CLASS___IS_FUNCTIONAL_COMPLEX = TYPE_OPERATION_COUNT + 28;
 
 	/**
 	 * The operation id for the '<em>Is Collection</em>' operation.
@@ -2736,7 +2817,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_COLLECTION = TYPE_OPERATION_COUNT + 26;
+	int CLASS___IS_COLLECTION = TYPE_OPERATION_COUNT + 29;
 
 	/**
 	 * The operation id for the '<em>Is Moment</em>' operation.
@@ -2745,7 +2826,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_MOMENT = TYPE_OPERATION_COUNT + 27;
+	int CLASS___IS_MOMENT = TYPE_OPERATION_COUNT + 30;
 
 	/**
 	 * The operation id for the '<em>Is Truth Maker</em>' operation.
@@ -2754,7 +2835,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_TRUTH_MAKER = TYPE_OPERATION_COUNT + 28;
+	int CLASS___IS_TRUTH_MAKER = TYPE_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Is Non Qualitative Intrinsic Moment</em>' operation.
@@ -2763,7 +2844,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 29;
+	int CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 32;
 
 	/**
 	 * The operation id for the '<em>Identity Providers At All Parents</em>' operation.
@@ -2772,7 +2853,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS = TYPE_OPERATION_COUNT + 30;
+	int CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS = TYPE_OPERATION_COUNT + 33;
 
 	/**
 	 * The operation id for the '<em>Identity Providers At All Children</em>' operation.
@@ -2781,7 +2862,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN = TYPE_OPERATION_COUNT + 31;
+	int CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN = TYPE_OPERATION_COUNT + 34;
 
 	/**
 	 * The operation id for the '<em>Identity Providers</em>' operation.
@@ -2790,7 +2871,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS = TYPE_OPERATION_COUNT + 32;
+	int CLASS___IDENTITY_PROVIDERS = TYPE_OPERATION_COUNT + 35;
 
 	/**
 	 * The number of operations of the '<em>Class</em>' class.
@@ -2799,7 +2880,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_COUNT = TYPE_OPERATION_COUNT + 33;
+	int CLASS_OPERATION_COUNT = TYPE_OPERATION_COUNT + 36;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.onto2.ontouml.impl.EndPointImpl <em>End Point</em>}' class.
@@ -4701,6 +4782,66 @@ public interface OntoumlPackage extends EPackage {
 	EReference getAttribute_Owner();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Attribute#isInteger() <em>Is Integer</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Integer</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Attribute#isInteger()
+	 * @generated
+	 */
+	EOperation getAttribute__IsInteger();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Attribute#isBoolean() <em>Is Boolean</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Boolean</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Attribute#isBoolean()
+	 * @generated
+	 */
+	EOperation getAttribute__IsBoolean();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Attribute#isReal() <em>Is Real</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Real</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Attribute#isReal()
+	 * @generated
+	 */
+	EOperation getAttribute__IsReal();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Attribute#isDate() <em>Is Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Date</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Attribute#isDate()
+	 * @generated
+	 */
+	EOperation getAttribute__IsDate();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Attribute#isDateTime() <em>Is Date Time</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Date Time</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Attribute#isDateTime()
+	 * @generated
+	 */
+	EOperation getAttribute__IsDateTime();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Attribute#isString() <em>Is String</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is String</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Attribute#isString()
+	 * @generated
+	 */
+	EOperation getAttribute__IsString();
+
+	/**
 	 * Returns the meta object for class '{@link net.menthor.onto2.ontouml.Constraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5423,6 +5564,36 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getClass__IsSemiRigid();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isPerceivableQuality() <em>Is Perceivable Quality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Perceivable Quality</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Class#isPerceivableQuality()
+	 * @generated
+	 */
+	EOperation getClass__IsPerceivableQuality();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isNonPerceivableQuality() <em>Is Non Perceivable Quality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Non Perceivable Quality</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Class#isNonPerceivableQuality()
+	 * @generated
+	 */
+	EOperation getClass__IsNonPerceivableQuality();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isNominalQuality() <em>Is Nominal Quality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Nominal Quality</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Class#isNominalQuality()
+	 * @generated
+	 */
+	EOperation getClass__IsNominalQuality();
 
 	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isSubstanceSortalClass() <em>Is Substance Sortal Class</em>}' operation.
@@ -7071,6 +7242,54 @@ public interface OntoumlPackage extends EPackage {
 		EReference ATTRIBUTE__OWNER = eINSTANCE.getAttribute_Owner();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Integer</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE___IS_INTEGER = eINSTANCE.getAttribute__IsInteger();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Boolean</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE___IS_BOOLEAN = eINSTANCE.getAttribute__IsBoolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Real</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE___IS_REAL = eINSTANCE.getAttribute__IsReal();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE___IS_DATE = eINSTANCE.getAttribute__IsDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Date Time</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE___IS_DATE_TIME = eINSTANCE.getAttribute__IsDateTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Is String</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ATTRIBUTE___IS_STRING = eINSTANCE.getAttribute__IsString();
+
+		/**
 		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.impl.ConstraintImpl <em>Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7637,6 +7856,30 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CLASS___IS_SEMI_RIGID = eINSTANCE.getClass__IsSemiRigid();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Perceivable Quality</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_PERCEIVABLE_QUALITY = eINSTANCE.getClass__IsPerceivableQuality();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Non Perceivable Quality</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_NON_PERCEIVABLE_QUALITY = eINSTANCE.getClass__IsNonPerceivableQuality();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Nominal Quality</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_NOMINAL_QUALITY = eINSTANCE.getClass__IsNominalQuality();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Substance Sortal Class</b></em>' operation.

@@ -136,12 +136,26 @@ public class OntoumlPrintHelper {
 	{		
 		if (elem instanceof Model) return getStereotypeAndName(elem, false, false);
 		if (elem instanceof Package) return getStereotypeAndName(elem, false, false);		
-		if (elem instanceof Classifier) return getStereotypeAndName(elem, true, false);		
+		if (elem instanceof Class || elem instanceof DataType)return getStereotypeAndName(elem, true, false);		
+		if (elem instanceof Relationship)
+		{
+			Relationship a = (Relationship) elem;
+			String result = getStereotypeAndName(elem,true, false)+" {";
+			int i=1;
+			for(EndPoint ep: a.getEndPoints()){
+				if(i<a.getEndPoints().size())
+					result += getName(ep.getEndType())+" -> ";
+				else 
+					result += getName(ep.getEndType())+"}";
+				i++;
+			}
+			return result;
+		}
 		if (elem instanceof Generalization)
 		{
 			String result = new String();		    
 		    Generalization g = (Generalization)elem;
-		    result += getStereotype(elem)+" {"+getName(g.getGeneral())+" <- "+getName(g.getSpecific())+"}";
+		    result += getStereotype(elem)+" {"+getName(g.getSpecific())+" -> "+getName(g.getGeneral())+"}";
 		    return result;
 		}
 		if (elem instanceof GeneralizationSet)
@@ -169,7 +183,7 @@ public class OntoumlPrintHelper {
 		if (elem instanceof EndPoint)
 		{
 			EndPoint p = (EndPoint)elem;
-			return getStereotype(p)+" "+getName(p.getEndType())+" ("+getName(p)+")"+" ["+getMultiplicity(p,true,"..")+"]";						
+			return getStereotype(p)+" ("+getName(p)+") "+getName(p.getEndType()) +" ["+getMultiplicity(p,true,"..")+"]";						
 		}
 		if (elem instanceof Literal)
 		{

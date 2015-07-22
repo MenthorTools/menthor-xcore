@@ -5,7 +5,6 @@ package net.menthor.onto2.ontouml.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import net.menthor.onto2.ontouml.OntoumlPackage;
 import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 

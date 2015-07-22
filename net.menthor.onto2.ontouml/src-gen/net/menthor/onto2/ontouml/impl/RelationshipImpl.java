@@ -40,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.RelationshipImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.RelationshipImpl#getReflexivity <em>Reflexivity</em>}</li>
@@ -50,7 +51,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.menthor.onto2.ontouml.impl.RelationshipImpl#getTemporalNature <em>Temporal Nature</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.RelationshipImpl#getParticipationNature <em>Participation Nature</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

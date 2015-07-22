@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#getReflexivity <em>Reflexivity</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#getTemporalNature <em>Temporal Nature</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#getParticipationNature <em>Participation Nature</em>}</li>
  * </ul>
- * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getRelationship()
  * @model

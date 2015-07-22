@@ -2,6 +2,10 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
+import com.google.common.base.Objects;
+
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import net.menthor.onto2.ontouml.Attribute;
@@ -28,6 +32,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getSynonyms <em>Synonyms</em>}</li>
@@ -35,7 +40,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.AttributeImpl#getOwner <em>Owner</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -241,6 +245,66 @@ public class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isInteger() {
+		PrimitiveStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, PrimitiveStereotype.INTEGER);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isBoolean() {
+		PrimitiveStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, PrimitiveStereotype.BOOLEAN);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isReal() {
+		PrimitiveStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, PrimitiveStereotype.REAL);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDate() {
+		PrimitiveStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, PrimitiveStereotype.DATE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDateTime() {
+		PrimitiveStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, PrimitiveStereotype.DATE_TIME);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isString() {
+		PrimitiveStereotype _stereotype = this.getStereotype();
+		return Objects.equal(_stereotype, PrimitiveStereotype.STRING);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -380,6 +444,30 @@ public class AttributeImpl extends PropertyImpl implements Attribute {
 				return basicGetOwner() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case OntoumlPackage.ATTRIBUTE___IS_INTEGER:
+				return isInteger();
+			case OntoumlPackage.ATTRIBUTE___IS_BOOLEAN:
+				return isBoolean();
+			case OntoumlPackage.ATTRIBUTE___IS_REAL:
+				return isReal();
+			case OntoumlPackage.ATTRIBUTE___IS_DATE:
+				return isDate();
+			case OntoumlPackage.ATTRIBUTE___IS_DATE_TIME:
+				return isDateTime();
+			case OntoumlPackage.ATTRIBUTE___IS_STRING:
+				return isString();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

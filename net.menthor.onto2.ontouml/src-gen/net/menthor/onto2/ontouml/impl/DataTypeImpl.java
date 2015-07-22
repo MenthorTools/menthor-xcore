@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.DataTypeImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.DataTypeImpl#getDimensions <em>Dimensions</em>}</li>
@@ -47,7 +48,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.menthor.onto2.ontouml.impl.DataTypeImpl#getLiterals <em>Literals</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.DataTypeImpl#getStructure <em>Structure</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

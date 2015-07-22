@@ -966,6 +966,60 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getAttribute__IsInteger() {
+		return attributeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAttribute__IsBoolean() {
+		return attributeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAttribute__IsReal() {
+		return attributeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAttribute__IsDate() {
+		return attributeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAttribute__IsDateTime() {
+		return attributeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAttribute__IsString() {
+		return attributeEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConstraint() {
 		return constraintEClass;
 	}
@@ -1596,7 +1650,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsSubstanceSortalClass() {
+	public EOperation getClass__IsPerceivableQuality() {
 		return classEClass.getEOperations().get(19);
 	}
 
@@ -1605,7 +1659,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsMomentClass() {
+	public EOperation getClass__IsNonPerceivableQuality() {
 		return classEClass.getEOperations().get(20);
 	}
 
@@ -1614,7 +1668,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsIdentityProviderClass() {
+	public EOperation getClass__IsNominalQuality() {
 		return classEClass.getEOperations().get(21);
 	}
 
@@ -1623,7 +1677,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsMixinClass() {
+	public EOperation getClass__IsSubstanceSortalClass() {
 		return classEClass.getEOperations().get(22);
 	}
 
@@ -1632,7 +1686,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsAntiRigidMixinClass() {
+	public EOperation getClass__IsMomentClass() {
 		return classEClass.getEOperations().get(23);
 	}
 
@@ -1641,7 +1695,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsAmountOfMatter() {
+	public EOperation getClass__IsIdentityProviderClass() {
 		return classEClass.getEOperations().get(24);
 	}
 
@@ -1650,7 +1704,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsFunctionalComplex() {
+	public EOperation getClass__IsMixinClass() {
 		return classEClass.getEOperations().get(25);
 	}
 
@@ -1659,7 +1713,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsCollection() {
+	public EOperation getClass__IsAntiRigidMixinClass() {
 		return classEClass.getEOperations().get(26);
 	}
 
@@ -1668,7 +1722,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsMoment() {
+	public EOperation getClass__IsAmountOfMatter() {
 		return classEClass.getEOperations().get(27);
 	}
 
@@ -1677,7 +1731,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsTruthMaker() {
+	public EOperation getClass__IsFunctionalComplex() {
 		return classEClass.getEOperations().get(28);
 	}
 
@@ -1686,7 +1740,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IsNonQualitativeIntrinsicMoment() {
+	public EOperation getClass__IsCollection() {
 		return classEClass.getEOperations().get(29);
 	}
 
@@ -1695,7 +1749,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IdentityProvidersAtAllParents() {
+	public EOperation getClass__IsMoment() {
 		return classEClass.getEOperations().get(30);
 	}
 
@@ -1704,7 +1758,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IdentityProvidersAtAllChildren() {
+	public EOperation getClass__IsTruthMaker() {
 		return classEClass.getEOperations().get(31);
 	}
 
@@ -1713,8 +1767,35 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getClass__IdentityProviders() {
+	public EOperation getClass__IsNonQualitativeIntrinsicMoment() {
 		return classEClass.getEOperations().get(32);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getClass__IdentityProvidersAtAllParents() {
+		return classEClass.getEOperations().get(33);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getClass__IdentityProvidersAtAllChildren() {
+		return classEClass.getEOperations().get(34);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getClass__IdentityProviders() {
+		return classEClass.getEOperations().get(35);
 	}
 
 	/**
@@ -2648,6 +2729,12 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		createEAttribute(attributeEClass, ATTRIBUTE__TEXT);
 		createEAttribute(attributeEClass, ATTRIBUTE__STEREOTYPE);
 		createEReference(attributeEClass, ATTRIBUTE__OWNER);
+		createEOperation(attributeEClass, ATTRIBUTE___IS_INTEGER);
+		createEOperation(attributeEClass, ATTRIBUTE___IS_BOOLEAN);
+		createEOperation(attributeEClass, ATTRIBUTE___IS_REAL);
+		createEOperation(attributeEClass, ATTRIBUTE___IS_DATE);
+		createEOperation(attributeEClass, ATTRIBUTE___IS_DATE_TIME);
+		createEOperation(attributeEClass, ATTRIBUTE___IS_STRING);
 
 		constraintEClass = createEClass(CONSTRAINT);
 		createEAttribute(constraintEClass, CONSTRAINT__STEREOTYPE);
@@ -2722,6 +2809,9 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		createEOperation(classEClass, CLASS___IS_NON_RIGID);
 		createEOperation(classEClass, CLASS___IS_ANTI_RIGID);
 		createEOperation(classEClass, CLASS___IS_SEMI_RIGID);
+		createEOperation(classEClass, CLASS___IS_PERCEIVABLE_QUALITY);
+		createEOperation(classEClass, CLASS___IS_NON_PERCEIVABLE_QUALITY);
+		createEOperation(classEClass, CLASS___IS_NOMINAL_QUALITY);
 		createEOperation(classEClass, CLASS___IS_SUBSTANCE_SORTAL_CLASS);
 		createEOperation(classEClass, CLASS___IS_MOMENT_CLASS);
 		createEOperation(classEClass, CLASS___IS_IDENTITY_PROVIDER_CLASS);
@@ -3022,6 +3112,18 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		initEAttribute(getAttribute_Stereotype(), this.getPrimitiveStereotype(), "stereotype", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttribute_Owner(), this.getType(), this.getType_Attributes(), "owner", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getAttribute__IsInteger(), theEcorePackage.getEBoolean(), "isInteger", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAttribute__IsBoolean(), theEcorePackage.getEBoolean(), "isBoolean", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAttribute__IsReal(), theEcorePackage.getEBoolean(), "isReal", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAttribute__IsDate(), theEcorePackage.getEBoolean(), "isDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAttribute__IsDateTime(), theEcorePackage.getEBoolean(), "isDateTime", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAttribute__IsString(), theEcorePackage.getEBoolean(), "isString", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstraint_Stereotype(), this.getConstraintSteteotype(), "stereotype", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraint_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3137,6 +3239,12 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		initEOperation(getClass__IsAntiRigid(), theEcorePackage.getEBoolean(), "isAntiRigid", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getClass__IsSemiRigid(), theEcorePackage.getEBoolean(), "isSemiRigid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getClass__IsPerceivableQuality(), theEcorePackage.getEBoolean(), "isPerceivableQuality", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getClass__IsNonPerceivableQuality(), theEcorePackage.getEBoolean(), "isNonPerceivableQuality", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getClass__IsNominalQuality(), theEcorePackage.getEBoolean(), "isNominalQuality", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getClass__IsSubstanceSortalClass(), theEcorePackage.getEBoolean(), "isSubstanceSortalClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

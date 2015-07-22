@@ -33,6 +33,7 @@ public class OntoumlTests extends TestSuite {
 		TestSuite suite = new OntoumlTests("ontouml Tests");
 		suite.addTestSuite(ModelTest.class);
 		suite.addTestSuite(PackageTest.class);
+		suite.addTestSuite(AttributeTest.class);
 		suite.addTestSuite(ConstraintTest.class);
 		suite.addTestSuite(DataTypeTest.class);
 		suite.addTestSuite(ClassTest.class);

@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#isIsAbstract <em>Is Abstract</em>}</li>
@@ -41,7 +42,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#getExistence <em>Existence</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#getClassification <em>Classification</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -637,6 +637,84 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 */
 	public boolean isSemiRigid() {
 		return this.isMixin();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isPerceivableQuality() {
+		boolean _and = false;
+		boolean _and_1 = false;
+		boolean _isQuality = this.isQuality();
+		if (!_isQuality) {
+			_and_1 = false;
+		} else {
+			QualityNature _qualityNature = this.getQualityNature();
+			boolean _notEquals = (!Objects.equal(_qualityNature, null));
+			_and_1 = _notEquals;
+		}
+		if (!_and_1) {
+			_and = false;
+		} else {
+			QualityNature _qualityNature_1 = this.getQualityNature();
+			boolean _equals = Objects.equal(_qualityNature_1, QualityNature.PERCEIVABLE);
+			_and = _equals;
+		}
+		return _and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNonPerceivableQuality() {
+		boolean _and = false;
+		boolean _and_1 = false;
+		boolean _isQuality = this.isQuality();
+		if (!_isQuality) {
+			_and_1 = false;
+		} else {
+			QualityNature _qualityNature = this.getQualityNature();
+			boolean _notEquals = (!Objects.equal(_qualityNature, null));
+			_and_1 = _notEquals;
+		}
+		if (!_and_1) {
+			_and = false;
+		} else {
+			QualityNature _qualityNature_1 = this.getQualityNature();
+			boolean _equals = Objects.equal(_qualityNature_1, QualityNature.NON_PERCEIVABLE);
+			_and = _equals;
+		}
+		return _and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNominalQuality() {
+		boolean _and = false;
+		boolean _and_1 = false;
+		boolean _isQuality = this.isQuality();
+		if (!_isQuality) {
+			_and_1 = false;
+		} else {
+			QualityNature _qualityNature = this.getQualityNature();
+			boolean _notEquals = (!Objects.equal(_qualityNature, null));
+			_and_1 = _notEquals;
+		}
+		if (!_and_1) {
+			_and = false;
+		} else {
+			QualityNature _qualityNature_1 = this.getQualityNature();
+			boolean _equals = Objects.equal(_qualityNature_1, QualityNature.NOMINAL);
+			_and = _equals;
+		}
+		return _and;
 	}
 
 	/**
@@ -1416,6 +1494,12 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 				return isAntiRigid();
 			case OntoumlPackage.CLASS___IS_SEMI_RIGID:
 				return isSemiRigid();
+			case OntoumlPackage.CLASS___IS_PERCEIVABLE_QUALITY:
+				return isPerceivableQuality();
+			case OntoumlPackage.CLASS___IS_NON_PERCEIVABLE_QUALITY:
+				return isNonPerceivableQuality();
+			case OntoumlPackage.CLASS___IS_NOMINAL_QUALITY:
+				return isNominalQuality();
 			case OntoumlPackage.CLASS___IS_SUBSTANCE_SORTAL_CLASS:
 				return isSubstanceSortalClass();
 			case OntoumlPackage.CLASS___IS_MOMENT_CLASS:

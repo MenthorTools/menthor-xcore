@@ -9,13 +9,15 @@
          <command
                commandId="net.menthor.onto2.mapping.ref2ontouml.convert"
                icon="icon/menthor.png"
-               label="Convert to OntoUML 2.0 (*.mouml)"
+               label="Convert to OntoUML 2.0"
                style="push">
             <visibleWhen
-                  checkEnabled="true">
+                  checkEnabled="false">
                <with
                      variable="activeMenuSelection">
-                  <iterate>
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
                      <adapt
                            type="org.eclipse.core.resources.IResource">
                         <test
@@ -33,7 +35,7 @@
          point="org.eclipse.ui.commands">
       <command
             defaultHandler="net.menthor.onto2.mapping.ref2ontouml.DefaultHandler"
-            id="net.menthor.onto2.mapping.ref2ontouml.handler"
+            id="net.menthor.onto2.mapping.ref2ontouml.convert"
             name="Convert">
       </command>
    </extension>

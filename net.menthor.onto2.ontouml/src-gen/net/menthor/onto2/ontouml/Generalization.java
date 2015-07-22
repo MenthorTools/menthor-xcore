@@ -10,12 +10,12 @@ package net.menthor.onto2.ontouml;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Generalization#getGeneral <em>General</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Generalization#getSpecific <em>Specific</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Generalization#getGeneralizationSet <em>Generalization Set</em>}</li>
  * </ul>
- * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getGeneralization()
  * @model

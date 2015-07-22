@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RefOntoUML:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RefOntoUML="http://nemo.inf.ufes.br/ontouml/refontouml" name="OntoBio">
+  <packagedElement xsi:type="RefOntoUML:Package" name="OntoBio">
+    <packagedElement xsi:type="RefOntoUML:Category" name="AbioticEntity" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.2"/>
+      <generalization general="//@packagedElement.0/@packagedElement.161"/>
+      <generalization general="//@packagedElement.0/@packagedElement.183"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Adult" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Quantity" name="Air"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Amazonia"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="AmazonicRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Animal" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.131"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="AntlanticRegio" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="AquaticVegetation"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="AraucariasRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Asexual" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="AssistantInCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="AverageLuminosity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="BayEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="BeachEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Biome">
+      <generalization general="//@packagedElement.0/@packagedElement.3" generalizationSet="//@packagedElement.0/@packagedElement.238"/>
+      <generalization general="//@packagedElement.0/@packagedElement.22" generalizationSet="//@packagedElement.0/@packagedElement.238"/>
+      <generalization general="//@packagedElement.0/@packagedElement.27" generalizationSet="//@packagedElement.0/@packagedElement.238"/>
+      <generalization general="//@packagedElement.0/@packagedElement.40" generalizationSet="//@packagedElement.0/@packagedElement.238"/>
+      <generalization general="//@packagedElement.0/@packagedElement.113" generalizationSet="//@packagedElement.0/@packagedElement.238"/>
+      <generalization general="//@packagedElement.0/@packagedElement.126" generalizationSet="//@packagedElement.0/@packagedElement.238"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="BiomeType"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="BioticEntity" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.5"/>
+      <generalization general="//@packagedElement.0/@packagedElement.57"/>
+      <generalization general="//@packagedElement.0/@packagedElement.120"/>
+      <generalization general="//@packagedElement.0/@packagedElement.134"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Bisexual" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="BlackWater"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="BorderingRiverVegetationEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="BrackishWater"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Caatinga"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Caatinga"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="CaatingaRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Capoeira"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="CaveEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Cerrado"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Cerrado"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="CerradoRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="City"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="CityLand"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Classification"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="ClassifiedEntity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="ClayEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Clayey"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Clearwater"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="ClimateRegion" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.59" generalizationSet="//@packagedElement.0/@packagedElement.251"/>
+      <generalization general="//@packagedElement.0/@packagedElement.84" generalizationSet="//@packagedElement.0/@packagedElement.251"/>
+      <generalization general="//@packagedElement.0/@packagedElement.157" generalizationSet="//@packagedElement.0/@packagedElement.251"/>
+      <generalization general="//@packagedElement.0/@packagedElement.169" generalizationSet="//@packagedElement.0/@packagedElement.251"/>
+      <generalization general="//@packagedElement.0/@packagedElement.175" generalizationSet="//@packagedElement.0/@packagedElement.251"/>
+      <generalization general="//@packagedElement.0/@packagedElement.176" generalizationSet="//@packagedElement.0/@packagedElement.251"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="ClimateRegionType"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Cloudy"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="CoarseSandEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="CoastalZone"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="CocaisRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="CollectedEntity"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Collection">
+      <generalization general="//@packagedElement.0/@packagedElement.46" generalizationSet="//@packagedElement.0/@packagedElement.248"/>
+      <generalization general="//@packagedElement.0/@packagedElement.92" generalizationSet="//@packagedElement.0/@packagedElement.254"/>
+      <generalization general="//@packagedElement.0/@packagedElement.111" generalizationSet="//@packagedElement.0/@packagedElement.254"/>
+      <generalization general="//@packagedElement.0/@packagedElement.140" generalizationSet="//@packagedElement.0/@packagedElement.248"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="CollectionIntrument"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="CollectionLocation"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="CollectionThroughFraction"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Community"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="ConservationUnity"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="CostalRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Country"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="DeforestedEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="DevoluteLand"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Ecosystem">
+      <generalization general="//@packagedElement.0/@packagedElement.105" generalizationSet="//@packagedElement.0/@packagedElement.255"/>
+      <generalization general="//@packagedElement.0/@packagedElement.115" generalizationSet="//@packagedElement.0/@packagedElement.255"/>
+      <generalization general="//@packagedElement.0/@packagedElement.116" generalizationSet="//@packagedElement.0/@packagedElement.255"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EcosystemType"/>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Egg" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Embryo" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="EntityInStudy">
+      <generalization general="//@packagedElement.0/@packagedElement.32"/>
+      <generalization general="//@packagedElement.0/@packagedElement.42"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Environment">
+      <generalization general="//@packagedElement.0/@packagedElement.106" generalizationSet="//@packagedElement.0/@packagedElement.256"/>
+      <generalization general="//@packagedElement.0/@packagedElement.117" generalizationSet="//@packagedElement.0/@packagedElement.256"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Equatorial" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="EtimologicUmbrellaCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="FallEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Family"/>
+    <packagedElement xsi:type="RefOntoUML:Collective" name="Fauna"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="FederalArea">
+      <generalization general="//@packagedElement.0/@packagedElement.52" generalizationSet="//@packagedElement.0/@packagedElement.250"/>
+      <generalization general="//@packagedElement.0/@packagedElement.65" generalizationSet="//@packagedElement.0/@packagedElement.250"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="FederalLand"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Female" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Field"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="FieldsRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="FineSandEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="FirstQuarterMoon"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="FloodedVegetation"/>
+    <packagedElement xsi:type="RefOntoUML:Collective" name="Flora"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Forest"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="ForestEnvironment">
+      <generalization general="//@packagedElement.0/@packagedElement.135" generalizationSet="//@packagedElement.0/@packagedElement.258"/>
+      <generalization general="//@packagedElement.0/@packagedElement.156" generalizationSet="//@packagedElement.0/@packagedElement.258"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Freshwater">
+      <generalization general="//@packagedElement.0/@packagedElement.18"/>
+      <generalization general="//@packagedElement.0/@packagedElement.35"/>
+      <generalization general="//@packagedElement.0/@packagedElement.185"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="FullMoon"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Gender" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.9"/>
+      <generalization general="//@packagedElement.0/@packagedElement.17"/>
+      <generalization general="//@packagedElement.0/@packagedElement.66"/>
+      <generalization general="//@packagedElement.0/@packagedElement.82"/>
+      <generalization general="//@packagedElement.0/@packagedElement.109"/>
+      <generalization general="//@packagedElement.0/@packagedElement.124"/>
+      <generalization general="//@packagedElement.0/@packagedElement.178"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Genus"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="GeographicPoint" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="GeographicSpace" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.36"/>
+      <generalization general="//@packagedElement.0/@packagedElement.132"/>
+      <generalization general="//@packagedElement.0/@packagedElement.159"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="GravelEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Hermaphrodite" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="HighLuminosity"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="HumidSubtropical" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Humous"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="HumusEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Hydromorphic"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Igapo"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="IndianLand"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="InstitutionalContract"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Instrument">
+      <generalization general="//@packagedElement.0/@packagedElement.44"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="InstrumentedCollection">
+      <generalization general="//@packagedElement.0/@packagedElement.60"/>
+      <generalization general="//@packagedElement.0/@packagedElement.122"/>
+      <generalization general="//@packagedElement.0/@packagedElement.173"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Juvenile" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="LakeEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="LakeEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="LastQuarterMoon"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="LeafyEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="LifeStage" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.1"/>
+      <generalization general="//@packagedElement.0/@packagedElement.55"/>
+      <generalization general="//@packagedElement.0/@packagedElement.56"/>
+      <generalization general="//@packagedElement.0/@packagedElement.93"/>
+      <generalization general="//@packagedElement.0/@packagedElement.108"/>
+      <generalization general="//@packagedElement.0/@packagedElement.138"/>
+      <generalization general="//@packagedElement.0/@packagedElement.177"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="LifeStageType"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Litholic"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Location">
+      <generalization general="//@packagedElement.0/@packagedElement.47" generalizationSet="//@packagedElement.0/@packagedElement.249"/>
+      <generalization general="//@packagedElement.0/@packagedElement.48" generalizationSet="//@packagedElement.0/@packagedElement.249"/>
+      <generalization general="//@packagedElement.0/@packagedElement.136" generalizationSet="//@packagedElement.0/@packagedElement.259"/>
+      <generalization general="//@packagedElement.0/@packagedElement.137" generalizationSet="//@packagedElement.0/@packagedElement.259"/>
+      <generalization general="//@packagedElement.0/@packagedElement.158" generalizationSet="//@packagedElement.0/@packagedElement.249"/>
+      <generalization general="//@packagedElement.0/@packagedElement.171" generalizationSet="//@packagedElement.0/@packagedElement.249"/>
+      <generalization general="//@packagedElement.0/@packagedElement.182" generalizationSet="//@packagedElement.0/@packagedElement.249"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="LowLuminosity"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Lowland"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Luminosity">
+      <generalization general="//@packagedElement.0/@packagedElement.11" generalizationSet="//@packagedElement.0/@packagedElement.242"/>
+      <generalization general="//@packagedElement.0/@packagedElement.83" generalizationSet="//@packagedElement.0/@packagedElement.242"/>
+      <generalization general="//@packagedElement.0/@packagedElement.102" generalizationSet="//@packagedElement.0/@packagedElement.242"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="MacroEcosystem">
+      <generalization general="//@packagedElement.0/@packagedElement.14"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="MacroEnvironment">
+      <generalization general="//@packagedElement.0/@packagedElement.12" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.13" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.25" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.51" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.61" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.74" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.94" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.110" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.112" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.129" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.141" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.148" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.149" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.151" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.155" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.167" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.172" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.174" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.179" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.181" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+      <generalization general="//@packagedElement.0/@packagedElement.186" generalizationSet="//@packagedElement.0/@packagedElement.243"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="MacroEnvironmentType"/>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Maggot" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Male" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="MangroveEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="ManualCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="MarshEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="MataAtlantica"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="MaterialEntity" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.0"/>
+      <generalization general="//@packagedElement.0/@packagedElement.16"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="MesoEcosystem"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="MicroEcosystem"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="MicroEnvironment">
+      <generalization general="//@packagedElement.0/@packagedElement.33" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.39" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.69" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.81" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.86" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.97" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.130" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.152" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+      <generalization general="//@packagedElement.0/@packagedElement.170" generalizationSet="//@packagedElement.0/@packagedElement.246"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="MicroEnvironmentType"/>
+    <packagedElement xsi:type="RefOntoUML:Collective" name="Microbiota"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Microorganism" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="MoonPhase">
+      <generalization general="//@packagedElement.0/@packagedElement.70" generalizationSet="//@packagedElement.0/@packagedElement.252"/>
+      <generalization general="//@packagedElement.0/@packagedElement.76" generalizationSet="//@packagedElement.0/@packagedElement.252"/>
+      <generalization general="//@packagedElement.0/@packagedElement.96" generalizationSet="//@packagedElement.0/@packagedElement.252"/>
+      <generalization general="//@packagedElement.0/@packagedElement.123" generalizationSet="//@packagedElement.0/@packagedElement.252"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="NetCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="NewMoon"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="NonExamined" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="ObjectClassifer"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Pantanal"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="ParticipantInCollection">
+      <generalization general="//@packagedElement.0/@packagedElement.10" generalizationSet="//@packagedElement.0/@packagedElement.241"/>
+      <generalization general="//@packagedElement.0/@packagedElement.144" generalizationSet="//@packagedElement.0/@packagedElement.241"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="PatanalRegion" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="PeakEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="PebbleEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Person">
+      <generalization general="//@packagedElement.0/@packagedElement.125" generalizationSet="//@packagedElement.0/@packagedElement.257"/>
+      <generalization general="//@packagedElement.0/@packagedElement.127" generalizationSet="//@packagedElement.0/@packagedElement.257"/>
+      <generalization general="//@packagedElement.0/@packagedElement.143" generalizationSet="//@packagedElement.0/@packagedElement.257"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="PhytophysiognomicRegion" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.4" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.6" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.8" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.23" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.28" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.41" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.49" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.68" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+      <generalization general="//@packagedElement.0/@packagedElement.128" generalizationSet="//@packagedElement.0/@packagedElement.239"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="PhytophysiognomicRegionType"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Plant" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="PrimaryForestEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="PrivateLocation"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="PublicLocation">
+      <generalization general="//@packagedElement.0/@packagedElement.30" generalizationSet="//@packagedElement.0/@packagedElement.245"/>
+      <generalization general="//@packagedElement.0/@packagedElement.64" generalizationSet="//@packagedElement.0/@packagedElement.245"/>
+      <generalization general="//@packagedElement.0/@packagedElement.89" generalizationSet="//@packagedElement.0/@packagedElement.245"/>
+      <generalization general="//@packagedElement.0/@packagedElement.165" generalizationSet="//@packagedElement.0/@packagedElement.245"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Pupa" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Rainy"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="RandomCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="RapidsEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="ResearchInstitution">
+      <generalization general="//@packagedElement.0/@packagedElement.146"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Researcher">
+      <generalization general="//@packagedElement.0/@packagedElement.144"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="ResearcherParticipant">
+      <generalization general="//@packagedElement.0/@packagedElement.145"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="ResponsibleForCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="ResposibleInstitution"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Restinga"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="RiverEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="RiverTributaryEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Rocky"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="RockyBottomEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="RockyEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Saltwater"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Sandy"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="SeaEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="SecundaryForestEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Semiarid" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Settlement"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="SocialPoliticalRegion" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.29" generalizationSet="//@packagedElement.0/@packagedElement.244"/>
+      <generalization general="//@packagedElement.0/@packagedElement.50" generalizationSet="//@packagedElement.0/@packagedElement.244"/>
+      <generalization general="//@packagedElement.0/@packagedElement.101" generalizationSet="//@packagedElement.0/@packagedElement.244"/>
+      <generalization general="//@packagedElement.0/@packagedElement.164" generalizationSet="//@packagedElement.0/@packagedElement.244"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="SocialPoliticalRegionType"/>
+    <packagedElement xsi:type="RefOntoUML:Quantity" name="Soil">
+      <generalization general="//@packagedElement.0/@packagedElement.34"/>
+      <generalization general="//@packagedElement.0/@packagedElement.85"/>
+      <generalization general="//@packagedElement.0/@packagedElement.87"/>
+      <generalization general="//@packagedElement.0/@packagedElement.100"/>
+      <generalization general="//@packagedElement.0/@packagedElement.150"/>
+      <generalization general="//@packagedElement.0/@packagedElement.154"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="SpatialLocation" isAbstract="true">
+      <generalization general="//@packagedElement.0/@packagedElement.45"/>
+      <generalization general="//@packagedElement.0/@packagedElement.79" generalizationSet="//@packagedElement.0/@packagedElement.253"/>
+      <generalization general="//@packagedElement.0/@packagedElement.80" generalizationSet="//@packagedElement.0/@packagedElement.253"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Species"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="State"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="StateLand"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Sunny"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="SwampEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Taxon">
+      <generalization general="//@packagedElement.0/@packagedElement.62"/>
+      <generalization general="//@packagedElement.0/@packagedElement.78"/>
+      <generalization general="//@packagedElement.0/@packagedElement.163"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Temperate" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="TerraPretaEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Thorp"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="TimberRemainderEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="TrapCollection"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="TreeCrowEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Tropical" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="TropicalWetAndDry" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Unknown" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Unknown" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="UrbanEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Vegetation">
+      <generalization general="//@packagedElement.0/@packagedElement.21"/>
+      <generalization general="//@packagedElement.0/@packagedElement.24"/>
+      <generalization general="//@packagedElement.0/@packagedElement.26"/>
+      <generalization general="//@packagedElement.0/@packagedElement.67"/>
+      <generalization general="//@packagedElement.0/@packagedElement.73"/>
+      <generalization general="//@packagedElement.0/@packagedElement.88"/>
+      <generalization general="//@packagedElement.0/@packagedElement.103"/>
+      <generalization general="//@packagedElement.0/@packagedElement.147"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="VegetationEnvironment">
+      <generalization general="//@packagedElement.0/@packagedElement.7" generalizationSet="//@packagedElement.0/@packagedElement.240"/>
+      <generalization general="//@packagedElement.0/@packagedElement.19" generalizationSet="//@packagedElement.0/@packagedElement.240"/>
+      <generalization general="//@packagedElement.0/@packagedElement.71" generalizationSet="//@packagedElement.0/@packagedElement.240"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Village"/>
+    <packagedElement xsi:type="RefOntoUML:Quantity" name="Water">
+      <generalization general="//@packagedElement.0/@packagedElement.20"/>
+      <generalization general="//@packagedElement.0/@packagedElement.75"/>
+      <generalization general="//@packagedElement.0/@packagedElement.153"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="WeatherCondition">
+      <generalization general="//@packagedElement.0/@packagedElement.38" generalizationSet="//@packagedElement.0/@packagedElement.247"/>
+      <generalization general="//@packagedElement.0/@packagedElement.139" generalizationSet="//@packagedElement.0/@packagedElement.247"/>
+      <generalization general="//@packagedElement.0/@packagedElement.166" generalizationSet="//@packagedElement.0/@packagedElement.247"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="WhiteWater"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="WholedEnvironment"/>
+    <packagedElement xsi:type="RefOntoUML:DataType" name="GeographicCoordinate"/>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.188/@ownedEnd.0 //@packagedElement.0/@packagedElement.188/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.188/@ownedEnd.0 //@packagedElement.0/@packagedElement.188/@ownedEnd.1">
+      <ownedEnd name="ecosystem" type="//@packagedElement.0/@packagedElement.53" association="//@packagedElement.0/@packagedElement.188">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="abioticentity" type="//@packagedElement.0/@packagedElement.0" association="//@packagedElement.0/@packagedElement.188">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:memberOf" name="" memberEnd="//@packagedElement.0/@packagedElement.189/@ownedEnd.0 //@packagedElement.0/@packagedElement.189/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.189/@ownedEnd.0 //@packagedElement.0/@packagedElement.189/@ownedEnd.1">
+      <ownedEnd name="fauna" type="//@packagedElement.0/@packagedElement.63" association="//@packagedElement.0/@packagedElement.189">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="animal" type="//@packagedElement.0/@packagedElement.5" association="//@packagedElement.0/@packagedElement.189">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.190/@ownedEnd.0 //@packagedElement.0/@packagedElement.190/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.190/@ownedEnd.0 //@packagedElement.0/@packagedElement.190/@ownedEnd.1">
+      <ownedEnd name="biome" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.190">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="biometype" type="//@packagedElement.0/@packagedElement.15" association="//@packagedElement.0/@packagedElement.190">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.0/@packagedElement.191/@ownedEnd.0 //@packagedElement.0/@packagedElement.191/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.191/@ownedEnd.0 //@packagedElement.0/@packagedElement.191/@ownedEnd.1">
+      <ownedEnd name="bioticentity" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.191">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="gender" type="//@packagedElement.0/@packagedElement.77" association="//@packagedElement.0/@packagedElement.191">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.0/@packagedElement.192/@ownedEnd.0 //@packagedElement.0/@packagedElement.192/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.192/@ownedEnd.0 //@packagedElement.0/@packagedElement.192/@ownedEnd.1">
+      <ownedEnd name="bioticentity" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.192">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="lifestage" type="//@packagedElement.0/@packagedElement.98" association="//@packagedElement.0/@packagedElement.192">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="instanceOf" memberEnd="//@packagedElement.0/@packagedElement.193/@ownedEnd.0 //@packagedElement.0/@packagedElement.193/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.193/@ownedEnd.0 //@packagedElement.0/@packagedElement.193/@ownedEnd.1">
+      <ownedEnd name="bioticentity" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.193">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="taxon" type="//@packagedElement.0/@packagedElement.168" association="//@packagedElement.0/@packagedElement.193">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.194/@ownedEnd.0 //@packagedElement.0/@packagedElement.194/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.194/@ownedEnd.0 //@packagedElement.0/@packagedElement.194/@ownedEnd.1">
+      <ownedEnd name="ecosystem" type="//@packagedElement.0/@packagedElement.53" association="//@packagedElement.0/@packagedElement.194">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="bioticentity" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.194">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="spatiallyContainedIn" memberEnd="//@packagedElement.0/@packagedElement.195/@ownedEnd.0 //@packagedElement.0/@packagedElement.195/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.195/@ownedEnd.0 //@packagedElement.0/@packagedElement.195/@ownedEnd.1">
+      <ownedEnd name="city" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.195">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="state" type="//@packagedElement.0/@packagedElement.164" association="//@packagedElement.0/@packagedElement.195">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="spatiallyContainedIn" memberEnd="//@packagedElement.0/@packagedElement.196/@ownedEnd.0 //@packagedElement.0/@packagedElement.196/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.196/@ownedEnd.0 //@packagedElement.0/@packagedElement.196/@ownedEnd.1">
+      <ownedEnd name="location" type="//@packagedElement.0/@packagedElement.101" association="//@packagedElement.0/@packagedElement.196">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="city" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.196">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.197/@ownedEnd.0 //@packagedElement.0/@packagedElement.197/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.197/@ownedEnd.0 //@packagedElement.0/@packagedElement.197/@ownedEnd.1">
+      <ownedEnd name="classification" type="//@packagedElement.0/@packagedElement.31" association="//@packagedElement.0/@packagedElement.197">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="classifiedentity" type="//@packagedElement.0/@packagedElement.32" association="//@packagedElement.0/@packagedElement.197">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.198/@ownedEnd.0 //@packagedElement.0/@packagedElement.198/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.198/@ownedEnd.0 //@packagedElement.0/@packagedElement.198/@ownedEnd.1">
+      <ownedEnd name="classification" type="//@packagedElement.0/@packagedElement.31" association="//@packagedElement.0/@packagedElement.198">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="objectclassifer" type="//@packagedElement.0/@packagedElement.125" association="//@packagedElement.0/@packagedElement.198">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.199/@ownedEnd.0 //@packagedElement.0/@packagedElement.199/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.199/@ownedEnd.0 //@packagedElement.0/@packagedElement.199/@ownedEnd.1">
+      <ownedEnd name="classification" type="//@packagedElement.0/@packagedElement.31" association="//@packagedElement.0/@packagedElement.199">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="species" type="//@packagedElement.0/@packagedElement.163" association="//@packagedElement.0/@packagedElement.199">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.200/@ownedEnd.0 //@packagedElement.0/@packagedElement.200/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.200/@ownedEnd.0 //@packagedElement.0/@packagedElement.200/@ownedEnd.1">
+      <ownedEnd name="climateregion" type="//@packagedElement.0/@packagedElement.36" association="//@packagedElement.0/@packagedElement.200">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="climateregiontype" type="//@packagedElement.0/@packagedElement.37" association="//@packagedElement.0/@packagedElement.200">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.201/@ownedEnd.0 //@packagedElement.0/@packagedElement.201/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.201/@ownedEnd.0 //@packagedElement.0/@packagedElement.201/@ownedEnd.1">
+      <ownedEnd name="collection" type="//@packagedElement.0/@packagedElement.43" association="//@packagedElement.0/@packagedElement.201">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="collectedentity" type="//@packagedElement.0/@packagedElement.42" association="//@packagedElement.0/@packagedElement.201">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.202/@ownedEnd.0 //@packagedElement.0/@packagedElement.202/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.202/@ownedEnd.0 //@packagedElement.0/@packagedElement.202/@ownedEnd.1">
+      <ownedEnd name="collection" type="//@packagedElement.0/@packagedElement.43" association="//@packagedElement.0/@packagedElement.202">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="participantincollection" type="//@packagedElement.0/@packagedElement.127" association="//@packagedElement.0/@packagedElement.202">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.203/@ownedEnd.0 //@packagedElement.0/@packagedElement.203/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.203/@ownedEnd.0 //@packagedElement.0/@packagedElement.203/@ownedEnd.1">
+      <ownedEnd name="collection" type="//@packagedElement.0/@packagedElement.43" association="//@packagedElement.0/@packagedElement.203">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="responsibleforcollection" type="//@packagedElement.0/@packagedElement.145" association="//@packagedElement.0/@packagedElement.203">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.204/@ownedEnd.0 //@packagedElement.0/@packagedElement.204/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.204/@ownedEnd.0 //@packagedElement.0/@packagedElement.204/@ownedEnd.1">
+      <ownedEnd name="collection" type="//@packagedElement.0/@packagedElement.43" association="//@packagedElement.0/@packagedElement.204">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="resposibleinstitution" type="//@packagedElement.0/@packagedElement.146" association="//@packagedElement.0/@packagedElement.204">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.205/@ownedEnd.0 //@packagedElement.0/@packagedElement.205/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.205/@ownedEnd.0 //@packagedElement.0/@packagedElement.205/@ownedEnd.1">
+      <ownedEnd name="collection" type="//@packagedElement.0/@packagedElement.43" association="//@packagedElement.0/@packagedElement.205">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="collectionlocation" type="//@packagedElement.0/@packagedElement.45" association="//@packagedElement.0/@packagedElement.205">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.206/@ownedEnd.0 //@packagedElement.0/@packagedElement.206/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.206/@ownedEnd.0 //@packagedElement.0/@packagedElement.206/@ownedEnd.1">
+      <ownedEnd name="instrumentedcollection" type="//@packagedElement.0/@packagedElement.92" association="//@packagedElement.0/@packagedElement.206">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="collectionintrument" type="//@packagedElement.0/@packagedElement.44" association="//@packagedElement.0/@packagedElement.206">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="spatiallyContainedIn" memberEnd="//@packagedElement.0/@packagedElement.207/@ownedEnd.0 //@packagedElement.0/@packagedElement.207/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.207/@ownedEnd.0 //@packagedElement.0/@packagedElement.207/@ownedEnd.1">
+      <ownedEnd name="state" type="//@packagedElement.0/@packagedElement.164" association="//@packagedElement.0/@packagedElement.207">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="country" type="//@packagedElement.0/@packagedElement.50" association="//@packagedElement.0/@packagedElement.207">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="locatedIn" memberEnd="//@packagedElement.0/@packagedElement.208/@ownedEnd.0 //@packagedElement.0/@packagedElement.208/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.208/@ownedEnd.0 //@packagedElement.0/@packagedElement.208/@ownedEnd.1">
+      <ownedEnd name="ecosystem" type="//@packagedElement.0/@packagedElement.53" association="//@packagedElement.0/@packagedElement.208">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="spatiallocation" type="//@packagedElement.0/@packagedElement.162" association="//@packagedElement.0/@packagedElement.208">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.209/@ownedEnd.0 //@packagedElement.0/@packagedElement.209/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.209/@ownedEnd.0 //@packagedElement.0/@packagedElement.209/@ownedEnd.1">
+      <ownedEnd name="ecosystem" type="//@packagedElement.0/@packagedElement.53" association="//@packagedElement.0/@packagedElement.209">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="ecosystemtype" type="//@packagedElement.0/@packagedElement.54" association="//@packagedElement.0/@packagedElement.209">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.210/@ownedEnd.0 //@packagedElement.0/@packagedElement.210/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.210/@ownedEnd.0 //@packagedElement.0/@packagedElement.210/@ownedEnd.1">
+      <ownedEnd name="ecosystem" type="//@packagedElement.0/@packagedElement.53" association="//@packagedElement.0/@packagedElement.210">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="ecosystem" type="//@packagedElement.0/@packagedElement.53" association="//@packagedElement.0/@packagedElement.210">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.0/@packagedElement.211/@ownedEnd.0 //@packagedElement.0/@packagedElement.211/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.211/@ownedEnd.0 //@packagedElement.0/@packagedElement.211/@ownedEnd.1">
+      <ownedEnd name="environment" type="//@packagedElement.0/@packagedElement.58" association="//@packagedElement.0/@packagedElement.211">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="spatiallocation" type="//@packagedElement.0/@packagedElement.162" association="//@packagedElement.0/@packagedElement.211">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.0/@packagedElement.212/@ownedEnd.0 //@packagedElement.0/@packagedElement.212/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.212/@ownedEnd.0 //@packagedElement.0/@packagedElement.212/@ownedEnd.1">
+      <ownedEnd name="weathercondition" type="//@packagedElement.0/@packagedElement.184" association="//@packagedElement.0/@packagedElement.212">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="environment" type="//@packagedElement.0/@packagedElement.58" association="//@packagedElement.0/@packagedElement.212">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.0/@packagedElement.213/@ownedEnd.0 //@packagedElement.0/@packagedElement.213/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.213/@ownedEnd.0 //@packagedElement.0/@packagedElement.213/@ownedEnd.1">
+      <ownedEnd name="moonphase" type="//@packagedElement.0/@packagedElement.121" association="//@packagedElement.0/@packagedElement.213">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="environment" type="//@packagedElement.0/@packagedElement.58" association="//@packagedElement.0/@packagedElement.213">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.0/@packagedElement.214/@ownedEnd.0 //@packagedElement.0/@packagedElement.214/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.214/@ownedEnd.0 //@packagedElement.0/@packagedElement.214/@ownedEnd.1">
+      <ownedEnd name="luminosity" type="//@packagedElement.0/@packagedElement.104" association="//@packagedElement.0/@packagedElement.214">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="environment" type="//@packagedElement.0/@packagedElement.58" association="//@packagedElement.0/@packagedElement.214">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="groups" memberEnd="//@packagedElement.0/@packagedElement.215/@ownedEnd.0 //@packagedElement.0/@packagedElement.215/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.215/@ownedEnd.0 //@packagedElement.0/@packagedElement.215/@ownedEnd.1">
+      <ownedEnd name="family" type="//@packagedElement.0/@packagedElement.62" association="//@packagedElement.0/@packagedElement.215">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="genus" type="//@packagedElement.0/@packagedElement.78" association="//@packagedElement.0/@packagedElement.215">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:memberOf" name="" memberEnd="//@packagedElement.0/@packagedElement.216/@ownedEnd.0 //@packagedElement.0/@packagedElement.216/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.216/@ownedEnd.0 //@packagedElement.0/@packagedElement.216/@ownedEnd.1">
+      <ownedEnd name="flora" type="//@packagedElement.0/@packagedElement.72" association="//@packagedElement.0/@packagedElement.216">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="plant" type="//@packagedElement.0/@packagedElement.134" association="//@packagedElement.0/@packagedElement.216">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="constitutedBy" memberEnd="//@packagedElement.0/@packagedElement.217/@ownedEnd.0 //@packagedElement.0/@packagedElement.217/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.217/@ownedEnd.0 //@packagedElement.0/@packagedElement.217/@ownedEnd.1">
+      <ownedEnd name="flora" type="//@packagedElement.0/@packagedElement.72" association="//@packagedElement.0/@packagedElement.217">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="vegetation" type="//@packagedElement.0/@packagedElement.180" association="//@packagedElement.0/@packagedElement.217">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="groups" memberEnd="//@packagedElement.0/@packagedElement.218/@ownedEnd.0 //@packagedElement.0/@packagedElement.218/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.218/@ownedEnd.0 //@packagedElement.0/@packagedElement.218/@ownedEnd.1">
+      <ownedEnd name="genus" type="//@packagedElement.0/@packagedElement.78" association="//@packagedElement.0/@packagedElement.218">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="species" type="//@packagedElement.0/@packagedElement.163" association="//@packagedElement.0/@packagedElement.218">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.219/@ownedEnd.0 //@packagedElement.0/@packagedElement.219/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.219/@ownedEnd.0 //@packagedElement.0/@packagedElement.219/@ownedEnd.1">
+      <ownedEnd name="geographicpoint" type="//@packagedElement.0/@packagedElement.79" association="//@packagedElement.0/@packagedElement.219">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="location" type="//@packagedElement.0/@packagedElement.187" association="//@packagedElement.0/@packagedElement.219">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.0/@packagedElement.220/@ownedEnd.0 //@packagedElement.0/@packagedElement.220/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.220/@ownedEnd.0 //@packagedElement.0/@packagedElement.220/@ownedEnd.1">
+      <ownedEnd name="microenvironment" type="//@packagedElement.0/@packagedElement.117" association="//@packagedElement.0/@packagedElement.220">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="geographicpoint" type="//@packagedElement.0/@packagedElement.79" association="//@packagedElement.0/@packagedElement.220">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.221/@ownedEnd.0 //@packagedElement.0/@packagedElement.221/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.221/@ownedEnd.0 //@packagedElement.0/@packagedElement.221/@ownedEnd.1">
+      <ownedEnd name="geographicspace" type="//@packagedElement.0/@packagedElement.80" association="//@packagedElement.0/@packagedElement.221">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="location" type="//@packagedElement.0/@packagedElement.187" association="//@packagedElement.0/@packagedElement.221">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.0/@packagedElement.222/@ownedEnd.0 //@packagedElement.0/@packagedElement.222/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.222/@ownedEnd.0 //@packagedElement.0/@packagedElement.222/@ownedEnd.1">
+      <ownedEnd name="macroenvironment" type="//@packagedElement.0/@packagedElement.106" association="//@packagedElement.0/@packagedElement.222">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="geographicspace" type="//@packagedElement.0/@packagedElement.80" association="//@packagedElement.0/@packagedElement.222">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="locatedIn" memberEnd="//@packagedElement.0/@packagedElement.223/@ownedEnd.0 //@packagedElement.0/@packagedElement.223/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.223/@ownedEnd.0 //@packagedElement.0/@packagedElement.223/@ownedEnd.1">
+      <ownedEnd name="vegetation" type="//@packagedElement.0/@packagedElement.180" association="//@packagedElement.0/@packagedElement.223">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="geographicspace" type="//@packagedElement.0/@packagedElement.80" association="//@packagedElement.0/@packagedElement.223">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.224/@ownedEnd.0 //@packagedElement.0/@packagedElement.224/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.224/@ownedEnd.0 //@packagedElement.0/@packagedElement.224/@ownedEnd.1">
+      <ownedEnd name="institutionalcontract" type="//@packagedElement.0/@packagedElement.90" association="//@packagedElement.0/@packagedElement.224">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="researchinstitution" type="//@packagedElement.0/@packagedElement.142" association="//@packagedElement.0/@packagedElement.224">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.225/@ownedEnd.0 //@packagedElement.0/@packagedElement.225/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.225/@ownedEnd.0 //@packagedElement.0/@packagedElement.225/@ownedEnd.1">
+      <ownedEnd name="institutionalcontract" type="//@packagedElement.0/@packagedElement.90" association="//@packagedElement.0/@packagedElement.225">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="researcher" type="//@packagedElement.0/@packagedElement.143" association="//@packagedElement.0/@packagedElement.225">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.226/@ownedEnd.0 //@packagedElement.0/@packagedElement.226/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.226/@ownedEnd.0 //@packagedElement.0/@packagedElement.226/@ownedEnd.1">
+      <ownedEnd name="lifestage" type="//@packagedElement.0/@packagedElement.98" association="//@packagedElement.0/@packagedElement.226">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="lifestagetype" type="//@packagedElement.0/@packagedElement.99" association="//@packagedElement.0/@packagedElement.226">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.227/@ownedEnd.0 //@packagedElement.0/@packagedElement.227/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.227/@ownedEnd.0 //@packagedElement.0/@packagedElement.227/@ownedEnd.1">
+      <ownedEnd name="macroecosystem" type="//@packagedElement.0/@packagedElement.105" association="//@packagedElement.0/@packagedElement.227">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="mesoecosystem" type="//@packagedElement.0/@packagedElement.115" association="//@packagedElement.0/@packagedElement.227">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.228/@ownedEnd.0 //@packagedElement.0/@packagedElement.228/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.228/@ownedEnd.0 //@packagedElement.0/@packagedElement.228/@ownedEnd.1">
+      <ownedEnd name="macroenvironment" type="//@packagedElement.0/@packagedElement.106" association="//@packagedElement.0/@packagedElement.228">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="macroenvironmenttype" type="//@packagedElement.0/@packagedElement.107" association="//@packagedElement.0/@packagedElement.228">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.229/@ownedEnd.0 //@packagedElement.0/@packagedElement.229/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.229/@ownedEnd.0 //@packagedElement.0/@packagedElement.229/@ownedEnd.1">
+      <ownedEnd name="mesoecosystem" type="//@packagedElement.0/@packagedElement.115" association="//@packagedElement.0/@packagedElement.229">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="microecosystem" type="//@packagedElement.0/@packagedElement.116" association="//@packagedElement.0/@packagedElement.229">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.230/@ownedEnd.0 //@packagedElement.0/@packagedElement.230/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.230/@ownedEnd.0 //@packagedElement.0/@packagedElement.230/@ownedEnd.1">
+      <ownedEnd name="microenvironment" type="//@packagedElement.0/@packagedElement.117" association="//@packagedElement.0/@packagedElement.230">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="microenvironmenttype" type="//@packagedElement.0/@packagedElement.118" association="//@packagedElement.0/@packagedElement.230">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:memberOf" name="" memberEnd="//@packagedElement.0/@packagedElement.231/@ownedEnd.0 //@packagedElement.0/@packagedElement.231/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.231/@ownedEnd.0 //@packagedElement.0/@packagedElement.231/@ownedEnd.1">
+      <ownedEnd name="microbiota" type="//@packagedElement.0/@packagedElement.119" association="//@packagedElement.0/@packagedElement.231">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="microorganism" type="//@packagedElement.0/@packagedElement.120" association="//@packagedElement.0/@packagedElement.231">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.232/@ownedEnd.0 //@packagedElement.0/@packagedElement.232/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.232/@ownedEnd.0 //@packagedElement.0/@packagedElement.232/@ownedEnd.1">
+      <ownedEnd name="phytophysiognomicregion" type="//@packagedElement.0/@packagedElement.132" association="//@packagedElement.0/@packagedElement.232">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="phytophysiognomicregiontype" type="//@packagedElement.0/@packagedElement.133" association="//@packagedElement.0/@packagedElement.232">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifiedAs" memberEnd="//@packagedElement.0/@packagedElement.233/@ownedEnd.0 //@packagedElement.0/@packagedElement.233/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.233/@ownedEnd.0 //@packagedElement.0/@packagedElement.233/@ownedEnd.1">
+      <ownedEnd name="socialpoliticalregion" type="//@packagedElement.0/@packagedElement.159" association="//@packagedElement.0/@packagedElement.233">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="socialpoliticalregiontype" type="//@packagedElement.0/@packagedElement.160" association="//@packagedElement.0/@packagedElement.233">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.234/@ownedEnd.0 //@packagedElement.0/@packagedElement.234/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.234/@ownedEnd.0 //@packagedElement.0/@packagedElement.234/@ownedEnd.1">
+      <ownedEnd name="spatiallocation" type="//@packagedElement.0/@packagedElement.162" association="//@packagedElement.0/@packagedElement.234">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="location" type="//@packagedElement.0/@packagedElement.187" association="//@packagedElement.0/@packagedElement.234">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="speciesIdentity" memberEnd="//@packagedElement.0/@packagedElement.235/@ownedEnd.0 //@packagedElement.0/@packagedElement.235/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.235/@ownedEnd.0 //@packagedElement.0/@packagedElement.235/@ownedEnd.1">
+      <ownedEnd name="species" type="//@packagedElement.0/@packagedElement.163" association="//@packagedElement.0/@packagedElement.235">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="species" type="//@packagedElement.0/@packagedElement.163" association="//@packagedElement.0/@packagedElement.235">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="worksIn" memberEnd="//@packagedElement.0/@packagedElement.236/@ownedEnd.0 //@packagedElement.0/@packagedElement.236/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.236/@ownedEnd.0 //@packagedElement.0/@packagedElement.236/@ownedEnd.1">
+      <ownedEnd name="researcher" type="//@packagedElement.0/@packagedElement.143" association="//@packagedElement.0/@packagedElement.236">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="researchinstitution" type="//@packagedElement.0/@packagedElement.142" association="//@packagedElement.0/@packagedElement.236">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Derivation" name="" memberEnd="//@packagedElement.0/@packagedElement.237/@ownedEnd.0 //@packagedElement.0/@packagedElement.237/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.237/@ownedEnd.0 //@packagedElement.0/@packagedElement.237/@ownedEnd.1">
+      <ownedEnd name="" association="//@packagedElement.0/@packagedElement.237">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="institutionalcontract" type="//@packagedElement.0/@packagedElement.90" isReadOnly="true" association="//@packagedElement.0/@packagedElement.237">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="type" isCovering="true" generalization="//@packagedElement.0/@packagedElement.14/@generalization.0 //@packagedElement.0/@packagedElement.14/@generalization.1 //@packagedElement.0/@packagedElement.14/@generalization.2 //@packagedElement.0/@packagedElement.14/@generalization.3 //@packagedElement.0/@packagedElement.14/@generalization.4 //@packagedElement.0/@packagedElement.14/@generalization.5"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs4" isCovering="true" generalization="//@packagedElement.0/@packagedElement.132/@generalization.0 //@packagedElement.0/@packagedElement.132/@generalization.1 //@packagedElement.0/@packagedElement.132/@generalization.2 //@packagedElement.0/@packagedElement.132/@generalization.3 //@packagedElement.0/@packagedElement.132/@generalization.4 //@packagedElement.0/@packagedElement.132/@generalization.5 //@packagedElement.0/@packagedElement.132/@generalization.6 //@packagedElement.0/@packagedElement.132/@generalization.7 //@packagedElement.0/@packagedElement.132/@generalization.8"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gsVegEnv" isCovering="true" generalization="//@packagedElement.0/@packagedElement.181/@generalization.0 //@packagedElement.0/@packagedElement.181/@generalization.1 //@packagedElement.0/@packagedElement.181/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs4" isCovering="true" generalization="//@packagedElement.0/@packagedElement.127/@generalization.0 //@packagedElement.0/@packagedElement.127/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gsLuminous" isCovering="true" generalization="//@packagedElement.0/@packagedElement.104/@generalization.0 //@packagedElement.0/@packagedElement.104/@generalization.1 //@packagedElement.0/@packagedElement.104/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gsMacroEnv" isCovering="true" generalization="//@packagedElement.0/@packagedElement.106/@generalization.0 //@packagedElement.0/@packagedElement.106/@generalization.1 //@packagedElement.0/@packagedElement.106/@generalization.2 //@packagedElement.0/@packagedElement.106/@generalization.3 //@packagedElement.0/@packagedElement.106/@generalization.4 //@packagedElement.0/@packagedElement.106/@generalization.5 //@packagedElement.0/@packagedElement.106/@generalization.6 //@packagedElement.0/@packagedElement.106/@generalization.7 //@packagedElement.0/@packagedElement.106/@generalization.8 //@packagedElement.0/@packagedElement.106/@generalization.9 //@packagedElement.0/@packagedElement.106/@generalization.10 //@packagedElement.0/@packagedElement.106/@generalization.11 //@packagedElement.0/@packagedElement.106/@generalization.12 //@packagedElement.0/@packagedElement.106/@generalization.13 //@packagedElement.0/@packagedElement.106/@generalization.14 //@packagedElement.0/@packagedElement.106/@generalization.15 //@packagedElement.0/@packagedElement.106/@generalization.16 //@packagedElement.0/@packagedElement.106/@generalization.17 //@packagedElement.0/@packagedElement.106/@generalization.18 //@packagedElement.0/@packagedElement.106/@generalization.19 //@packagedElement.0/@packagedElement.106/@generalization.20"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs3" isCovering="true" generalization="//@packagedElement.0/@packagedElement.159/@generalization.0 //@packagedElement.0/@packagedElement.159/@generalization.1 //@packagedElement.0/@packagedElement.159/@generalization.2 //@packagedElement.0/@packagedElement.159/@generalization.3"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs7" isCovering="true" generalization="//@packagedElement.0/@packagedElement.137/@generalization.0 //@packagedElement.0/@packagedElement.137/@generalization.1 //@packagedElement.0/@packagedElement.137/@generalization.2 //@packagedElement.0/@packagedElement.137/@generalization.3"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-Micro" isCovering="true" generalization="//@packagedElement.0/@packagedElement.117/@generalization.0 //@packagedElement.0/@packagedElement.117/@generalization.1 //@packagedElement.0/@packagedElement.117/@generalization.2 //@packagedElement.0/@packagedElement.117/@generalization.3 //@packagedElement.0/@packagedElement.117/@generalization.4 //@packagedElement.0/@packagedElement.117/@generalization.5 //@packagedElement.0/@packagedElement.117/@generalization.6 //@packagedElement.0/@packagedElement.117/@generalization.7 //@packagedElement.0/@packagedElement.117/@generalization.8"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gsWethear" isCovering="true" generalization="//@packagedElement.0/@packagedElement.184/@generalization.0 //@packagedElement.0/@packagedElement.184/@generalization.1 //@packagedElement.0/@packagedElement.184/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs2" isCovering="true" generalization="//@packagedElement.0/@packagedElement.43/@generalization.0 //@packagedElement.0/@packagedElement.43/@generalization.3"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs6" isCovering="true" generalization="//@packagedElement.0/@packagedElement.101/@generalization.0 //@packagedElement.0/@packagedElement.101/@generalization.1 //@packagedElement.0/@packagedElement.101/@generalization.4 //@packagedElement.0/@packagedElement.101/@generalization.5 //@packagedElement.0/@packagedElement.101/@generalization.6"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs8" isCovering="true" generalization="//@packagedElement.0/@packagedElement.64/@generalization.0 //@packagedElement.0/@packagedElement.64/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs2" isCovering="true" generalization="//@packagedElement.0/@packagedElement.36/@generalization.0 //@packagedElement.0/@packagedElement.36/@generalization.1 //@packagedElement.0/@packagedElement.36/@generalization.2 //@packagedElement.0/@packagedElement.36/@generalization.3 //@packagedElement.0/@packagedElement.36/@generalization.4 //@packagedElement.0/@packagedElement.36/@generalization.5"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gsMoon" isCovering="true" generalization="//@packagedElement.0/@packagedElement.121/@generalization.0 //@packagedElement.0/@packagedElement.121/@generalization.1 //@packagedElement.0/@packagedElement.121/@generalization.2 //@packagedElement.0/@packagedElement.121/@generalization.3"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs1" isCovering="true" generalization="//@packagedElement.0/@packagedElement.162/@generalization.1 //@packagedElement.0/@packagedElement.162/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs1" generalization="//@packagedElement.0/@packagedElement.43/@generalization.1 //@packagedElement.0/@packagedElement.43/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="size" isCovering="true" generalization="//@packagedElement.0/@packagedElement.53/@generalization.0 //@packagedElement.0/@packagedElement.53/@generalization.1 //@packagedElement.0/@packagedElement.53/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-Enviroment" isCovering="true" generalization="//@packagedElement.0/@packagedElement.58/@generalization.0 //@packagedElement.0/@packagedElement.58/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs3" isCovering="true" generalization="//@packagedElement.0/@packagedElement.131/@generalization.0 //@packagedElement.0/@packagedElement.131/@generalization.1 //@packagedElement.0/@packagedElement.131/@generalization.2"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gsForest" isCovering="true" generalization="//@packagedElement.0/@packagedElement.74/@generalization.0 //@packagedElement.0/@packagedElement.74/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs5" isCovering="true" generalization="//@packagedElement.0/@packagedElement.101/@generalization.2 //@packagedElement.0/@packagedElement.101/@generalization.3"/>
+  </packagedElement>
+</RefOntoUML:Model>

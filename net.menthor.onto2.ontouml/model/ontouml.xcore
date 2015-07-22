@@ -399,6 +399,13 @@ class Attribute extends Property
 	PrimitiveStereotype[?] stereotype
 	
 	container Type[1] owner opposite attributes
+	
+	op boolean isInteger() { return stereotype==PrimitiveStereotype.INTEGER; }
+	op boolean isBoolean() { return stereotype==PrimitiveStereotype.BOOLEAN; }
+	op boolean isReal() { return stereotype==PrimitiveStereotype.REAL; }
+	op boolean isDate() { return stereotype==PrimitiveStereotype.DATE; }
+	op boolean isDateTime() { return stereotype==PrimitiveStereotype.DATE_TIME; }
+	op boolean isString() { return stereotype==PrimitiveStereotype.STRING; }	
 }
 
 /** Possible constraint stereotypes are static "Invariants" and "Derivations", 
@@ -565,6 +572,9 @@ class Class extends Type
 	op boolean isNonRigid() { isRole()|| isPhase() || isRoleMixin() || isPhaseMixin() || isMixin() } 
 	op boolean isAntiRigid() { isRole() || isPhase() || isRoleMixin() || isPhaseMixin() }
 	op boolean isSemiRigid() { isMixin() }
+	op boolean isPerceivableQuality() { isQuality() && qualityNature!=null && qualityNature==QualityNature.PERCEIVABLE }
+	op boolean isNonPerceivableQuality() { isQuality() && qualityNature!=null && qualityNature==QualityNature.NON_PERCEIVABLE }
+	op boolean isNominalQuality() { isQuality() && qualityNature!=null && qualityNature==QualityNature.NOMINAL }
 			
 	op boolean isSubstanceSortalClass() { isKind() || isCollective() || isQuantity() }
 	op boolean isMomentClass() { isRelator() || isMode() || isQuality() }	
@@ -794,9 +804,9 @@ class EndPoint extends Property
 }
 
 /** A Relationship Stereotype can be a ComponentOf, MemberOf, 
- * SubCollectionOf, SubQuantityOf, QuaPartOf, Constitution,
- * Characterization, Mediation, Material, Formal, Derivation, Structuration, 
- * Participation, SubEventOf, Causation, Temporal or InstanceOf. */ 
+ *  SubCollectionOf, SubQuantityOf, QuaPartOf, Constitution,
+ *  Characterization, Mediation, Material, Formal, Derivation, Structuration, 
+ *  Participation, SubEventOf, Causation, Temporal or InstanceOf. */ 
 enum RelationshipStereotype 
 {
 	ComponentOf

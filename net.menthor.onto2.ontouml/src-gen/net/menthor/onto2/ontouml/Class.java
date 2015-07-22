@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Class#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isIsAbstract <em>Is Abstract</em>}</li>
@@ -24,7 +25,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.Class#getExistence <em>Existence</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#getClassification <em>Classification</em>}</li>
  * </ul>
- * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getClass_()
  * @model
@@ -395,6 +395,33 @@ public interface Class extends Type {
 	 * @generated
 	 */
 	boolean isSemiRigid();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _and = false;\nboolean _and_1 = false;\nboolean _isQuality = this.isQuality();\nif (!_isQuality)\n{\n\t_and_1 = false;\n} else\n{\n\t<%net.menthor.onto2.ontouml.QualityNature%> _qualityNature = this.getQualityNature();\n\tboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_qualityNature, null));\n\t_and_1 = _notEquals;\n}\nif (!_and_1)\n{\n\t_and = false;\n} else\n{\n\t<%net.menthor.onto2.ontouml.QualityNature%> _qualityNature_1 = this.getQualityNature();\n\tboolean _equals = <%com.google.common.base.Objects%>.equal(_qualityNature_1, <%net.menthor.onto2.ontouml.QualityNature%>.PERCEIVABLE);\n\t_and = _equals;\n}\nreturn _and;'"
+	 * @generated
+	 */
+	boolean isPerceivableQuality();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _and = false;\nboolean _and_1 = false;\nboolean _isQuality = this.isQuality();\nif (!_isQuality)\n{\n\t_and_1 = false;\n} else\n{\n\t<%net.menthor.onto2.ontouml.QualityNature%> _qualityNature = this.getQualityNature();\n\tboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_qualityNature, null));\n\t_and_1 = _notEquals;\n}\nif (!_and_1)\n{\n\t_and = false;\n} else\n{\n\t<%net.menthor.onto2.ontouml.QualityNature%> _qualityNature_1 = this.getQualityNature();\n\tboolean _equals = <%com.google.common.base.Objects%>.equal(_qualityNature_1, <%net.menthor.onto2.ontouml.QualityNature%>.NON_PERCEIVABLE);\n\t_and = _equals;\n}\nreturn _and;'"
+	 * @generated
+	 */
+	boolean isNonPerceivableQuality();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _and = false;\nboolean _and_1 = false;\nboolean _isQuality = this.isQuality();\nif (!_isQuality)\n{\n\t_and_1 = false;\n} else\n{\n\t<%net.menthor.onto2.ontouml.QualityNature%> _qualityNature = this.getQualityNature();\n\tboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_qualityNature, null));\n\t_and_1 = _notEquals;\n}\nif (!_and_1)\n{\n\t_and = false;\n} else\n{\n\t<%net.menthor.onto2.ontouml.QualityNature%> _qualityNature_1 = this.getQualityNature();\n\tboolean _equals = <%com.google.common.base.Objects%>.equal(_qualityNature_1, <%net.menthor.onto2.ontouml.QualityNature%>.NOMINAL);\n\t_and = _equals;\n}\nreturn _and;'"
+	 * @generated
+	 */
+	boolean isNominalQuality();
 
 	/**
 	 * <!-- begin-user-doc -->

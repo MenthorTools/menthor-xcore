@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationImpl#getGeneral <em>General</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationImpl#getSpecific <em>Specific</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.GeneralizationImpl#getGeneralizationSet <em>Generalization Set</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -32,6 +32,9 @@ import net.menthor.onto2.ontouml.OntoumlFactory;
  *   <li>{@link net.menthor.onto2.ontouml.Class#isNonRigid() <em>Is Non Rigid</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isAntiRigid() <em>Is Anti Rigid</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isSemiRigid() <em>Is Semi Rigid</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Class#isPerceivableQuality() <em>Is Perceivable Quality</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Class#isNonPerceivableQuality() <em>Is Non Perceivable Quality</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Class#isNominalQuality() <em>Is Nominal Quality</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isSubstanceSortalClass() <em>Is Substance Sortal Class</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isMomentClass() <em>Is Moment Class</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isIdentityProviderClass() <em>Is Identity Provider Class</em>}</li>
@@ -346,6 +349,45 @@ public class ClassTest extends TypeTest {
 	 * @generated
 	 */
 	public void testIsSemiRigid() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isPerceivableQuality() <em>Is Perceivable Quality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Class#isPerceivableQuality()
+	 * @generated
+	 */
+	public void testIsPerceivableQuality() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isNonPerceivableQuality() <em>Is Non Perceivable Quality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Class#isNonPerceivableQuality()
+	 * @generated
+	 */
+	public void testIsNonPerceivableQuality() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isNominalQuality() <em>Is Nominal Quality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Class#isNominalQuality()
+	 * @generated
+	 */
+	public void testIsNominalQuality() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

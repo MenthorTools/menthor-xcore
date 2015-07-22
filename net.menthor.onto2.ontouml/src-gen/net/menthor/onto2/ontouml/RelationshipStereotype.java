@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
  * * A Relationship Stereotype can be a ComponentOf, MemberOf,
- * SubCollectionOf, SubQuantityOf, QuaPartOf, Constitution,
- * Characterization, Mediation, Material, Formal, Derivation, Structuration,
- * Participation, SubEventOf, Causation, Temporal or InstanceOf.
+ *  SubCollectionOf, SubQuantityOf, QuaPartOf, Constitution,
+ *  Characterization, Mediation, Material, Formal, Derivation, Structuration,
+ *  Participation, SubEventOf, Causation, Temporal or InstanceOf.
  * <!-- end-model-doc -->
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getRelationshipStereotype()
  * @model
@@ -488,6 +488,8 @@ public enum RelationshipStereotype implements Enumerator {
 	 * Returns the '<em><b>Relationship Stereotype</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RelationshipStereotype get(String literal) {
@@ -504,6 +506,8 @@ public enum RelationshipStereotype implements Enumerator {
 	 * Returns the '<em><b>Relationship Stereotype</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RelationshipStereotype getByName(String name) {
@@ -520,6 +524,8 @@ public enum RelationshipStereotype implements Enumerator {
 	 * Returns the '<em><b>Relationship Stereotype</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RelationshipStereotype get(int value) {

@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RefOntoUML:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RefOntoUML="http://nemo.inf.ufes.br/ontouml/refontouml" name="OntoEmerge">
+  <packagedElement xsi:type="RefOntoUML:Package" name="Plans, Processes e Activities">
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Action"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Action"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Atomic Commitment" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Atomic E Standard Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Atomic E Standard Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Atomic OE Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Atomic OE Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Closed Commitment"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Commitment" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Complex Commitment" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Complex E Standard Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Complex E Standard Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Complex OE Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Complex OE Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Activity">
+      <generalization general="//@packagedElement.0/@packagedElement.3" generalizationSet="//@packagedElement.0/@packagedElement.88"/>
+      <generalization general="//@packagedElement.0/@packagedElement.4" generalizationSet="//@packagedElement.0/@packagedElement.88"/>
+      <generalization general="//@packagedElement.0/@packagedElement.10" generalizationSet="//@packagedElement.0/@packagedElement.88"/>
+      <generalization general="//@packagedElement.0/@packagedElement.11" generalizationSet="//@packagedElement.0/@packagedElement.88"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Process">
+      <generalization general="//@packagedElement.0/@packagedElement.22"/>
+      <generalization general="//@packagedElement.0/@packagedElement.23"/>
+      <generalization general="//@packagedElement.0/@packagedElement.38"/>
+      <generalization general="//@packagedElement.0/@packagedElement.39"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Process"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Process Definition Document"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Process Definition Document"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Process Definition Document Type"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="E Standard Process Definition Document Type"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="General E Standard Process"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="General E Standard Process"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="General OE Process"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="General OE Process"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Goal"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Intention (Internal Commitment)" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="OE Activity">
+      <generalization general="//@packagedElement.0/@packagedElement.5"/>
+      <generalization general="//@packagedElement.0/@packagedElement.12"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="OE Activity">
+      <generalization general="//@packagedElement.0/@packagedElement.6"/>
+      <generalization general="//@packagedElement.0/@packagedElement.13"/>
+      <generalization general="//@packagedElement.7/@packagedElement.22"/>
+      <generalization general="//@packagedElement.7/@packagedElement.23"/>
+      <generalization general="//@packagedElement.7/@packagedElement.26"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="OE Activity Goal"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="OE Activity Goal"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="OE Process">
+      <generalization general="//@packagedElement.0/@packagedElement.24" generalizationSet="//@packagedElement.0/@packagedElement.89"/>
+      <generalization general="//@packagedElement.0/@packagedElement.40" generalizationSet="//@packagedElement.0/@packagedElement.89"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="OE Process">
+      <generalization general="//@packagedElement.0/@packagedElement.25" generalizationSet="//@packagedElement.0/@packagedElement.89"/>
+      <generalization general="//@packagedElement.0/@packagedElement.41" generalizationSet="//@packagedElement.0/@packagedElement.89"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="OE Process Definition Document"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="OE Process Definition Document"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="RoESPDD"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="RoESPDD"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Specific E Standard Process"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Specific E Standard Process"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Specific OE Process"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Specific OE Process"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Main Organization"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Regulatory Organization"/>
+    <packagedElement xsi:type="RefOntoUML:Enumeration" name="Enumeration1"/>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="caused by" memberEnd="//@packagedElement.0/@packagedElement.45/@ownedEnd.0 //@packagedElement.0/@packagedElement.45/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.45/@ownedEnd.0 //@packagedElement.0/@packagedElement.45/@ownedEnd.1">
+      <ownedEnd name="specific e standard process" type="//@packagedElement.0/@packagedElement.39" association="//@packagedElement.0/@packagedElement.45">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="action" type="//@packagedElement.0/@packagedElement.0" association="//@packagedElement.0/@packagedElement.45">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="caused by" memberEnd="//@packagedElement.0/@packagedElement.46/@ownedEnd.0 //@packagedElement.0/@packagedElement.46/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.46/@ownedEnd.0 //@packagedElement.0/@packagedElement.46/@ownedEnd.1">
+      <ownedEnd name="specific e standard process" type="//@packagedElement.0/@packagedElement.38" association="//@packagedElement.0/@packagedElement.46">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="action" type="//@packagedElement.0/@packagedElement.1" association="//@packagedElement.0/@packagedElement.46">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="propositional content of" memberEnd="//@packagedElement.0/@packagedElement.47/@ownedEnd.0 //@packagedElement.0/@packagedElement.47/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.47/@ownedEnd.0 //@packagedElement.0/@packagedElement.47/@ownedEnd.1">
+      <ownedEnd name="goal" type="//@packagedElement.0/@packagedElement.26" association="//@packagedElement.0/@packagedElement.47">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="commitment" type="//@packagedElement.0/@packagedElement.8" association="//@packagedElement.0/@packagedElement.47">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.48/@ownedEnd.0 //@packagedElement.0/@packagedElement.48/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.48/@ownedEnd.0 //@packagedElement.0/@packagedElement.48/@ownedEnd.1">
+      <ownedEnd name="complex oe activity" type="//@packagedElement.0/@packagedElement.12" association="//@packagedElement.0/@packagedElement.48">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.28" association="//@packagedElement.0/@packagedElement.48">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.49/@ownedEnd.0 //@packagedElement.0/@packagedElement.49/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.49/@ownedEnd.0 //@packagedElement.0/@packagedElement.49/@ownedEnd.1">
+      <ownedEnd name="complex oe activity" type="//@packagedElement.0/@packagedElement.13" association="//@packagedElement.0/@packagedElement.49">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.49">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="is to be performed using" memberEnd="//@packagedElement.0/@packagedElement.50/@ownedEnd.0 //@packagedElement.0/@packagedElement.50/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.50/@ownedEnd.0 //@packagedElement.0/@packagedElement.50/@ownedEnd.1">
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.50">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="business emergency material resource type" type="//@packagedElement.3/@packagedElement.0" association="//@packagedElement.0/@packagedElement.50">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="is to be performed by" memberEnd="//@packagedElement.0/@packagedElement.51/@ownedEnd.0 //@packagedElement.0/@packagedElement.51/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.51/@ownedEnd.0 //@packagedElement.0/@packagedElement.51/@ownedEnd.1">
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.51">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="human resource role" type="//@packagedElement.4/@packagedElement.10" association="//@packagedElement.0/@packagedElement.51">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.52/@ownedEnd.0 //@packagedElement.0/@packagedElement.52/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.52/@ownedEnd.0 //@packagedElement.0/@packagedElement.52/@ownedEnd.1">
+      <ownedEnd name="specific e standard process" type="//@packagedElement.0/@packagedElement.39" association="//@packagedElement.0/@packagedElement.52">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.52">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.0/@packagedElement.53/@ownedEnd.0 //@packagedElement.0/@packagedElement.53/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.53/@ownedEnd.0 //@packagedElement.0/@packagedElement.53/@ownedEnd.1">
+      <ownedEnd name="specific e standard process" type="//@packagedElement.0/@packagedElement.38" association="//@packagedElement.0/@packagedElement.53">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.53">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="tailors activities" memberEnd="//@packagedElement.0/@packagedElement.54/@ownedEnd.0 //@packagedElement.0/@packagedElement.54/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.54/@ownedEnd.0 //@packagedElement.0/@packagedElement.54/@ownedEnd.1">
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.54">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.54">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="tailors activities" memberEnd="//@packagedElement.0/@packagedElement.55/@ownedEnd.0 //@packagedElement.0/@packagedElement.55/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.55/@ownedEnd.0 //@packagedElement.0/@packagedElement.55/@ownedEnd.1">
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.28" association="//@packagedElement.0/@packagedElement.55">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.55">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="defines" memberEnd="//@packagedElement.0/@packagedElement.56/@ownedEnd.0 //@packagedElement.0/@packagedElement.56/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.56/@ownedEnd.0 //@packagedElement.0/@packagedElement.56/@ownedEnd.1">
+      <ownedEnd name="job plan" type="//@packagedElement.3/@packagedElement.1" association="//@packagedElement.0/@packagedElement.56">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard activity" type="//@packagedElement.0/@packagedElement.14" association="//@packagedElement.0/@packagedElement.56">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="describes" memberEnd="//@packagedElement.0/@packagedElement.57/@ownedEnd.0 //@packagedElement.0/@packagedElement.57/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.57/@ownedEnd.0 //@packagedElement.0/@packagedElement.57/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.57">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.57">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="tailors processes" memberEnd="//@packagedElement.0/@packagedElement.58/@ownedEnd.0 //@packagedElement.0/@packagedElement.58/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.58/@ownedEnd.0 //@packagedElement.0/@packagedElement.58/@ownedEnd.1">
+      <ownedEnd name="pIntention" type="//@packagedElement.0/@packagedElement.32" association="//@packagedElement.0/@packagedElement.58">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="pPlan" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.58">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="tailors processes" memberEnd="//@packagedElement.0/@packagedElement.59/@ownedEnd.0 //@packagedElement.0/@packagedElement.59/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.59/@ownedEnd.0 //@packagedElement.0/@packagedElement.59/@ownedEnd.1">
+      <ownedEnd name="pIntention" type="//@packagedElement.0/@packagedElement.33" association="//@packagedElement.0/@packagedElement.59">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="pPlan" type="//@packagedElement.0/@packagedElement.16" association="//@packagedElement.0/@packagedElement.59">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="describes" memberEnd="//@packagedElement.0/@packagedElement.60/@ownedEnd.0 //@packagedElement.0/@packagedElement.60/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.60/@ownedEnd.0 //@packagedElement.0/@packagedElement.60/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.60">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process" type="//@packagedElement.0/@packagedElement.17" association="//@packagedElement.0/@packagedElement.60">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instance of" memberEnd="//@packagedElement.0/@packagedElement.61/@ownedEnd.0 //@packagedElement.0/@packagedElement.61/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.61/@ownedEnd.0 //@packagedElement.0/@packagedElement.61/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.61">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process definition document type" type="//@packagedElement.0/@packagedElement.20" association="//@packagedElement.0/@packagedElement.61">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="regulates" memberEnd="//@packagedElement.0/@packagedElement.62/@ownedEnd.0 //@packagedElement.0/@packagedElement.62/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.62/@ownedEnd.0 //@packagedElement.0/@packagedElement.62/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.62">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="business activity type" type="//@packagedElement.2/@packagedElement.2" association="//@packagedElement.0/@packagedElement.62">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="regulates" memberEnd="//@packagedElement.0/@packagedElement.63/@ownedEnd.0 //@packagedElement.0/@packagedElement.63/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.63/@ownedEnd.0 //@packagedElement.0/@packagedElement.63/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.63">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation type" type="//@packagedElement.2/@packagedElement.15" association="//@packagedElement.0/@packagedElement.63">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.0/@packagedElement.64/@ownedEnd.0 //@packagedElement.0/@packagedElement.64/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.64/@ownedEnd.0 //@packagedElement.0/@packagedElement.64/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.64">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process definition document type" type="//@packagedElement.0/@packagedElement.20" association="//@packagedElement.0/@packagedElement.64">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instance of" memberEnd="//@packagedElement.0/@packagedElement.65/@ownedEnd.0 //@packagedElement.0/@packagedElement.65/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.65/@ownedEnd.0 //@packagedElement.0/@packagedElement.65/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.65">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process definition document type" type="//@packagedElement.0/@packagedElement.21" association="//@packagedElement.0/@packagedElement.65">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="regonized by" memberEnd="//@packagedElement.0/@packagedElement.66/@ownedEnd.0 //@packagedElement.0/@packagedElement.66/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.66/@ownedEnd.0 //@packagedElement.0/@packagedElement.66/@ownedEnd.1">
+      <ownedEnd name="roespdd" type="//@packagedElement.0/@packagedElement.36" association="//@packagedElement.0/@packagedElement.66">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.18" association="//@packagedElement.0/@packagedElement.66">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.0/@packagedElement.67/@ownedEnd.0 //@packagedElement.0/@packagedElement.67/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.67/@ownedEnd.0 //@packagedElement.0/@packagedElement.67/@ownedEnd.1">
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.19" association="//@packagedElement.0/@packagedElement.67">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process definition document type" type="//@packagedElement.0/@packagedElement.21" association="//@packagedElement.0/@packagedElement.67">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="regonized by" memberEnd="//@packagedElement.0/@packagedElement.68/@ownedEnd.0 //@packagedElement.0/@packagedElement.68/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.68/@ownedEnd.0 //@packagedElement.0/@packagedElement.68/@ownedEnd.1">
+      <ownedEnd name="roespdd" type="//@packagedElement.0/@packagedElement.36" association="//@packagedElement.0/@packagedElement.68">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="e standard process definition document" type="//@packagedElement.0/@packagedElement.19" association="//@packagedElement.0/@packagedElement.68">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="tailors general processes" memberEnd="//@packagedElement.0/@packagedElement.69/@ownedEnd.0 //@packagedElement.0/@packagedElement.69/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.69/@ownedEnd.0 //@packagedElement.0/@packagedElement.69/@ownedEnd.1">
+      <ownedEnd name="general oe process" type="//@packagedElement.0/@packagedElement.24" association="//@packagedElement.0/@packagedElement.69">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="general e standard process" type="//@packagedElement.0/@packagedElement.22" association="//@packagedElement.0/@packagedElement.69">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="tailors general processes" memberEnd="//@packagedElement.0/@packagedElement.70/@ownedEnd.0 //@packagedElement.0/@packagedElement.70/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.70/@ownedEnd.0 //@packagedElement.0/@packagedElement.70/@ownedEnd.1">
+      <ownedEnd name="general oe process" type="//@packagedElement.0/@packagedElement.25" association="//@packagedElement.0/@packagedElement.70">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="general e standard process" type="//@packagedElement.0/@packagedElement.23" association="//@packagedElement.0/@packagedElement.70">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.71/@ownedEnd.0 //@packagedElement.0/@packagedElement.71/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.71/@ownedEnd.0 //@packagedElement.0/@packagedElement.71/@ownedEnd.1">
+      <ownedEnd name="general oe process" type="//@packagedElement.0/@packagedElement.24" association="//@packagedElement.0/@packagedElement.71">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="specific oe process" type="//@packagedElement.0/@packagedElement.40" association="//@packagedElement.0/@packagedElement.71">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="subprocesses" memberEnd="//@packagedElement.0/@packagedElement.72/@ownedEnd.0 //@packagedElement.0/@packagedElement.72/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.72/@ownedEnd.0 //@packagedElement.0/@packagedElement.72/@ownedEnd.1">
+      <ownedEnd name="general oe process" type="//@packagedElement.0/@packagedElement.25" association="//@packagedElement.0/@packagedElement.72">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="specific oe process" type="//@packagedElement.0/@packagedElement.41" association="//@packagedElement.0/@packagedElement.72">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="is to be performed by" memberEnd="//@packagedElement.0/@packagedElement.73/@ownedEnd.0 //@packagedElement.0/@packagedElement.73/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.73/@ownedEnd.0 //@packagedElement.0/@packagedElement.73/@ownedEnd.1">
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.28" association="//@packagedElement.0/@packagedElement.73">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="business emergency human resource" type="//@packagedElement.4/@packagedElement.1" association="//@packagedElement.0/@packagedElement.73">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="is to be performed using" memberEnd="//@packagedElement.0/@packagedElement.74/@ownedEnd.0 //@packagedElement.0/@packagedElement.74/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.74/@ownedEnd.0 //@packagedElement.0/@packagedElement.74/@ownedEnd.1">
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.28" association="//@packagedElement.0/@packagedElement.74">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="business emergency material resource" type="//@packagedElement.4/@packagedElement.2" association="//@packagedElement.0/@packagedElement.74">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.0/@packagedElement.75/@ownedEnd.0 //@packagedElement.0/@packagedElement.75/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.75/@ownedEnd.0 //@packagedElement.0/@packagedElement.75/@ownedEnd.1">
+      <ownedEnd name="specific oe process" type="//@packagedElement.0/@packagedElement.40" association="//@packagedElement.0/@packagedElement.75">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.28" association="//@packagedElement.0/@packagedElement.75">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="propositional content of" memberEnd="//@packagedElement.0/@packagedElement.76/@ownedEnd.0 //@packagedElement.0/@packagedElement.76/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.76/@ownedEnd.0 //@packagedElement.0/@packagedElement.76/@ownedEnd.1">
+      <ownedEnd name="oe activity goal" type="//@packagedElement.0/@packagedElement.30" association="//@packagedElement.0/@packagedElement.76">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.28" association="//@packagedElement.0/@packagedElement.76">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="dependenceof" memberEnd="//@packagedElement.0/@packagedElement.77/@ownedEnd.0 //@packagedElement.0/@packagedElement.77/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.77/@ownedEnd.0 //@packagedElement.0/@packagedElement.77/@ownedEnd.1">
+      <ownedEnd name="depender" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.77">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="dependee" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.77">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="treats" memberEnd="//@packagedElement.0/@packagedElement.78/@ownedEnd.0 //@packagedElement.0/@packagedElement.78/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.78/@ownedEnd.0 //@packagedElement.0/@packagedElement.78/@ownedEnd.1">
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.78">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="risk" type="//@packagedElement.7/@packagedElement.24" association="//@packagedElement.0/@packagedElement.78">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.0/@packagedElement.79/@ownedEnd.0 //@packagedElement.0/@packagedElement.79/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.79/@ownedEnd.0 //@packagedElement.0/@packagedElement.79/@ownedEnd.1">
+      <ownedEnd name="specific oe process" type="//@packagedElement.0/@packagedElement.41" association="//@packagedElement.0/@packagedElement.79">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.79">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="propositional content of" memberEnd="//@packagedElement.0/@packagedElement.80/@ownedEnd.0 //@packagedElement.0/@packagedElement.80/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.80/@ownedEnd.0 //@packagedElement.0/@packagedElement.80/@ownedEnd.1">
+      <ownedEnd name="oe activity goal" type="//@packagedElement.0/@packagedElement.31" association="//@packagedElement.0/@packagedElement.80">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe activity" type="//@packagedElement.0/@packagedElement.29" association="//@packagedElement.0/@packagedElement.80">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="defined for" memberEnd="//@packagedElement.0/@packagedElement.81/@ownedEnd.0 //@packagedElement.0/@packagedElement.81/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.81/@ownedEnd.0 //@packagedElement.0/@packagedElement.81/@ownedEnd.1">
+      <ownedEnd name="oe process" type="//@packagedElement.0/@packagedElement.32" association="//@packagedElement.0/@packagedElement.81">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="main organization" type="//@packagedElement.2/@packagedElement.26" association="//@packagedElement.0/@packagedElement.81">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="describes" memberEnd="//@packagedElement.0/@packagedElement.82/@ownedEnd.0 //@packagedElement.0/@packagedElement.82/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.82/@ownedEnd.0 //@packagedElement.0/@packagedElement.82/@ownedEnd.1">
+      <ownedEnd name="oe process" type="//@packagedElement.0/@packagedElement.32" association="//@packagedElement.0/@packagedElement.82">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe process definition document" type="//@packagedElement.0/@packagedElement.34" association="//@packagedElement.0/@packagedElement.82">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="defined for" memberEnd="//@packagedElement.0/@packagedElement.83/@ownedEnd.0 //@packagedElement.0/@packagedElement.83/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.83/@ownedEnd.0 //@packagedElement.0/@packagedElement.83/@ownedEnd.1">
+      <ownedEnd name="oe process" type="//@packagedElement.0/@packagedElement.33" association="//@packagedElement.0/@packagedElement.83">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="main organization" type="//@packagedElement.2/@packagedElement.26" association="//@packagedElement.0/@packagedElement.83">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="describes" memberEnd="//@packagedElement.0/@packagedElement.84/@ownedEnd.0 //@packagedElement.0/@packagedElement.84/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.84/@ownedEnd.0 //@packagedElement.0/@packagedElement.84/@ownedEnd.1">
+      <ownedEnd name="oe process definition document" type="//@packagedElement.0/@packagedElement.34" association="//@packagedElement.0/@packagedElement.84">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe process" type="//@packagedElement.0/@packagedElement.33" association="//@packagedElement.0/@packagedElement.84">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.0/@packagedElement.85/@ownedEnd.0 //@packagedElement.0/@packagedElement.85/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.85/@ownedEnd.0 //@packagedElement.0/@packagedElement.85/@ownedEnd.1">
+      <ownedEnd name="deployment" type="//@packagedElement.2/@packagedElement.4" association="//@packagedElement.0/@packagedElement.85">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="oe process definition document" type="//@packagedElement.0/@packagedElement.34" isReadOnly="true" association="//@packagedElement.0/@packagedElement.85">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="tailors specific processes" memberEnd="//@packagedElement.0/@packagedElement.86/@ownedEnd.0 //@packagedElement.0/@packagedElement.86/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.86/@ownedEnd.0 //@packagedElement.0/@packagedElement.86/@ownedEnd.1">
+      <ownedEnd name="specific oe process" type="//@packagedElement.0/@packagedElement.41" association="//@packagedElement.0/@packagedElement.86">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="specific e standard process" type="//@packagedElement.0/@packagedElement.38" association="//@packagedElement.0/@packagedElement.86">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="tailors specific processes" memberEnd="//@packagedElement.0/@packagedElement.87/@ownedEnd.0 //@packagedElement.0/@packagedElement.87/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.0/@packagedElement.87/@ownedEnd.0 //@packagedElement.0/@packagedElement.87/@ownedEnd.1">
+      <ownedEnd name="specific oe process" type="//@packagedElement.0/@packagedElement.40" association="//@packagedElement.0/@packagedElement.87">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="specific e standard process" type="//@packagedElement.0/@packagedElement.39" association="//@packagedElement.0/@packagedElement.87">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-standard-e-activity" generalization="//@packagedElement.0/@packagedElement.14/@generalization.0 //@packagedElement.0/@packagedElement.14/@generalization.1 //@packagedElement.0/@packagedElement.14/@generalization.2 //@packagedElement.0/@packagedElement.14/@generalization.3"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-oe-process" generalization="//@packagedElement.0/@packagedElement.32/@generalization.0 //@packagedElement.0/@packagedElement.33/@generalization.0 //@packagedElement.0/@packagedElement.32/@generalization.1 //@packagedElement.0/@packagedElement.33/@generalization.1"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Goals, Intentions and Delegations">
+    <packagedElement xsi:type="RefOntoUML:Category" name="Category1" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Civil Defense Organization"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Civil Defense Organization Intention"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Closed Commitment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Delegation">
+      <generalization general="//@packagedElement.1/@packagedElement.11"/>
+      <generalization general="//@packagedElement.1/@packagedElement.14"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Delegatum"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="EP Agent" isAbstract="true">
+      <generalization general="//@packagedElement.1/@packagedElement.1"/>
+      <generalization general="//@packagedElement.1/@packagedElement.7"/>
+      <generalization general="//@packagedElement.1/@packagedElement.8"/>
+      <generalization general="//@packagedElement.1/@packagedElement.16"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="EP Agent delegatee"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="EP Agent delegator"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="EP Delegatum"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Goal">
+      <generalization general="//@packagedElement.5/@packagedElement.8"/>
+      <generalization general="//@packagedElement.1/@packagedElement.12"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Goal Delegation"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Main Goal"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Plan">
+      <generalization general="//@packagedElement.6/@packagedElement.0"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Plan Delegation"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Situation Individual"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Organization Holder"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Organization Holder Intention"/>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.1/@packagedElement.18/@ownedEnd.0 //@packagedElement.1/@packagedElement.18/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.18/@ownedEnd.0 //@packagedElement.1/@packagedElement.18/@ownedEnd.1">
+      <ownedEnd name="civil defense organization intention" type="//@packagedElement.1/@packagedElement.2" association="//@packagedElement.1/@packagedElement.18">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="civil defense organization" type="//@packagedElement.1/@packagedElement.1" isReadOnly="true" association="//@packagedElement.1/@packagedElement.18">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="propositional content of" memberEnd="//@packagedElement.1/@packagedElement.19/@ownedEnd.0 //@packagedElement.1/@packagedElement.19/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.19/@ownedEnd.0 //@packagedElement.1/@packagedElement.19/@ownedEnd.1">
+      <ownedEnd name="civil defense organization intention" type="//@packagedElement.1/@packagedElement.2" association="//@packagedElement.1/@packagedElement.19">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep main goal" type="//@packagedElement.1/@packagedElement.12" association="//@packagedElement.1/@packagedElement.19">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="causes" memberEnd="//@packagedElement.1/@packagedElement.20/@ownedEnd.0 //@packagedElement.1/@packagedElement.20/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.20/@ownedEnd.0 //@packagedElement.1/@packagedElement.20/@ownedEnd.1">
+      <ownedEnd name="civil defense organization intention" type="//@packagedElement.1/@packagedElement.2" association="//@packagedElement.1/@packagedElement.20">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep plan" type="//@packagedElement.1/@packagedElement.13" association="//@packagedElement.1/@packagedElement.20">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="based on" memberEnd="//@packagedElement.1/@packagedElement.21/@ownedEnd.0 //@packagedElement.1/@packagedElement.21/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.21/@ownedEnd.0 //@packagedElement.1/@packagedElement.21/@ownedEnd.1">
+      <ownedEnd name="closed commitment" type="//@packagedElement.1/@packagedElement.3" association="//@packagedElement.1/@packagedElement.21">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="ep plan" type="//@packagedElement.1/@packagedElement.13" association="//@packagedElement.1/@packagedElement.21">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="derived from" memberEnd="//@packagedElement.1/@packagedElement.22/@ownedEnd.0 //@packagedElement.1/@packagedElement.22/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.22/@ownedEnd.0 //@packagedElement.1/@packagedElement.22/@ownedEnd.1">
+      <ownedEnd name="delegation" type="//@packagedElement.1/@packagedElement.4" association="//@packagedElement.1/@packagedElement.22">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="delegatum" type="//@packagedElement.1/@packagedElement.5" association="//@packagedElement.1/@packagedElement.22">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="delegatum" memberEnd="//@packagedElement.1/@packagedElement.23/@ownedEnd.0 //@packagedElement.1/@packagedElement.23/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.23/@ownedEnd.0 //@packagedElement.1/@packagedElement.23/@ownedEnd.1">
+      <ownedEnd name="ep goal" type="//@packagedElement.1/@packagedElement.10" association="//@packagedElement.1/@packagedElement.23">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep goal delegation" type="//@packagedElement.1/@packagedElement.11" association="//@packagedElement.1/@packagedElement.23">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="satisfies" memberEnd="//@packagedElement.1/@packagedElement.24/@ownedEnd.0 //@packagedElement.1/@packagedElement.24/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.24/@ownedEnd.0 //@packagedElement.1/@packagedElement.24/@ownedEnd.1">
+      <ownedEnd name="ep situation individual" type="//@packagedElement.1/@packagedElement.15" association="//@packagedElement.1/@packagedElement.24">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep goal" type="//@packagedElement.1/@packagedElement.10" association="//@packagedElement.1/@packagedElement.24">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="propositional content of" memberEnd="//@packagedElement.1/@packagedElement.25/@ownedEnd.0 //@packagedElement.1/@packagedElement.25/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.25/@ownedEnd.0 //@packagedElement.1/@packagedElement.25/@ownedEnd.1">
+      <ownedEnd name="organization holder intention" type="//@packagedElement.1/@packagedElement.17" association="//@packagedElement.1/@packagedElement.25">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep goal" type="//@packagedElement.1/@packagedElement.10" association="//@packagedElement.1/@packagedElement.25">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="delegatum" memberEnd="//@packagedElement.1/@packagedElement.26/@ownedEnd.0 //@packagedElement.1/@packagedElement.26/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.26/@ownedEnd.0 //@packagedElement.1/@packagedElement.26/@ownedEnd.1">
+      <ownedEnd name="ep main goal" type="//@packagedElement.1/@packagedElement.12" association="//@packagedElement.1/@packagedElement.26">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep plan delegation" type="//@packagedElement.1/@packagedElement.14" association="//@packagedElement.1/@packagedElement.26">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="satisfies" memberEnd="//@packagedElement.1/@packagedElement.27/@ownedEnd.0 //@packagedElement.1/@packagedElement.27/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.27/@ownedEnd.0 //@packagedElement.1/@packagedElement.27/@ownedEnd.1">
+      <ownedEnd name="ep situation individual" type="//@packagedElement.1/@packagedElement.15" association="//@packagedElement.1/@packagedElement.27">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep main goal" type="//@packagedElement.1/@packagedElement.12" association="//@packagedElement.1/@packagedElement.27">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="creates" memberEnd="//@packagedElement.1/@packagedElement.28/@ownedEnd.0 //@packagedElement.1/@packagedElement.28/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.28/@ownedEnd.0 //@packagedElement.1/@packagedElement.28/@ownedEnd.1">
+      <ownedEnd name="ep plan" type="//@packagedElement.1/@packagedElement.13" association="//@packagedElement.1/@packagedElement.28">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="ep situation individual" type="//@packagedElement.1/@packagedElement.15" association="//@packagedElement.1/@packagedElement.28">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="causes" memberEnd="//@packagedElement.1/@packagedElement.29/@ownedEnd.0 //@packagedElement.1/@packagedElement.29/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.29/@ownedEnd.0 //@packagedElement.1/@packagedElement.29/@ownedEnd.1">
+      <ownedEnd name="organization holder intention" type="//@packagedElement.1/@packagedElement.17" association="//@packagedElement.1/@packagedElement.29">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep plan" type="//@packagedElement.1/@packagedElement.13" association="//@packagedElement.1/@packagedElement.29">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.1/@packagedElement.30/@ownedEnd.0 //@packagedElement.1/@packagedElement.30/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.1/@packagedElement.30/@ownedEnd.0 //@packagedElement.1/@packagedElement.30/@ownedEnd.1">
+      <ownedEnd name="organization holder intention" type="//@packagedElement.1/@packagedElement.17" association="//@packagedElement.1/@packagedElement.30">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="organization holder" type="//@packagedElement.1/@packagedElement.16" association="//@packagedElement.1/@packagedElement.30">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Installation">
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Acess Infrastructure" isAbstract="true">
+      <generalization general="//@packagedElement.2/@packagedElement.14" generalizationSet="//@packagedElement.2/@packagedElement.63"/>
+      <generalization general="//@packagedElement.2/@packagedElement.20" generalizationSet="//@packagedElement.2/@packagedElement.63"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Business Activitiy">
+      <generalization general="//@packagedElement.2/@packagedElement.18"/>
+      <generalization general="//@packagedElement.2/@packagedElement.19"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Business Activity Type"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Businessman"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Deployment"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Evacuation Closed Area" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Evacuation Geographical Region"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Evacuation Installation"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Evacuation Local" isAbstract="true">
+      <generalization general="//@packagedElement.2/@packagedElement.5" generalizationSet="//@packagedElement.2/@packagedElement.62"/>
+      <generalization general="//@packagedElement.2/@packagedElement.6"/>
+      <generalization general="//@packagedElement.2/@packagedElement.7"/>
+      <generalization general="//@packagedElement.2/@packagedElement.11" generalizationSet="//@packagedElement.2/@packagedElement.62"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Evacuation Local Definition"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Evacuation Occurrence"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Evacuation Open Area"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Evacuation at Installation"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Geographical Region">
+      <generalization general="//@packagedElement.2/@packagedElement.6"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Horizontal Acess" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Installation Type"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Owner" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Place of Business"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Primary Business Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Secondary Business Activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mixin" name="Vertical Acess" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Atomic Installation"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Civil Defense Organization"/>
+    <packagedElement xsi:type="RefOntoUML:SubKind" name="Complex Installation"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Holder" isAbstract="true">
+      <generalization general="//@packagedElement.2/@packagedElement.3" generalizationSet="//@packagedElement.2/@packagedElement.61"/>
+      <generalization general="//@packagedElement.2/@packagedElement.16" generalizationSet="//@packagedElement.2/@packagedElement.61"/>
+      <generalization general="//@packagedElement.2/@packagedElement.28" generalizationSet="//@packagedElement.2/@packagedElement.64"/>
+      <generalization general="//@packagedElement.2/@packagedElement.29" generalizationSet="//@packagedElement.2/@packagedElement.64"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Installation">
+      <generalization general="//@packagedElement.2/@packagedElement.7"/>
+      <generalization general="//@packagedElement.2/@packagedElement.21"/>
+      <generalization general="//@packagedElement.2/@packagedElement.23"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Main Organization"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Organization" isAbstract="true">
+      <generalization general="//@packagedElement.2/@packagedElement.22"/>
+      <generalization general="//@packagedElement.2/@packagedElement.26"/>
+      <generalization general="//@packagedElement.2/@packagedElement.28"/>
+      <generalization general="//@packagedElement.2/@packagedElement.31"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Organization Holder"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Person Holder"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Possesion"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Regulatory Organization">
+      <generalization general="//@packagedElement.0/@packagedElement.36"/>
+      <generalization general="//@packagedElement.0/@packagedElement.37"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="posses" memberEnd="//@packagedElement.2/@packagedElement.32/@ownedEnd.0 //@packagedElement.2/@packagedElement.32/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.32/@ownedEnd.0 //@packagedElement.2/@packagedElement.32/@ownedEnd.1">
+      <ownedEnd name="geographical region" type="//@packagedElement.2/@packagedElement.13" association="//@packagedElement.2/@packagedElement.32">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="acess infrastructure" type="//@packagedElement.2/@packagedElement.0" association="//@packagedElement.2/@packagedElement.32">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has acess" memberEnd="//@packagedElement.2/@packagedElement.33/@ownedEnd.0 //@packagedElement.2/@packagedElement.33/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.33/@ownedEnd.0 //@packagedElement.2/@packagedElement.33/@ownedEnd.1">
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.33">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="acess infrastructure" type="//@packagedElement.2/@packagedElement.0" association="//@packagedElement.2/@packagedElement.33">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has acess by" memberEnd="//@packagedElement.2/@packagedElement.34/@ownedEnd.0 //@packagedElement.2/@packagedElement.34/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.34/@ownedEnd.0 //@packagedElement.2/@packagedElement.34/@ownedEnd.1">
+      <ownedEnd name="evacuation local" type="//@packagedElement.2/@packagedElement.8" association="//@packagedElement.2/@packagedElement.34">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="acess infrastructure" type="//@packagedElement.2/@packagedElement.0" association="//@packagedElement.2/@packagedElement.34">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.2/@packagedElement.35/@ownedEnd.0 //@packagedElement.2/@packagedElement.35/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.35/@ownedEnd.0 //@packagedElement.2/@packagedElement.35/@ownedEnd.1">
+      <ownedEnd name="business activitiy" type="//@packagedElement.2/@packagedElement.1" association="//@packagedElement.2/@packagedElement.35">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="business activity type" type="//@packagedElement.2/@packagedElement.2" association="//@packagedElement.2/@packagedElement.35">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.36/@ownedEnd.0 //@packagedElement.2/@packagedElement.36/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.36/@ownedEnd.0 //@packagedElement.2/@packagedElement.36/@ownedEnd.1">
+      <ownedEnd name="business activitiy" type="//@packagedElement.2/@packagedElement.1" association="//@packagedElement.2/@packagedElement.36">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.36">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.37/@ownedEnd.0 //@packagedElement.2/@packagedElement.37/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.37/@ownedEnd.0 //@packagedElement.2/@packagedElement.37/@ownedEnd.1">
+      <ownedEnd name="business activitiy" type="//@packagedElement.2/@packagedElement.1" association="//@packagedElement.2/@packagedElement.37">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="businessman" type="//@packagedElement.2/@packagedElement.3" association="//@packagedElement.2/@packagedElement.37">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="can be developed in" memberEnd="//@packagedElement.2/@packagedElement.38/@ownedEnd.0 //@packagedElement.2/@packagedElement.38/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.38/@ownedEnd.0 //@packagedElement.2/@packagedElement.38/@ownedEnd.1">
+      <ownedEnd name="business activity type" type="//@packagedElement.2/@packagedElement.2" association="//@packagedElement.2/@packagedElement.38">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="installation type" type="//@packagedElement.2/@packagedElement.15" association="//@packagedElement.2/@packagedElement.38">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.39/@ownedEnd.0 //@packagedElement.2/@packagedElement.39/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.39/@ownedEnd.0 //@packagedElement.2/@packagedElement.39/@ownedEnd.1">
+      <ownedEnd name="primary business activity" type="//@packagedElement.2/@packagedElement.18" association="//@packagedElement.2/@packagedElement.39">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="businessman" type="//@packagedElement.2/@packagedElement.3" isReadOnly="true" association="//@packagedElement.2/@packagedElement.39">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.40/@ownedEnd.0 //@packagedElement.2/@packagedElement.40/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.40/@ownedEnd.0 //@packagedElement.2/@packagedElement.40/@ownedEnd.1">
+      <ownedEnd name="secondary business activity" type="//@packagedElement.2/@packagedElement.19" association="//@packagedElement.2/@packagedElement.40">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="businessman" type="//@packagedElement.2/@packagedElement.3" isReadOnly="true" association="//@packagedElement.2/@packagedElement.40">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.41/@ownedEnd.0 //@packagedElement.2/@packagedElement.41/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.41/@ownedEnd.0 //@packagedElement.2/@packagedElement.41/@ownedEnd.1">
+      <ownedEnd name="deployment" type="//@packagedElement.2/@packagedElement.4" association="//@packagedElement.2/@packagedElement.41">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" isReadOnly="true" association="//@packagedElement.2/@packagedElement.41">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.42/@ownedEnd.0 //@packagedElement.2/@packagedElement.42/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.42/@ownedEnd.0 //@packagedElement.2/@packagedElement.42/@ownedEnd.1">
+      <ownedEnd name="evacuation at installation" type="//@packagedElement.2/@packagedElement.12" association="//@packagedElement.2/@packagedElement.42">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="evacuation closed area" type="//@packagedElement.2/@packagedElement.5" association="//@packagedElement.2/@packagedElement.42">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has business activity" memberEnd="//@packagedElement.2/@packagedElement.43/@ownedEnd.0 //@packagedElement.2/@packagedElement.43/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.43/@ownedEnd.0 //@packagedElement.2/@packagedElement.43/@ownedEnd.1">
+      <ownedEnd name="evacuation installation" type="//@packagedElement.2/@packagedElement.7" association="//@packagedElement.2/@packagedElement.43">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="evacuation closed area" type="//@packagedElement.2/@packagedElement.5" association="//@packagedElement.2/@packagedElement.43">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="acts as" memberEnd="//@packagedElement.2/@packagedElement.44/@ownedEnd.0 //@packagedElement.2/@packagedElement.44/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.44/@ownedEnd.0 //@packagedElement.2/@packagedElement.44/@ownedEnd.1">
+      <ownedEnd name="evacuation open area" type="//@packagedElement.2/@packagedElement.11" association="//@packagedElement.2/@packagedElement.44">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="evacuation geographical region" type="//@packagedElement.2/@packagedElement.6" association="//@packagedElement.2/@packagedElement.44">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.45/@ownedEnd.0 //@packagedElement.2/@packagedElement.45/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.45/@ownedEnd.0 //@packagedElement.2/@packagedElement.45/@ownedEnd.1">
+      <ownedEnd name="evacuation local definition" type="//@packagedElement.2/@packagedElement.9" association="//@packagedElement.2/@packagedElement.45">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="evacuation local" type="//@packagedElement.2/@packagedElement.8" association="//@packagedElement.2/@packagedElement.45">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.46/@ownedEnd.0 //@packagedElement.2/@packagedElement.46/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.46/@ownedEnd.0 //@packagedElement.2/@packagedElement.46/@ownedEnd.1">
+      <ownedEnd name="evacuation occurrence" type="//@packagedElement.2/@packagedElement.10" association="//@packagedElement.2/@packagedElement.46">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="evacuation local" type="//@packagedElement.2/@packagedElement.8" association="//@packagedElement.2/@packagedElement.46">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.47/@ownedEnd.0 //@packagedElement.2/@packagedElement.47/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.47/@ownedEnd.0 //@packagedElement.2/@packagedElement.47/@ownedEnd.1">
+      <ownedEnd name="evacuation local definition" type="//@packagedElement.2/@packagedElement.9" association="//@packagedElement.2/@packagedElement.47">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.47">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.48/@ownedEnd.0 //@packagedElement.2/@packagedElement.48/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.48/@ownedEnd.0 //@packagedElement.2/@packagedElement.48/@ownedEnd.1">
+      <ownedEnd name="evacuation occurrence" type="//@packagedElement.2/@packagedElement.10" association="//@packagedElement.2/@packagedElement.48">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" isReadOnly="true" association="//@packagedElement.2/@packagedElement.48">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.49/@ownedEnd.0 //@packagedElement.2/@packagedElement.49/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.49/@ownedEnd.0 //@packagedElement.2/@packagedElement.49/@ownedEnd.1">
+      <ownedEnd name="evacuation at installation" type="//@packagedElement.2/@packagedElement.12" association="//@packagedElement.2/@packagedElement.49">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" isReadOnly="true" association="//@packagedElement.2/@packagedElement.49">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="is located in" memberEnd="//@packagedElement.2/@packagedElement.50/@ownedEnd.0 //@packagedElement.2/@packagedElement.50/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.50/@ownedEnd.0 //@packagedElement.2/@packagedElement.50/@ownedEnd.1">
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.50">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="geographical region" type="//@packagedElement.2/@packagedElement.13" association="//@packagedElement.2/@packagedElement.50">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.2/@packagedElement.51/@ownedEnd.0 //@packagedElement.2/@packagedElement.51/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.51/@ownedEnd.0 //@packagedElement.2/@packagedElement.51/@ownedEnd.1">
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.51">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="installation type" type="//@packagedElement.2/@packagedElement.15" association="//@packagedElement.2/@packagedElement.51">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.52/@ownedEnd.0 //@packagedElement.2/@packagedElement.52/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.52/@ownedEnd.0 //@packagedElement.2/@packagedElement.52/@ownedEnd.1">
+      <ownedEnd name="possesion" type="//@packagedElement.2/@packagedElement.30" association="//@packagedElement.2/@packagedElement.52">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="owner" type="//@packagedElement.2/@packagedElement.16" isReadOnly="true" association="//@packagedElement.2/@packagedElement.52">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="belongs" memberEnd="//@packagedElement.2/@packagedElement.53/@ownedEnd.0 //@packagedElement.2/@packagedElement.53/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.53/@ownedEnd.0 //@packagedElement.2/@packagedElement.53/@ownedEnd.1">
+      <ownedEnd name="public emergency material resource" type="//@packagedElement.4/@packagedElement.15" association="//@packagedElement.2/@packagedElement.53">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="civil defense organization" type="//@packagedElement.2/@packagedElement.22" association="//@packagedElement.2/@packagedElement.53">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.54/@ownedEnd.0 //@packagedElement.2/@packagedElement.54/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.54/@ownedEnd.0 //@packagedElement.2/@packagedElement.54/@ownedEnd.1">
+      <ownedEnd name="allocation" type="//@packagedElement.4/@packagedElement.0" association="//@packagedElement.2/@packagedElement.54">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="civil defense organization" type="//@packagedElement.2/@packagedElement.22" association="//@packagedElement.2/@packagedElement.54">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.2/@packagedElement.55/@ownedEnd.0 //@packagedElement.2/@packagedElement.55/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.55/@ownedEnd.0 //@packagedElement.2/@packagedElement.55/@ownedEnd.1">
+      <ownedEnd name="complex installation" type="//@packagedElement.2/@packagedElement.23" association="//@packagedElement.2/@packagedElement.55">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.55">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="exposed to" memberEnd="//@packagedElement.2/@packagedElement.56/@ownedEnd.0 //@packagedElement.2/@packagedElement.56/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.56/@ownedEnd.0 //@packagedElement.2/@packagedElement.56/@ownedEnd.1">
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.56">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="emergency event with planned type" type="//@packagedElement.6/@packagedElement.2" association="//@packagedElement.2/@packagedElement.56">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="located in" memberEnd="//@packagedElement.2/@packagedElement.57/@ownedEnd.0 //@packagedElement.2/@packagedElement.57/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.57/@ownedEnd.0 //@packagedElement.2/@packagedElement.57/@ownedEnd.1">
+      <ownedEnd name="user" type="//@packagedElement.4/@packagedElement.16" association="//@packagedElement.2/@packagedElement.57">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.57">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.58/@ownedEnd.0 //@packagedElement.2/@packagedElement.58/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.58/@ownedEnd.0 //@packagedElement.2/@packagedElement.58/@ownedEnd.1">
+      <ownedEnd name="possesion" type="//@packagedElement.2/@packagedElement.30" association="//@packagedElement.2/@packagedElement.58">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="installation" type="//@packagedElement.2/@packagedElement.25" association="//@packagedElement.2/@packagedElement.58">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.2/@packagedElement.59/@ownedEnd.0 //@packagedElement.2/@packagedElement.59/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.59/@ownedEnd.0 //@packagedElement.2/@packagedElement.59/@ownedEnd.1">
+      <ownedEnd name="internal allocation" type="//@packagedElement.4/@packagedElement.11" association="//@packagedElement.2/@packagedElement.59">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="organization holder" type="//@packagedElement.2/@packagedElement.28" association="//@packagedElement.2/@packagedElement.59">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="belongs" memberEnd="//@packagedElement.2/@packagedElement.60/@ownedEnd.0 //@packagedElement.2/@packagedElement.60/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.2/@packagedElement.60/@ownedEnd.0 //@packagedElement.2/@packagedElement.60/@ownedEnd.1">
+      <ownedEnd name="business emergency material resource" type="//@packagedElement.4/@packagedElement.2" association="//@packagedElement.2/@packagedElement.60">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="organization holder" type="//@packagedElement.2/@packagedElement.28" association="//@packagedElement.2/@packagedElement.60">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-holderFunction" generalization="//@packagedElement.2/@packagedElement.24/@generalization.0 //@packagedElement.2/@packagedElement.24/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-evacutaionLocal" generalization="//@packagedElement.2/@packagedElement.8/@generalization.0 //@packagedElement.2/@packagedElement.8/@generalization.3"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-acessInfra" generalization="//@packagedElement.2/@packagedElement.0/@generalization.0 //@packagedElement.2/@packagedElement.0/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-holderType" generalization="//@packagedElement.2/@packagedElement.24/@generalization.2 //@packagedElement.2/@packagedElement.24/@generalization.3"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Resource, Types of Resources and Roles">
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Business Emergency Material Resource Type"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Job Plan"/>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.3/@packagedElement.2/@ownedEnd.0 //@packagedElement.3/@packagedElement.2/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.3/@packagedElement.2/@ownedEnd.0 //@packagedElement.3/@packagedElement.2/@ownedEnd.1">
+      <ownedEnd name="business emergency material resource" type="//@packagedElement.4/@packagedElement.2" association="//@packagedElement.3/@packagedElement.2">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="business emergency material resource type" type="//@packagedElement.3/@packagedElement.0" association="//@packagedElement.3/@packagedElement.2">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Human Resources and Materials">
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Allocation"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Business Emergency Human Resource"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Business Emergency Material Resource" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Business Human Resource">
+      <generalization general="//@packagedElement.4/@packagedElement.1" generalizationSet="//@packagedElement.4/@packagedElement.29"/>
+      <generalization general="//@packagedElement.4/@packagedElement.5" generalizationSet="//@packagedElement.4/@packagedElement.29"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Business Human Resource Role"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Business Non Emergency Human Resource"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Emergency Human Resource Role"/>
+    <packagedElement xsi:type="RefOntoUML:Collective" name="Emergency Team"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Function of Role"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Human Resource">
+      <generalization general="//@packagedElement.4/@packagedElement.3" generalizationSet="//@packagedElement.4/@packagedElement.30"/>
+      <generalization general="//@packagedElement.4/@packagedElement.14" generalizationSet="//@packagedElement.4/@packagedElement.30"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Human Resource Role">
+      <generalization general="//@packagedElement.4/@packagedElement.4"/>
+      <generalization general="//@packagedElement.4/@packagedElement.6"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Internal Allocation"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Material Resource" isAbstract="true">
+      <generalization general="//@packagedElement.4/@packagedElement.2"/>
+      <generalization general="//@packagedElement.4/@packagedElement.15"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Positions Plan"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Public Emergency Human Resource"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Public Emergency Material Resource" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Role" name="User">
+      <generalization general="//@packagedElement.4/@packagedElement.5" generalizationSet="//@packagedElement.4/@packagedElement.31"/>
+      <generalization general="//@packagedElement.4/@packagedElement.17" generalizationSet="//@packagedElement.4/@packagedElement.31"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Visitor"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Visitor Type"/>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.4/@packagedElement.19/@ownedEnd.0 //@packagedElement.4/@packagedElement.19/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.19/@ownedEnd.0 //@packagedElement.4/@packagedElement.19/@ownedEnd.1">
+      <ownedEnd name="allocation" type="//@packagedElement.4/@packagedElement.0" association="//@packagedElement.4/@packagedElement.19">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="public emergency human resource" type="//@packagedElement.4/@packagedElement.14" isReadOnly="true" association="//@packagedElement.4/@packagedElement.19">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.4/@packagedElement.20/@ownedEnd.0 //@packagedElement.4/@packagedElement.20/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.20/@ownedEnd.0 //@packagedElement.4/@packagedElement.20/@ownedEnd.1">
+      <ownedEnd name="internal allocation" type="//@packagedElement.4/@packagedElement.11" association="//@packagedElement.4/@packagedElement.20">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="business human resource" type="//@packagedElement.4/@packagedElement.3" isReadOnly="true" association="//@packagedElement.4/@packagedElement.20">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:memberOf" name="" memberEnd="//@packagedElement.4/@packagedElement.21/@ownedEnd.0 //@packagedElement.4/@packagedElement.21/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.21/@ownedEnd.0 //@packagedElement.4/@packagedElement.21/@ownedEnd.1">
+      <ownedEnd name="emergency team" type="//@packagedElement.4/@packagedElement.7" association="//@packagedElement.4/@packagedElement.21">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="human resource" type="//@packagedElement.4/@packagedElement.9" association="//@packagedElement.4/@packagedElement.21">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="defines responsabilities for" memberEnd="//@packagedElement.4/@packagedElement.22/@ownedEnd.0 //@packagedElement.4/@packagedElement.22/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.22/@ownedEnd.0 //@packagedElement.4/@packagedElement.22/@ownedEnd.1">
+      <ownedEnd name="function of role" type="//@packagedElement.4/@packagedElement.8" association="//@packagedElement.4/@packagedElement.22">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="human resource role" type="//@packagedElement.4/@packagedElement.10" association="//@packagedElement.4/@packagedElement.22">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="located in" memberEnd="//@packagedElement.4/@packagedElement.23/@ownedEnd.0 //@packagedElement.4/@packagedElement.23/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.23/@ownedEnd.0 //@packagedElement.4/@packagedElement.23/@ownedEnd.1">
+      <ownedEnd name="human resource" type="//@packagedElement.4/@packagedElement.9" association="//@packagedElement.4/@packagedElement.23">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="geographical region" type="//@packagedElement.8/@packagedElement.9" association="//@packagedElement.4/@packagedElement.23">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.4/@packagedElement.24/@ownedEnd.0 //@packagedElement.4/@packagedElement.24/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.24/@ownedEnd.0 //@packagedElement.4/@packagedElement.24/@ownedEnd.1">
+      <ownedEnd name="human resource" type="//@packagedElement.4/@packagedElement.9" association="//@packagedElement.4/@packagedElement.24">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="human resource role" type="//@packagedElement.4/@packagedElement.10" association="//@packagedElement.4/@packagedElement.24">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="defines" memberEnd="//@packagedElement.4/@packagedElement.25/@ownedEnd.0 //@packagedElement.4/@packagedElement.25/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.25/@ownedEnd.0 //@packagedElement.4/@packagedElement.25/@ownedEnd.1">
+      <ownedEnd name="positions plan" type="//@packagedElement.4/@packagedElement.13" association="//@packagedElement.4/@packagedElement.25">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="human resource role" type="//@packagedElement.4/@packagedElement.10" association="//@packagedElement.4/@packagedElement.25">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="located in" memberEnd="//@packagedElement.4/@packagedElement.26/@ownedEnd.0 //@packagedElement.4/@packagedElement.26/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.26/@ownedEnd.0 //@packagedElement.4/@packagedElement.26/@ownedEnd.1">
+      <ownedEnd name="material resource" type="//@packagedElement.4/@packagedElement.12" association="//@packagedElement.4/@packagedElement.26">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="geographical region" type="//@packagedElement.8/@packagedElement.9" association="//@packagedElement.4/@packagedElement.26">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="located in" memberEnd="//@packagedElement.4/@packagedElement.27/@ownedEnd.0 //@packagedElement.4/@packagedElement.27/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.27/@ownedEnd.0 //@packagedElement.4/@packagedElement.27/@ownedEnd.1">
+      <ownedEnd name="user" type="//@packagedElement.4/@packagedElement.16" association="//@packagedElement.4/@packagedElement.27">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="geographical region" type="//@packagedElement.8/@packagedElement.9" association="//@packagedElement.4/@packagedElement.27">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instantiates" memberEnd="//@packagedElement.4/@packagedElement.28/@ownedEnd.0 //@packagedElement.4/@packagedElement.28/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.4/@packagedElement.28/@ownedEnd.0 //@packagedElement.4/@packagedElement.28/@ownedEnd.1">
+      <ownedEnd name="visitor" type="//@packagedElement.4/@packagedElement.17" association="//@packagedElement.4/@packagedElement.28">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="visitor type" type="//@packagedElement.4/@packagedElement.18" association="//@packagedElement.4/@packagedElement.28">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-businessResource" generalization="//@packagedElement.4/@packagedElement.3/@generalization.0 //@packagedElement.4/@packagedElement.3/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-resource" generalization="//@packagedElement.4/@packagedElement.9/@generalization.0 //@packagedElement.4/@packagedElement.9/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-User" generalization="//@packagedElement.4/@packagedElement.16/@generalization.0 //@packagedElement.4/@packagedElement.16/@generalization.1"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Environment">
+    <packagedElement xsi:type="RefOntoUML:Category" name="Abiotic Component" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Action Universal"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Agent" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Agreement"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Biotic Component" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.29"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Built Component" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.24"/>
+      <generalization general="//@packagedElement.2/@packagedElement.0"/>
+      <generalization general="//@packagedElement.2/@packagedElement.25"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Component" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.25"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Goal">
+      <generalization general="//@packagedElement.5/@packagedElement.8"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Main Goal"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Situation Individual"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Endangered Component" isAbstract="true">
+      <generalization general="//@packagedElement.7/@packagedElement.3"/>
+      <generalization general="//@packagedElement.7/@packagedElement.17"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Environment">
+      <generalization general="//@packagedElement.7/@packagedElement.4"/>
+      <generalization general="//@packagedElement.7/@packagedElement.18"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Intention" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.15"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Natural Component" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.0" generalizationSet="//@packagedElement.5/@packagedElement.45"/>
+      <generalization general="//@packagedElement.5/@packagedElement.4" generalizationSet="//@packagedElement.5/@packagedElement.45"/>
+      <generalization general="//@packagedElement.5/@packagedElement.26"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Plan (Action Universal)">
+      <generalization general="//@packagedElement.5/@packagedElement.18"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Protect Intention"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Protected Environment"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Protection"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Protection Action"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Protector" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Proteger"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Safe Component" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Situation Individual">
+      <generalization general="//@packagedElement.5/@packagedElement.9"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="UFO-C::Open Commitment">
+      <generalization general="//@packagedElement.5/@packagedElement.15"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Under Protection Built Object" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Under Protection Component" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.10" generalizationSet="//@packagedElement.5/@packagedElement.46"/>
+      <generalization general="//@packagedElement.5/@packagedElement.21" generalizationSet="//@packagedElement.5/@packagedElement.46"/>
+      <generalization general="//@packagedElement.5/@packagedElement.24"/>
+      <generalization general="//@packagedElement.5/@packagedElement.26"/>
+      <generalization general="//@packagedElement.5/@packagedElement.28"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Under Protection Natural Object" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.27"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Role" name="Under Protection Person"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Under Protection Social Object" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Person">
+      <generalization general="//@packagedElement.5/@packagedElement.27"/>
+      <generalization general="//@packagedElement.2/@packagedElement.29"/>
+      <generalization general="//@packagedElement.4/@packagedElement.9"/>
+      <generalization general="//@packagedElement.4/@packagedElement.16"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="instance of" memberEnd="//@packagedElement.5/@packagedElement.30/@ownedEnd.0 //@packagedElement.5/@packagedElement.30/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.30/@ownedEnd.0 //@packagedElement.5/@packagedElement.30/@ownedEnd.1">
+      <ownedEnd name="protection" type="//@packagedElement.5/@packagedElement.17" association="//@packagedElement.5/@packagedElement.30">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="action universal" type="//@packagedElement.5/@packagedElement.1" association="//@packagedElement.5/@packagedElement.30">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.5/@packagedElement.31/@ownedEnd.0 //@packagedElement.5/@packagedElement.31/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.31/@ownedEnd.0 //@packagedElement.5/@packagedElement.31/@ownedEnd.1">
+      <ownedEnd name="agreement" type="//@packagedElement.5/@packagedElement.3" association="//@packagedElement.5/@packagedElement.31">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="protector" type="//@packagedElement.5/@packagedElement.19" association="//@packagedElement.5/@packagedElement.31">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mediation" name="" memberEnd="//@packagedElement.5/@packagedElement.32/@ownedEnd.0 //@packagedElement.5/@packagedElement.32/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.32/@ownedEnd.0 //@packagedElement.5/@packagedElement.32/@ownedEnd.1">
+      <ownedEnd name="agreement" type="//@packagedElement.5/@packagedElement.3" association="//@packagedElement.5/@packagedElement.32">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="under protection component" type="//@packagedElement.5/@packagedElement.25" association="//@packagedElement.5/@packagedElement.32">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.5/@packagedElement.33/@ownedEnd.0 //@packagedElement.5/@packagedElement.33/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.33/@ownedEnd.0 //@packagedElement.5/@packagedElement.33/@ownedEnd.1">
+      <ownedEnd name="environment" type="//@packagedElement.5/@packagedElement.11" association="//@packagedElement.5/@packagedElement.33">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="Component" type="//@packagedElement.5/@packagedElement.6" association="//@packagedElement.5/@packagedElement.33">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="propositional content of" memberEnd="//@packagedElement.5/@packagedElement.34/@ownedEnd.0 //@packagedElement.5/@packagedElement.34/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.34/@ownedEnd.0 //@packagedElement.5/@packagedElement.34/@ownedEnd.1">
+      <ownedEnd name="protect intention" type="//@packagedElement.5/@packagedElement.15" association="//@packagedElement.5/@packagedElement.34">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep main goal" type="//@packagedElement.5/@packagedElement.8" association="//@packagedElement.5/@packagedElement.34">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="satisfies" memberEnd="//@packagedElement.5/@packagedElement.35/@ownedEnd.0 //@packagedElement.5/@packagedElement.35/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.35/@ownedEnd.0 //@packagedElement.5/@packagedElement.35/@ownedEnd.1">
+      <ownedEnd name="situation individual" type="//@packagedElement.5/@packagedElement.22" association="//@packagedElement.5/@packagedElement.35">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="ep main goal" type="//@packagedElement.5/@packagedElement.8" association="//@packagedElement.5/@packagedElement.35">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.5/@packagedElement.36/@ownedEnd.0 //@packagedElement.5/@packagedElement.36/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.36/@ownedEnd.0 //@packagedElement.5/@packagedElement.36/@ownedEnd.1">
+      <ownedEnd name="endangered component" type="//@packagedElement.5/@packagedElement.10" association="//@packagedElement.5/@packagedElement.36">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="individual vulnerability" type="//@packagedElement.7/@packagedElement.21" isReadOnly="true" association="//@packagedElement.5/@packagedElement.36">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Characterization" name="" memberEnd="//@packagedElement.5/@packagedElement.37/@ownedEnd.0 //@packagedElement.5/@packagedElement.37/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.37/@ownedEnd.0 //@packagedElement.5/@packagedElement.37/@ownedEnd.1">
+      <ownedEnd name="environmental vulnerability" type="//@packagedElement.7/@packagedElement.8" association="//@packagedElement.5/@packagedElement.37">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="environment" type="//@packagedElement.5/@packagedElement.11" isReadOnly="true" association="//@packagedElement.5/@packagedElement.37">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.5/@packagedElement.38/@ownedEnd.0 //@packagedElement.5/@packagedElement.38/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.38/@ownedEnd.0 //@packagedElement.5/@packagedElement.38/@ownedEnd.1">
+      <ownedEnd name="environment" type="//@packagedElement.5/@packagedElement.11" association="//@packagedElement.5/@packagedElement.38">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="component" type="//@packagedElement.7/@packagedElement.0" association="//@packagedElement.5/@packagedElement.38">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="changes" memberEnd="//@packagedElement.5/@packagedElement.39/@ownedEnd.0 //@packagedElement.5/@packagedElement.39/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.39/@ownedEnd.0 //@packagedElement.5/@packagedElement.39/@ownedEnd.1">
+      <ownedEnd name="impact type" type="//@packagedElement.6/@packagedElement.4" association="//@packagedElement.5/@packagedElement.39">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="environment" type="//@packagedElement.5/@packagedElement.11" association="//@packagedElement.5/@packagedElement.39">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has location" memberEnd="//@packagedElement.5/@packagedElement.40/@ownedEnd.0 //@packagedElement.5/@packagedElement.40/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.40/@ownedEnd.0 //@packagedElement.5/@packagedElement.40/@ownedEnd.1">
+      <ownedEnd name="environment" type="//@packagedElement.5/@packagedElement.11" association="//@packagedElement.5/@packagedElement.40">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="geographical region" type="//@packagedElement.8/@packagedElement.9" association="//@packagedElement.5/@packagedElement.40">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="causes" memberEnd="//@packagedElement.5/@packagedElement.41/@ownedEnd.0 //@packagedElement.5/@packagedElement.41/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.41/@ownedEnd.0 //@packagedElement.5/@packagedElement.41/@ownedEnd.1">
+      <ownedEnd name="protect intention" type="//@packagedElement.5/@packagedElement.15" association="//@packagedElement.5/@packagedElement.41">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="protection action" type="//@packagedElement.5/@packagedElement.18" association="//@packagedElement.5/@packagedElement.41">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="inherents in" memberEnd="//@packagedElement.5/@packagedElement.42/@ownedEnd.0 //@packagedElement.5/@packagedElement.42/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.42/@ownedEnd.0 //@packagedElement.5/@packagedElement.42/@ownedEnd.1">
+      <ownedEnd name="protector" type="//@packagedElement.5/@packagedElement.19" association="//@packagedElement.5/@packagedElement.42">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="protect intention" type="//@packagedElement.5/@packagedElement.15" association="//@packagedElement.5/@packagedElement.42">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="caused by" memberEnd="//@packagedElement.5/@packagedElement.43/@ownedEnd.0 //@packagedElement.5/@packagedElement.43/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.43/@ownedEnd.0 //@packagedElement.5/@packagedElement.43/@ownedEnd.1">
+      <ownedEnd name="protection action" type="//@packagedElement.5/@packagedElement.18" association="//@packagedElement.5/@packagedElement.43">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="proteger" type="//@packagedElement.5/@packagedElement.20" association="//@packagedElement.5/@packagedElement.43">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="creates" memberEnd="//@packagedElement.5/@packagedElement.44/@ownedEnd.0 //@packagedElement.5/@packagedElement.44/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.5/@packagedElement.44/@ownedEnd.0 //@packagedElement.5/@packagedElement.44/@ownedEnd.1">
+      <ownedEnd name="protection action" type="//@packagedElement.5/@packagedElement.18" association="//@packagedElement.5/@packagedElement.44">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="situation individual" type="//@packagedElement.5/@packagedElement.22" association="//@packagedElement.5/@packagedElement.44">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-liveness" generalization="//@packagedElement.5/@packagedElement.13/@generalization.0 //@packagedElement.5/@packagedElement.13/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-SituationObject" generalization="//@packagedElement.5/@packagedElement.25/@generalization.0 //@packagedElement.5/@packagedElement.25/@generalization.1"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Emergency Event">
+    <packagedElement xsi:type="RefOntoUML:Kind" name="EP Plan"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Emergency Event Type">
+      <generalization general="//@packagedElement.6/@packagedElement.2"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Emergency Event with Planned Type"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Identified Risk"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Impact Type"/>
+    <packagedElement xsi:type="RefOntoUML:Relator" name="Risk">
+      <generalization general="//@packagedElement.6/@packagedElement.3"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="causes" memberEnd="//@packagedElement.6/@packagedElement.6/@ownedEnd.0 //@packagedElement.6/@packagedElement.6/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.6/@packagedElement.6/@ownedEnd.0 //@packagedElement.6/@packagedElement.6/@ownedEnd.1">
+      <ownedEnd name="emergency event type" type="//@packagedElement.6/@packagedElement.1" association="//@packagedElement.6/@packagedElement.6">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="impact type" type="//@packagedElement.6/@packagedElement.4" association="//@packagedElement.6/@packagedElement.6">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="generically dependent on" memberEnd="//@packagedElement.6/@packagedElement.7/@ownedEnd.0 //@packagedElement.6/@packagedElement.7/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.6/@packagedElement.7/@ownedEnd.0 //@packagedElement.6/@packagedElement.7/@ownedEnd.1">
+      <ownedEnd name="identified risk" type="//@packagedElement.6/@packagedElement.3" association="//@packagedElement.6/@packagedElement.7">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="emergency event with planned type" type="//@packagedElement.6/@packagedElement.2" association="//@packagedElement.6/@packagedElement.7">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Risks and Planned Activities">
+    <packagedElement xsi:type="RefOntoUML:Category" name="Component" isAbstract="true">
+      <generalization general="//@packagedElement.5/@packagedElement.10"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Damage"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Damage Type"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Damaged Component" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Damaged Environment" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Damaged Participant" isAbstract="true">
+      <generalization general="//@packagedElement.7/@packagedElement.3"/>
+      <generalization general="//@packagedElement.7/@packagedElement.4"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Emergency Event Type"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Enviromental Vulnerability"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Environmental Vulnerability"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Event Type">
+      <generalization general="//@packagedElement.6/@packagedElement.1"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Hazard"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Hazard "/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Hazard Type"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Hazardous Event"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Hazardous Event Type"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Impact">
+      <generalization general="//@packagedElement.7/@packagedElement.1"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Impact Type"/>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Impacted Component" isAbstract="true">
+      <generalization general="//@packagedElement.7/@packagedElement.3"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Impacted Environment" isAbstract="true">
+      <generalization general="//@packagedElement.7/@packagedElement.4"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:RoleMixin" name="Impacted Participant" isAbstract="true">
+      <generalization general="//@packagedElement.7/@packagedElement.5"/>
+      <generalization general="//@packagedElement.7/@packagedElement.17"/>
+      <generalization general="//@packagedElement.7/@packagedElement.18"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Individual Vulnerability"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Individual Vulnerability"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Mitigation activity"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Preventive activity"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Risk"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Risk Type"/>
+    <packagedElement xsi:type="RefOntoUML:Mode" name="Transfer activity"/>
+    <packagedElement xsi:type="RefOntoUML:Kind" name="Vulnerability">
+      <generalization general="//@packagedElement.7/@packagedElement.8" generalizationSet="//@packagedElement.7/@packagedElement.45"/>
+      <generalization general="//@packagedElement.7/@packagedElement.21" generalizationSet="//@packagedElement.7/@packagedElement.45"/>
+      <generalization general="//@packagedElement.7/@packagedElement.24" generalizationSet="//@packagedElement.7/@packagedElement.46"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifies" memberEnd="//@packagedElement.7/@packagedElement.28/@ownedEnd.0 //@packagedElement.7/@packagedElement.28/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.28/@ownedEnd.0 //@packagedElement.7/@packagedElement.28/@ownedEnd.1">
+      <ownedEnd name="damage" type="//@packagedElement.7/@packagedElement.1" association="//@packagedElement.7/@packagedElement.28">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="damage type" type="//@packagedElement.7/@packagedElement.2" association="//@packagedElement.7/@packagedElement.28">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="manifested_by" memberEnd="//@packagedElement.7/@packagedElement.29/@ownedEnd.0 //@packagedElement.7/@packagedElement.29/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.29/@ownedEnd.0 //@packagedElement.7/@packagedElement.29/@ownedEnd.1">
+      <ownedEnd name="damage" type="//@packagedElement.7/@packagedElement.1" association="//@packagedElement.7/@packagedElement.29">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="vulnerability" type="//@packagedElement.7/@packagedElement.27" association="//@packagedElement.7/@packagedElement.29">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.7/@packagedElement.30/@ownedEnd.0 //@packagedElement.7/@packagedElement.30/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.30/@ownedEnd.0 //@packagedElement.7/@packagedElement.30/@ownedEnd.1">
+      <ownedEnd name="damage" type="//@packagedElement.7/@packagedElement.1" association="//@packagedElement.7/@packagedElement.30">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="damaged" type="//@packagedElement.7/@packagedElement.5" association="//@packagedElement.7/@packagedElement.30">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.7/@packagedElement.31/@ownedEnd.0 //@packagedElement.7/@packagedElement.31/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.31/@ownedEnd.0 //@packagedElement.7/@packagedElement.31/@ownedEnd.1">
+      <ownedEnd name="hazardous event" type="//@packagedElement.7/@packagedElement.13" association="//@packagedElement.7/@packagedElement.31">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="damage" type="//@packagedElement.7/@packagedElement.1" association="//@packagedElement.7/@packagedElement.31">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="enables" memberEnd="//@packagedElement.7/@packagedElement.32/@ownedEnd.0 //@packagedElement.7/@packagedElement.32/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.32/@ownedEnd.0 //@packagedElement.7/@packagedElement.32/@ownedEnd.1">
+      <ownedEnd name="hazard" type="//@packagedElement.7/@packagedElement.10" association="//@packagedElement.7/@packagedElement.32">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="damage" type="//@packagedElement.7/@packagedElement.1" association="//@packagedElement.7/@packagedElement.32">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="determines" memberEnd="//@packagedElement.7/@packagedElement.33/@ownedEnd.0 //@packagedElement.7/@packagedElement.33/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.33/@ownedEnd.0 //@packagedElement.7/@packagedElement.33/@ownedEnd.1">
+      <ownedEnd name="vulnerability" type="//@packagedElement.7/@packagedElement.27" association="//@packagedElement.7/@packagedElement.33">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="damage type" type="//@packagedElement.7/@packagedElement.2" association="//@packagedElement.7/@packagedElement.33">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.7/@packagedElement.34/@ownedEnd.0 //@packagedElement.7/@packagedElement.34/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.34/@ownedEnd.0 //@packagedElement.7/@packagedElement.34/@ownedEnd.1">
+      <ownedEnd name="environmental vulnerability" type="//@packagedElement.7/@packagedElement.8" association="//@packagedElement.7/@packagedElement.34">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="individual vulnerability" type="//@packagedElement.7/@packagedElement.21" association="//@packagedElement.7/@packagedElement.34">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="enables" memberEnd="//@packagedElement.7/@packagedElement.35/@ownedEnd.0 //@packagedElement.7/@packagedElement.35/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.35/@ownedEnd.0 //@packagedElement.7/@packagedElement.35/@ownedEnd.1">
+      <ownedEnd name="preState" type="//@packagedElement.7/@packagedElement.10" association="//@packagedElement.7/@packagedElement.35">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="hazardous event" type="//@packagedElement.7/@packagedElement.13" association="//@packagedElement.7/@packagedElement.35">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="activates" memberEnd="//@packagedElement.7/@packagedElement.36/@ownedEnd.0 //@packagedElement.7/@packagedElement.36/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.36/@ownedEnd.0 //@packagedElement.7/@packagedElement.36/@ownedEnd.1">
+      <ownedEnd name="hazard" type="//@packagedElement.7/@packagedElement.10" association="//@packagedElement.7/@packagedElement.36">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="vulnerability" type="//@packagedElement.7/@packagedElement.27" association="//@packagedElement.7/@packagedElement.36">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.7/@packagedElement.37/@ownedEnd.0 //@packagedElement.7/@packagedElement.37/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.37/@ownedEnd.0 //@packagedElement.7/@packagedElement.37/@ownedEnd.1">
+      <ownedEnd name="hazardous event" type="//@packagedElement.7/@packagedElement.13" association="//@packagedElement.7/@packagedElement.37">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="hazard" type="//@packagedElement.7/@packagedElement.10" association="//@packagedElement.7/@packagedElement.37">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifies" memberEnd="//@packagedElement.7/@packagedElement.38/@ownedEnd.0 //@packagedElement.7/@packagedElement.38/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.38/@ownedEnd.0 //@packagedElement.7/@packagedElement.38/@ownedEnd.1">
+      <ownedEnd name="hazard type" type="//@packagedElement.7/@packagedElement.12" association="//@packagedElement.7/@packagedElement.38">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="hazard" type="//@packagedElement.7/@packagedElement.10" association="//@packagedElement.7/@packagedElement.38">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:componentOf" name="" memberEnd="//@packagedElement.7/@packagedElement.39/@ownedEnd.0 //@packagedElement.7/@packagedElement.39/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.39/@ownedEnd.0 //@packagedElement.7/@packagedElement.39/@ownedEnd.1">
+      <ownedEnd name="hazardous event" type="//@packagedElement.7/@packagedElement.13" association="//@packagedElement.7/@packagedElement.39">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="impact" type="//@packagedElement.7/@packagedElement.15" association="//@packagedElement.7/@packagedElement.39">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifies" memberEnd="//@packagedElement.7/@packagedElement.40/@ownedEnd.0 //@packagedElement.7/@packagedElement.40/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.40/@ownedEnd.0 //@packagedElement.7/@packagedElement.40/@ownedEnd.1">
+      <ownedEnd name="hazardous event" type="//@packagedElement.7/@packagedElement.13" association="//@packagedElement.7/@packagedElement.40">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="hazardous event type" type="//@packagedElement.7/@packagedElement.14" association="//@packagedElement.7/@packagedElement.40">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="can cause" memberEnd="//@packagedElement.7/@packagedElement.41/@ownedEnd.0 //@packagedElement.7/@packagedElement.41/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.41/@ownedEnd.0 //@packagedElement.7/@packagedElement.41/@ownedEnd.1">
+      <ownedEnd name="hazardous event type" type="//@packagedElement.7/@packagedElement.14" association="//@packagedElement.7/@packagedElement.41">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="impact type" type="//@packagedElement.7/@packagedElement.16" association="//@packagedElement.7/@packagedElement.41">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifies" memberEnd="//@packagedElement.7/@packagedElement.42/@ownedEnd.0 //@packagedElement.7/@packagedElement.42/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.42/@ownedEnd.0 //@packagedElement.7/@packagedElement.42/@ownedEnd.1">
+      <ownedEnd name="impact" type="//@packagedElement.7/@packagedElement.15" association="//@packagedElement.7/@packagedElement.42">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="impact type" type="//@packagedElement.7/@packagedElement.16" association="//@packagedElement.7/@packagedElement.42">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="participationof (changes)" memberEnd="//@packagedElement.7/@packagedElement.43/@ownedEnd.0 //@packagedElement.7/@packagedElement.43/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.43/@ownedEnd.0 //@packagedElement.7/@packagedElement.43/@ownedEnd.1">
+      <ownedEnd name="impacted" type="//@packagedElement.7/@packagedElement.19" association="//@packagedElement.7/@packagedElement.43">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="impact" type="//@packagedElement.7/@packagedElement.15" association="//@packagedElement.7/@packagedElement.43">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="classifies" memberEnd="//@packagedElement.7/@packagedElement.44/@ownedEnd.0 //@packagedElement.7/@packagedElement.44/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.7/@packagedElement.44/@ownedEnd.0 //@packagedElement.7/@packagedElement.44/@ownedEnd.1">
+      <ownedEnd name="risk type" type="//@packagedElement.7/@packagedElement.25" association="//@packagedElement.7/@packagedElement.44">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="risk" type="//@packagedElement.7/@packagedElement.24" association="//@packagedElement.7/@packagedElement.44">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-Vulnerability" generalization="//@packagedElement.7/@packagedElement.27/@generalization.0 //@packagedElement.7/@packagedElement.27/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-LevelOfVulnerability" generalization="//@packagedElement.7/@packagedElement.27/@generalization.2"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Package" name="Geographical Region">
+    <packagedElement xsi:type="RefOntoUML:Category" name="Authority" isAbstract="true">
+      <generalization general="//@packagedElement.8/@packagedElement.6"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Geographical Point" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Jurisdiction" isAbstract="true">
+      <generalization general="//@packagedElement.8/@packagedElement.7"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Macro Political Region" isAbstract="true">
+      <ownedAttribute name="name" type="//@packagedElement.8/@packagedElement.20">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Micro Political Region" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Non Political Region" isAbstract="true"/>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Political Body" isAbstract="true">
+      <ownedAttribute name="name" type="//@packagedElement.8/@packagedElement.21">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Political Region" isAbstract="true">
+      <generalization general="//@packagedElement.8/@packagedElement.3" generalizationSet="//@packagedElement.8/@packagedElement.26"/>
+      <generalization general="//@packagedElement.8/@packagedElement.4" generalizationSet="//@packagedElement.8/@packagedElement.26"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Spatial Location" isAbstract="true">
+      <generalization general="//@packagedElement.8/@packagedElement.1" generalizationSet="//@packagedElement.8/@packagedElement.25"/>
+      <generalization general="//@packagedElement.8/@packagedElement.9" generalizationSet="//@packagedElement.8/@packagedElement.25"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:Category" name="Geographical Region" isAbstract="true">
+      <generalization general="//@packagedElement.8/@packagedElement.2"/>
+      <generalization general="//@packagedElement.8/@packagedElement.5" generalizationSet="//@packagedElement.8/@packagedElement.27"/>
+      <generalization general="//@packagedElement.8/@packagedElement.7" generalizationSet="//@packagedElement.8/@packagedElement.27"/>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:DataType" name="Adress Domain"/>
+    <packagedElement xsi:type="RefOntoUML:DataType" name="Location Coordinates">
+      <ownedAttribute name="altitude" type="//@packagedElement.8/@packagedElement.22">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute name="latitude" type="//@packagedElement.8/@packagedElement.23">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute name="longitude" type="//@packagedElement.8/@packagedElement.24">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="controlled by" memberEnd="//@packagedElement.8/@packagedElement.12/@ownedEnd.0 //@packagedElement.8/@packagedElement.12/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.12/@ownedEnd.0 //@packagedElement.8/@packagedElement.12/@ownedEnd.1">
+      <ownedEnd name="jurisdiction" type="//@packagedElement.8/@packagedElement.2" association="//@packagedElement.8/@packagedElement.12">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="authority" type="//@packagedElement.8/@packagedElement.0" association="//@packagedElement.8/@packagedElement.12">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has location" memberEnd="//@packagedElement.8/@packagedElement.13/@ownedEnd.0 //@packagedElement.8/@packagedElement.13/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.13/@ownedEnd.0 //@packagedElement.8/@packagedElement.13/@ownedEnd.1">
+      <ownedEnd name="geographical point" type="//@packagedElement.8/@packagedElement.1" association="//@packagedElement.8/@packagedElement.13">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="location coordinates" type="//@packagedElement.8/@packagedElement.11" association="//@packagedElement.8/@packagedElement.13">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="" memberEnd="//@packagedElement.8/@packagedElement.14/@ownedEnd.0 //@packagedElement.8/@packagedElement.14/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.14/@ownedEnd.0 //@packagedElement.8/@packagedElement.14/@ownedEnd.1">
+      <ownedEnd name="micro political region" type="//@packagedElement.8/@packagedElement.4" association="//@packagedElement.8/@packagedElement.14">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="adress domain" type="//@packagedElement.8/@packagedElement.10" association="//@packagedElement.8/@packagedElement.14">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="is subordinated to" memberEnd="//@packagedElement.8/@packagedElement.15/@ownedEnd.0 //@packagedElement.8/@packagedElement.15/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.15/@ownedEnd.0 //@packagedElement.8/@packagedElement.15/@ownedEnd.1">
+      <ownedEnd name="political body" type="//@packagedElement.8/@packagedElement.6" association="//@packagedElement.8/@packagedElement.15">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="political body" type="//@packagedElement.8/@packagedElement.6" association="//@packagedElement.8/@packagedElement.15">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="controlled by" memberEnd="//@packagedElement.8/@packagedElement.16/@ownedEnd.0 //@packagedElement.8/@packagedElement.16/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.16/@ownedEnd.0 //@packagedElement.8/@packagedElement.16/@ownedEnd.1">
+      <ownedEnd name="political region" type="//@packagedElement.8/@packagedElement.7" association="//@packagedElement.8/@packagedElement.16">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+      <ownedEnd name="political body" type="//@packagedElement.8/@packagedElement.6" association="//@packagedElement.8/@packagedElement.16">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has location" memberEnd="//@packagedElement.8/@packagedElement.17/@ownedEnd.0 //@packagedElement.8/@packagedElement.17/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.17/@ownedEnd.0 //@packagedElement.8/@packagedElement.17/@ownedEnd.1">
+      <ownedEnd name="spatialLocation" type="//@packagedElement.8/@packagedElement.8" association="//@packagedElement.8/@packagedElement.17">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="location coordinates" type="//@packagedElement.8/@packagedElement.11" association="//@packagedElement.8/@packagedElement.17">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="spatially subsumes" memberEnd="//@packagedElement.8/@packagedElement.18/@ownedEnd.0 //@packagedElement.8/@packagedElement.18/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.18/@ownedEnd.0 //@packagedElement.8/@packagedElement.18/@ownedEnd.1">
+      <ownedEnd name="spatial location" type="//@packagedElement.8/@packagedElement.8" association="//@packagedElement.8/@packagedElement.18">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="spatial location" type="//@packagedElement.8/@packagedElement.8" association="//@packagedElement.8/@packagedElement.18">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:FormalAssociation" name="has location" memberEnd="//@packagedElement.8/@packagedElement.19/@ownedEnd.0 //@packagedElement.8/@packagedElement.19/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.8/@packagedElement.19/@ownedEnd.0 //@packagedElement.8/@packagedElement.19/@ownedEnd.1">
+      <ownedEnd name="geographical region" type="//@packagedElement.8/@packagedElement.9" association="//@packagedElement.8/@packagedElement.19">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger"/>
+      </ownedEnd>
+      <ownedEnd name="location coordinates" type="//@packagedElement.8/@packagedElement.11" association="//@packagedElement.8/@packagedElement.19">
+        <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+        <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="2"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="RefOntoUML:PrimitiveType" name="Boolean"/>
+    <packagedElement xsi:type="RefOntoUML:PrimitiveType" name="Boolean"/>
+    <packagedElement xsi:type="RefOntoUML:PrimitiveType" name="Boolean"/>
+    <packagedElement xsi:type="RefOntoUML:PrimitiveType" name="Boolean"/>
+    <packagedElement xsi:type="RefOntoUML:PrimitiveType" name="Boolean"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-spatial" generalization="//@packagedElement.8/@packagedElement.8/@generalization.0 //@packagedElement.8/@packagedElement.8/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-politicalRegion" generalization="//@packagedElement.8/@packagedElement.7/@generalization.0 //@packagedElement.8/@packagedElement.7/@generalization.1"/>
+    <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="gs-geographicalRegion" generalization="//@packagedElement.8/@packagedElement.9/@generalization.1 //@packagedElement.8/@packagedElement.9/@generalization.2"/>
+  </packagedElement>
+</RefOntoUML:Model>
