@@ -5,11 +5,12 @@ package net.menthor.onto2.ontouml.provider;
 
 import java.util.Collection;
 import java.util.List;
+
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
-import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 /**
  * This is the item provider adapter for a {@link net.menthor.onto2.ontouml.Model} object.
@@ -54,15 +55,9 @@ public class ModelItemProvider extends ContainerItemProvider {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Model"));
 	}
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 */
 	@Override
 	public String getText(Object object) {
-		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.Model)object);
+		return OntoumlPrintHelper.getCommonName((org.eclipse.emf.ecore.EObject)object);
 	}
 	
 

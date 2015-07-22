@@ -9,11 +9,11 @@ import java.util.List;
 import net.menthor.onto2.ontouml.OntoumlFactory;
 import net.menthor.onto2.ontouml.OntoumlPackage;
 import net.menthor.onto2.ontouml.Relationship;
+import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -253,18 +253,9 @@ public class RelationshipItemProvider extends ClassifierItemProvider {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Relationship"));
 	}
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Relationship)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Relationship_type") :
-			getString("_UI_Relationship_type") + " " + label;
+		return OntoumlPrintHelper.getCommonName((org.eclipse.emf.ecore.EObject)object);
 	}
 	
 

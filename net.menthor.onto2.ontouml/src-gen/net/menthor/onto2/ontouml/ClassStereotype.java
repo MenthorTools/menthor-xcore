@@ -435,8 +435,6 @@ public enum ClassStereotype implements Enumerator {
 	 * Returns the '<em><b>Class Stereotype</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ClassStereotype get(String literal) {
@@ -453,8 +451,6 @@ public enum ClassStereotype implements Enumerator {
 	 * Returns the '<em><b>Class Stereotype</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ClassStereotype getByName(String name) {
@@ -471,8 +467,6 @@ public enum ClassStereotype implements Enumerator {
 	 * Returns the '<em><b>Class Stereotype</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ClassStereotype get(int value) {

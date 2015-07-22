@@ -12,7 +12,7 @@
                label="Convert to OntoUML 2.0 (*.mouml)"
                style="push">
             <visibleWhen
-                  checkEnabled="false">
+                  checkEnabled="true">
                <with
                      variable="activeMenuSelection">
                   <iterate>

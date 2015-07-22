@@ -12,7 +12,6 @@ import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -176,16 +175,10 @@ public class AttributeItemProvider extends PropertyItemProvider {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Attribute"));
 	}
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 */
+	@Override
 	public String getText(Object object) {
-		return OntoumlPrintHelper.getCommonName((Attribute)object);
+		return OntoumlPrintHelper.getCommonName((org.eclipse.emf.ecore.EObject)object);
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

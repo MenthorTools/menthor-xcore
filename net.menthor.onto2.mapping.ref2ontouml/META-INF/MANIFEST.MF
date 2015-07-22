@@ -11,10 +11,12 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ocl.ecore,
  org.eclipse.core.resources,
  org.eclipse.jdt.core,
- org.eclipse.core.expressions
+ org.eclipse.core.expressions,
+ net.menthor.onto2.ontouml
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Name: %pluginName
 Bundle-Vendor: %providerName
 Export-Package: net.menthor.onto2.mapping.ref2ontouml
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ lib/br.ufes.inf.nemo.ontouml.refontouml_1.3.0.201409252327.jar

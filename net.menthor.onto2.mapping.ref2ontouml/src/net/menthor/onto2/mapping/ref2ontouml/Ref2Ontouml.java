@@ -7,8 +7,6 @@ import net.menthor.onto2.ontouml.util.OntoumlResource;
 
 import org.eclipse.emf.ecore.resource.Resource;
 
-import RefOntoUML.util.RefOntoUMLResourceUtil;
-
 public class Ref2Ontouml {
 
 	public static void main(String[] args)
@@ -23,7 +21,7 @@ public class Ref2Ontouml {
 	public static void run(String refontoPath, String ontoPath)
 	{	
 		try {
-			Resource resource = RefOntoUMLResourceUtil.loadModel(refontoPath);
+			Resource resource = TransformerUtil.loadRefModel(refontoPath);
 			RefOntoUML.Package refmodel = (RefOntoUML.Package)resource.getContents().get(0);						
 			run(refmodel, ontoPath);			
 		} catch (Exception e) {

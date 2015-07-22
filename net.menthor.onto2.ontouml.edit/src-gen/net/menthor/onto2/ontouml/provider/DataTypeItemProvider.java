@@ -13,9 +13,7 @@ import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -301,15 +299,9 @@ public class DataTypeItemProvider extends TypeItemProvider {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DataType"));
 	}
 
-	/**
-	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * 
-	 */
 	@Override
 	public String getText(Object object) {
-		return OntoumlPrintHelper.getCommonName((net.menthor.onto2.ontouml.DataType)object);
+		return OntoumlPrintHelper.getCommonName((org.eclipse.emf.ecore.EObject)object);
 	}
 	
 

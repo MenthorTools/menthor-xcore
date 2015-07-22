@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.PropertyImpl#isIsOrdered <em>Is Ordered</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.PropertyImpl#isIsDerived <em>Is Derived</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link net.menthor.onto2.ontouml.impl.PropertyImpl#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.PropertyImpl#isIsDependency <em>Is Dependency</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

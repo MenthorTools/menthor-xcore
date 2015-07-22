@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.EndPointImpl#getOwner <em>Owner</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.EndPointImpl#getEndType <em>End Type</em>}</li>
@@ -38,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.menthor.onto2.ontouml.impl.EndPointImpl#getIsSubsettedBy <em>Is Subsetted By</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.EndPointImpl#getIsRedefinedBy <em>Is Redefined By</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

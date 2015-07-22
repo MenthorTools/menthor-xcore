@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Attribute#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Attribute#getSynonyms <em>Synonyms</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link net.menthor.onto2.ontouml.Attribute#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Attribute#getOwner <em>Owner</em>}</li>
  * </ul>
+ * </p>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getAttribute()
  * @model

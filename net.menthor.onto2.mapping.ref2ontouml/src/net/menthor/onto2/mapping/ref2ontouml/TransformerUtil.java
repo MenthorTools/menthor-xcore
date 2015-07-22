@@ -1,17 +1,44 @@
 package net.menthor.onto2.mapping.ref2ontouml;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMLParserPoolImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
+import RefOntoUML.util.RefOntoUMLResourceFactoryImpl;
 import net.menthor.onto2.ontouml.ClassStereotype;
 import net.menthor.onto2.ontouml.DataTypeStereotype;
 import net.menthor.onto2.ontouml.PrimitiveStereotype;
 import net.menthor.onto2.ontouml.RelationshipStereotype;
 
 public class TransformerUtil {
+	
+	public static Resource loadRefModel(String refontoumlpath) throws IOException
+	{
+		ResourceSet rset = new ResourceSetImpl();			
+		rset.getResourceFactoryRegistry().getExtensionToFactoryMap().put("refontouml",new RefOntoUMLResourceFactoryImpl());
+		rset.getPackageRegistry().put(RefOntoUML.RefOntoUMLPackage.eNS_URI,	RefOntoUML.RefOntoUMLPackage.eINSTANCE);		
+	    File file = new File(refontoumlpath);
+		URI fileURI = URI.createFileURI(file.getAbsolutePath());		
+		Resource resource = rset.createResource(fileURI);		
+		/**Load options that significantly improved the performance of loading EMF Model instances*/
+		Map<Object,Object> loadOptions = ((XMLResourceImpl)resource).getDefaultLoadOptions();
+		loadOptions.put(XMLResource.OPTION_USE_PARSER_POOL, new XMLParserPoolImpl());
+		loadOptions.put(XMLResource.OPTION_DEFER_IDREF_RESOLUTION, Boolean.TRUE);
+		resource.load(loadOptions);		
+		return resource;		
+	}
 	
 	public static ClassStereotype getClassStereotypeByName(EObject elem, String stereo)
     {

@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#isIsAbstract <em>Is Abstract</em>}</li>
@@ -42,6 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#getExistence <em>Existence</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassImpl#getClassification <em>Classification</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
