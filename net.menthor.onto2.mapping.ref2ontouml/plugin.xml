@@ -7,7 +7,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
          <command
-               commandId="net.menthor.onto2.mapping.ref2ontouml.tranform"
+               commandId="net.menthor.onto2.mapping.ref2ontouml.convert"
                icon="icon/menthor.png"
                label="Convert to OntoUML 2.0 (*.mouml)"
                style="push">
@@ -20,7 +20,7 @@
                            type="org.eclipse.core.resources.IResource">
                         <test
                               property="org.eclipse.core.resources.name"
-                              value="`*.refontouml">
+                              value="*.refontouml">
                         </test>
                      </adapt>
                   </iterate>

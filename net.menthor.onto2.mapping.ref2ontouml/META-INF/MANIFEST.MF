@@ -5,15 +5,16 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: net.menthor.onto2.mapping.ref2ontouml.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.google.guava;bundle-version="15.0.0",
- org.eclipse.emf.ecore;bundle-version="2.11.0",
- org.eclipse.emf.ecore.xmi;bundle-version="2.11.0",
- org.eclipse.ocl.ecore;bundle-version="3.5.0",
- org.eclipse.core.resources;bundle-version="3.10.0",
- org.eclipse.jdt.core;bundle-version="3.11.0",
- org.eclipse.core.expressions;bundle-version="3.5.0"
+ com.google.guava,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ocl.ecore,
+ org.eclipse.core.resources,
+ org.eclipse.jdt.core,
+ org.eclipse.core.expressions
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Name: %pluginName
 Bundle-Vendor: %providerName
 Export-Package: net.menthor.onto2.mapping.ref2ontouml
+Bundle-ClassPath: .
