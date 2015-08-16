@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import net.menthor.onto2.ontouml.Model;
 import net.menthor.onto2.ontouml.util.OntoumlResource;
+import net.menthor.onto2.ontouml.util.OntoumlDiagnostician;
 
 import org.eclipse.emf.ecore.resource.Resource;
 
@@ -11,8 +12,8 @@ public class Ref2Ontouml {
 
 	public static void main(String[] args)
 	{
-		run("src/net/menthor/onto2/mapping/ref2ontouml/test/ontoemerge.refontouml", 
-			"src/net/menthor/onto2/mapping/ref2ontouml/test/ontoemerge.mouml");
+		//run("src/net/menthor/onto2/mapping/ref2ontouml/test/ontoemerge.refontouml", 
+		//	"src/net/menthor/onto2/mapping/ref2ontouml/test/ontoemerge.mouml");
 		
 		run("src/net/menthor/onto2/mapping/ref2ontouml/test/ontobio.refontouml", 
 			"src/net/menthor/onto2/mapping/ref2ontouml/test/ontobio.mouml");
@@ -35,5 +36,10 @@ public class Ref2Ontouml {
 		Model ontomodel = t.run();		
 		OntoumlResource.save(ontoPath,ontomodel);		
 		System.out.println("Ref2Ontouml: Executed succesfully.");
+		
+		OntoumlDiagnostician checker = new OntoumlDiagnostician();
+		checker.run(ontomodel);
+		System.out.println(checker.getResult());
+		System.out.println("Syntactical Verification: Executed succesfully.");
 	}
 }

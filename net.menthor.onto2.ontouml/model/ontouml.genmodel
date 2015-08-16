@@ -223,7 +223,24 @@
       <genOperations ecoreOperation="ontouml.ecore#//Classifier/allChildren.1"/>
       <genOperations ecoreOperation="ontouml.ecore#//Classifier/siblings"/>
       <genOperations ecoreOperation="ontouml.ecore#//Classifier/ends"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/ends.1">
+        <genParameters ecoreParameter="ontouml.ecore#//Classifier/ends.1/stereo"/>
+      </genOperations>
       <genOperations ecoreOperation="ontouml.ecore#//Classifier/allEnds"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/allEnds.1">
+        <genParameters ecoreParameter="ontouml.ecore#//Classifier/allEnds.1/stereo"/>
+      </genOperations>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/relationships"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/allRelationships"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/isDisjointOfParentsOf">
+        <genParameters ecoreParameter="ontouml.ecore#//Classifier/isDisjointOfParentsOf/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/isDisjointOfChildrenOf">
+        <genParameters ecoreParameter="ontouml.ecore#//Classifier/isDisjointOfChildrenOf/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="ontouml.ecore#//Classifier/isDisjointOf">
+        <genParameters ecoreParameter="ontouml.ecore#//Classifier/isDisjointOf/c"/>
+      </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="ontouml.ecore#//Type">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ontouml.ecore#//Type/attributes"/>
@@ -243,6 +260,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Attribute/text"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Attribute/stereotype"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ontouml.ecore#//Attribute/owner"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Attribute/isInteger"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Attribute/isBoolean"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Attribute/isReal"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Attribute/isDate"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Attribute/isDateTime"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Attribute/isString"/>
     </genClasses>
     <genClasses ecoreClass="ontouml.ecore#//Constraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Constraint/stereotype"/>
@@ -317,6 +340,11 @@
       <genOperations ecoreOperation="ontouml.ecore#//Class/isNonRigid"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isAntiRigid"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isSemiRigid"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isPerceivableQuality"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isNonPerceivableQuality"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isNominalQuality"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isEndurantClass"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isIntrinsicMoment"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isSubstanceSortalClass"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isMomentClass"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isIdentityProviderClass"/>
@@ -328,6 +356,7 @@
       <genOperations ecoreOperation="ontouml.ecore#//Class/isMoment"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isTruthMaker"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/isNonQualitativeIntrinsicMoment"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Class/isQualitativeIntrinsicMoment"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/identityProvidersAtAllParents"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/identityProvidersAtAllChildren"/>
       <genOperations ecoreOperation="ontouml.ecore#//Class/identityProviders"/>
@@ -381,10 +410,14 @@
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/isChange"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/sourceEnd"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/targetEnd"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Relationship/partEnd"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Relationship/wholeEnd"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/source"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/target"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/sourceClass"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/targetClass"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Relationship/wholeClass"/>
+      <genOperations ecoreOperation="ontouml.ecore#//Relationship/partClass"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/sourceDataType"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/targetDataType"/>
       <genOperations ecoreOperation="ontouml.ecore#//Relationship/sourceRelationship"/>
@@ -406,6 +439,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//GeneralizationSet/isDisjoint"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ontouml.ecore#//GeneralizationSet/generalizations"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ontouml.ecore#//GeneralizationSet/highOrder"/>
+      <genOperations ecoreOperation="ontouml.ecore#//GeneralizationSet/general"/>
+      <genOperations ecoreOperation="ontouml.ecore#//GeneralizationSet/specifics"/>
     </genClasses>
     <genClasses ecoreClass="ontouml.ecore#//Generalization">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ontouml.ecore#//Generalization/general"/>

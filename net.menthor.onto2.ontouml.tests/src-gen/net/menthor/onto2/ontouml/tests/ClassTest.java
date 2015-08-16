@@ -35,6 +35,8 @@ import net.menthor.onto2.ontouml.OntoumlFactory;
  *   <li>{@link net.menthor.onto2.ontouml.Class#isPerceivableQuality() <em>Is Perceivable Quality</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isNonPerceivableQuality() <em>Is Non Perceivable Quality</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isNominalQuality() <em>Is Nominal Quality</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Class#isEndurantClass() <em>Is Endurant Class</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Class#isIntrinsicMoment() <em>Is Intrinsic Moment</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isSubstanceSortalClass() <em>Is Substance Sortal Class</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isMomentClass() <em>Is Moment Class</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isIdentityProviderClass() <em>Is Identity Provider Class</em>}</li>
@@ -46,6 +48,7 @@ import net.menthor.onto2.ontouml.OntoumlFactory;
  *   <li>{@link net.menthor.onto2.ontouml.Class#isMoment() <em>Is Moment</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isTruthMaker() <em>Is Truth Maker</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#isNonQualitativeIntrinsicMoment() <em>Is Non Qualitative Intrinsic Moment</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Class#isQualitativeIntrinsicMoment() <em>Is Qualitative Intrinsic Moment</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#identityProvidersAtAllParents() <em>Identity Providers At All Parents</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#identityProvidersAtAllChildren() <em>Identity Providers At All Children</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Class#identityProviders() <em>Identity Providers</em>}</li>
@@ -394,6 +397,32 @@ public class ClassTest extends TypeTest {
 	}
 
 	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isEndurantClass() <em>Is Endurant Class</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Class#isEndurantClass()
+	 * @generated
+	 */
+	public void testIsEndurantClass() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isIntrinsicMoment() <em>Is Intrinsic Moment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Class#isIntrinsicMoment()
+	 * @generated
+	 */
+	public void testIsIntrinsicMoment() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
 	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isSubstanceSortalClass() <em>Is Substance Sortal Class</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -531,6 +560,19 @@ public class ClassTest extends TypeTest {
 	 * @generated
 	 */
 	public void testIsNonQualitativeIntrinsicMoment() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Class#isQualitativeIntrinsicMoment() <em>Is Qualitative Intrinsic Moment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Class#isQualitativeIntrinsicMoment()
+	 * @generated
+	 */
+	public void testIsQualitativeIntrinsicMoment() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

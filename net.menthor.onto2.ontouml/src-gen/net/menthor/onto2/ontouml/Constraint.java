@@ -19,6 +19,7 @@ package net.menthor.onto2.ontouml;
  * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Constraint#getStereotype <em>Stereotype</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Constraint#getContext <em>Context</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Constraint#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Constraint#getRuleAsString <em>Rule As String</em>}</li>
  * </ul>
@@ -56,6 +57,32 @@ public interface Constraint extends ContainedElement {
 	 * @generated
 	 */
 	void setStereotype(ConstraintSteteotype value);
+
+	/**
+	 * Returns the value of the '<em><b>Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Context</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Context</em>' attribute.
+	 * @see #setContext(String)
+	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getConstraint_Context()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getContext();
+
+	/**
+	 * Sets the value of the '{@link net.menthor.onto2.ontouml.Constraint#getContext <em>Context</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Context</em>' attribute.
+	 * @see #getContext()
+	 * @generated
+	 */
+	void setContext(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -250,11 +250,55 @@
         <details key="body" value="&lt;%net.menthor.onto2.ontouml.EndPoint%>[] result = null;&#xA;&lt;%net.menthor.onto2.ontouml.Model%> _model = this.getModel();&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>> _allRelationships = _model.allRelationships();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Relationship%> rel : _allRelationships)&#xA;{&#xA;&#x9;boolean _isEnd = rel.isEnd(this);&#xA;&#x9;if (_isEnd)&#xA;&#x9;{&#xA;&#x9;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _endPoints = rel.getEndPoints();&#xA;&#x9;&#x9;for (final &lt;%net.menthor.onto2.ontouml.EndPoint%> ep : _endPoints)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&lt;%net.menthor.onto2.ontouml.Classifier%> _endType = ep.getEndType();&#xA;&#x9;&#x9;&#x9;boolean _equals = _endType.equals(this);&#xA;&#x9;&#x9;&#x9;boolean _not = (!_equals);&#xA;&#x9;&#x9;&#x9;if (_not)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&#x9;&#x9;&#x9;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(ep);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));"/>
       </eAnnotations>
     </eOperations>
+    <eOperations name="ends" unique="false" upperBound="-1" eType="#//EndPoint">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="* Returns all direct end-points of a given relationship stereotype from this classifier (in which we can navigate from it)&#xA; In other words, it returns all opposite ends of the relationships connected to this classifier."/>
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.EndPoint%>[] result = null;&#xA;&lt;%net.menthor.onto2.ontouml.Model%> _model = this.getModel();&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>> _allRelationships = _model.allRelationships();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Relationship%> rel : _allRelationships)&#xA;{&#xA;&#x9;boolean _and = false;&#xA;&#x9;boolean _isEnd = rel.isEnd(this);&#xA;&#x9;if (!_isEnd)&#xA;&#x9;{&#xA;&#x9;&#x9;_and = false;&#xA;&#x9;} else&#xA;&#x9;{&#xA;&#x9;&#x9;&lt;%net.menthor.onto2.ontouml.RelationshipStereotype%> _stereotype = rel.getStereotype();&#xA;&#x9;&#x9;boolean _equals = _stereotype.equals(stereo);&#xA;&#x9;&#x9;_and = _equals;&#xA;&#x9;}&#xA;&#x9;if (_and)&#xA;&#x9;{&#xA;&#x9;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _endPoints = rel.getEndPoints();&#xA;&#x9;&#x9;for (final &lt;%net.menthor.onto2.ontouml.EndPoint%> ep : _endPoints)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&lt;%net.menthor.onto2.ontouml.Classifier%> _endType = ep.getEndType();&#xA;&#x9;&#x9;&#x9;boolean _equals_1 = _endType.equals(this);&#xA;&#x9;&#x9;&#x9;boolean _not = (!_equals_1);&#xA;&#x9;&#x9;&#x9;if (_not)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&#x9;&#x9;&#x9;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(ep);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));"/>
+      </eAnnotations>
+      <eParameters name="stereo" unique="false" eType="#//RelationshipStereotype"/>
+    </eOperations>
     <eOperations name="allEnds" unique="false" upperBound="-1" eType="#//EndPoint">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="* Returns all direct and indirect end-points from this classifier (in which we can navigate from it)&#xA; In other words, it returns all opposite ends of the relationships connected to this classifier, or to a parent of this classifier."/>
-        <details key="body" value="&lt;%net.menthor.onto2.ontouml.EndPoint%>[] result = null;&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends();&#xA;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> p : _allParents)&#xA;{&#xA;&#x9;if ((p instanceof &lt;%net.menthor.onto2.ontouml.Class%>))&#xA;&#x9;{&#xA;&#x9;&#x9;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&#x9;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _ends_1 = ((&lt;%net.menthor.onto2.ontouml.Class%>)p).ends();&#xA;&#x9;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);&#xA;&#x9;}&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_2 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));"/>
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.EndPoint%>[] result = null;&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends();&#xA;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> p : _allParents)&#xA;{&#xA;&#x9;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _ends_1 = p.ends();&#xA;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_2 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));"/>
       </eAnnotations>
+    </eOperations>
+    <eOperations name="allEnds" unique="false" upperBound="-1" eType="#//EndPoint">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="* Returns all direct and indirect end-points from this classifier (in which we can navigate from it)&#xA; In other words, it returns all opposite ends of the relationships connected to this classifier, or to a parent of this classifier."/>
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.EndPoint%>[] result = null;&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends(stereo);&#xA;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> p : _allParents)&#xA;{&#xA;&#x9;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _ends_1 = p.ends(stereo);&#xA;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_2 = (&lt;%net.menthor.onto2.ontouml.EndPoint%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));"/>
+      </eAnnotations>
+      <eParameters name="stereo" unique="false" eType="#//RelationshipStereotype"/>
+    </eOperations>
+    <eOperations name="relationships" unique="false" upperBound="-1" eType="#//Relationship">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="* Returns all direct relationships this classifier is connected to"/>
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.Relationship%>[] result = null;&#xA;&lt;%net.menthor.onto2.ontouml.Model%> _model = this.getModel();&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>> _allRelationships = _model.allRelationships();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Relationship%> rel : _allRelationships)&#xA;{&#xA;&#x9;boolean _isEnd = rel.isEnd(this);&#xA;&#x9;if (_isEnd)&#xA;&#x9;{&#xA;&#x9;&#x9;final &lt;%net.menthor.onto2.ontouml.Relationship%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.Relationship%>[])result;&#xA;&#x9;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(rel);&#xA;&#x9;}&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.Relationship%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.Relationship%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="allRelationships" unique="false" upperBound="-1" eType="#//Relationship">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="* Returns all direct and indirect relationships this classifier is connected to"/>
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.Relationship%>[] result = null;&#xA;final &lt;%net.menthor.onto2.ontouml.Relationship%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.Relationship%>[])result;&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>> _relationships = this.relationships();&#xA;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_relationships);&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> p : _allParents)&#xA;{&#xA;&#x9;final &lt;%net.menthor.onto2.ontouml.Relationship%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.Relationship%>[])result;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>> _relationships_1 = p.relationships();&#xA;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_relationships_1);&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.Relationship%>[] _converted_result_2 = (&lt;%net.menthor.onto2.ontouml.Relationship%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.Relationship%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isDisjointOfParentsOf" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents = c.allParents();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> o : _allParents)&#xA;{&#xA;&#x9;{&#xA;&#x9;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents_1 = this.allParents();&#xA;&#x9;&#x9;boolean _contains = _allParents_1.contains(o);&#xA;&#x9;&#x9;if (_contains)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;boolean _equals = this.equals(o);&#xA;&#x9;&#x9;if (_equals)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;return true;"/>
+      </eAnnotations>
+      <eParameters name="c" unique="false" eType="#//Classifier"/>
+    </eOperations>
+    <eOperations name="isDisjointOfChildrenOf" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allChildren = c.allChildren();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> o : _allChildren)&#xA;{&#xA;&#x9;{&#xA;&#x9;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();&#xA;&#x9;&#x9;boolean _contains = _allParents.contains(o);&#xA;&#x9;&#x9;if (_contains)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;boolean _equals = this.equals(o);&#xA;&#x9;&#x9;if (_equals)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;return true;"/>
+      </eAnnotations>
+      <eParameters name="c" unique="false" eType="#//Classifier"/>
+    </eOperations>
+    <eOperations name="isDisjointOf" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _and = false;&#xA;boolean _isDisjointOfParentsOf = this.isDisjointOfParentsOf(c);&#xA;if (!_isDisjointOfParentsOf)&#xA;{&#xA;&#x9;_and = false;&#xA;} else&#xA;{&#xA;&#x9;boolean _isDisjointOfChildrenOf = this.isDisjointOfChildrenOf(c);&#xA;&#x9;_and = _isDisjointOfChildrenOf;&#xA;}&#xA;if (_and)&#xA;{&#xA;&#x9;return true;&#xA;}&#xA;return false;"/>
+      </eAnnotations>
+      <eParameters name="c" unique="false" eType="#//Classifier"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="definitions" unique="false"
         upperBound="-1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
@@ -316,6 +360,36 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="* An &quot;Attribute&quot; has a primitive stereotype and a &quot;Type&quot; owner (a Class or a DataType)."/>
     </eAnnotations>
+    <eOperations name="isInteger" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%>.INTEGER);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isBoolean" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%>.BOOLEAN);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isReal" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%>.REAL);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isDate" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%>.DATE);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isDateTime" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%>.DATE_TIME);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isString" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%> _stereotype = this.getStereotype();&#xA;return &lt;%com.google.common.base.Objects%>.equal(_stereotype, &lt;%net.menthor.onto2.ontouml.PrimitiveStereotype%>.STRING);"/>
+      </eAnnotations>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="definitions" unique="false"
         upperBound="-1" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="synonyms" unique="false"
@@ -664,6 +738,31 @@
         <details key="body" value="return this.isMixin();"/>
       </eAnnotations>
     </eOperations>
+    <eOperations name="isPerceivableQuality" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _and = false;&#xA;boolean _and_1 = false;&#xA;boolean _isQuality = this.isQuality();&#xA;if (!_isQuality)&#xA;{&#xA;&#x9;_and_1 = false;&#xA;} else&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.QualityNature%> _qualityNature = this.getQualityNature();&#xA;&#x9;boolean _notEquals = (!&lt;%com.google.common.base.Objects%>.equal(_qualityNature, null));&#xA;&#x9;_and_1 = _notEquals;&#xA;}&#xA;if (!_and_1)&#xA;{&#xA;&#x9;_and = false;&#xA;} else&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.QualityNature%> _qualityNature_1 = this.getQualityNature();&#xA;&#x9;boolean _equals = &lt;%com.google.common.base.Objects%>.equal(_qualityNature_1, &lt;%net.menthor.onto2.ontouml.QualityNature%>.PERCEIVABLE);&#xA;&#x9;_and = _equals;&#xA;}&#xA;return _and;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isNonPerceivableQuality" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _and = false;&#xA;boolean _and_1 = false;&#xA;boolean _isQuality = this.isQuality();&#xA;if (!_isQuality)&#xA;{&#xA;&#x9;_and_1 = false;&#xA;} else&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.QualityNature%> _qualityNature = this.getQualityNature();&#xA;&#x9;boolean _notEquals = (!&lt;%com.google.common.base.Objects%>.equal(_qualityNature, null));&#xA;&#x9;_and_1 = _notEquals;&#xA;}&#xA;if (!_and_1)&#xA;{&#xA;&#x9;_and = false;&#xA;} else&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.QualityNature%> _qualityNature_1 = this.getQualityNature();&#xA;&#x9;boolean _equals = &lt;%com.google.common.base.Objects%>.equal(_qualityNature_1, &lt;%net.menthor.onto2.ontouml.QualityNature%>.NON_PERCEIVABLE);&#xA;&#x9;_and = _equals;&#xA;}&#xA;return _and;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isNominalQuality" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _and = false;&#xA;boolean _and_1 = false;&#xA;boolean _isQuality = this.isQuality();&#xA;if (!_isQuality)&#xA;{&#xA;&#x9;_and_1 = false;&#xA;} else&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.QualityNature%> _qualityNature = this.getQualityNature();&#xA;&#x9;boolean _notEquals = (!&lt;%com.google.common.base.Objects%>.equal(_qualityNature, null));&#xA;&#x9;_and_1 = _notEquals;&#xA;}&#xA;if (!_and_1)&#xA;{&#xA;&#x9;_and = false;&#xA;} else&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.QualityNature%> _qualityNature_1 = this.getQualityNature();&#xA;&#x9;boolean _equals = &lt;%com.google.common.base.Objects%>.equal(_qualityNature_1, &lt;%net.menthor.onto2.ontouml.QualityNature%>.NOMINAL);&#xA;&#x9;_and = _equals;&#xA;}&#xA;return _and;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isEndurantClass" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _or = false;&#xA;boolean _isEvent = this.isEvent();&#xA;if (_isEvent)&#xA;{&#xA;&#x9;_or = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isHighOrder = this.isHighOrder();&#xA;&#x9;_or = _isHighOrder;&#xA;}&#xA;return (!_or);"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="isIntrinsicMoment" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _or = false;&#xA;boolean _isNonQualitativeIntrinsicMoment = this.isNonQualitativeIntrinsicMoment();&#xA;if (_isNonQualitativeIntrinsicMoment)&#xA;{&#xA;&#x9;_or = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isQualitativeIntrinsicMoment = this.isQualitativeIntrinsicMoment();&#xA;&#x9;_or = _isQualitativeIntrinsicMoment;&#xA;}&#xA;return _or;"/>
+      </eAnnotations>
+    </eOperations>
     <eOperations name="isSubstanceSortalClass" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="boolean _or = false;&#xA;boolean _or_1 = false;&#xA;boolean _isKind = this.isKind();&#xA;if (_isKind)&#xA;{&#xA;&#x9;_or_1 = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isCollective = this.isCollective();&#xA;&#x9;_or_1 = _isCollective;&#xA;}&#xA;if (_or_1)&#xA;{&#xA;&#x9;_or = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isQuantity = this.isQuantity();&#xA;&#x9;_or = _isQuantity;&#xA;}&#xA;return _or;"/>
@@ -725,6 +824,12 @@
         <details key="body" value="boolean _isMode = this.isMode();&#xA;if (_isMode)&#xA;{&#xA;&#x9;return true;&#xA;}&#xA;boolean _or = false;&#xA;boolean _or_1 = false;&#xA;boolean _isRole = this.isRole();&#xA;if (_isRole)&#xA;{&#xA;&#x9;_or_1 = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isPhase = this.isPhase();&#xA;&#x9;_or_1 = _isPhase;&#xA;}&#xA;if (_or_1)&#xA;{&#xA;&#x9;_or = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isSubKind = this.isSubKind();&#xA;&#x9;_or = _isSubKind;&#xA;}&#xA;if (_or)&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.Class%>[] providers = null;&#xA;&#x9;final &lt;%net.menthor.onto2.ontouml.Class%>[] _converted_providers = (&lt;%net.menthor.onto2.ontouml.Class%>[])providers;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Class%>> _identityProviders = this.identityProviders();&#xA;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.Class%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);&#xA;&#x9;for (final &lt;%net.menthor.onto2.ontouml.Class%> c : providers)&#xA;&#x9;{&#xA;&#x9;&#x9;boolean _isMode_1 = c.isMode();&#xA;&#x9;&#x9;if (_isMode_1)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return true;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;boolean _isMixinClass = this.isMixinClass();&#xA;if (_isMixinClass)&#xA;{&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _children = this.children();&#xA;&#x9;int _size = _children.size();&#xA;&#x9;boolean _equals = (_size == 0);&#xA;&#x9;if (_equals)&#xA;&#x9;{&#xA;&#x9;&#x9;return false;&#xA;&#x9;}&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _children_1 = this.children();&#xA;&#x9;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> child : _children_1)&#xA;&#x9;{&#xA;&#x9;&#x9;if ((child instanceof &lt;%net.menthor.onto2.ontouml.Class%>))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;boolean _isMode_2 = ((&lt;%net.menthor.onto2.ontouml.Class%>)child).isMode();&#xA;&#x9;&#x9;&#x9;boolean _not = (!_isMode_2);&#xA;&#x9;&#x9;&#x9;if (_not)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;return true;&#xA;}&#xA;return false;"/>
       </eAnnotations>
     </eOperations>
+    <eOperations name="isQualitativeIntrinsicMoment" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="*&#xA;Checks if this element is a qualitative instrinsic moment (quality) i.e.&#xA;1) if it is a instrinsic moment which is a qualitative element, or,&#xA;2) if it is a subKind or role/phase with exactly one identity provider being a qualitative intrinsic moment, or,&#xA;3) if it is a mixin class in which all their children are qualitative intrinsic moment."/>
+        <details key="body" value="boolean _isQuality = this.isQuality();&#xA;if (_isQuality)&#xA;{&#xA;&#x9;return true;&#xA;}&#xA;boolean _or = false;&#xA;boolean _or_1 = false;&#xA;boolean _isRole = this.isRole();&#xA;if (_isRole)&#xA;{&#xA;&#x9;_or_1 = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isPhase = this.isPhase();&#xA;&#x9;_or_1 = _isPhase;&#xA;}&#xA;if (_or_1)&#xA;{&#xA;&#x9;_or = true;&#xA;} else&#xA;{&#xA;&#x9;boolean _isSubKind = this.isSubKind();&#xA;&#x9;_or = _isSubKind;&#xA;}&#xA;if (_or)&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.Class%>[] providers = null;&#xA;&#x9;final &lt;%net.menthor.onto2.ontouml.Class%>[] _converted_providers = (&lt;%net.menthor.onto2.ontouml.Class%>[])providers;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Class%>> _identityProviders = this.identityProviders();&#xA;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.Class%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);&#xA;&#x9;for (final &lt;%net.menthor.onto2.ontouml.Class%> c : providers)&#xA;&#x9;{&#xA;&#x9;&#x9;boolean _isQuality_1 = c.isQuality();&#xA;&#x9;&#x9;if (_isQuality_1)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return true;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;boolean _isMixinClass = this.isMixinClass();&#xA;if (_isMixinClass)&#xA;{&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _children = this.children();&#xA;&#x9;int _size = _children.size();&#xA;&#x9;boolean _equals = (_size == 0);&#xA;&#x9;if (_equals)&#xA;&#x9;{&#xA;&#x9;&#x9;return false;&#xA;&#x9;}&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>> _children_1 = this.children();&#xA;&#x9;for (final &lt;%net.menthor.onto2.ontouml.Classifier%> child : _children_1)&#xA;&#x9;{&#xA;&#x9;&#x9;if ((child instanceof &lt;%net.menthor.onto2.ontouml.Class%>))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;boolean _isQuality_2 = ((&lt;%net.menthor.onto2.ontouml.Class%>)child).isQuality();&#xA;&#x9;&#x9;&#x9;boolean _not = (!_isQuality_2);&#xA;&#x9;&#x9;&#x9;if (_not)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;return true;&#xA;}&#xA;return false;"/>
+      </eAnnotations>
+    </eOperations>
     <eOperations name="identityProvidersAtAllParents" unique="false" upperBound="-1"
         eType="#//Class">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -779,7 +884,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationshipStereotype">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="* A Relationship Stereotype can be a ComponentOf, MemberOf,&#xA;SubCollectionOf, SubQuantityOf, QuaPartOf, Constitution,&#xA;Characterization, Mediation, Material, Formal, Derivation, Structuration,&#xA;Participation, SubEventOf, Causation, Temporal or InstanceOf."/>
+      <details key="documentation" value="* A Relationship Stereotype can be a ComponentOf, MemberOf,&#xA; SubCollectionOf, SubQuantityOf, QuaPartOf, Constitution,&#xA; Characterization, Mediation, Material, Formal, Derivation, Structuration,&#xA; Participation, SubEventOf, Causation, Temporal or InstanceOf."/>
     </eAnnotations>
     <eLiterals name="ComponentOf"/>
     <eLiterals name="MemberOf"/>
@@ -1006,6 +1111,16 @@
         <details key="body" value="&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _endPoints = this.getEndPoints();&#xA;int _size = _endPoints.size();&#xA;boolean _greaterThan = (_size > 1);&#xA;if (_greaterThan)&#xA;{&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.EndPoint%>> _endPoints_1 = this.getEndPoints();&#xA;&#x9;return _endPoints_1.get(1);&#xA;}&#xA;return null;"/>
       </eAnnotations>
     </eOperations>
+    <eOperations name="partEnd" unique="false" eType="#//EndPoint">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _isMeronymic = this.isMeronymic();&#xA;if (_isMeronymic)&#xA;{&#xA;&#x9;return this.targetEnd();&#xA;}&#xA;else&#xA;{&#xA;&#x9;return null;&#xA;}"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="wholeEnd" unique="false" eType="#//EndPoint">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="boolean _isMeronymic = this.isMeronymic();&#xA;if (_isMeronymic)&#xA;{&#xA;&#x9;return this.sourceEnd();&#xA;}&#xA;else&#xA;{&#xA;&#x9;return null;&#xA;}"/>
+      </eAnnotations>
+    </eOperations>
     <eOperations name="source" unique="false" eType="#//Classifier">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="* Returns the source (first end-classifier) of this relationship"/>
@@ -1028,6 +1143,18 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="* Returns the target (second end-class) of this relationship"/>
         <details key="body" value="&lt;%net.menthor.onto2.ontouml.Classifier%> _target = this.target();&#xA;boolean _notEquals = (!&lt;%com.google.common.base.Objects%>.equal(_target, null));&#xA;if (_notEquals)&#xA;{&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.Classifier%> _target_1 = this.target();&#xA;&#x9;return ((&lt;%net.menthor.onto2.ontouml.Class%>) _target_1);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="wholeClass" unique="false" eType="#//Class">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="* Returns the source (first end-class) of this relationship"/>
+        <details key="body" value="boolean _isMeronymic = this.isMeronymic();&#xA;if (_isMeronymic)&#xA;{&#xA;&#x9;return this.sourceClass();&#xA;}&#xA;else&#xA;{&#xA;&#x9;return null;&#xA;}"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="partClass" unique="false" eType="#//Class">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="* Returns the target (second end-class) of this relationship"/>
+        <details key="body" value="boolean _isMeronymic = this.isMeronymic();&#xA;if (_isMeronymic)&#xA;{&#xA;&#x9;return this.partClass();&#xA;}&#xA;else&#xA;{&#xA;&#x9;return null;&#xA;}"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="sourceDataType" unique="false" eType="#//DataType">
@@ -1127,6 +1254,16 @@
         eType="#//ParticipationNature"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralizationSet" eSuperTypes="#//NamedElement #//ContainedElement">
+    <eOperations name="general" unique="false" eType="#//Classifier">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Generalization%>> _generalizations = this.getGeneralizations();&#xA;int _size = _generalizations.size();&#xA;boolean _greaterThan = (_size > 0);&#xA;if (_greaterThan)&#xA;{&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Generalization%>> _generalizations_1 = this.getGeneralizations();&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.Generalization%> _get = _generalizations_1.get(0);&#xA;&#x9;return _get.getGeneral();&#xA;}&#xA;else&#xA;{&#xA;&#x9;return null;&#xA;}"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="specifics" unique="false" upperBound="-1" eType="#//Classifier">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="&lt;%net.menthor.onto2.ontouml.Classifier%>[] result = null;&#xA;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%net.menthor.onto2.ontouml.Generalization%>> _generalizations = this.getGeneralizations();&#xA;for (final &lt;%net.menthor.onto2.ontouml.Generalization%> g : _generalizations)&#xA;{&#xA;&#x9;final &lt;%net.menthor.onto2.ontouml.Classifier%>[] _converted_result = (&lt;%net.menthor.onto2.ontouml.Classifier%>[])result;&#xA;&#x9;&lt;%net.menthor.onto2.ontouml.Classifier%> _specific = g.getSpecific();&#xA;&#x9;((&lt;%java.util.List%>&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(_specific);&#xA;}&#xA;final &lt;%net.menthor.onto2.ontouml.Classifier%>[] _converted_result_1 = (&lt;%net.menthor.onto2.ontouml.Classifier%>[])result;&#xA;return &lt;%org.eclipse.emf.common.util.ECollections%>.&lt;&lt;%net.menthor.onto2.ontouml.Classifier%>>toEList(((&lt;%java.lang.Iterable%>&lt;? extends &lt;%net.menthor.onto2.ontouml.Classifier%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));"/>
+      </eAnnotations>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCovering" unique="false"
         eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDisjoint" unique="false"

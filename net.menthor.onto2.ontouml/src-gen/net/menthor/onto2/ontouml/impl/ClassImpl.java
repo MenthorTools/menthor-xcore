@@ -722,6 +722,40 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isEndurantClass() {
+		boolean _or = false;
+		boolean _isEvent = this.isEvent();
+		if (_isEvent) {
+			_or = true;
+		} else {
+			boolean _isHighOrder = this.isHighOrder();
+			_or = _isHighOrder;
+		}
+		return (!_or);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIntrinsicMoment() {
+		boolean _or = false;
+		boolean _isNonQualitativeIntrinsicMoment = this.isNonQualitativeIntrinsicMoment();
+		if (_isNonQualitativeIntrinsicMoment) {
+			_or = true;
+		} else {
+			boolean _isQualitativeIntrinsicMoment = this.isQualitativeIntrinsicMoment();
+			_or = _isQualitativeIntrinsicMoment;
+		}
+		return _or;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isSubstanceSortalClass() {
 		boolean _or = false;
 		boolean _or_1 = false;
@@ -1223,6 +1257,66 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isQualitativeIntrinsicMoment() {
+		boolean _isQuality = this.isQuality();
+		if (_isQuality) {
+			return true;
+		}
+		boolean _or = false;
+		boolean _or_1 = false;
+		boolean _isRole = this.isRole();
+		if (_isRole) {
+			_or_1 = true;
+		} else {
+			boolean _isPhase = this.isPhase();
+			_or_1 = _isPhase;
+		}
+		if (_or_1) {
+			_or = true;
+		} else {
+			boolean _isSubKind = this.isSubKind();
+			_or = _isSubKind;
+		}
+		if (_or) {
+			net.menthor.onto2.ontouml.Class[] providers = null;
+			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
+			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			for (final net.menthor.onto2.ontouml.Class c : providers) {
+				boolean _isQuality_1 = c.isQuality();
+				if (_isQuality_1) {
+					return true;
+				}
+			}
+		}
+		boolean _isMixinClass = this.isMixinClass();
+		if (_isMixinClass) {
+			EList<Classifier> _children = this.children();
+			int _size = _children.size();
+			boolean _equals = (_size == 0);
+			if (_equals) {
+				return false;
+			}
+			EList<Classifier> _children_1 = this.children();
+			for (final Classifier child : _children_1) {
+				if ((child instanceof net.menthor.onto2.ontouml.Class)) {
+					boolean _isQuality_2 = ((net.menthor.onto2.ontouml.Class)child).isQuality();
+					boolean _not = (!_isQuality_2);
+					if (_not) {
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<net.menthor.onto2.ontouml.Class> identityProvidersAtAllParents() {
 		net.menthor.onto2.ontouml.Class[] result = null;
 		EList<Classifier> _allParents = this.allParents();
@@ -1500,6 +1594,10 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 				return isNonPerceivableQuality();
 			case OntoumlPackage.CLASS___IS_NOMINAL_QUALITY:
 				return isNominalQuality();
+			case OntoumlPackage.CLASS___IS_ENDURANT_CLASS:
+				return isEndurantClass();
+			case OntoumlPackage.CLASS___IS_INTRINSIC_MOMENT:
+				return isIntrinsicMoment();
 			case OntoumlPackage.CLASS___IS_SUBSTANCE_SORTAL_CLASS:
 				return isSubstanceSortalClass();
 			case OntoumlPackage.CLASS___IS_MOMENT_CLASS:
@@ -1522,6 +1620,8 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 				return isTruthMaker();
 			case OntoumlPackage.CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT:
 				return isNonQualitativeIntrinsicMoment();
+			case OntoumlPackage.CLASS___IS_QUALITATIVE_INTRINSIC_MOMENT:
+				return isQualitativeIntrinsicMoment();
 			case OntoumlPackage.CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS:
 				return identityProvidersAtAllParents();
 			case OntoumlPackage.CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN:

@@ -30,7 +30,7 @@
     <elements xsi:type="menthor:Class" name="Goal"/>
     <elements xsi:type="menthor:Class" name="Intention (Internal Commitment)" stereotype="Mode" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.0/@elements.90 //@elements.0/@elements.94" stereotype="Mode"/>
-    <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.0/@elements.91 //@elements.0/@elements.95 //@elements.7/@elements.59 //@elements.7/@elements.60 //@elements.7/@elements.62" stereotype="Mode"/>
+    <elements xsi:type="menthor:Class" name="OE Activity" isSpecificIn="//@elements.7/@elements.59 //@elements.7/@elements.60 //@elements.7/@elements.62 //@elements.0/@elements.91 //@elements.0/@elements.95" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="OE Activity Goal"/>
     <elements xsi:type="menthor:Class" name="OE Activity Goal"/>
     <elements xsi:type="menthor:Class" name="OE Process" isSpecificIn="//@elements.0/@elements.98 //@elements.0/@elements.104" stereotype="Mode"/>
@@ -250,7 +250,7 @@
     <elements xsi:type="menthor:Class" name="EP Agent delegatee" isGeneralIn="//@elements.1/@elements.32" stereotype="Role"/>
     <elements xsi:type="menthor:Class" name="EP Agent delegator" isGeneralIn="//@elements.1/@elements.33" stereotype="Role"/>
     <elements xsi:type="menthor:Class" name="EP Delegatum" stereotype="Relator"/>
-    <elements xsi:type="menthor:Class" name="EP Goal" isSpecificIn="//@elements.5/@elements.48 //@elements.1/@elements.35"/>
+    <elements xsi:type="menthor:Class" name="EP Goal" isSpecificIn="//@elements.1/@elements.35 //@elements.5/@elements.48"/>
     <elements xsi:type="menthor:Class" name="EP Goal Delegation" isGeneralIn="//@elements.1/@elements.34"/>
     <elements xsi:type="menthor:Class" name="EP Main Goal" isGeneralIn="//@elements.1/@elements.35"/>
     <elements xsi:type="menthor:Class" name="EP Plan" isSpecificIn="//@elements.6/@elements.8"/>

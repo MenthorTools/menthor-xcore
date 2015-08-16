@@ -427,6 +427,24 @@ public interface Class extends Type {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _or = false;\nboolean _isEvent = this.isEvent();\nif (_isEvent)\n{\n\t_or = true;\n} else\n{\n\tboolean _isHighOrder = this.isHighOrder();\n\t_or = _isHighOrder;\n}\nreturn (!_or);'"
+	 * @generated
+	 */
+	boolean isEndurantClass();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _or = false;\nboolean _isNonQualitativeIntrinsicMoment = this.isNonQualitativeIntrinsicMoment();\nif (_isNonQualitativeIntrinsicMoment)\n{\n\t_or = true;\n} else\n{\n\tboolean _isQualitativeIntrinsicMoment = this.isQualitativeIntrinsicMoment();\n\t_or = _isQualitativeIntrinsicMoment;\n}\nreturn _or;'"
+	 * @generated
+	 */
+	boolean isIntrinsicMoment();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _or = false;\nboolean _or_1 = false;\nboolean _isKind = this.isKind();\nif (_isKind)\n{\n\t_or_1 = true;\n} else\n{\n\tboolean _isCollective = this.isCollective();\n\t_or_1 = _isCollective;\n}\nif (_or_1)\n{\n\t_or = true;\n} else\n{\n\tboolean _isQuantity = this.isQuantity();\n\t_or = _isQuantity;\n}\nreturn _or;'"
 	 * @generated
 	 */
@@ -563,6 +581,22 @@ public interface Class extends Type {
 	 * @generated
 	 */
 	boolean isNonQualitativeIntrinsicMoment();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Checks if this element is a qualitative instrinsic moment (quality) i.e.
+	 * 1) if it is a instrinsic moment which is a qualitative element, or,
+	 * 2) if it is a subKind or role/phase with exactly one identity provider being a qualitative intrinsic moment, or,
+	 * 3) if it is a mixin class in which all their children are qualitative intrinsic moment.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isQuality = this.isQuality();\nif (_isQuality)\n{\n\treturn true;\n}\nboolean _or = false;\nboolean _or_1 = false;\nboolean _isRole = this.isRole();\nif (_isRole)\n{\n\t_or_1 = true;\n} else\n{\n\tboolean _isPhase = this.isPhase();\n\t_or_1 = _isPhase;\n}\nif (_or_1)\n{\n\t_or = true;\n} else\n{\n\tboolean _isSubKind = this.isSubKind();\n\t_or = _isSubKind;\n}\nif (_or)\n{\n\t<%net.menthor.onto2.ontouml.Class%>[] providers = null;\n\tfinal <%net.menthor.onto2.ontouml.Class%>[] _converted_providers = (<%net.menthor.onto2.ontouml.Class%>[])providers;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Class%>> _identityProviders = this.identityProviders();\n\t((<%java.util.List%><<%net.menthor.onto2.ontouml.Class%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);\n\tfor (final <%net.menthor.onto2.ontouml.Class%> c : providers)\n\t{\n\t\tboolean _isQuality_1 = c.isQuality();\n\t\tif (_isQuality_1)\n\t\t{\n\t\t\treturn true;\n\t\t}\n\t}\n}\nboolean _isMixinClass = this.isMixinClass();\nif (_isMixinClass)\n{\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _children = this.children();\n\tint _size = _children.size();\n\tboolean _equals = (_size == 0);\n\tif (_equals)\n\t{\n\t\treturn false;\n\t}\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _children_1 = this.children();\n\tfor (final <%net.menthor.onto2.ontouml.Classifier%> child : _children_1)\n\t{\n\t\tif ((child instanceof <%net.menthor.onto2.ontouml.Class%>))\n\t\t{\n\t\t\tboolean _isQuality_2 = ((<%net.menthor.onto2.ontouml.Class%>)child).isQuality();\n\t\t\tboolean _not = (!_isQuality_2);\n\t\t\tif (_not)\n\t\t\t{\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n\treturn true;\n}\nreturn false;'"
+	 * @generated
+	 */
+	boolean isQualitativeIntrinsicMoment();
 
 	/**
 	 * <!-- begin-user-doc -->

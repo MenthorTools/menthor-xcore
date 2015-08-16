@@ -3,6 +3,7 @@ package net.menthor.onto2.ontouml.util;
 import org.eclipse.emf.ecore.EObject;
 
 import net.menthor.onto2.ontouml.Attribute;
+import net.menthor.onto2.ontouml.Class;
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.Comment;
 import net.menthor.onto2.ontouml.Constraint;
@@ -15,7 +16,6 @@ import net.menthor.onto2.ontouml.Model;
 import net.menthor.onto2.ontouml.NamedElement;
 import net.menthor.onto2.ontouml.Property;
 import net.menthor.onto2.ontouml.Relationship;
-import net.menthor.onto2.ontouml.Class;
 
 
 /** 
@@ -162,12 +162,12 @@ public class OntoumlPrintHelper {
 		{	
 			String result = new String();		    
 		    GeneralizationSet genset = (GeneralizationSet)elem;		    
-		    Classifier general = genset.getGeneral();		    
+		    Classifier general = genset.general();		    
 		    result += getStereotypeAndName(elem, false, false) + " / "+getName(general)+" { ";		   	    
 		    int i=1;
-		    for(Classifier specific: genset.getSpecifics())
+		    for(Classifier specific: genset.specifics())
 		    {
-		    	if(i < genset.getSpecifics().size()) 
+		    	if(i < genset.specifics().size()) 
 		    		result += getName(specific)+", ";
 		    	else 
 		    		result += getName(specific) + " } ";

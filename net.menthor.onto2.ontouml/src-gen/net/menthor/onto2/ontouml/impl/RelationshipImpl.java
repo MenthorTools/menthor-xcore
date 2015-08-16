@@ -837,6 +837,36 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EndPoint partEnd() {
+		boolean _isMeronymic = this.isMeronymic();
+		if (_isMeronymic) {
+			return this.targetEnd();
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EndPoint wholeEnd() {
+		boolean _isMeronymic = this.isMeronymic();
+		if (_isMeronymic) {
+			return this.sourceEnd();
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Classifier source() {
 		EndPoint _sourceEnd = this.sourceEnd();
 		boolean _notEquals = (!Objects.equal(_sourceEnd, null));
@@ -890,6 +920,36 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 			return ((net.menthor.onto2.ontouml.Class) _target_1);
 		}
 		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public net.menthor.onto2.ontouml.Class wholeClass() {
+		boolean _isMeronymic = this.isMeronymic();
+		if (_isMeronymic) {
+			return this.sourceClass();
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public net.menthor.onto2.ontouml.Class partClass() {
+		boolean _isMeronymic = this.isMeronymic();
+		if (_isMeronymic) {
+			return this.partClass();
+		}
+		else {
+			return null;
+		}
 	}
 
 	/**
@@ -1377,6 +1437,10 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 				return sourceEnd();
 			case OntoumlPackage.RELATIONSHIP___TARGET_END:
 				return targetEnd();
+			case OntoumlPackage.RELATIONSHIP___PART_END:
+				return partEnd();
+			case OntoumlPackage.RELATIONSHIP___WHOLE_END:
+				return wholeEnd();
 			case OntoumlPackage.RELATIONSHIP___SOURCE:
 				return source();
 			case OntoumlPackage.RELATIONSHIP___TARGET:
@@ -1385,6 +1449,10 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 				return sourceClass();
 			case OntoumlPackage.RELATIONSHIP___TARGET_CLASS:
 				return targetClass();
+			case OntoumlPackage.RELATIONSHIP___WHOLE_CLASS:
+				return wholeClass();
+			case OntoumlPackage.RELATIONSHIP___PART_CLASS:
+				return partClass();
 			case OntoumlPackage.RELATIONSHIP___SOURCE_DATA_TYPE:
 				return sourceDataType();
 			case OntoumlPackage.RELATIONSHIP___TARGET_DATA_TYPE:

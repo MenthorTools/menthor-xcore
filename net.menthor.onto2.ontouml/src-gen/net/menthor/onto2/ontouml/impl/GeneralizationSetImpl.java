@@ -301,7 +301,7 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Classifier getGeneral() {
+	public Classifier general() {
 		EList<Generalization> _generalizations = this.getGeneralizations();
 		int _size = _generalizations.size();
 		boolean _greaterThan = (_size > 0);
@@ -320,7 +320,7 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Classifier> getSpecifics() {
+	public EList<Classifier> specifics() {
 		Classifier[] result = null;
 		EList<Generalization> _generalizations = this.getGeneralizations();
 		for (final Generalization g : _generalizations) {
@@ -585,10 +585,10 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case OntoumlPackage.GENERALIZATION_SET___GET_GENERAL:
-				return getGeneral();
-			case OntoumlPackage.GENERALIZATION_SET___GET_SPECIFICS:
-				return getSpecifics();
+			case OntoumlPackage.GENERALIZATION_SET___GENERAL:
+				return general();
+			case OntoumlPackage.GENERALIZATION_SET___SPECIFICS:
+				return specifics();
 			case OntoumlPackage.GENERALIZATION_SET___GET_MODEL__CONTAINER:
 				return getModel((net.menthor.onto2.ontouml.Container)arguments.get(0));
 			case OntoumlPackage.GENERALIZATION_SET___GET_MODEL:

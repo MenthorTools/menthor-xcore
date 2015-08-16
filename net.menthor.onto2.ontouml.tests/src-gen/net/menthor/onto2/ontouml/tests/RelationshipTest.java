@@ -46,10 +46,14 @@ import net.menthor.onto2.ontouml.Relationship;
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#isChange() <em>Is Change</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#sourceEnd() <em>Source End</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#targetEnd() <em>Target End</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Relationship#partEnd() <em>Part End</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Relationship#wholeEnd() <em>Whole End</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#source() <em>Source</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#target() <em>Target</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#sourceClass() <em>Source Class</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#targetClass() <em>Target Class</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Relationship#wholeClass() <em>Whole Class</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Relationship#partClass() <em>Part Class</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#sourceDataType() <em>Source Data Type</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#targetDataType() <em>Target Data Type</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Relationship#sourceRelationship() <em>Source Relationship</em>}</li>
@@ -538,6 +542,32 @@ public class RelationshipTest extends ClassifierTest {
 	}
 
 	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Relationship#partEnd() <em>Part End</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Relationship#partEnd()
+	 * @generated
+	 */
+	public void testPartEnd() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Relationship#wholeEnd() <em>Whole End</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Relationship#wholeEnd()
+	 * @generated
+	 */
+	public void testWholeEnd() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
 	 * Tests the '{@link net.menthor.onto2.ontouml.Relationship#source() <em>Source</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -584,6 +614,32 @@ public class RelationshipTest extends ClassifierTest {
 	 * @generated
 	 */
 	public void testTargetClass() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Relationship#wholeClass() <em>Whole Class</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Relationship#wholeClass()
+	 * @generated
+	 */
+	public void testWholeClass() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Relationship#partClass() <em>Part Class</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Relationship#partClass()
+	 * @generated
+	 */
+	public void testPartClass() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

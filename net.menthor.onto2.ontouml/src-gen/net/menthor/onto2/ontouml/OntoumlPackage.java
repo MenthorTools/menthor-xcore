@@ -1085,13 +1085,76 @@ public interface OntoumlPackage extends EPackage {
 	int CLASSIFIER___ENDS = CONTAINED_ELEMENT_OPERATION_COUNT + 7;
 
 	/**
+	 * The operation id for the '<em>Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___ENDS__RELATIONSHIPSTEREOTYPE = CONTAINED_ELEMENT_OPERATION_COUNT + 8;
+
+	/**
 	 * The operation id for the '<em>All Ends</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER___ALL_ENDS = CONTAINED_ELEMENT_OPERATION_COUNT + 8;
+	int CLASSIFIER___ALL_ENDS = CONTAINED_ELEMENT_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>All Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___ALL_ENDS__RELATIONSHIPSTEREOTYPE = CONTAINED_ELEMENT_OPERATION_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___RELATIONSHIPS = CONTAINED_ELEMENT_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>All Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___ALL_RELATIONSHIPS = CONTAINED_ELEMENT_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Parents Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER = CONTAINED_ELEMENT_OPERATION_COUNT + 13;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Children Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER = CONTAINED_ELEMENT_OPERATION_COUNT + 14;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER___IS_DISJOINT_OF__CLASSIFIER = CONTAINED_ELEMENT_OPERATION_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Classifier</em>' class.
@@ -1100,7 +1163,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER_OPERATION_COUNT = CONTAINED_ELEMENT_OPERATION_COUNT + 9;
+	int CLASSIFIER_OPERATION_COUNT = CONTAINED_ELEMENT_OPERATION_COUNT + 16;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.onto2.ontouml.impl.TypeImpl <em>Type</em>}' class.
@@ -1293,6 +1356,15 @@ public interface OntoumlPackage extends EPackage {
 	int TYPE___ENDS = CLASSIFIER___ENDS;
 
 	/**
+	 * The operation id for the '<em>Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___ENDS__RELATIONSHIPSTEREOTYPE = CLASSIFIER___ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
 	 * The operation id for the '<em>All Ends</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1300,6 +1372,60 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TYPE___ALL_ENDS = CLASSIFIER___ALL_ENDS;
+
+	/**
+	 * The operation id for the '<em>All Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___ALL_ENDS__RELATIONSHIPSTEREOTYPE = CLASSIFIER___ALL_ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___RELATIONSHIPS = CLASSIFIER___RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>All Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___ALL_RELATIONSHIPS = CLASSIFIER___ALL_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Parents Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER = CLASSIFIER___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Children Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER = CLASSIFIER___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___IS_DISJOINT_OF__CLASSIFIER = CLASSIFIER___IS_DISJOINT_OF__CLASSIFIER;
 
 	/**
 	 * The operation id for the '<em>Related Types</em>' operation.
@@ -1629,13 +1755,22 @@ public interface OntoumlPackage extends EPackage {
 	int CONSTRAINT__STEREOTYPE = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Context</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__CONTEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+	int CONSTRAINT__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Rule As String</b></em>' attribute.
@@ -1644,7 +1779,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__RULE_AS_STRING = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
+	int CONSTRAINT__RULE_AS_STRING = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
@@ -1653,7 +1788,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
+	int CONSTRAINT_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -2027,6 +2162,15 @@ public interface OntoumlPackage extends EPackage {
 	int DATA_TYPE___ENDS = TYPE___ENDS;
 
 	/**
+	 * The operation id for the '<em>Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___ENDS__RELATIONSHIPSTEREOTYPE = TYPE___ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
 	 * The operation id for the '<em>All Ends</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2034,6 +2178,60 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE___ALL_ENDS = TYPE___ALL_ENDS;
+
+	/**
+	 * The operation id for the '<em>All Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___ALL_ENDS__RELATIONSHIPSTEREOTYPE = TYPE___ALL_ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___RELATIONSHIPS = TYPE___RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>All Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___ALL_RELATIONSHIPS = TYPE___ALL_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Parents Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER = TYPE___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Children Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER = TYPE___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE___IS_DISJOINT_OF__CLASSIFIER = TYPE___IS_DISJOINT_OF__CLASSIFIER;
 
 	/**
 	 * The operation id for the '<em>Related Types</em>' operation.
@@ -2523,6 +2721,15 @@ public interface OntoumlPackage extends EPackage {
 	int CLASS___ENDS = TYPE___ENDS;
 
 	/**
+	 * The operation id for the '<em>Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___ENDS__RELATIONSHIPSTEREOTYPE = TYPE___ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
 	 * The operation id for the '<em>All Ends</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2530,6 +2737,60 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS___ALL_ENDS = TYPE___ALL_ENDS;
+
+	/**
+	 * The operation id for the '<em>All Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___ALL_ENDS__RELATIONSHIPSTEREOTYPE = TYPE___ALL_ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___RELATIONSHIPS = TYPE___RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>All Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___ALL_RELATIONSHIPS = TYPE___ALL_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Parents Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER = TYPE___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Children Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER = TYPE___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_DISJOINT_OF__CLASSIFIER = TYPE___IS_DISJOINT_OF__CLASSIFIER;
 
 	/**
 	 * The operation id for the '<em>Related Types</em>' operation.
@@ -2748,13 +3009,31 @@ public interface OntoumlPackage extends EPackage {
 	int CLASS___IS_NOMINAL_QUALITY = TYPE_OPERATION_COUNT + 21;
 
 	/**
+	 * The operation id for the '<em>Is Endurant Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_ENDURANT_CLASS = TYPE_OPERATION_COUNT + 22;
+
+	/**
+	 * The operation id for the '<em>Is Intrinsic Moment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 23;
+
+	/**
 	 * The operation id for the '<em>Is Substance Sortal Class</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_SUBSTANCE_SORTAL_CLASS = TYPE_OPERATION_COUNT + 22;
+	int CLASS___IS_SUBSTANCE_SORTAL_CLASS = TYPE_OPERATION_COUNT + 24;
 
 	/**
 	 * The operation id for the '<em>Is Moment Class</em>' operation.
@@ -2763,7 +3042,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_MOMENT_CLASS = TYPE_OPERATION_COUNT + 23;
+	int CLASS___IS_MOMENT_CLASS = TYPE_OPERATION_COUNT + 25;
 
 	/**
 	 * The operation id for the '<em>Is Identity Provider Class</em>' operation.
@@ -2772,7 +3051,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_IDENTITY_PROVIDER_CLASS = TYPE_OPERATION_COUNT + 24;
+	int CLASS___IS_IDENTITY_PROVIDER_CLASS = TYPE_OPERATION_COUNT + 26;
 
 	/**
 	 * The operation id for the '<em>Is Mixin Class</em>' operation.
@@ -2781,7 +3060,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_MIXIN_CLASS = TYPE_OPERATION_COUNT + 25;
+	int CLASS___IS_MIXIN_CLASS = TYPE_OPERATION_COUNT + 27;
 
 	/**
 	 * The operation id for the '<em>Is Anti Rigid Mixin Class</em>' operation.
@@ -2790,7 +3069,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_ANTI_RIGID_MIXIN_CLASS = TYPE_OPERATION_COUNT + 26;
+	int CLASS___IS_ANTI_RIGID_MIXIN_CLASS = TYPE_OPERATION_COUNT + 28;
 
 	/**
 	 * The operation id for the '<em>Is Amount Of Matter</em>' operation.
@@ -2799,7 +3078,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_AMOUNT_OF_MATTER = TYPE_OPERATION_COUNT + 27;
+	int CLASS___IS_AMOUNT_OF_MATTER = TYPE_OPERATION_COUNT + 29;
 
 	/**
 	 * The operation id for the '<em>Is Functional Complex</em>' operation.
@@ -2808,7 +3087,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_FUNCTIONAL_COMPLEX = TYPE_OPERATION_COUNT + 28;
+	int CLASS___IS_FUNCTIONAL_COMPLEX = TYPE_OPERATION_COUNT + 30;
 
 	/**
 	 * The operation id for the '<em>Is Collection</em>' operation.
@@ -2817,7 +3096,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_COLLECTION = TYPE_OPERATION_COUNT + 29;
+	int CLASS___IS_COLLECTION = TYPE_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Is Moment</em>' operation.
@@ -2826,7 +3105,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_MOMENT = TYPE_OPERATION_COUNT + 30;
+	int CLASS___IS_MOMENT = TYPE_OPERATION_COUNT + 32;
 
 	/**
 	 * The operation id for the '<em>Is Truth Maker</em>' operation.
@@ -2835,7 +3114,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_TRUTH_MAKER = TYPE_OPERATION_COUNT + 31;
+	int CLASS___IS_TRUTH_MAKER = TYPE_OPERATION_COUNT + 33;
 
 	/**
 	 * The operation id for the '<em>Is Non Qualitative Intrinsic Moment</em>' operation.
@@ -2844,7 +3123,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 32;
+	int CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 34;
+
+	/**
+	 * The operation id for the '<em>Is Qualitative Intrinsic Moment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS___IS_QUALITATIVE_INTRINSIC_MOMENT = TYPE_OPERATION_COUNT + 35;
 
 	/**
 	 * The operation id for the '<em>Identity Providers At All Parents</em>' operation.
@@ -2853,7 +3141,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS = TYPE_OPERATION_COUNT + 33;
+	int CLASS___IDENTITY_PROVIDERS_AT_ALL_PARENTS = TYPE_OPERATION_COUNT + 36;
 
 	/**
 	 * The operation id for the '<em>Identity Providers At All Children</em>' operation.
@@ -2862,7 +3150,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN = TYPE_OPERATION_COUNT + 34;
+	int CLASS___IDENTITY_PROVIDERS_AT_ALL_CHILDREN = TYPE_OPERATION_COUNT + 37;
 
 	/**
 	 * The operation id for the '<em>Identity Providers</em>' operation.
@@ -2871,7 +3159,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___IDENTITY_PROVIDERS = TYPE_OPERATION_COUNT + 35;
+	int CLASS___IDENTITY_PROVIDERS = TYPE_OPERATION_COUNT + 38;
 
 	/**
 	 * The number of operations of the '<em>Class</em>' class.
@@ -2880,7 +3168,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_COUNT = TYPE_OPERATION_COUNT + 36;
+	int CLASS_OPERATION_COUNT = TYPE_OPERATION_COUNT + 39;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.onto2.ontouml.impl.EndPointImpl <em>End Point</em>}' class.
@@ -3272,6 +3560,15 @@ public interface OntoumlPackage extends EPackage {
 	int RELATIONSHIP___ENDS = CLASSIFIER___ENDS;
 
 	/**
+	 * The operation id for the '<em>Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___ENDS__RELATIONSHIPSTEREOTYPE = CLASSIFIER___ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
 	 * The operation id for the '<em>All Ends</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3279,6 +3576,60 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP___ALL_ENDS = CLASSIFIER___ALL_ENDS;
+
+	/**
+	 * The operation id for the '<em>All Ends</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___ALL_ENDS__RELATIONSHIPSTEREOTYPE = CLASSIFIER___ALL_ENDS__RELATIONSHIPSTEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___RELATIONSHIPS = CLASSIFIER___RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>All Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___ALL_RELATIONSHIPS = CLASSIFIER___ALL_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Parents Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER = CLASSIFIER___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of Children Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER = CLASSIFIER___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Is Disjoint Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___IS_DISJOINT_OF__CLASSIFIER = CLASSIFIER___IS_DISJOINT_OF__CLASSIFIER;
 
 	/**
 	 * The operation id for the '<em>Is Component Of</em>' operation.
@@ -3569,13 +3920,31 @@ public interface OntoumlPackage extends EPackage {
 	int RELATIONSHIP___TARGET_END = CLASSIFIER_OPERATION_COUNT + 31;
 
 	/**
+	 * The operation id for the '<em>Part End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___PART_END = CLASSIFIER_OPERATION_COUNT + 32;
+
+	/**
+	 * The operation id for the '<em>Whole End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___WHOLE_END = CLASSIFIER_OPERATION_COUNT + 33;
+
+	/**
 	 * The operation id for the '<em>Source</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE = CLASSIFIER_OPERATION_COUNT + 32;
+	int RELATIONSHIP___SOURCE = CLASSIFIER_OPERATION_COUNT + 34;
 
 	/**
 	 * The operation id for the '<em>Target</em>' operation.
@@ -3584,7 +3953,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET = CLASSIFIER_OPERATION_COUNT + 33;
+	int RELATIONSHIP___TARGET = CLASSIFIER_OPERATION_COUNT + 35;
 
 	/**
 	 * The operation id for the '<em>Source Class</em>' operation.
@@ -3593,7 +3962,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_CLASS = CLASSIFIER_OPERATION_COUNT + 34;
+	int RELATIONSHIP___SOURCE_CLASS = CLASSIFIER_OPERATION_COUNT + 36;
 
 	/**
 	 * The operation id for the '<em>Target Class</em>' operation.
@@ -3602,7 +3971,25 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_CLASS = CLASSIFIER_OPERATION_COUNT + 35;
+	int RELATIONSHIP___TARGET_CLASS = CLASSIFIER_OPERATION_COUNT + 37;
+
+	/**
+	 * The operation id for the '<em>Whole Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___WHOLE_CLASS = CLASSIFIER_OPERATION_COUNT + 38;
+
+	/**
+	 * The operation id for the '<em>Part Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP___PART_CLASS = CLASSIFIER_OPERATION_COUNT + 39;
 
 	/**
 	 * The operation id for the '<em>Source Data Type</em>' operation.
@@ -3611,7 +3998,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 36;
+	int RELATIONSHIP___SOURCE_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 40;
 
 	/**
 	 * The operation id for the '<em>Target Data Type</em>' operation.
@@ -3620,7 +4007,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 37;
+	int RELATIONSHIP___TARGET_DATA_TYPE = CLASSIFIER_OPERATION_COUNT + 41;
 
 	/**
 	 * The operation id for the '<em>Source Relationship</em>' operation.
@@ -3629,7 +4016,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___SOURCE_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 38;
+	int RELATIONSHIP___SOURCE_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 42;
 
 	/**
 	 * The operation id for the '<em>Target Relationship</em>' operation.
@@ -3638,7 +4025,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___TARGET_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 39;
+	int RELATIONSHIP___TARGET_RELATIONSHIP = CLASSIFIER_OPERATION_COUNT + 43;
 
 	/**
 	 * The operation id for the '<em>Is Derived</em>' operation.
@@ -3647,7 +4034,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_DERIVED = CLASSIFIER_OPERATION_COUNT + 40;
+	int RELATIONSHIP___IS_DERIVED = CLASSIFIER_OPERATION_COUNT + 44;
 
 	/**
 	 * The operation id for the '<em>Is End</em>' operation.
@@ -3656,7 +4043,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_END__CLASSIFIER = CLASSIFIER_OPERATION_COUNT + 41;
+	int RELATIONSHIP___IS_END__CLASSIFIER = CLASSIFIER_OPERATION_COUNT + 45;
 
 	/**
 	 * The operation id for the '<em>Is Part Essential</em>' operation.
@@ -3665,7 +4052,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_ESSENTIAL = CLASSIFIER_OPERATION_COUNT + 42;
+	int RELATIONSHIP___IS_PART_ESSENTIAL = CLASSIFIER_OPERATION_COUNT + 46;
 
 	/**
 	 * The operation id for the '<em>Is Part Inseparable</em>' operation.
@@ -3674,7 +4061,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_INSEPARABLE = CLASSIFIER_OPERATION_COUNT + 43;
+	int RELATIONSHIP___IS_PART_INSEPARABLE = CLASSIFIER_OPERATION_COUNT + 47;
 
 	/**
 	 * The operation id for the '<em>Is Part Immutable</em>' operation.
@@ -3683,7 +4070,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 44;
+	int RELATIONSHIP___IS_PART_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 48;
 
 	/**
 	 * The operation id for the '<em>Is Whole Immutable</em>' operation.
@@ -3692,7 +4079,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_WHOLE_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 45;
+	int RELATIONSHIP___IS_WHOLE_IMMUTABLE = CLASSIFIER_OPERATION_COUNT + 49;
 
 	/**
 	 * The operation id for the '<em>Is Part Mandatory</em>' operation.
@@ -3701,7 +4088,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_MANDATORY = CLASSIFIER_OPERATION_COUNT + 46;
+	int RELATIONSHIP___IS_PART_MANDATORY = CLASSIFIER_OPERATION_COUNT + 50;
 
 	/**
 	 * The operation id for the '<em>Is Whole Mandatory</em>' operation.
@@ -3710,7 +4097,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_WHOLE_MANDATORY = CLASSIFIER_OPERATION_COUNT + 47;
+	int RELATIONSHIP___IS_WHOLE_MANDATORY = CLASSIFIER_OPERATION_COUNT + 51;
 
 	/**
 	 * The operation id for the '<em>Is Part Shareable</em>' operation.
@@ -3719,7 +4106,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___IS_PART_SHAREABLE = CLASSIFIER_OPERATION_COUNT + 48;
+	int RELATIONSHIP___IS_PART_SHAREABLE = CLASSIFIER_OPERATION_COUNT + 52;
 
 	/**
 	 * The number of operations of the '<em>Relationship</em>' class.
@@ -3728,7 +4115,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 49;
+	int RELATIONSHIP_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 53;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.onto2.ontouml.impl.GeneralizationSetImpl <em>Generalization Set</em>}' class.
@@ -3831,22 +4218,22 @@ public interface OntoumlPackage extends EPackage {
 	int GENERALIZATION_SET___GET_MODEL = NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get General</em>' operation.
+	 * The operation id for the '<em>General</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_SET___GET_GENERAL = NAMED_ELEMENT_OPERATION_COUNT + 2;
+	int GENERALIZATION_SET___GENERAL = NAMED_ELEMENT_OPERATION_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Get Specifics</em>' operation.
+	 * The operation id for the '<em>Specifics</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_SET___GET_SPECIFICS = NAMED_ELEMENT_OPERATION_COUNT + 3;
+	int GENERALIZATION_SET___SPECIFICS = NAMED_ELEMENT_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Generalization Set</em>' class.
@@ -4601,6 +4988,16 @@ public interface OntoumlPackage extends EPackage {
 	EOperation getClassifier__Ends();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#ends(net.menthor.onto2.ontouml.RelationshipStereotype) <em>Ends</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ends</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#ends(net.menthor.onto2.ontouml.RelationshipStereotype)
+	 * @generated
+	 */
+	EOperation getClassifier__Ends__RelationshipStereotype();
+
+	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#allEnds() <em>All Ends</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4609,6 +5006,66 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getClassifier__AllEnds();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#allEnds(net.menthor.onto2.ontouml.RelationshipStereotype) <em>All Ends</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>All Ends</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#allEnds(net.menthor.onto2.ontouml.RelationshipStereotype)
+	 * @generated
+	 */
+	EOperation getClassifier__AllEnds__RelationshipStereotype();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#relationships() <em>Relationships</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Relationships</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#relationships()
+	 * @generated
+	 */
+	EOperation getClassifier__Relationships();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#allRelationships() <em>All Relationships</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>All Relationships</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#allRelationships()
+	 * @generated
+	 */
+	EOperation getClassifier__AllRelationships();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#isDisjointOfParentsOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of Parents Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Disjoint Of Parents Of</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#isDisjointOfParentsOf(net.menthor.onto2.ontouml.Classifier)
+	 * @generated
+	 */
+	EOperation getClassifier__IsDisjointOfParentsOf__Classifier();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#isDisjointOfChildrenOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of Children Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Disjoint Of Children Of</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#isDisjointOfChildrenOf(net.menthor.onto2.ontouml.Classifier)
+	 * @generated
+	 */
+	EOperation getClassifier__IsDisjointOfChildrenOf__Classifier();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Classifier#isDisjointOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Disjoint Of</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Classifier#isDisjointOf(net.menthor.onto2.ontouml.Classifier)
+	 * @generated
+	 */
+	EOperation getClassifier__IsDisjointOf__Classifier();
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.onto2.ontouml.Type <em>Type</em>}'.
@@ -4861,6 +5318,17 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getConstraint_Stereotype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link net.menthor.onto2.ontouml.Constraint#getContext <em>Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Context</em>'.
+	 * @see net.menthor.onto2.ontouml.Constraint#getContext()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EAttribute getConstraint_Context();
 
 	/**
 	 * Returns the meta object for the attribute '{@link net.menthor.onto2.ontouml.Constraint#getName <em>Name</em>}'.
@@ -5596,6 +6064,26 @@ public interface OntoumlPackage extends EPackage {
 	EOperation getClass__IsNominalQuality();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isEndurantClass() <em>Is Endurant Class</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Endurant Class</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Class#isEndurantClass()
+	 * @generated
+	 */
+	EOperation getClass__IsEndurantClass();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isIntrinsicMoment() <em>Is Intrinsic Moment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Intrinsic Moment</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Class#isIntrinsicMoment()
+	 * @generated
+	 */
+	EOperation getClass__IsIntrinsicMoment();
+
+	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isSubstanceSortalClass() <em>Is Substance Sortal Class</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5704,6 +6192,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getClass__IsNonQualitativeIntrinsicMoment();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#isQualitativeIntrinsicMoment() <em>Is Qualitative Intrinsic Moment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Qualitative Intrinsic Moment</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Class#isQualitativeIntrinsicMoment()
+	 * @generated
+	 */
+	EOperation getClass__IsQualitativeIntrinsicMoment();
 
 	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Class#identityProvidersAtAllParents() <em>Identity Providers At All Parents</em>}' operation.
@@ -6230,6 +6728,26 @@ public interface OntoumlPackage extends EPackage {
 	EOperation getRelationship__TargetEnd();
 
 	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Relationship#partEnd() <em>Part End</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Part End</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Relationship#partEnd()
+	 * @generated
+	 */
+	EOperation getRelationship__PartEnd();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Relationship#wholeEnd() <em>Whole End</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Whole End</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Relationship#wholeEnd()
+	 * @generated
+	 */
+	EOperation getRelationship__WholeEnd();
+
+	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Relationship#source() <em>Source</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6268,6 +6786,26 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRelationship__TargetClass();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Relationship#wholeClass() <em>Whole Class</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Whole Class</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Relationship#wholeClass()
+	 * @generated
+	 */
+	EOperation getRelationship__WholeClass();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Relationship#partClass() <em>Part Class</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Part Class</em>' operation.
+	 * @see net.menthor.onto2.ontouml.Relationship#partClass()
+	 * @generated
+	 */
+	EOperation getRelationship__PartClass();
 
 	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.Relationship#sourceDataType() <em>Source Data Type</em>}' operation.
@@ -6454,24 +6992,24 @@ public interface OntoumlPackage extends EPackage {
 	EReference getGeneralizationSet_HighOrder();
 
 	/**
-	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.GeneralizationSet#getGeneral() <em>Get General</em>}' operation.
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.GeneralizationSet#general() <em>General</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get General</em>' operation.
-	 * @see net.menthor.onto2.ontouml.GeneralizationSet#getGeneral()
+	 * @return the meta object for the '<em>General</em>' operation.
+	 * @see net.menthor.onto2.ontouml.GeneralizationSet#general()
 	 * @generated
 	 */
-	EOperation getGeneralizationSet__GetGeneral();
+	EOperation getGeneralizationSet__General();
 
 	/**
-	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.GeneralizationSet#getSpecifics() <em>Get Specifics</em>}' operation.
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.GeneralizationSet#specifics() <em>Specifics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Specifics</em>' operation.
-	 * @see net.menthor.onto2.ontouml.GeneralizationSet#getSpecifics()
+	 * @return the meta object for the '<em>Specifics</em>' operation.
+	 * @see net.menthor.onto2.ontouml.GeneralizationSet#specifics()
 	 * @generated
 	 */
-	EOperation getGeneralizationSet__GetSpecifics();
+	EOperation getGeneralizationSet__Specifics();
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.onto2.ontouml.Generalization <em>Generalization</em>}'.
@@ -7100,12 +7638,68 @@ public interface OntoumlPackage extends EPackage {
 		EOperation CLASSIFIER___ENDS = eINSTANCE.getClassifier__Ends();
 
 		/**
+		 * The meta object literal for the '<em><b>Ends</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___ENDS__RELATIONSHIPSTEREOTYPE = eINSTANCE.getClassifier__Ends__RelationshipStereotype();
+
+		/**
 		 * The meta object literal for the '<em><b>All Ends</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation CLASSIFIER___ALL_ENDS = eINSTANCE.getClassifier__AllEnds();
+
+		/**
+		 * The meta object literal for the '<em><b>All Ends</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___ALL_ENDS__RELATIONSHIPSTEREOTYPE = eINSTANCE.getClassifier__AllEnds__RelationshipStereotype();
+
+		/**
+		 * The meta object literal for the '<em><b>Relationships</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___RELATIONSHIPS = eINSTANCE.getClassifier__Relationships();
+
+		/**
+		 * The meta object literal for the '<em><b>All Relationships</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___ALL_RELATIONSHIPS = eINSTANCE.getClassifier__AllRelationships();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Disjoint Of Parents Of</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER = eINSTANCE.getClassifier__IsDisjointOfParentsOf__Classifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Disjoint Of Children Of</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER = eINSTANCE.getClassifier__IsDisjointOfChildrenOf__Classifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Disjoint Of</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASSIFIER___IS_DISJOINT_OF__CLASSIFIER = eINSTANCE.getClassifier__IsDisjointOf__Classifier();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.impl.TypeImpl <em>Type</em>}' class.
@@ -7306,6 +7900,14 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONSTRAINT__STEREOTYPE = eINSTANCE.getConstraint_Stereotype();
+
+		/**
+		 * The meta object literal for the '<em><b>Context</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTRAINT__CONTEXT = eINSTANCE.getConstraint_Context();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -7882,6 +8484,22 @@ public interface OntoumlPackage extends EPackage {
 		EOperation CLASS___IS_NOMINAL_QUALITY = eINSTANCE.getClass__IsNominalQuality();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Endurant Class</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_ENDURANT_CLASS = eINSTANCE.getClass__IsEndurantClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Intrinsic Moment</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_INTRINSIC_MOMENT = eINSTANCE.getClass__IsIntrinsicMoment();
+
+		/**
 		 * The meta object literal for the '<em><b>Is Substance Sortal Class</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7968,6 +8586,14 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CLASS___IS_NON_QUALITATIVE_INTRINSIC_MOMENT = eINSTANCE.getClass__IsNonQualitativeIntrinsicMoment();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Qualitative Intrinsic Moment</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLASS___IS_QUALITATIVE_INTRINSIC_MOMENT = eINSTANCE.getClass__IsQualitativeIntrinsicMoment();
 
 		/**
 		 * The meta object literal for the '<em><b>Identity Providers At All Parents</b></em>' operation.
@@ -8382,6 +9008,22 @@ public interface OntoumlPackage extends EPackage {
 		EOperation RELATIONSHIP___TARGET_END = eINSTANCE.getRelationship__TargetEnd();
 
 		/**
+		 * The meta object literal for the '<em><b>Part End</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RELATIONSHIP___PART_END = eINSTANCE.getRelationship__PartEnd();
+
+		/**
+		 * The meta object literal for the '<em><b>Whole End</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RELATIONSHIP___WHOLE_END = eINSTANCE.getRelationship__WholeEnd();
+
+		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8412,6 +9054,22 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation RELATIONSHIP___TARGET_CLASS = eINSTANCE.getRelationship__TargetClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Whole Class</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RELATIONSHIP___WHOLE_CLASS = eINSTANCE.getRelationship__WholeClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Part Class</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RELATIONSHIP___PART_CLASS = eINSTANCE.getRelationship__PartClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Data Type</b></em>' operation.
@@ -8560,20 +9218,20 @@ public interface OntoumlPackage extends EPackage {
 		EReference GENERALIZATION_SET__HIGH_ORDER = eINSTANCE.getGeneralizationSet_HighOrder();
 
 		/**
-		 * The meta object literal for the '<em><b>Get General</b></em>' operation.
+		 * The meta object literal for the '<em><b>General</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GENERALIZATION_SET___GET_GENERAL = eINSTANCE.getGeneralizationSet__GetGeneral();
+		EOperation GENERALIZATION_SET___GENERAL = eINSTANCE.getGeneralizationSet__General();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Specifics</b></em>' operation.
+		 * The meta object literal for the '<em><b>Specifics</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GENERALIZATION_SET___GET_SPECIFICS = eINSTANCE.getGeneralizationSet__GetSpecifics();
+		EOperation GENERALIZATION_SET___SPECIFICS = eINSTANCE.getGeneralizationSet__Specifics();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.impl.GeneralizationImpl <em>Generalization</em>}' class.

@@ -1,0 +1,84 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Relationship
+
+inv	derivationDependency('Both sides of a Derivation must be set dependent'): 
+	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+
+inv temporalDependency('Both sides of a Temporal relationship must be set dependent'): 
+	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+							
+inv causationDependency('Both sides of a Causation must be set dependent'): 
+	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+														
+inv subEventDependency('Both part and whole of a SubEventOf must be set dependent'): 
+	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+														
+inv mediationDependency('The mediated end (target) of a Mediation must be dependent'): 
+	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+						
+inv characterizationDependency('The characterized end (target) of a Characterization must be set dependent.'): 
+	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+							
+inv participationDependency('The participant end (target) of a Participation must be set dependent.'): 
+	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+
+inv instanceOfDependency('The high order end (target) of a InstanceOf must be set dependent iff the type end (source) is a rigid type.'): 
+	(not sourceClass().oclIsUndefined() and sourceClass().isRigid()) implies 
+	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+
+--==============================================
+ 
+inv subQuantityOfNonShareable('The part of a SubQuantityOf is always non-shareable.'): 
+	self.isSubQuantityOf() implies not self.isPartShareable()
+ 
+inv quaPartOfNonShareable('The part of a QuaPartOf is always non-shareable.'): 
+	self.isQuaPartOf() implies not self.isPartShareable()
+  
+inv subQuantityOfEssentialPart('The part of a SubQuantitOf is always essential if the whole is rigid'): 
+	self.isSubQuantityOf() and not self.wholeClass().oclIsUndefined() and
+	self.wholeClass().isRigid() implies self.isPartEssential()
+	 
+inv subQuantityOfImmutablePart('The part of a SubQuantitOf is always immutable if the whole is non-rigid'): 
+	self.isSubQuantityOf() and not self.wholeClass().oclIsUndefined() and
+	self.wholeClass().isAntiRigid() implies self.isPartImmutable()
+ 
+inv subEventOfEssentialPart('The part of a SubEventOf is always essential if the whole is rigid'): 
+	self.isSubEventOf() and not self.wholeClass().oclIsUndefined() and
+	self.wholeClass().isRigid() implies self.isPartEssential()
+ 
+inv subEventOfImmutablePart('The part of a SubEventOf is always immutable if the whole is non-rigid'): 
+	self.isSubEventOf() and not self.wholeClass().oclIsUndefined() and
+	self.wholeClass().isNonRigid() implies self.isPartImmutable()
+
+inv quaPartOfEssentialPart('The part of a QuaPartOf is always essential if the whole is rigid'): 
+	self.isQuaPartOf() and not self.wholeClass().oclIsUndefined() and
+	self.wholeClass().isRigid() implies self.isPartEssential()
+ 
+inv quaPartOfImmutablePart('The part of a QuaPartOf is always immutable if the whole is non-rigid'): 
+	self.isQuaPartOf() and not self.wholeClass().oclIsUndefined() and
+	self.wholeClass().isNonRigid() implies self.isPartImmutable()
+
+inv subEventOfInseparablePart('The part of a SubEventOf is always inseparable if the part is rigid'): 
+	self.isSubEventOf() and not self.partClass().oclIsUndefined() and
+	self.partClass().isRigid() implies self.isPartInseparable()
+ 
+inv subEventOfImmutableWhole('The whole of a SubEventOf is always immutable if the part is non-rigid'): 
+	self.isSubEventOf() and not self.partClass().oclIsUndefined() and
+	self.partClass().isNonRigid() implies self.isWholeImmutable()
+					
+inv quaPartOfInseparablePart('The part of a QuaPartOf is always inseparable if the part is rigid'): 
+	self.isQuaPartOf() and not self.partClass().oclIsUndefined() and
+	self.partClass().isRigid() implies self.isPartInseparable()
+ 
+inv quaPartOfImmutableWhole('The whole of a QuaPartOf is always immutable if the part is non-rigid'): 
+	self.isQuaPartOf() and not self.partClass().oclIsUndefined() and
+	self.partClass().isNonRigid() implies self.isWholeImmutable()
+
+endpackage

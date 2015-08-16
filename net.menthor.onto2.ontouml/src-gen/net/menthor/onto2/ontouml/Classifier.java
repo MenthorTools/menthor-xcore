@@ -224,13 +224,90 @@ public interface Classifier extends ContainedElement, NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * * Returns all direct end-points of a given relationship stereotype from this classifier (in which we can navigate from it)
+	 *  In other words, it returns all opposite ends of the relationships connected to this classifier.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" stereoUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.EndPoint%>[] result = null;\n<%net.menthor.onto2.ontouml.Model%> _model = this.getModel();\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Relationship%>> _allRelationships = _model.allRelationships();\nfor (final <%net.menthor.onto2.ontouml.Relationship%> rel : _allRelationships)\n{\n\tboolean _and = false;\n\tboolean _isEnd = rel.isEnd(this);\n\tif (!_isEnd)\n\t{\n\t\t_and = false;\n\t} else\n\t{\n\t\t<%net.menthor.onto2.ontouml.RelationshipStereotype%> _stereotype = rel.getStereotype();\n\t\tboolean _equals = _stereotype.equals(stereo);\n\t\t_and = _equals;\n\t}\n\tif (_and)\n\t{\n\t\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _endPoints = rel.getEndPoints();\n\t\tfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _endPoints)\n\t\t{\n\t\t\t<%net.menthor.onto2.ontouml.Classifier%> _endType = ep.getEndType();\n\t\t\tboolean _equals_1 = _endType.equals(this);\n\t\t\tboolean _not = (!_equals_1);\n\t\t\tif (_not)\n\t\t\t{\n\t\t\t\tfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n\t\t\t\t((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(ep);\n\t\t\t}\n\t\t}\n\t}\n}\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.EndPoint%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));'"
+	 * @generated
+	 */
+	EList<EndPoint> ends(RelationshipStereotype stereo);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * * Returns all direct and indirect end-points from this classifier (in which we can navigate from it)
 	 *  In other words, it returns all opposite ends of the relationships connected to this classifier, or to a parent of this classifier.
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.EndPoint%>[] result = null;\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends();\n((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> p : _allParents)\n{\n\tif ((p instanceof <%net.menthor.onto2.ontouml.Class%>))\n\t{\n\t\tfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n\t\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends_1 = ((<%net.menthor.onto2.ontouml.Class%>)p).ends();\n\t\t((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);\n\t}\n}\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_2 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.EndPoint%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.EndPoint%>[] result = null;\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends();\n((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> p : _allParents)\n{\n\tfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends_1 = p.ends();\n\t((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);\n}\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_2 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.EndPoint%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));'"
 	 * @generated
 	 */
 	EList<EndPoint> allEnds();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Returns all direct and indirect end-points from this classifier (in which we can navigate from it)
+	 *  In other words, it returns all opposite ends of the relationships connected to this classifier, or to a parent of this classifier.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" stereoUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.EndPoint%>[] result = null;\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends(stereo);\n((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> p : _allParents)\n{\n\tfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends_1 = p.ends(stereo);\n\t((<%java.util.List%><<%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);\n}\nfinal <%net.menthor.onto2.ontouml.EndPoint%>[] _converted_result_2 = (<%net.menthor.onto2.ontouml.EndPoint%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.EndPoint%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.EndPoint%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));'"
+	 * @generated
+	 */
+	EList<EndPoint> allEnds(RelationshipStereotype stereo);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Returns all direct relationships this classifier is connected to
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.Relationship%>[] result = null;\n<%net.menthor.onto2.ontouml.Model%> _model = this.getModel();\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Relationship%>> _allRelationships = _model.allRelationships();\nfor (final <%net.menthor.onto2.ontouml.Relationship%> rel : _allRelationships)\n{\n\tboolean _isEnd = rel.isEnd(this);\n\tif (_isEnd)\n\t{\n\t\tfinal <%net.menthor.onto2.ontouml.Relationship%>[] _converted_result = (<%net.menthor.onto2.ontouml.Relationship%>[])result;\n\t\t((<%java.util.List%><<%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(rel);\n\t}\n}\nfinal <%net.menthor.onto2.ontouml.Relationship%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.Relationship%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Relationship%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));'"
+	 * @generated
+	 */
+	EList<Relationship> relationships();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Returns all direct and indirect relationships this classifier is connected to
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.Relationship%>[] result = null;\nfinal <%net.menthor.onto2.ontouml.Relationship%>[] _converted_result = (<%net.menthor.onto2.ontouml.Relationship%>[])result;\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Relationship%>> _relationships = this.relationships();\n((<%java.util.List%><<%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_relationships);\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> p : _allParents)\n{\n\tfinal <%net.menthor.onto2.ontouml.Relationship%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.Relationship%>[])result;\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Relationship%>> _relationships_1 = p.relationships();\n\t((<%java.util.List%><<%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_relationships_1);\n}\nfinal <%net.menthor.onto2.ontouml.Relationship%>[] _converted_result_2 = (<%net.menthor.onto2.ontouml.Relationship%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Relationship%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.Relationship%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));'"
+	 * @generated
+	 */
+	EList<Relationship> allRelationships();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" cUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = c.allParents();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> o : _allParents)\n{\n\t{\n\t\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents_1 = this.allParents();\n\t\tboolean _contains = _allParents_1.contains(o);\n\t\tif (_contains)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t\tboolean _equals = this.equals(o);\n\t\tif (_equals)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t}\n}\nreturn true;'"
+	 * @generated
+	 */
+	boolean isDisjointOfParentsOf(Classifier c);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" cUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allChildren = c.allChildren();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> o : _allChildren)\n{\n\t{\n\t\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();\n\t\tboolean _contains = _allParents.contains(o);\n\t\tif (_contains)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t\tboolean _equals = this.equals(o);\n\t\tif (_equals)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t}\n}\nreturn true;'"
+	 * @generated
+	 */
+	boolean isDisjointOfChildrenOf(Classifier c);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" cUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _and = false;\nboolean _isDisjointOfParentsOf = this.isDisjointOfParentsOf(c);\nif (!_isDisjointOfParentsOf)\n{\n\t_and = false;\n} else\n{\n\tboolean _isDisjointOfChildrenOf = this.isDisjointOfChildrenOf(c);\n\t_and = _isDisjointOfChildrenOf;\n}\nif (_and)\n{\n\treturn true;\n}\nreturn false;'"
+	 * @generated
+	 */
+	boolean isDisjointOf(Classifier c);
 
 } // Classifier

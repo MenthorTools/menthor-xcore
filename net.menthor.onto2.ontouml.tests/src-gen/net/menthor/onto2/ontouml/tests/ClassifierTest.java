@@ -19,7 +19,14 @@ import net.menthor.onto2.ontouml.Classifier;
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#allChildren() <em>All Children</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#siblings() <em>Siblings</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#ends() <em>Ends</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#ends(net.menthor.onto2.ontouml.RelationshipStereotype) <em>Ends</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#allEnds() <em>All Ends</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#allEnds(net.menthor.onto2.ontouml.RelationshipStereotype) <em>All Ends</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#relationships() <em>Relationships</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#allRelationships() <em>All Relationships</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#isDisjointOfParentsOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of Parents Of</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#isDisjointOfChildrenOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of Children Of</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#isDisjointOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -152,6 +159,19 @@ public abstract class ClassifierTest extends ContainedElementTest {
 	}
 
 	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#ends(net.menthor.onto2.ontouml.RelationshipStereotype) <em>Ends</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#ends(net.menthor.onto2.ontouml.RelationshipStereotype)
+	 * @generated
+	 */
+	public void testEnds__RelationshipStereotype() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
 	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#allEnds() <em>All Ends</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,6 +179,84 @@ public abstract class ClassifierTest extends ContainedElementTest {
 	 * @generated
 	 */
 	public void testAllEnds() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#allEnds(net.menthor.onto2.ontouml.RelationshipStereotype) <em>All Ends</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#allEnds(net.menthor.onto2.ontouml.RelationshipStereotype)
+	 * @generated
+	 */
+	public void testAllEnds__RelationshipStereotype() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#relationships() <em>Relationships</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#relationships()
+	 * @generated
+	 */
+	public void testRelationships() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#allRelationships() <em>All Relationships</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#allRelationships()
+	 * @generated
+	 */
+	public void testAllRelationships() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#isDisjointOfParentsOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of Parents Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#isDisjointOfParentsOf(net.menthor.onto2.ontouml.Classifier)
+	 * @generated
+	 */
+	public void testIsDisjointOfParentsOf__Classifier() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#isDisjointOfChildrenOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of Children Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#isDisjointOfChildrenOf(net.menthor.onto2.ontouml.Classifier)
+	 * @generated
+	 */
+	public void testIsDisjointOfChildrenOf__Classifier() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link net.menthor.onto2.ontouml.Classifier#isDisjointOf(net.menthor.onto2.ontouml.Classifier) <em>Is Disjoint Of</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.menthor.onto2.ontouml.Classifier#isDisjointOf(net.menthor.onto2.ontouml.Classifier)
+	 * @generated
+	 */
+	public void testIsDisjointOf__Classifier() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

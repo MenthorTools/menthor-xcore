@@ -1,0 +1,80 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Relationship
+
+inv mediationProperties('A Mediation must be Irreflexive'): 
+	self.isMediation() implies self.reflexivity = Reflexivity::Irreflexive
+
+inv characterizationProperties('A Characterization must be Irreflexive, Anti-Symmetric, Transitive and Acyclic'): 
+	self.isCharacterization() implies self.reflexivity = Reflexivity::Irreflexive and
+	self.transitivity = Transitivity::Transitive and self.symmetry = Symmetry::AntiSymmetric and self.ciclicity=Ciclicity::Acyclic
+
+inv causationProperties('A Causation must be Irreflexive, Anti-Symmetric, Transitive and Acyclic.'): 
+	self.isCausation() implies self.reflexivity = Reflexivity::Irreflexive and
+	self.transitivity = Transitivity::Transitive and self.symmetry = Symmetry::AntiSymmetric and self.ciclicity=Ciclicity::Acyclic
+	 					
+inv meronymicProperties('A Parthood (MemberOf, ComponentOf, SubEventOf, SubCollectionOf, SubQuantityOf, Consitution) must be Anti-Symmetric and Acyclic'): 
+	self.isMeronymic() implies self.symmetry = Symmetry::AntiSymmetric and self.ciclicity=Ciclicity::Acyclic
+ 					
+inv memberOfProperties('A MemberOf must be Non-Reflexive and Intransitive'): 
+	self.isMemberOf() implies self.reflexivity = Reflexivity::NonReflexive and
+	self.transitivity = Transitivity::Intransitive
+				 					
+inv componentOfProperties('A ComponentOf must be Non-Reflexive and Non-Transitive'): 
+	self.isComponentOf() implies self.reflexivity = Reflexivity::NonReflexive and
+	self.transitivity = Transitivity::NonTransitive
+	 					
+inv subCollectionOfProperties('A SubCollectionOf must be Non-Reflexive and Transitive'): 
+	self.isSubCollectionOf() implies self.reflexivity = Reflexivity::NonReflexive and
+	self.transitivity = Transitivity::Transitive
+	 					
+inv subQuantityOfProperties('A SubQuantityOf must be Non-Reflexive and Transitive'): 
+	self.isSubQuantityOf() implies self.reflexivity = Reflexivity::NonReflexive and
+	self.transitivity = Transitivity::Transitive
+											 					
+inv constitutionProperties('A Constitution must be Irreflexive and Transitive'): 
+	self.isConstitution() implies self.reflexivity = Reflexivity::Irreflexive and
+	self.transitivity = Transitivity::Transitive
+ 					
+inv subEventProperties('A SubEventOf must be Irreflexive and Transitive'): 
+	self.isSubEventOf() implies self.reflexivity = Reflexivity::Irreflexive and
+	self.transitivity = Transitivity::Transitive
+		 					
+inv precedesProperties('A Temporal {precedes} must be Irreflexive, Anti-Symmetric, Transitive and Acyclic'): 
+	self.isPrecedes() implies self.reflexivity = Reflexivity::Irreflexive and
+	self.symmetry = Symmetry::AntiSymmetric  and self.transitivity = Transitivity::Transitive and
+	self.ciclicity=Ciclicity::Acyclic
+ 					
+inv duringProperties('A Temporal {during} must be Reflexive, Asymmetric, Transitive and Acyclic'): 
+	self.isDuring() implies self.reflexivity = Reflexivity::Reflexive and
+	self.symmetry = Symmetry::Assymetric  and self.transitivity = Transitivity::Transitive and
+	self.ciclicity=Ciclicity::Acyclic
+ 					
+inv meetsProperties('A Temporal {meets} must be Irreflexive, Anti-Symmetric, Instransitive and Acyclic'): 
+	self.isMeets() implies self.reflexivity = Reflexivity::Irreflexive and
+	self.symmetry = Symmetry::AntiSymmetric  and self.transitivity = Transitivity::Intransitive and
+	self.ciclicity=Ciclicity::Acyclic
+ 					
+inv finishesProperties('A Temporal {finishes} must be Reflexive, Anti-Symmetric, Transitive and Acyclic'): 
+	self.isFinishes() implies self.reflexivity = Reflexivity::Reflexive and
+	self.symmetry = Symmetry::AntiSymmetric  and self.transitivity = Transitivity::Transitive and
+	self.ciclicity=Ciclicity::Acyclic
+ 					
+inv startsProperties('A Temporal {starts} must be Reflexive, Anti-Symmetric, Transitive and Acyclic'): 
+	self.isStarts() implies self.reflexivity = Reflexivity::Reflexive and
+	self.symmetry = Symmetry::AntiSymmetric  and self.transitivity = Transitivity::Transitive and
+	self.ciclicity=Ciclicity::Acyclic
+ 					
+inv equalsProperties('A Temporal {equals} must be Reflexive, Symmetric, Transitive, and Cyclic'): 
+	self.isEquals() implies self.reflexivity = Reflexivity::Reflexive and
+	self.symmetry = Symmetry::Symmetric  and self.transitivity = Transitivity::Transitive and
+	self.ciclicity=Ciclicity::Cyclic
+
+inv overlapsProperties('A Temporal {overlaps} must be Reflexive, Symmetric, Non-Transitive and Non-Cyclic'): 
+	self.isOverlaps() implies self.reflexivity = Reflexivity::Reflexive and
+	self.symmetry = Symmetry::Symmetric  and self.transitivity = Transitivity::NonTransitive and
+	self.ciclicity=Ciclicity::NonCyclic
+
+endpackage					

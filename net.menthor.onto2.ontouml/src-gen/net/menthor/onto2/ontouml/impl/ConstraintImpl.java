@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getStereotype <em>Stereotype</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getContext <em>Context</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getRuleAsString <em>Rule As String</em>}</li>
  * </ul>
@@ -47,6 +48,26 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * @ordered
 	 */
 	protected ConstraintSteteotype stereotype = STEREOTYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getContext() <em>Context</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONTEXT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getContext() <em>Context</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected String context = CONTEXT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -133,6 +154,27 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getContext() {
+		return context;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContext(String newContext) {
+		String oldContext = context;
+		context = newContext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CONSTRAINT__CONTEXT, oldContext, context));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
 		return name;
 	}
@@ -180,6 +222,8 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 		switch (featureID) {
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				return getStereotype();
+			case OntoumlPackage.CONSTRAINT__CONTEXT:
+				return getContext();
 			case OntoumlPackage.CONSTRAINT__NAME:
 				return getName();
 			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
@@ -198,6 +242,9 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 		switch (featureID) {
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				setStereotype((ConstraintSteteotype)newValue);
+				return;
+			case OntoumlPackage.CONSTRAINT__CONTEXT:
+				setContext((String)newValue);
 				return;
 			case OntoumlPackage.CONSTRAINT__NAME:
 				setName((String)newValue);
@@ -220,6 +267,9 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				setStereotype(STEREOTYPE_EDEFAULT);
 				return;
+			case OntoumlPackage.CONSTRAINT__CONTEXT:
+				setContext(CONTEXT_EDEFAULT);
+				return;
 			case OntoumlPackage.CONSTRAINT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -240,6 +290,8 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 		switch (featureID) {
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				return stereotype != STEREOTYPE_EDEFAULT;
+			case OntoumlPackage.CONSTRAINT__CONTEXT:
+				return CONTEXT_EDEFAULT == null ? context != null : !CONTEXT_EDEFAULT.equals(context);
 			case OntoumlPackage.CONSTRAINT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
@@ -260,6 +312,8 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (stereotype: ");
 		result.append(stereotype);
+		result.append(", context: ");
+		result.append(context);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", ruleAsString: ");

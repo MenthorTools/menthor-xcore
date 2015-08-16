@@ -1,0 +1,19 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Class
+
+inv mixinsAreAbstract('A Mixin type (Category, PhaseMixin, RoleMixin, Mixin) must always be abstract'): 
+	self.isMixinClass() implies self.isAbstract
+
+inv collectionWithEssentialParts('All the parts of an extensional Collection (Collective, SubKind, Role, Phase, Category, PhaseMixin, RoleMixin, Mixin) must be essential'): 
+	self.isCollection() implies self.allRelationships()->forAll(r | r.isMeronymic() and (not r.wholeClass().oclIsUndefined()) and (not r.partClass().oclIsUndefined()) 
+	and (r.wholeClass() = self) implies r.isPartEssential())
+ 
+context Relationship
+
+inv memberOfAndExtensionalWhole('A MemberOf with essential part must imply in an extensional Collection (whole) (Collective, SubKind, Role, Phase, Category, PhaseMixin, RoleMixin, Mixin)'):
+	self.isMemberOf() and self.isPartEssential() and not self.wholeClass().oclIsUndefined() implies self.wholeClass().isExtensional 
+				
+endpackage

@@ -1,0 +1,93 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Relationship
+
+inv mediationSource('The mediating type (source) of a Mediation must be a Truth Maker (Relator, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'):
+	self.isMediation() implies (not self.sourceClass().oclIsUndefined()) and (self.sourceClass().isTruthMaker())					 
+
+inv mediationTarget('The mediated type (target) of a Mediation must be a Rigid Sortal (Kind, Collective Quantity, or SubKind), Category, Role or RoleMixin'): 
+	self.isMediation() implies (not self.targetClass().oclIsUndefined()) and (self.targetClass().isSubstanceSortalClass() or 
+	self.targetClass().isSubKind() or self.targetClass().isCategory() or self.targetClass().isRole() or self.targetClass().isRoleMixin())
+									
+inv structurationSource('The structured type (source) of a Structuration must be a Quality'):
+	self.isStructuration() implies (not self.sourceClass().oclIsUndefined()) and (self.sourceClass().isQualitativeIntrinsicMoment())					 
+
+inv structurationTarget('The structurating type (target) of a Structuration must be a Domain, Dimension, or Enumeration'): 
+	self.isStructuration() implies (not self.targetDataType().oclIsUndefined()) and (self.targetDataType().isStructure() or 
+	self.targetDataType().isEnumeration())									
+			
+inv characterizationSource('The characterizing type (source) of a Characterization must be a Mode or Quality'): 
+	self.isCharacterization() implies (not self.sourceClass().oclIsUndefined()) and (self.sourceClass().isIntrinsicMoment())					 
+
+inv characterizationTarget('The characterized type (target) of a Characterization must be an Endurant'):
+	self.isCharacterization() implies (not self.targetClass().oclIsUndefined()) and (self.targetClass().isEndurantClass())
+					 	 	
+inv materialSourceAndTarget('A Material cannot connect a Mode or a Quality'): 
+	self.isMaterial() implies self.targetClass()<>null and self.sourceClass()<>null and
+	not self.targetClass().isIntrinsicMoment() and not self.sourceClass().isIntrinsicMoment()
+					 	 	 					 	 	 					 	 	 									
+inv componentOfPart('The part of a ComponentOf must be a Functional Complex (Kind, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isComponentOf() implies (not self.partClass().oclIsUndefined()) and (self.partClass().isFunctionalComplex())
+					 
+inv componentOfWhole('The whole of a ComponentOf must be a Functional Complex (Kind, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isComponentOf() implies (not self.wholeClass().oclIsUndefined()) and (self.wholeClass().isFunctionalComplex())					 	 	
+						
+inv memberOfPart('The part of a MemberOf must be a Functional Complex (Kind, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isMemberOf() implies (not self.partClass().oclIsUndefined()) and (self.partClass().isFunctionalComplex())
+					 
+inv memberOfWhole('The whole of a MemberOf must be a Collection (Collective, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isMemberOf() implies (not self.wholeClass().oclIsUndefined()) and (self.wholeClass().isCollection())
+
+inv subCollectionOfPart('The part of a SubCollectionOf must be a Collection (Collective, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isSubCollectionOf() implies (self.partClass().oclIsUndefined()) and (self.partClass().isCollection())
+					 
+inv subCollectionOfWhole('The whole of a SubCollectionOf must be a Collection (Collective, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isSubCollectionOf() implies (self.wholeClass().oclIsUndefined()) and (self.wholeClass().isCollection())
+
+inv subQuantityOfPart('The part of a SubQuantityOf must be an Amount of Matter (Quantity, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isSubQuantityOf() implies (not self.partClass().oclIsUndefined()) and (self.partClass().isAmountOfMatter())
+					 
+inv subQuantityOfWhole('The whole of a SubQuantityOf must be an Amount of Matter (Quantity, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isSubQuantityOf() implies (not self.wholeClass().oclIsUndefined()) and (self.wholeClass().isAmountOfMatter())
+
+inv instanceOfSource('The source type of an InstanceOf cannot be a DataType or a High Order Type'): 
+	self.isInstanceOf() implies (not self.sourceClass().oclIsUndefined()) and (not self.sourceClass().isHighOrder())
+					 
+inv instanceOfTarget('The target type of an InstanceOf must be a HighOrder Type'): 
+	self.isInstanceOf() implies (not self.targetClass().oclIsUndefined()) and (self.targetClass().isHighOrder())
+
+inv participationSourceAndTarget('A Participation must connect an Event to an Endurant'): 
+	self.isParticipation() implies (not self.sourceClass().oclIsUndefined()) and (not self.targetClass().oclIsUndefined()) and 
+	(self.sourceClass().isEvent() and self.targetClass().isEndurantClass())
+
+inv temporalSourceAndTarget('A Temporal must only connect an Event to another Event'): 
+	self.isTemporal() implies (not self.sourceClass().oclIsUndefined()) and (not self.targetClass().oclIsUndefined()) and 
+	(self.sourceClass().isEvent() and self.targetClass().isEvent())
+
+inv causationSourceAndTarget('A Causation must only connect an Event to another Event'): 
+	self.isCausation() implies (not self.sourceClass().oclIsUndefined()) and (not self.targetClass().oclIsUndefined()) and 
+	(self.sourceClass().isEvent() and self.targetClass().isEvent())
+
+inv subEventOfPartAndWhole('A SubEventOf must only connect an Event to another Event'): 
+	self.isSubEventOf() implies (not self.partClass().oclIsUndefined()) and (not self.wholeClass().oclIsUndefined()) and 
+	(self.partClass().isEvent() and self.wholeClass().isEvent())
+
+inv consitutionPart('The part of a Consitution must be a Collection or an Amount of Matter (Collective, Quantity, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'):
+	self.isConstitution() implies (not self.partClass().oclIsUndefined()) and 
+    (self.partClass().isAmountOfMatter() or self.partClass().isCollection())
+					 
+inv consitutionWhole('The whole of a Consitution must be a Functional Complex (Kind, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin)'): 
+	self.isConstitution() implies (not self.wholeClass().oclIsUndefined()) and 
+	(self.wholeClass().isFunctionalComplex())
+					
+inv quaPartOfPart('The part of a QuaPartOf must be a non-measurable Instrinsic Moment (Mode, SubKind, Role, Phase, Category. RoleMixin, PhaseMixin, Mixin)'): 
+	self.isQuaPartOf() implies (not self.partClass().oclIsUndefined()) and 
+	(self.partClass().isNonQualitativeIntrinsicMoment())
+					 
+inv quaPartOfWhole('The whole of a QuaPartOf must be a Truth Maker (Relator, SubKind, Role, Phase, Category. RoleMixin, PhaseMixin, Mixin)'): 
+	self.isQuaPartOf() implies (not self.wholeClass().oclIsUndefined()) and 
+	(self.wholeClass().isTruthMaker())
+			
+endpackage

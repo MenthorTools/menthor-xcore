@@ -1,0 +1,104 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Class
+
+inv modeConnectedToCharacterization('A Mode (Mode, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin) must be connected (directly or indirectly) to a Characterization'): 
+	self.isNonQualitativeIntrinsicMoment() implies self.allRelationships()->exists(r | r.isCharacterization())
+
+inv qualityConnectedToStructuration('A Quality (Quality, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin) must be connected (directly or indirectly) to a Structuration'): 
+	self.isQualitativeIntrinsicMoment() implies self.allRelationships()->exists(r | r.isStructuration())
+
+inv relatorConnectedToMediation('A Relator (Relator, SubKind, Role, Phase, Category, Mixin) must be connected (directly or indirectly) to a Mediation'): 
+	self.isTruthMaker() implies self.allRelationships()->exists(r | r.isMediation())
+
+inv highOrderConnectedToInstanceOf('A HighOrder must be connected (directly or indirectly) to a InstanceOf'): 
+	self.isHighOrder() implies self.allRelationships()->exists(r | r.isInstanceOf())
+
+inv eventConnectedToParticipation('An Event must be connected (directly or indirectly) to a Participation'): 
+	self.isEvent() implies self.allRelationships()->exists(r | r.isParticipation())
+
+inv roleConnectedToMediationOrParticipation('A Role must be connected (directly or indirectly) to a Mediation or a Participation'): 
+	self.isRole() implies self.allRelationships()->exists(r | r.isParticipation()) or
+	self.allRelationships()->exists(r | r.isMediation())
+
+inv roleMixinConnectedToMediationOrParticipation('A RoleMixin must be connected (directly or indirectly) to a Mediation or a Participation'): 
+	self.isRole() implies self.allRelationships()->exists(r | r.isParticipation()) or
+	self.allRelationships()->exists(r | r.isMediation())
+											 							
+--===========================================================
+
+inv rigidityAncestors('A Rigid type (Kind, Quantity, Collective, Relator, Mode, Quality, SubKind, Category) cannot have an Anti-Rigid type (Role, Phase, RoleMixin, PhaseMixin) ancestor. This leads to a logic inconsistency.'): 
+	self.isRigid() implies self.allParents()->forAll(p | p.oclIsKindOf(Class) implies not p.oclAsType(Class).isAntiRigid())
+
+inv identityProviders('An identity provider type (Kind, Quantity, Collective, Relator, Mode, Quality) cannot have another identity provider ancestor or a SubKind ancestor. This leads to conflicting identity criteria.'): 
+	self.isIdentityProviderClass() implies self.allParents()->forAll(p | p.oclIsKindOf(Class) implies not p.oclAsType(Class).isIdentityProviderClass()
+	 and not p.oclAsType(Class).isSubKind())
+
+inv mixinsAncestors('A Mixin type (Category, RoleMixin, PhaseMixin, Mixin) must not have a Sortal type (Kind, Quantity, Collective, Relator, Mode, Quality, SubKind, Role, Phase) ancestor. Mixins are abstract types and can only have mixins as ancestors.'): 
+	self.isMixinClass() implies self.allParents()->forAll(p | p.oclIsKindOf(Class) implies not p.oclAsType(Class).isMixinClass())
+
+inv roleMixinMustNotSpecialize('A RoleMixin must not specialize (directly) a PhaseMixin'): 
+	self.isRoleMixin() implies self.parents()->forAll(p | p.oclIsKindOf(Class) implies not p.oclAsType(Class).isPhaseMixin())
+
+inv roleMustNotSpecialize('A Role cannot specialize (directly) a Category or PhaseMixin'): 
+	self.isRole() implies self.parents()->forAll(p | p.oclIsKindOf(Class) implies not p.oclAsType(Class).isPhaseMixin()
+	and not p.oclAsType(Class).isCategory())
+
+inv phaseMustNotSpecialize('A Phase cannot specialize (directly) a Category or RoleMixin'): 
+	self.isPhase() implies self.parents()->forAll(p | p.oclIsKindOf(Class) implies not p.oclAsType(Class).isRoleMixin()
+	and not p.oclAsType(Class).isCategory())
+																							
+inv subKindProvider('A SubKind must have exactly one identity provider (Kind, Collective, Quantity, Relator, Mode, Quality) ancestor. If not, it leads to conflicting (or not having an) identity criteria'): 
+	self.isSubKind() implies self.identityProviders()->size()=1
+																			
+inv antiRigidProvider('An Anti-Rigid Sortal (Role, Phase) must have exactly one identity provider (Kind, Collective, Quantity, Relator, Mode, Quality) ancestor. If not, this leads to conflicting (or not having an) identity criteria'): 
+	self.isAntiRigid() implies self.identityProviders()->size()=1
+
+inv eventAncestors('An Event can only have an Event ancestor'): 
+	self.isEvent() implies self.allParents()->forAll(p | p.oclIsKindOf(Class) and p.oclAsType(Class).isEvent())
+
+inv highOrderAncestors('A HighOrder can only have a HighOrder ancestor'): 
+	self.isHighOrder() implies self.allParents()->forAll(p | p.oclIsKindOf(Class) and p.oclAsType(Class).isHighOrder())
+
+inv endurantAncestors('An Endurant cannot have a Perdurant (Event), DataType (Domain, Dimension, Enumeration, DataType) or HighOrder ancestor.'): 
+	self.isEndurantClass() implies self.allParents()->forAll(p | p.oclIsKindOf(Class) and p.oclAsType(Class).isEndurantClass())															
+
+inv phasePartition('A Phase must be grouped in exactly one {disjoint, complete} Generalization Set with other Phases (i.e. every phase must be in a partition with at least one more phase).'): 
+	self.isPhase() implies GeneralizationSet.allInstances()->one(gs | gs.specifics()->one(s | s = self) and 
+	gs.isCovering=true and gs.isDisjoint=true and gs.specifics()->forAll(s2| s2.oclIsKindOf(Class) and s2.oclAsType(Class).isPhase()))
+											 										 									
+context DataType
+
+inv dimensionConnectedToStructuration('A Dimension must be connected (directly or indirectly) to a Structuration or be owned by a Domain'): 
+	self.isDimension() implies self.allRelationships()->exists(r | r.isStructuration())
+	or not self.ownerDomain.oclIsUndefined()
+
+inv domainConnectedToStructuration('A Domain must be connected (directly or indirectly) to a Structuration'): 
+	self.isDomain() implies self.allRelationships()->exists(r | r.isStructuration())									   
+
+inv domainComposedDimensions('A Domain must be composed by (own) at least two Dimensions'): 
+	self.isDomain() implies self.dimensions->size()>=2
+
+inv enumConnectedToStructuration('An Enumeration must be connected (directly or indirectly) to a Structuration'):
+	self.isEnumeration() implies self.allRelationships()->exists(r | r.isStructuration())
+
+inv enumComposedLiterals('An Enumeration must have at least two owned Enumeration Literals'): 
+	self.isEnumeration() implies self.literals->size()>=2
+
+--===========================================================
+
+inv datatypeAncestors('A DataType can only have a DataType ancestor'): 
+	self.isDataType() implies self.allParents()->forAll(p | p.oclIsKindOf(DataType) and p.oclAsType(DataType).isDataType())
+
+inv domainAncestors('A Domain can only have a Domain ancestor'): 
+	self.isDomain() implies self.allParents()->forAll(p | p.oclIsKindOf(DataType) and p.oclAsType(DataType).isDomain())
+																				
+inv dimensionAncestors('A Dimension can only have a Dimension ancestor'): 
+	self.isDimension() implies self.allParents()->forAll(p | p.oclIsKindOf(DataType) and p.oclAsType(DataType).isDimension())
+																					
+inv enumAncestors('An Enumeration can only have an Enumeration ancestor'):
+	self.isEnumeration() implies self.allParents()->forAll(p | p.oclIsKindOf(DataType) and p.oclAsType(DataType).isEnumeration())
+
+endpackage

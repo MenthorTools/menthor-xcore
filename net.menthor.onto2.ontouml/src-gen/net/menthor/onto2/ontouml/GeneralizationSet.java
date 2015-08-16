@@ -123,19 +123,19 @@ public interface GeneralizationSet extends NamedElement, ContainedElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" unique="false"
+	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Generalization%>> _generalizations = this.getGeneralizations();\nint _size = _generalizations.size();\nboolean _greaterThan = (_size > 0);\nif (_greaterThan)\n{\n\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Generalization%>> _generalizations_1 = this.getGeneralizations();\n\t<%net.menthor.onto2.ontouml.Generalization%> _get = _generalizations_1.get(0);\n\treturn _get.getGeneral();\n}\nelse\n{\n\treturn null;\n}'"
 	 * @generated
 	 */
-	Classifier getGeneral();
+	Classifier general();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" unique="false"
+	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.Classifier%>[] result = null;\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Generalization%>> _generalizations = this.getGeneralizations();\nfor (final <%net.menthor.onto2.ontouml.Generalization%> g : _generalizations)\n{\n\tfinal <%net.menthor.onto2.ontouml.Classifier%>[] _converted_result = (<%net.menthor.onto2.ontouml.Classifier%>[])result;\n\t<%net.menthor.onto2.ontouml.Classifier%> _specific = g.getSpecific();\n\t((<%java.util.List%><<%net.menthor.onto2.ontouml.Classifier%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(_specific);\n}\nfinal <%net.menthor.onto2.ontouml.Classifier%>[] _converted_result_1 = (<%net.menthor.onto2.ontouml.Classifier%>[])result;\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Classifier%>>toEList(((<%java.lang.Iterable%><? extends <%net.menthor.onto2.ontouml.Classifier%>>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));'"
 	 * @generated
 	 */
-	EList<Classifier> getSpecifics();
+	EList<Classifier> specifics();
 
 } // GeneralizationSet

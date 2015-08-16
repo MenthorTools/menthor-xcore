@@ -27,7 +27,7 @@ package net.menthor.onto2.ontouml
  *  - (JP) Create a separate meta-model for "occurrences" of the elements in views (similar to occurrences and definitions in ARIS)
  *         Keep this meta-model for definitions and create a meta-model for occurrences. This will enable a strict separation between model and views
  *  - (TS) Rule to enforce sub-setting and redefinition constraints
- *  - (TS) Implement the following operations: overlapSiblings(), disjointSiblings(), isDisjointOf(Class c)
+ *  - (TS) Implement the following operations: overlapSiblings(), disjointSiblings()
  *  ======================================================================================================== */  
 	 
 @Ecore(validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
@@ -332,7 +332,24 @@ abstract class Classifier extends ContainedElement, NamedElement
 			}			
 		}	
 		return result.toEList;	
-	}
+	}	  
+	
+	/** Returns all direct end-points of a given relationship stereotype from this classifier (in which we can navigate from it) 
+	 *  In other words, it returns all opposite ends of the relationships connected to this classifier. */		
+	op EndPoint[] ends(RelationshipStereotype stereo)
+	{		
+		var EndPoint[] result
+		for(Relationship rel: model.allRelationships){
+			if(rel.isEnd(this) && rel.stereotype.equals(stereo)){
+				for(EndPoint ep: rel.endPoints){
+					if(!ep.endType.equals(this)){
+						result.add(ep);
+					}	
+				}
+			}			
+		}	
+		return result.toEList;	
+	}	
 		  
 	/** Returns all direct and indirect end-points from this classifier (in which we can navigate from it) 
 	 *  In other words, it returns all opposite ends of the relationships connected to this classifier, or to a parent of this classifier. */
@@ -340,13 +357,70 @@ abstract class Classifier extends ContainedElement, NamedElement
 	{		
 		var EndPoint[] result
 		result.addAll(this.ends());
-		for(Classifier p: this.allParents()){
-			if(p instanceof Class){
-				result.addAll(p.ends());
-			}
+		for(Classifier p: this.allParents()){			
+			result.addAll(p.ends());			
 		}
 		return result.toEList;		
 	}	
+	
+	/** Returns all direct and indirect end-points from this classifier (in which we can navigate from it) 
+	 *  In other words, it returns all opposite ends of the relationships connected to this classifier, or to a parent of this classifier. */
+	op EndPoint[] allEnds(RelationshipStereotype stereo) 
+	{		
+		var EndPoint[] result
+		result.addAll(this.ends(stereo));
+		for(Classifier p: this.allParents()){			
+			result.addAll(p.ends(stereo));			
+		}
+		return result.toEList;		
+	}
+	
+	/** Returns all direct relationships this classifier is connected to */		
+	op Relationship[] relationships()
+	{		
+		var Relationship[] result
+		for(Relationship rel: model.allRelationships){
+			if(rel.isEnd(this)){
+				result.add(rel);				
+			}			
+		}	
+		return result.toEList;	
+	}
+	
+	/** Returns all direct and indirect relationships this classifier is connected to */
+	op Relationship[] allRelationships() 
+	{		
+		var Relationship[] result
+		result.addAll(this.relationships());
+		for(Classifier p: this.allParents()){			
+			result.addAll(p.relationships());			
+		}
+		return result.toEList;		
+	}
+
+	op boolean isDisjointOfParentsOf(Classifier c){
+		for(Classifier o: c.allParents()){			
+			if(this.allParents().contains(o)) return false;
+			if(this.equals(o)) return false;
+		}
+		return true;
+	}	
+	
+	op boolean isDisjointOfChildrenOf(Classifier c){
+		for(Classifier o: c.allChildren()){			
+			if(this.allParents().contains(o)) return false;
+			if(this.equals(o)) return false;
+		}
+		return true;
+	}
+	
+	op boolean isDisjointOf(Classifier c)	
+	{
+		if(this.isDisjointOfParentsOf(c) && this.isDisjointOfChildrenOf(c)){
+			return true;
+		}
+		return false
+	}
 }
 
 /** A "Type" is a "Class" or a "DataType". */
@@ -421,6 +495,7 @@ enum ConstraintSteteotype
 class Constraint extends ContainedElement
 {
 	ConstraintSteteotype stereotype
+	String context
 	String[?] name
 	String ruleAsString
 }
@@ -576,6 +651,8 @@ class Class extends Type
 	op boolean isNonPerceivableQuality() { isQuality() && qualityNature!=null && qualityNature==QualityNature.NON_PERCEIVABLE }
 	op boolean isNominalQuality() { isQuality() && qualityNature!=null && qualityNature==QualityNature.NOMINAL }
 			
+	op boolean isEndurantClass() { ! (isEvent() || isHighOrder()) }
+	op boolean isIntrinsicMoment() { isNonQualitativeIntrinsicMoment() || isQualitativeIntrinsicMoment() }
 	op boolean isSubstanceSortalClass() { isKind() || isCollective() || isQuantity() }
 	op boolean isMomentClass() { isRelator() || isMode() || isQuality() }	
 	op boolean isIdentityProviderClass() { isKind() || isQuantity() || isCollective() || isRelator() || isMode() || isQuality() }
@@ -738,6 +815,33 @@ class Class extends Type
 			for (Classifier child : children()) 
 			{
 				if(child instanceof Class) if(!child.isMode()) return false;
+			}
+			return true;
+		}		
+		return false;		
+	}	
+	
+	/** 
+	 * Checks if this element is a qualitative instrinsic moment (quality) i.e.
+	 * 1) if it is a instrinsic moment which is a qualitative element, or, 
+	 * 2) if it is a subKind or role/phase with exactly one identity provider being a qualitative intrinsic moment, or,
+	 * 3) if it is a mixin class in which all their children are qualitative intrinsic moment.
+	 */
+	op boolean isQualitativeIntrinsicMoment()
+	{
+		if(isQuality()) return true;		
+		if(isRole() || isPhase() || isSubKind()) 
+		{ 
+			var Class[] providers
+			providers.addAll(identityProviders());			
+			for(Class c: providers) if (c.isQuality()) return true;
+		}			
+		if(isMixinClass())
+		{			
+			if(children().size()==0) return false;			
+			for (Classifier child : children()) 
+			{
+				if(child instanceof Class) if(!child.isQuality()) return false;
 			}
 			return true;
 		}		
@@ -941,6 +1045,18 @@ class Relationship extends Classifier
 		return null;
 	}
 	
+	op EndPoint partEnd()
+	{
+		if(isMeronymic) { return targetEnd(); }
+		else return null;
+	}
+	
+	op EndPoint wholeEnd()
+	{
+		if(isMeronymic) { return sourceEnd(); }
+		else return null;
+	}
+	
 	/** Returns the source (first end-classifier) of this relationship */
 	op Classifier source() 
 	{ 
@@ -968,6 +1084,20 @@ class Relationship extends Classifier
 		if(target()!=null) return target() as Class		
 		return null;  
 	}	
+	
+	/** Returns the source (first end-class) of this relationship */
+	op Class wholeClass() 
+	{ 
+		if(isMeronymic()) { return sourceClass(); } 
+		else return null;
+	}
+	
+	/** Returns the target (second end-class) of this relationship */
+	op Class partClass()  
+	{ 
+		if(isMeronymic()) { return partClass(); } 
+		else return null;
+	}
 	
 	/** Returns the source (first end-dataType) of this relationship */
 	op DataType sourceDataType() 
@@ -1042,12 +1172,12 @@ class GeneralizationSet extends NamedElement, ContainedElement
 	refers Generalization[*] generalizations opposite generalizationSet			
 	refers Class[?] highOrder
 	
-	op Classifier getGeneral(){
+	op Classifier general(){
 		if(generalizations.size()>0) { return generalizations.get(0).getGeneral(); }
 		else { return null; }
 	}
 	
-	op Classifier[] getSpecifics(){
+	op Classifier[] specifics(){
 		var Classifier[] result		
 		for(Generalization g: generalizations) { 
 			result.add(g.specific);

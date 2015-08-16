@@ -551,6 +551,24 @@ public interface Relationship extends Classifier {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMeronymic = this.isMeronymic();\nif (_isMeronymic)\n{\n\treturn this.targetEnd();\n}\nelse\n{\n\treturn null;\n}'"
+	 * @generated
+	 */
+	EndPoint partEnd();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMeronymic = this.isMeronymic();\nif (_isMeronymic)\n{\n\treturn this.sourceEnd();\n}\nelse\n{\n\treturn null;\n}'"
+	 * @generated
+	 */
+	EndPoint wholeEnd();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * * Returns the source (first end-classifier) of this relationship
 	 * <!-- end-model-doc -->
@@ -595,6 +613,30 @@ public interface Relationship extends Classifier {
 	 * @generated
 	 */
 	net.menthor.onto2.ontouml.Class targetClass();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Returns the source (first end-class) of this relationship
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMeronymic = this.isMeronymic();\nif (_isMeronymic)\n{\n\treturn this.sourceClass();\n}\nelse\n{\n\treturn null;\n}'"
+	 * @generated
+	 */
+	net.menthor.onto2.ontouml.Class wholeClass();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Returns the target (second end-class) of this relationship
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMeronymic = this.isMeronymic();\nif (_isMeronymic)\n{\n\treturn this.partClass();\n}\nelse\n{\n\treturn null;\n}'"
+	 * @generated
+	 */
+	net.menthor.onto2.ontouml.Class partClass();
 
 	/**
 	 * <!-- begin-user-doc -->

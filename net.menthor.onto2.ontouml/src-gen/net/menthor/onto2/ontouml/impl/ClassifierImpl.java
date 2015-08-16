@@ -16,6 +16,7 @@ import net.menthor.onto2.ontouml.Model;
 import net.menthor.onto2.ontouml.NamedElement;
 import net.menthor.onto2.ontouml.OntoumlPackage;
 import net.menthor.onto2.ontouml.Relationship;
+import net.menthor.onto2.ontouml.RelationshipStereotype;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -392,6 +393,42 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<EndPoint> ends(final RelationshipStereotype stereo) {
+		EndPoint[] result = null;
+		Model _model = this.getModel();
+		EList<Relationship> _allRelationships = _model.allRelationships();
+		for (final Relationship rel : _allRelationships) {
+			boolean _and = false;
+			boolean _isEnd = rel.isEnd(this);
+			if (!_isEnd) {
+				_and = false;
+			} else {
+				RelationshipStereotype _stereotype = rel.getStereotype();
+				boolean _equals = _stereotype.equals(stereo);
+				_and = _equals;
+			}
+			if (_and) {
+				EList<EndPoint> _endPoints = rel.getEndPoints();
+				for (final EndPoint ep : _endPoints) {
+					Classifier _endType = ep.getEndType();
+					boolean _equals_1 = _endType.equals(this);
+					boolean _not = (!_equals_1);
+					if (_not) {
+						final EndPoint[] _converted_result = (EndPoint[])result;
+						((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(ep);
+					}
+				}
+			}
+		}
+		final EndPoint[] _converted_result_1 = (EndPoint[])result;
+		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<EndPoint> allEnds() {
 		EndPoint[] result = null;
 		final EndPoint[] _converted_result = (EndPoint[])result;
@@ -399,14 +436,138 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);
 		EList<Classifier> _allParents = this.allParents();
 		for (final Classifier p : _allParents) {
-			if ((p instanceof net.menthor.onto2.ontouml.Class)) {
-				final EndPoint[] _converted_result_1 = (EndPoint[])result;
-				EList<EndPoint> _ends_1 = ((net.menthor.onto2.ontouml.Class)p).ends();
-				((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);
-			}
+			final EndPoint[] _converted_result_1 = (EndPoint[])result;
+			EList<EndPoint> _ends_1 = p.ends();
+			((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);
 		}
 		final EndPoint[] _converted_result_2 = (EndPoint[])result;
 		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EndPoint> allEnds(final RelationshipStereotype stereo) {
+		EndPoint[] result = null;
+		final EndPoint[] _converted_result = (EndPoint[])result;
+		EList<EndPoint> _ends = this.ends(stereo);
+		((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);
+		EList<Classifier> _allParents = this.allParents();
+		for (final Classifier p : _allParents) {
+			final EndPoint[] _converted_result_1 = (EndPoint[])result;
+			EList<EndPoint> _ends_1 = p.ends(stereo);
+			((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);
+		}
+		final EndPoint[] _converted_result_2 = (EndPoint[])result;
+		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Relationship> relationships() {
+		Relationship[] result = null;
+		Model _model = this.getModel();
+		EList<Relationship> _allRelationships = _model.allRelationships();
+		for (final Relationship rel : _allRelationships) {
+			boolean _isEnd = rel.isEnd(this);
+			if (_isEnd) {
+				final Relationship[] _converted_result = (Relationship[])result;
+				((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(rel);
+			}
+		}
+		final Relationship[] _converted_result_1 = (Relationship[])result;
+		return ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Relationship> allRelationships() {
+		Relationship[] result = null;
+		final Relationship[] _converted_result = (Relationship[])result;
+		EList<Relationship> _relationships = this.relationships();
+		((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_relationships);
+		EList<Classifier> _allParents = this.allParents();
+		for (final Classifier p : _allParents) {
+			final Relationship[] _converted_result_1 = (Relationship[])result;
+			EList<Relationship> _relationships_1 = p.relationships();
+			((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_relationships_1);
+		}
+		final Relationship[] _converted_result_2 = (Relationship[])result;
+		return ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDisjointOfParentsOf(final Classifier c) {
+		EList<Classifier> _allParents = c.allParents();
+		for (final Classifier o : _allParents) {
+			{
+				EList<Classifier> _allParents_1 = this.allParents();
+				boolean _contains = _allParents_1.contains(o);
+				if (_contains) {
+					return false;
+				}
+				boolean _equals = this.equals(o);
+				if (_equals) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDisjointOfChildrenOf(final Classifier c) {
+		EList<Classifier> _allChildren = c.allChildren();
+		for (final Classifier o : _allChildren) {
+			{
+				EList<Classifier> _allParents = this.allParents();
+				boolean _contains = _allParents.contains(o);
+				if (_contains) {
+					return false;
+				}
+				boolean _equals = this.equals(o);
+				if (_equals) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isDisjointOf(final Classifier c) {
+		boolean _and = false;
+		boolean _isDisjointOfParentsOf = this.isDisjointOfParentsOf(c);
+		if (!_isDisjointOfParentsOf) {
+			_and = false;
+		} else {
+			boolean _isDisjointOfChildrenOf = this.isDisjointOfChildrenOf(c);
+			_and = _isDisjointOfChildrenOf;
+		}
+		if (_and) {
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -614,8 +775,22 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 				return siblings();
 			case OntoumlPackage.CLASSIFIER___ENDS:
 				return ends();
+			case OntoumlPackage.CLASSIFIER___ENDS__RELATIONSHIPSTEREOTYPE:
+				return ends((RelationshipStereotype)arguments.get(0));
 			case OntoumlPackage.CLASSIFIER___ALL_ENDS:
 				return allEnds();
+			case OntoumlPackage.CLASSIFIER___ALL_ENDS__RELATIONSHIPSTEREOTYPE:
+				return allEnds((RelationshipStereotype)arguments.get(0));
+			case OntoumlPackage.CLASSIFIER___RELATIONSHIPS:
+				return relationships();
+			case OntoumlPackage.CLASSIFIER___ALL_RELATIONSHIPS:
+				return allRelationships();
+			case OntoumlPackage.CLASSIFIER___IS_DISJOINT_OF_PARENTS_OF__CLASSIFIER:
+				return isDisjointOfParentsOf((Classifier)arguments.get(0));
+			case OntoumlPackage.CLASSIFIER___IS_DISJOINT_OF_CHILDREN_OF__CLASSIFIER:
+				return isDisjointOfChildrenOf((Classifier)arguments.get(0));
+			case OntoumlPackage.CLASSIFIER___IS_DISJOINT_OF__CLASSIFIER:
+				return isDisjointOf((Classifier)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

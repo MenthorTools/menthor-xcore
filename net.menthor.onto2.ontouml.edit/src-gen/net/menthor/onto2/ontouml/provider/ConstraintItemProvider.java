@@ -46,6 +46,7 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addStereotypePropertyDescriptor(object);
+			addContextPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addRuleAsStringPropertyDescriptor(object);
 		}
@@ -66,6 +67,28 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 				 getString("_UI_Constraint_stereotype_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Constraint_stereotype_feature", "_UI_Constraint_type"),
 				 OntoumlPackage.Literals.CONSTRAINT__STEREOTYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Context feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Constraint_context_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Constraint_context_feature", "_UI_Constraint_type"),
+				 OntoumlPackage.Literals.CONSTRAINT__CONTEXT,
 				 true,
 				 false,
 				 false,
@@ -148,6 +171,7 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 
 		switch (notification.getFeatureID(Constraint.class)) {
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
+			case OntoumlPackage.CONSTRAINT__CONTEXT:
 			case OntoumlPackage.CONSTRAINT__NAME:
 			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

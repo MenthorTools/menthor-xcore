@@ -1,0 +1,50 @@
+import 'ontouml.ecore'
+
+package ontouml
+
+context Relationship
+
+inv mediationTargetCardinality('The mediated end (target) of a Mediation must have minimum cardinality of 1.'): 
+	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
+ 
+inv characterizationSourceCardinality('The characterizing end (source) of a Characterization must have (minimum and maximum) cardinality of exactly 1.'): 
+	(not self.sourceEnd().oclIsUndefined()) and (self.sourceEnd().lowerBound=1) and (self.sourceEnd().upperBound=1)
+ 
+inv characterizationTargetCardinality('The characterized end (target) of a Characterization must have minimum cardinality of 1.'): 
+	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
+ 
+inv instanceOfTargetCardinality('The high order end (target) of a InstanceOf must have minimum cardinality of 1.'): 
+	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
+ 
+inv subCollectionPartCardinality('The subCollection end (part) of a SubCollectionOf must have maximium cardinality of 1.'): 
+	(not self.partEnd().oclIsUndefined()) and (self.partEnd().upperBound=1)
+ 
+inv subQuantityWholeCardinality('The amount of matter whole (source) of a SubQuantityOf must have maximum cardinality of 1.'): 
+	(not self.wholeEnd().oclIsUndefined()) and (self.wholeEnd().upperBound=1)
+ 
+inv subQuantityPartCardinality('The amount of matter part (target) of a SubQuantityOf must have maximum cardinality of 1.'): 
+	(not self.partEnd().oclIsUndefined()) and (self.partEnd().upperBound=1)
+ 
+inv structurationTargetCardinality('The structure (domain, dimension) end of a Structuration must have cardinality (maximum and minimum) of exactly 1.'): 
+	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1) and (self.targetEnd().upperBound=1)
+ 
+inv derivationSourceCardinality('The material end of a Derivation must have minimum cardinality of 1.'): 
+	(not self.sourceEnd().oclIsUndefined()) and (self.sourceEnd().lowerBound=1)
+ 
+inv derivationTargetCardinality('The relator end of a Derivation must have minimum cardinality of 1.'): 
+	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1) and (self.sourceEnd().upperBound=1)
+ 
+inv quaPartOfWholeCardinality('The relator end (whole) of a QuaPartOf must have cardinality (maximum and minimum) of exactly 1.'): 
+	(not self.wholeEnd().oclIsUndefined()) and (self.wholeEnd().upperBound=1) and (self.wholeEnd().lowerBound=1)					
+
+context Class
+ 
+inv truthMakerCardinalityEnds('The sum of the minimum cardinalities of the mediated ends of a Truth Maker (Relator, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin) must be greater or equal to 2'): 
+	self.isTruthMaker() implies self.allRelationships()->select(r|r.isMediation() and (not r.sourceClass().oclIsUndefined()) and (not r.targetClass().oclIsUndefined())
+	and (self.allParents()->union(self.oclAsSet())->includes(r.sourceClass())))->collect(m | m.endPoints.lowerBound)->sum()>=2
+
+inv weakSupplementation('The sum of the minimum cardinalities of the part ends of a Whole (ComponentOf, MemberOf, SubCollectionOf, SubQuantityOf, SubEventOf, QuaPartOf) must be greater or equal to 2'): 
+	self.allRelationships()->select(r | r.isMeronymic() and (not r.wholeClass().oclIsUndefined()) and (not r.partClass().oclIsUndefined())
+	and (self.allParents()->union(self.oclAsSet())->includes(r.wholeClass())))->collect(m | m.endPoints.lowerBound)->sum()>=2  
+
+endpackage						

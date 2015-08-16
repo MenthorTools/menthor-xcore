@@ -14,8 +14,8 @@ import net.menthor.onto2.ontouml.OntoumlFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#getGeneral() <em>Get General</em>}</li>
- *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#getSpecifics() <em>Get Specifics</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#general() <em>General</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#specifics() <em>Specifics</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel() <em>Get Model</em>}</li>
  * </ul>
@@ -77,26 +77,26 @@ public class GeneralizationSetTest extends NamedElementTest {
 	}
 
 	/**
-	 * Tests the '{@link net.menthor.onto2.ontouml.GeneralizationSet#getGeneral() <em>Get General</em>}' operation.
+	 * Tests the '{@link net.menthor.onto2.ontouml.GeneralizationSet#general() <em>General</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.menthor.onto2.ontouml.GeneralizationSet#getGeneral()
+	 * @see net.menthor.onto2.ontouml.GeneralizationSet#general()
 	 * @generated
 	 */
-	public void testGetGeneral() {
+	public void testGeneral() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link net.menthor.onto2.ontouml.GeneralizationSet#getSpecifics() <em>Get Specifics</em>}' operation.
+	 * Tests the '{@link net.menthor.onto2.ontouml.GeneralizationSet#specifics() <em>Specifics</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.menthor.onto2.ontouml.GeneralizationSet#getSpecifics()
+	 * @see net.menthor.onto2.ontouml.GeneralizationSet#specifics()
 	 * @generated
 	 */
-	public void testGetSpecifics() {
+	public void testSpecifics() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
