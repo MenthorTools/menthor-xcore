@@ -114,14 +114,16 @@ public class OntoumlFactoryUtil {
 	
 	public static Relationship createRelationship (Classifier source, Classifier target, Container container)
 	{
-		Relationship assoc = factory.createRelationship();
-		createEndPoints(assoc, source, target);
+		Relationship assoc = factory.createRelationship();		
+		assoc.setStereotype(null);
+		assoc.setName("");						
 		assoc.setTemporalNature(null);
 		assoc.setParticipationNature(null);
 		assoc = setReflexivityDefault(assoc);		
 		assoc = setSymmetryDefault(assoc);
 		assoc = setTransitivityDefault(assoc);
 		assoc = setCyclicityDefault(assoc);
+		createEndPoints(assoc, source, target);
 		if(container!=null){
 			container.getElements().add(assoc);
 			assoc.setHolder(container);
@@ -129,10 +131,65 @@ public class OntoumlFactoryUtil {
 		return assoc;
 	}
 	
-	public static Relationship createRelationship (RelationshipStereotype rs, String name, Container container)
+	/** Create a relationship between source and target types */
+	public static Relationship createRelationship (
+		RelationshipStereotype stereotype, String name, Container container, 
+		Classifier source, int srcLower, int srcUpper, String srcEndName, boolean isSrcDerived, boolean isSrcDependent, 
+		Classifier target, int tgtLower, int tgtUpper, String tgtEndName, boolean isTgtDerived, boolean isTgtDependent
+	){
+		Relationship rel = createRelationship(stereotype, name, container, source, srcLower, srcUpper, target, tgtLower, tgtUpper);
+		rel.sourceEnd().setName(srcEndName);
+		rel.targetEnd().setName(tgtEndName);
+		rel.sourceEnd().setIsDerived(isSrcDerived);
+		rel.targetEnd().setIsDerived(isTgtDerived);
+		rel.sourceEnd().setIsDependency(isSrcDependent);
+		rel.targetEnd().setIsDependency(isTgtDependent);
+		return rel;
+	}
+	
+	/** Create a relationship between source and target types */
+	public static Relationship createRelationship (RelationshipStereotype stereotype, String name, Container container, Classifier source, int srcLower, int srcUpper, Classifier target, int tgtLower, int tgtUpper)
+	{
+		Relationship relationship = createRelationship(stereotype,name,container);
+		List<EndPoint> ends;
+		if(shouldInvert(relationship,source,target)) {
+			ends = createEndPoints(relationship, target, source);
+			setMultiplicity(ends.get(0), tgtLower, tgtUpper);
+			setMultiplicity(ends.get(1), srcLower, srcUpper);			
+		} else {
+			ends = createEndPoints(relationship, source, target);
+			setMultiplicity(ends.get(0), srcLower, srcUpper);
+			setMultiplicity(ends.get(1), tgtLower, tgtUpper);
+		}		
+		return relationship;
+	}
+
+	/** Create an relationship between source and target types */
+	public static Relationship createRelationship (Container container, Classifier source, int srcLower, int srcUpper, String name, Classifier target, int tgtLower, int tgtUpper)
+	{
+		Relationship relationship = createRelationship(null,"",container);
+		List<EndPoint> ends = createEndPoints(relationship, source, target);
+		setMultiplicity(ends.get(0), tgtLower, tgtUpper);
+		setMultiplicity(ends.get(1), srcLower, srcUpper);		
+		return relationship;
+	}
+	
+	/** Create a relationship between source and target types */
+	public static Relationship createRelationship (RelationshipStereotype stereotype, Container container, Classifier source, Classifier target)
+	{
+		Relationship relationship = createRelationship(stereotype, "", container);
+		if(shouldInvert(relationship,source,target)) {
+			createEndPoints(relationship, target, source); 
+		}else{
+			createEndPoints(relationship, source, target);
+		}		
+		return relationship;
+	}
+	
+	public static Relationship createRelationship (RelationshipStereotype stereotype, String name, Container container)
 	{
 		Relationship assoc = factory.createRelationship();
-		assoc.setStereotype(rs);
+		assoc.setStereotype(stereotype);
 		if(name!=null) assoc.setName(name);
 		else assoc.setName("");		
 		assoc.setTemporalNature(null);
@@ -144,50 +201,8 @@ public class OntoumlFactoryUtil {
 		if(container!=null){
 			container.getElements().add(assoc);
 			assoc.setHolder(container);
-		}
+		}		
 		return assoc;
-	}
-		
-	/** Create an relationship between source and target types */
-	public static Relationship createRelationship (Classifier source, int srcLower, int srcUpper, String name, Classifier target, int tgtLower, int tgtUpper, Container container)
-	{
-		Relationship relationship = factory.createRelationship();
-		List<EndPoint> ends = createEndPoints(relationship, source, target);
-		setMultiplicity(ends.get(0), srcLower, srcUpper);
-		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
-		if(name!=null) relationship.setName(name);
-		else relationship.setName("");		
-		relationship.setTemporalNature(null);
-		relationship.setParticipationNature(null);
-		relationship = setReflexivityDefault(relationship);		
-		relationship = setSymmetryDefault(relationship);
-		relationship = setTransitivityDefault(relationship);
-		relationship = setCyclicityDefault(relationship);
-		if(container!=null){
-			container.getElements().add(relationship);
-			relationship.setHolder(container);
-		}
-		return relationship;
-	}
-	
-	/** Create a relationship between source and target types */
-	public static Relationship createRelationship (RelationshipStereotype stereotype, Classifier source, Classifier target, Container container)
-	{
-		Relationship relationship = factory.createRelationship();
-		relationship.setStereotype(stereotype);
-		relationship.setTemporalNature(null);
-		relationship.setParticipationNature(null);
-		relationship = setReflexivityDefault(relationship);		
-		relationship = setSymmetryDefault(relationship);
-		relationship = setTransitivityDefault(relationship);
-		relationship = setCyclicityDefault(relationship);
-		if(shouldInvert(relationship,source,target)) createEndPoints(relationship, target, source); 
-		else createEndPoints(relationship, source, target);
-		if(container!=null){
-			container.getElements().add(relationship);
-			relationship.setHolder(container);
-		}
-		return relationship;
 	}
 	
 	public static Relationship setCyclicityDefault(Relationship rel){
@@ -247,31 +262,6 @@ public class OntoumlFactoryUtil {
 			return true;
 		}
 		else return false;
-	}
-	
-	/** Create a relationship between source and target types */
-	public static Relationship createRelationship (RelationshipStereotype stereotype, Classifier source, int srcLower, int srcUpper, String name, Classifier target, int tgtLower, int tgtUpper, Container container)
-	{
-		Relationship relationship = factory.createRelationship();
-		relationship.setStereotype(stereotype);		
-		List<EndPoint> ends;
-		if(shouldInvert(relationship,source,target)) ends = createEndPoints(relationship, target, source); 
-		else ends = createEndPoints(relationship, source, target);		
-		setMultiplicity(ends.get(0), srcLower, srcUpper);
-		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
-		if(name!=null) relationship.setName(name);
-		else relationship.setName("");
-		relationship.setTemporalNature(null);
-		relationship.setParticipationNature(null);
-		relationship = setReflexivityDefault(relationship);		
-		relationship = setSymmetryDefault(relationship);
-		relationship = setTransitivityDefault(relationship);
-		relationship = setCyclicityDefault(relationship);
-		if(container!=null){
-			container.getElements().add(relationship);
-			relationship.setHolder(container);
-		}
-		return relationship;
 	}
 	
 	/** Create a class  */

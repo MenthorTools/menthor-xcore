@@ -25,10 +25,10 @@ public class OntoumlResource {
 
 	/** Load model to a resource. */
 	public static Resource load (String ontoumlPath) throws IOException
-	{
+	{	
 		ResourceSet rset = new ResourceSetImpl();			
 		rset.getResourceFactoryRegistry().getExtensionToFactoryMap().put("mouml",new XMIResourceFactoryImpl());
-		rset.getPackageRegistry().put(OntoumlPackage.eNS_URI,	OntoumlPackage.eINSTANCE);		
+		rset.getPackageRegistry().put(OntoumlPackage.eNS_URI,	OntoumlPackage.eINSTANCE);
 	    File file = new File(ontoumlPath);
 		URI fileURI = URI.createFileURI(file.getAbsolutePath());		
 		Resource resource = rset.createResource(fileURI);		

@@ -15,25 +15,25 @@ public class OntoumlElement implements Serializable{
 	private static final long serialVersionUID = 6497601879574303331L;
 	
 	protected transient EObject element;
-	protected String uniqueName = new String();
-	
+	protected String uniqueName = new String();	
 	protected String name = new String();
 	protected String type = new String();		
 	protected String commonName = new String();
 	protected String completeName = new String();
 	
-	public OntoumlElement(EObject element, String uniqueName) 
-	{
-		this.element = element;
-		this.uniqueName= uniqueName;
-		
-		if(element!=null)
-		{
+	public OntoumlElement(EObject element){
+		this.element = element;		
+		if(element!=null){
 			name = OntoumlPrintHelper.getName(element);		
 			type = OntoumlPrintHelper.getStereotype(element);
 			commonName = OntoumlPrintHelper.getCommonName(element);
 			completeName = OntoumlPrintHelper.getCompleteName(element);
 		}	     
+	}
+	
+	public OntoumlElement(EObject element, String uniqueName){
+		this(element);
+		this.uniqueName= uniqueName;		
 	}
 	
 	public EObject getElement() { return element; }

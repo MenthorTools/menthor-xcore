@@ -33,8 +33,8 @@ public class Ref2Ontouml {
 	public static void run(RefOntoUML.Package refmodel, String ontoPath) throws IOException, ParserException
 	{	
 		Transformer t = new Transformer(refmodel);		
-		Model ontomodel = t.run();		
+		Model ontomodel = t.run();
 		OntoumlResource.save(ontoPath,ontomodel);		
-		System.out.println("Ref2Ontouml: Executed succesfully.");
+		System.out.println("Ref2Ontouml Done.");
 	}
 }

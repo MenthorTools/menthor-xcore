@@ -78,6 +78,7 @@ public class Transformer {
 		runRelationships();
 		runAttributes();
 		runEndPoints();
+		runSubsetsAndRedefines();
 		runGeneralizations();
 		runGeneralizationSets();
 		return ontomodel;
@@ -270,6 +271,26 @@ public class Transformer {
    		}
    	}
    	
+   	/**subsetting and redefining*/
+   	public void runSubsetsAndRedefines(){
+		for (EObject obj: packagesMap.keySet())
+   		{
+   			RefOntoUML.Package refpack = (RefOntoUML.Package)obj;   			   			
+   			List<RefOntoUML.Property> endpoints = TransformerUtil.getAllEndPoints(refpack);
+   			
+   			for(RefOntoUML.Property ep: endpoints)
+   			{
+   				EndPoint newEP = endpointsMap.get(ep);
+   				for(RefOntoUML.Property subsetted: ep.getSubsettedProperty()){
+   					if(newEP!=null) newEP.getSubsets().add(endpointsMap.get(subsetted));   					
+   				}
+   				for(RefOntoUML.Property redefined: ep.getRedefinedProperty()){
+   					if(newEP!=null) newEP.getRedefines().add(endpointsMap.get(redefined));   					
+   				}
+   			}
+   		}
+	}
+   	
    	/**generalizations*/
    	public void runGeneralizations()
    	{
@@ -327,6 +348,5 @@ public class Transformer {
 				}
 	        }
 		}
-   	}
-   
+   	}   
 }

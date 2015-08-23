@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMLParserPoolImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
 import RefOntoUML.util.RefOntoUMLResourceFactoryImpl;
+
 import net.menthor.onto2.ontouml.ClassStereotype;
 import net.menthor.onto2.ontouml.DataTypeStereotype;
 import net.menthor.onto2.ontouml.PrimitiveStereotype;

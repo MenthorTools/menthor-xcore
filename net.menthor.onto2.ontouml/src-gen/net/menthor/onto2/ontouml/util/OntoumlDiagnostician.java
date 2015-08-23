@@ -8,6 +8,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -70,7 +71,8 @@ public class OntoumlDiagnostician {
 		for(String oclPath: oclFilePaths){
 			File file = new File(oclPath);
 			URI oclURI = URI.createFileURI(file.getAbsolutePath());			
-			CompleteOCLEObjectValidator myValidator = new CompleteOCLEObjectValidator(OntoumlPackage.eINSTANCE, oclURI, ocl.getEnvironmentFactory());;
+			CompleteOCLEObjectValidator myValidator = new CompleteOCLEObjectValidator(OntoumlPackage.eINSTANCE, oclURI, ocl.getEnvironmentFactory());
+			EValidator.Registry.INSTANCE.put(OntoumlPackage.eINSTANCE, myValidator);
 			composed.addChild(myValidator);
 		}						
 		Diagnostic diagnostics = Diagnostician.INSTANCE.validate(model);			
