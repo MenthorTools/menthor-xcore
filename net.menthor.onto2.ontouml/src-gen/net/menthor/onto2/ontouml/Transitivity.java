@@ -19,6 +19,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Transitivity implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Transitive</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +57,21 @@ public enum Transitivity implements Enumerator {
 	 * @ordered
 	 */
 	NON_TRANSITIVE(0, "NonTransitive", "NonTransitive");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Transitive</b></em>' literal value.
@@ -101,6 +126,7 @@ public enum Transitivity implements Enumerator {
 	 */
 	private static final Transitivity[] VALUES_ARRAY =
 		new Transitivity[] {
+			UNSET,
 			TRANSITIVE,
 			INTRANSITIVE,
 			NON_TRANSITIVE,
@@ -160,7 +186,7 @@ public enum Transitivity implements Enumerator {
 	 */
 	public static Transitivity get(int value) {
 		switch (value) {
-			case TRANSITIVE_VALUE: return TRANSITIVE;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Existence implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Permanent</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,6 +60,21 @@ public enum Existence implements Enumerator {
 	 * @ordered
 	 */
 	ETERNAL(0, "Eternal", "Eternal");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Permanent</b></em>' literal value.
@@ -104,6 +129,7 @@ public enum Existence implements Enumerator {
 	 */
 	private static final Existence[] VALUES_ARRAY =
 		new Existence[] {
+			UNSET,
 			PERMANENT,
 			TRANSIENT,
 			ETERNAL,
@@ -163,7 +189,7 @@ public enum Existence implements Enumerator {
 	 */
 	public static Existence get(int value) {
 		switch (value) {
-			case PERMANENT_VALUE: return PERMANENT;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

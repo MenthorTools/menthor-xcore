@@ -2,8 +2,6 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
-import java.util.ArrayList;
-
 import net.menthor.onto2.ontouml.Attribute;
 import net.menthor.onto2.ontouml.Ciclicity;
 import net.menthor.onto2.ontouml.ClassStereotype;
@@ -143,8 +141,6 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 				return createTransitivityFromString(eDataType, initialValue);
 			case OntoumlPackage.CICLICITY:
 				return createCiclicityFromString(eDataType, initialValue);
-			case OntoumlPackage.ARRAY_LIST:
-				return createArrayListFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -190,8 +186,6 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 				return convertTransitivityToString(eDataType, instanceValue);
 			case OntoumlPackage.CICLICITY:
 				return convertCiclicityToString(eDataType, instanceValue);
-			case OntoumlPackage.ARRAY_LIST:
-				return convertArrayListToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -635,24 +629,6 @@ public class OntoumlFactoryImpl extends EFactoryImpl implements OntoumlFactory {
 	 */
 	public String convertCiclicityToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ArrayList<?> createArrayListFromString(EDataType eDataType, String initialValue) {
-		return (ArrayList<?>)super.createFromString(initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertArrayListToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
 	}
 
 	/**

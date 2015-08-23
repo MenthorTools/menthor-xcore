@@ -2,7 +2,6 @@
  */
 package net.menthor.onto2.ontouml.util;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 import net.menthor.onto2.ontouml.Attribute;
@@ -197,8 +196,6 @@ public class OntoumlValidator extends EObjectValidator {
 				return validateTransitivity((Transitivity)value, diagnostics, context);
 			case OntoumlPackage.CICLICITY:
 				return validateCiclicity((Ciclicity)value, diagnostics, context);
-			case OntoumlPackage.ARRAY_LIST:
-				return validateArrayList((ArrayList<?>)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -536,15 +533,6 @@ public class OntoumlValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCiclicity(Ciclicity ciclicity, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateArrayList(ArrayList<?> arrayList, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

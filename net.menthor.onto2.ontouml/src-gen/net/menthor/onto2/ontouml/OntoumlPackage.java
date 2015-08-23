@@ -4,7 +4,6 @@ package net.menthor.onto2.ontouml;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -4496,16 +4495,6 @@ public interface OntoumlPackage extends EPackage {
 	 */
 	int CICLICITY = 34;
 
-	/**
-	 * The meta object id for the '<em>Array List</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.util.ArrayList
-	 * @see net.menthor.onto2.ontouml.impl.OntoumlPackageImpl#getArrayList()
-	 * @generated
-	 */
-	int ARRAY_LIST = 35;
-
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.onto2.ontouml.Element <em>Element</em>}'.
@@ -7226,17 +7215,6 @@ public interface OntoumlPackage extends EPackage {
 	EEnum getCiclicity();
 
 	/**
-	 * Returns the meta object for data type '{@link java.util.ArrayList <em>Array List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Array List</em>'.
-	 * @see java.util.ArrayList
-	 * @model instanceClass="java.util.ArrayList" typeParameters="E"
-	 * @generated
-	 */
-	EDataType getArrayList();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9448,16 +9426,6 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CICLICITY = eINSTANCE.getCiclicity();
-
-		/**
-		 * The meta object literal for the '<em>Array List</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.util.ArrayList
-		 * @see net.menthor.onto2.ontouml.impl.OntoumlPackageImpl#getArrayList()
-		 * @generated
-		 */
-		EDataType ARRAY_LIST = eINSTANCE.getArrayList();
 
 	}
 

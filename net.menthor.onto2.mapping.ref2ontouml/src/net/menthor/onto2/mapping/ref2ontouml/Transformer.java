@@ -119,11 +119,10 @@ public class Transformer {
             		ClassStereotype cs = TransformerUtil.getClassStereotypeByName(elem, stereo);
             		
             		/**create class*/
-            		Class ontoclass = OntoumlFactoryUtil.createClass(cs, name, pack);            		            		
-            		ontoclass.setIsAbstract(isAbstract);
+            		Class ontoclass = OntoumlFactoryUtil.createClass(cs, name, isAbstract, pack);            		            		
             		if(elem instanceof RefOntoUML.PerceivableQuality) ontoclass.setQualityNature(QualityNature.PERCEIVABLE);
-            		if(elem instanceof RefOntoUML.NonPerceivableQuality) ontoclass.setQualityNature(QualityNature.NON_PERCEIVABLE);
-            		if(elem instanceof RefOntoUML.NominalQuality) ontoclass.setQualityNature(QualityNature.NOMINAL);
+            		else if(elem instanceof RefOntoUML.NonPerceivableQuality) ontoclass.setQualityNature(QualityNature.NON_PERCEIVABLE);
+            		else if(elem instanceof RefOntoUML.NominalQuality) ontoclass.setQualityNature(QualityNature.NOMINAL);
         			if(elem instanceof RefOntoUML.Collective) ontoclass.setIsExtensional(((RefOntoUML.Collective)elem).isIsExtensional());
         			
         			typesMap.put((RefOntoUML.Class)elem, ontoclass);

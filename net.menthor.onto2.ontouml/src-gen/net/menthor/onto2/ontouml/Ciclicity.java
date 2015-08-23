@@ -19,6 +19,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Ciclicity implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Cyclic</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +57,21 @@ public enum Ciclicity implements Enumerator {
 	 * @ordered
 	 */
 	NON_CYCLIC(0, "NonCyclic", "NonCyclic");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Cyclic</b></em>' literal value.
@@ -101,6 +126,7 @@ public enum Ciclicity implements Enumerator {
 	 */
 	private static final Ciclicity[] VALUES_ARRAY =
 		new Ciclicity[] {
+			UNSET,
 			CYCLIC,
 			ACYCLIC,
 			NON_CYCLIC,
@@ -160,7 +186,7 @@ public enum Ciclicity implements Enumerator {
 	 */
 	public static Ciclicity get(int value) {
 		switch (value) {
-			case CYCLIC_VALUE: return CYCLIC;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum PrimitiveStereotype implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Boolean</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,6 +90,21 @@ public enum PrimitiveStereotype implements Enumerator {
 	 * @ordered
 	 */
 	DATE_TIME(0, "DateTime", "DateTime");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Boolean</b></em>' literal value.
@@ -179,6 +204,7 @@ public enum PrimitiveStereotype implements Enumerator {
 	 */
 	private static final PrimitiveStereotype[] VALUES_ARRAY =
 		new PrimitiveStereotype[] {
+			UNSET,
 			BOOLEAN,
 			STRING,
 			REAL,
@@ -241,7 +267,7 @@ public enum PrimitiveStereotype implements Enumerator {
 	 */
 	public static PrimitiveStereotype get(int value) {
 		switch (value) {
-			case BOOLEAN_VALUE: return BOOLEAN;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

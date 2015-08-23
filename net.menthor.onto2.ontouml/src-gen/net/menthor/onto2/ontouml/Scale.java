@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Scale implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Interval</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,6 +70,21 @@ public enum Scale implements Enumerator {
 	 * @ordered
 	 */
 	NOMINAL(0, "Nominal", "Nominal");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Interval</b></em>' literal value.
@@ -129,6 +154,7 @@ public enum Scale implements Enumerator {
 	 */
 	private static final Scale[] VALUES_ARRAY =
 		new Scale[] {
+			UNSET,
 			INTERVAL,
 			RATIONAL,
 			ORDINAL,
@@ -189,7 +215,7 @@ public enum Scale implements Enumerator {
 	 */
 	public static Scale get(int value) {
 		switch (value) {
-			case INTERVAL_VALUE: return INTERVAL;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

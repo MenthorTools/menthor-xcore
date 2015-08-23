@@ -19,6 +19,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Reflexivity implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Reflexive</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +57,21 @@ public enum Reflexivity implements Enumerator {
 	 * @ordered
 	 */
 	NON_REFLEXIVE(0, "NonReflexive", "NonReflexive");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Reflexive</b></em>' literal value.
@@ -101,6 +126,7 @@ public enum Reflexivity implements Enumerator {
 	 */
 	private static final Reflexivity[] VALUES_ARRAY =
 		new Reflexivity[] {
+			UNSET,
 			REFLEXIVE,
 			IRREFLEXIVE,
 			NON_REFLEXIVE,
@@ -160,7 +186,7 @@ public enum Reflexivity implements Enumerator {
 	 */
 	public static Reflexivity get(int value) {
 		switch (value) {
-			case REFLEXIVE_VALUE: return REFLEXIVE;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

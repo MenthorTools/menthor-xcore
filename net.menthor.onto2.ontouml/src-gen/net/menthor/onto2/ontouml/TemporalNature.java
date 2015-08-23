@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TemporalNature implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Starts</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,6 +100,21 @@ public enum TemporalNature implements Enumerator {
 	 * @ordered
 	 */
 	DURING(0, "During", "During");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Starts</b></em>' literal value.
@@ -204,6 +229,7 @@ public enum TemporalNature implements Enumerator {
 	 */
 	private static final TemporalNature[] VALUES_ARRAY =
 		new TemporalNature[] {
+			UNSET,
 			STARTS,
 			PRECEDES,
 			EQUALS,
@@ -267,7 +293,7 @@ public enum TemporalNature implements Enumerator {
 	 */
 	public static TemporalNature get(int value) {
 		switch (value) {
-			case STARTS_VALUE: return STARTS;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

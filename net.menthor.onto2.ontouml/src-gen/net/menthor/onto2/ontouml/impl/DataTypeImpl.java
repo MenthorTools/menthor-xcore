@@ -60,7 +60,7 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DataTypeStereotype STEREOTYPE_EDEFAULT = DataTypeStereotype.DOMAIN;
+	protected static final DataTypeStereotype STEREOTYPE_EDEFAULT = DataTypeStereotype.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
@@ -90,7 +90,7 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Scale SCALE_EDEFAULT = Scale.INTERVAL;
+	protected static final Scale SCALE_EDEFAULT = Scale.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getScale() <em>Scale</em>}' attribute.
@@ -110,7 +110,7 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Measurement MEASUREMENT_EDEFAULT = Measurement.INTEGER;
+	protected static final Measurement MEASUREMENT_EDEFAULT = Measurement.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getMeasurement() <em>Measurement</em>}' attribute.
@@ -515,8 +515,17 @@ public class DataTypeImpl extends TypeImpl implements DataType {
 	 * @generated
 	 */
 	public boolean isDataType() {
+		boolean _or = false;
 		DataTypeStereotype _stereotype = this.getStereotype();
-		return Objects.equal(_stereotype, DataTypeStereotype.DATA_TYPE);
+		boolean _equals = Objects.equal(_stereotype, DataTypeStereotype.UNSET);
+		if (_equals) {
+			_or = true;
+		} else {
+			DataTypeStereotype _stereotype_1 = this.getStereotype();
+			boolean _equals_1 = Objects.equal(_stereotype_1, null);
+			_or = _equals_1;
+		}
+		return _or;
 	}
 
 	/**

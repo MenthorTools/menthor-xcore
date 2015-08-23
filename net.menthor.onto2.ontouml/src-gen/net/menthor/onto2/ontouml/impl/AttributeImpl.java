@@ -92,7 +92,7 @@ public class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final PrimitiveStereotype STEREOTYPE_EDEFAULT = PrimitiveStereotype.BOOLEAN;
+	protected static final PrimitiveStereotype STEREOTYPE_EDEFAULT = PrimitiveStereotype.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.

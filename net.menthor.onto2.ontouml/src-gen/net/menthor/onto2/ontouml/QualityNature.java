@@ -23,6 +23,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum QualityNature implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Nominal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -51,6 +61,21 @@ public enum QualityNature implements Enumerator {
 	 * @ordered
 	 */
 	NON_PERCEIVABLE(0, "NonPerceivable", "NonPerceivable");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Nominal</b></em>' literal value.
@@ -105,6 +130,7 @@ public enum QualityNature implements Enumerator {
 	 */
 	private static final QualityNature[] VALUES_ARRAY =
 		new QualityNature[] {
+			UNSET,
 			NOMINAL,
 			PERCEIVABLE,
 			NON_PERCEIVABLE,
@@ -164,7 +190,7 @@ public enum QualityNature implements Enumerator {
 	 */
 	public static QualityNature get(int value) {
 		switch (value) {
-			case NOMINAL_VALUE: return NOMINAL;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

@@ -243,8 +243,6 @@ class Model extends Container
 /** A "Package" is both a "Container" and a "ContainedElement". */
 class Package extends Container, ContainedElement { }
 
-type ArrayList<E> wraps java.util.ArrayList
-
 /** A "Classifier" is a "Type" (i.e., a Class or a DataType) or a Relationship. */ 
 abstract class Classifier extends ContainedElement, NamedElement 
 {
@@ -477,7 +475,7 @@ abstract class Property extends NamedElement
 /** Possible primitive stereotypes are Boolean, String, Real, Integer, Date and DateTime */ 
 enum PrimitiveStereotype
 {
-	Boolean, String, Real, Integer, Date, DateTime
+	Unset, Boolean, String, Real, Integer, Date, DateTime
 }
 
 /** An "Attribute" has a primitive stereotype and a "Type" owner (a Class or a DataType). */
@@ -522,6 +520,7 @@ class Constraint extends ContainedElement
  *  PhaseMixin, Event or HighOrder. */
 enum ClassStereotype 
 {	
+	Unset, 
 	Kind, Collective, Quantity, 
 	Relator, Mode, Quality,  
 	Role, Phase, SubKind, 
@@ -533,7 +532,7 @@ enum ClassStereotype
 /** A DataType Stereotype can be a Domain, Dimension, Enuneration or DataType itself. */ 
 enum DataTypeStereotype
 {
-	Domain, Dimension, Enumeration, DataType
+	Unset, Domain, Dimension, Enumeration
 }
 
 /** Literals for enumerations. */
@@ -548,13 +547,13 @@ class Literal extends Element
 /** Structure Scale for Dimensions. Possible scales are Interval, Rational, Ordinal or Nominal. */ 
 enum Scale
 {
-	Interval, Rational, Ordinal, Nominal
+	Unset, Interval, Rational, Ordinal, Nominal
 }
 
 /** Structure measurements for Dimensions. Possible measures are Integer, Real, Decimal or String. */
 enum Measurement
 {
-	Integer, Real, Decimal, String
+	Unset, Integer, Real, Decimal, String
 }
 
 /** A "DataType" is a Domain, Dimension, Enumeration or DataType. */
@@ -580,7 +579,7 @@ class DataType extends Type
 	op boolean isEnumeration(){stereotype==DataTypeStereotype.ENUMERATION}
 	op boolean isDomain(){stereotype==DataTypeStereotype.DOMAIN}
 	op boolean isDimension(){stereotype==DataTypeStereotype.DIMENSION}
-	op boolean isDataType(){stereotype==DataTypeStereotype.DATA_TYPE}	
+	op boolean isDataType(){stereotype==DataTypeStereotype.UNSET || stereotype==null}	
 	
 	op boolean isNominal() { scale!=null && scale==Scale.NOMINAL }
 	op boolean isInterval() { scale!=null && scale==Scale.INTERVAL }
@@ -610,19 +609,19 @@ class DataType extends Type
  *  Nominal, Perceivable or NonPerceivable. */ 
 enum QualityNature 
 {
-	Nominal, Perceivable, NonPerceivable	
+	Unset, Nominal, Perceivable, NonPerceivable	
 }
 
 /** A Classification defines roles and phases to have a initial or final dynamic classificaiton. */ 
 enum Classification
 {
-	Initial, Final	
+	Unset, Initial, Final	
 }
 
 /** An Existence defines identity providers to be permanent, transient or eternal in time/existence */
 enum Existence
 {
-	Permanent, Transient, Eternal	
+	Unset, Permanent, Transient, Eternal	
 }
 
 /** A "Class" is an Endurant, Perdurant or a HighOrder class. */
@@ -930,6 +929,7 @@ class EndPoint extends Property
  *  Participation, SubEventOf, Causation, Temporal or InstanceOf. */ 
 enum RelationshipStereotype 
 {
+	Unset, 
 	ComponentOf
 	MemberOf
 	SubCollectionOf
@@ -952,6 +952,7 @@ enum RelationshipStereotype
 /** A Temporal Nature defines the type of a temporal relationship between events. */
 enum TemporalNature
 {
+	Unset
 	Starts
 	Precedes
 	Equals
@@ -964,6 +965,7 @@ enum TemporalNature
 /** A Participation Nature defines the type of participation of an object in an event.*/
 enum ParticipationNature
 {
+	Unset
 	Creation
 	Change
 	Destruction		
@@ -971,6 +973,7 @@ enum ParticipationNature
  
  enum Reflexivity 
  {
+ 	Unset
  	Reflexive
  	Irreflexive
  	NonReflexive
@@ -978,6 +981,7 @@ enum ParticipationNature
  
  enum Symmetry
  {
+ 	Unset
  	Symmetric
  	Assymetric
  	AntiSymmetric
@@ -986,6 +990,7 @@ enum ParticipationNature
  
  enum Transitivity
  {
+ 	Unset
  	Transitive
  	Intransitive
  	NonTransitive
@@ -993,6 +998,7 @@ enum ParticipationNature
  
  enum Ciclicity
  {
+ 	Unset
  	Cyclic
  	Acyclic
  	NonCyclic	

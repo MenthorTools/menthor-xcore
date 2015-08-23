@@ -19,6 +19,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Symmetry implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Symmetric</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,6 +67,21 @@ public enum Symmetry implements Enumerator {
 	 * @ordered
 	 */
 	NON_SYMMETRIC(0, "NonSymmetric", "NonSymmetric");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Symmetric</b></em>' literal value.
@@ -126,6 +151,7 @@ public enum Symmetry implements Enumerator {
 	 */
 	private static final Symmetry[] VALUES_ARRAY =
 		new Symmetry[] {
+			UNSET,
 			SYMMETRIC,
 			ASSYMETRIC,
 			ANTI_SYMMETRIC,
@@ -186,7 +212,7 @@ public enum Symmetry implements Enumerator {
 	 */
 	public static Symmetry get(int value) {
 		switch (value) {
-			case SYMMETRIC_VALUE: return SYMMETRIC;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

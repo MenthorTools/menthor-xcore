@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ParticipationNature implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Creation</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,6 +60,21 @@ public enum ParticipationNature implements Enumerator {
 	 * @ordered
 	 */
 	DESTRUCTION(0, "Destruction", "Destruction");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Creation</b></em>' literal value.
@@ -104,6 +129,7 @@ public enum ParticipationNature implements Enumerator {
 	 */
 	private static final ParticipationNature[] VALUES_ARRAY =
 		new ParticipationNature[] {
+			UNSET,
 			CREATION,
 			CHANGE,
 			DESTRUCTION,
@@ -163,7 +189,7 @@ public enum ParticipationNature implements Enumerator {
 	 */
 	public static ParticipationNature get(int value) {
 		switch (value) {
-			case CREATION_VALUE: return CREATION;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

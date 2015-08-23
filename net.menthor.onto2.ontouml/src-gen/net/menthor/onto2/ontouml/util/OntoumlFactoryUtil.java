@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.List;
 
 import net.menthor.onto2.ontouml.Attribute;
+import net.menthor.onto2.ontouml.Ciclicity;
+import net.menthor.onto2.ontouml.Class;
 import net.menthor.onto2.ontouml.ClassStereotype;
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.Container;
@@ -15,14 +17,16 @@ import net.menthor.onto2.ontouml.Generalization;
 import net.menthor.onto2.ontouml.GeneralizationSet;
 import net.menthor.onto2.ontouml.Literal;
 import net.menthor.onto2.ontouml.Model;
-import net.menthor.onto2.ontouml.Package;
-import net.menthor.onto2.ontouml.Class;
 import net.menthor.onto2.ontouml.OntoumlFactory;
+import net.menthor.onto2.ontouml.Package;
 import net.menthor.onto2.ontouml.PrimitiveStereotype;
 import net.menthor.onto2.ontouml.Property;
 import net.menthor.onto2.ontouml.QualityNature;
+import net.menthor.onto2.ontouml.Reflexivity;
 import net.menthor.onto2.ontouml.Relationship;
 import net.menthor.onto2.ontouml.RelationshipStereotype;
+import net.menthor.onto2.ontouml.Symmetry;
+import net.menthor.onto2.ontouml.Transitivity;
 import net.menthor.onto2.ontouml.Type;
 
 public class OntoumlFactoryUtil {
@@ -112,6 +116,12 @@ public class OntoumlFactoryUtil {
 	{
 		Relationship assoc = factory.createRelationship();
 		createEndPoints(assoc, source, target);
+		assoc.setTemporalNature(null);
+		assoc.setParticipationNature(null);
+		assoc = setReflexivityDefault(assoc);		
+		assoc = setSymmetryDefault(assoc);
+		assoc = setTransitivityDefault(assoc);
+		assoc = setCyclicityDefault(assoc);
 		if(container!=null){
 			container.getElements().add(assoc);
 			assoc.setHolder(container);
@@ -124,14 +134,20 @@ public class OntoumlFactoryUtil {
 		Relationship assoc = factory.createRelationship();
 		assoc.setStereotype(rs);
 		if(name!=null) assoc.setName(name);
-		else assoc.setName("");
+		else assoc.setName("");		
+		assoc.setTemporalNature(null);
+		assoc.setParticipationNature(null);
+		assoc = setReflexivityDefault(assoc);		
+		assoc = setSymmetryDefault(assoc);
+		assoc = setTransitivityDefault(assoc);
+		assoc = setCyclicityDefault(assoc);		
 		if(container!=null){
 			container.getElements().add(assoc);
 			assoc.setHolder(container);
 		}
 		return assoc;
 	}
-	
+		
 	/** Create an relationship between source and target types */
 	public static Relationship createRelationship (Classifier source, int srcLower, int srcUpper, String name, Classifier target, int tgtLower, int tgtUpper, Container container)
 	{
@@ -140,7 +156,13 @@ public class OntoumlFactoryUtil {
 		setMultiplicity(ends.get(0), srcLower, srcUpper);
 		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
 		if(name!=null) relationship.setName(name);
-		else relationship.setName("");
+		else relationship.setName("");		
+		relationship.setTemporalNature(null);
+		relationship.setParticipationNature(null);
+		relationship = setReflexivityDefault(relationship);		
+		relationship = setSymmetryDefault(relationship);
+		relationship = setTransitivityDefault(relationship);
+		relationship = setCyclicityDefault(relationship);
 		if(container!=null){
 			container.getElements().add(relationship);
 			relationship.setHolder(container);
@@ -152,7 +174,13 @@ public class OntoumlFactoryUtil {
 	public static Relationship createRelationship (RelationshipStereotype stereotype, Classifier source, Classifier target, Container container)
 	{
 		Relationship relationship = factory.createRelationship();
-		relationship.setStereotype(stereotype);		
+		relationship.setStereotype(stereotype);
+		relationship.setTemporalNature(null);
+		relationship.setParticipationNature(null);
+		relationship = setReflexivityDefault(relationship);		
+		relationship = setSymmetryDefault(relationship);
+		relationship = setTransitivityDefault(relationship);
+		relationship = setCyclicityDefault(relationship);
 		if(shouldInvert(relationship,source,target)) createEndPoints(relationship, target, source); 
 		else createEndPoints(relationship, source, target);
 		if(container!=null){
@@ -160,6 +188,42 @@ public class OntoumlFactoryUtil {
 			relationship.setHolder(container);
 		}
 		return relationship;
+	}
+	
+	public static Relationship setCyclicityDefault(Relationship rel){
+		if(rel.isMeronymic()||rel.isCharacterization()||rel.isCausation()
+		|| rel.isPrecedes()||rel.isMeets()||rel.isFinishes()||rel.isStarts()||rel.isDuring()) rel.setCiclicity(Ciclicity.ACYCLIC);
+		else if(rel.isOverlaps()) rel.setCiclicity(Ciclicity.NON_CYCLIC);
+		else if(rel.isEquals()) rel.setCiclicity(Ciclicity.CYCLIC);
+		else rel.setCiclicity(null);
+		return rel;
+	}
+	
+	public static Relationship setTransitivityDefault(Relationship rel){
+		if(rel.isMemberOf()||rel.isMeets()) rel.setTransitivity(Transitivity.INTRANSITIVE);
+		else if(rel.isComponentOf()||rel.isOverlaps()) rel.setTransitivity(Transitivity.NON_TRANSITIVE);
+		else if(rel.isSubCollectionOf()||rel.isSubQuantityOf()||rel.isSubEventOf()||rel.isConstitution()
+			  ||rel.isCharacterization()||rel.isCausation()||rel.isPrecedes()||rel.isFinishes()||rel.isStarts()
+			  ||rel.isDuring()||rel.isEquals()) rel.setTransitivity(Transitivity.TRANSITIVE);
+		else rel.setTransitivity(null);
+		return rel;
+	}
+	
+	public static Relationship setReflexivityDefault(Relationship rel){
+		if(rel.isMemberOf()||rel.isComponentOf()||rel.isSubCollectionOf()||rel.isSubQuantityOf()) rel.setReflexivity(Reflexivity.NON_REFLEXIVE);
+		else if(rel.isFinishes()||rel.isStarts()||rel.isDuring()||rel.isEquals()||rel.isOverlaps()) rel.setReflexivity(Reflexivity.REFLEXIVE);
+		else if(rel.isSubEventOf()||rel.isConstitution()||rel.isMediation()||rel.isCharacterization()||rel.isCausation()) rel.setReflexivity(Reflexivity.IRREFLEXIVE);
+		else rel.setReflexivity(null);
+		return rel;
+	}
+	
+	public static Relationship setSymmetryDefault(Relationship rel){
+		if(rel.isMeronymic()||rel.isCharacterization()||rel.isCausation()
+		|| rel.isPrecedes()||rel.isMeets()||rel.isFinishes()||rel.isStarts()) rel.setSymmetry(Symmetry.ANTI_SYMMETRIC);
+		else if(rel.isDuring()) rel.setSymmetry(Symmetry.ASSYMETRIC);
+		else if(rel.isEquals()||rel.isOverlaps()) rel.setSymmetry(Symmetry.SYMMETRIC);
+		else rel.setSymmetry(null);
+		return rel;
 	}
 	
 	public static boolean shouldInvert(Relationship relationship, Classifier source, Classifier target)
@@ -197,6 +261,12 @@ public class OntoumlFactoryUtil {
 		setMultiplicity(ends.get(1), tgtLower, tgtUpper);
 		if(name!=null) relationship.setName(name);
 		else relationship.setName("");
+		relationship.setTemporalNature(null);
+		relationship.setParticipationNature(null);
+		relationship = setReflexivityDefault(relationship);		
+		relationship = setSymmetryDefault(relationship);
+		relationship = setTransitivityDefault(relationship);
+		relationship = setCyclicityDefault(relationship);
 		if(container!=null){
 			container.getElements().add(relationship);
 			relationship.setHolder(container);
@@ -212,6 +282,9 @@ public class OntoumlFactoryUtil {
 		if(class_.isMixinClass()) class_.setIsAbstract(true);
 		if(name!=null) class_.setName(name);
 		else class_.setName("");
+		class_.setExistence(null);
+		class_.setClassification(null);
+		class_.setQualityNature(null);
 		if(container!=null){
 			container.getElements().add(class_);
 			class_.setHolder(container);
@@ -226,6 +299,9 @@ public class OntoumlFactoryUtil {
 		class_.setIsAbstract(isAbstract);
 		if(name!=null) class_.setName(name);
 		else class_.setName("");
+		class_.setExistence(null);
+		class_.setClassification(null);
+		class_.setQualityNature(null);
 		if(container!=null){
 			container.getElements().add(class_);
 			class_.setHolder(container);
@@ -264,6 +340,8 @@ public class OntoumlFactoryUtil {
 		datatype.setStereotype(stereotype);
 		if(name!=null) datatype.setName(name);
 		else datatype.setName("");		
+		datatype.setMeasurement(null);
+		datatype.setScale(null);		
 		if(container!=null){
 			container.getElements().add(datatype);
 			datatype.setHolder(container);

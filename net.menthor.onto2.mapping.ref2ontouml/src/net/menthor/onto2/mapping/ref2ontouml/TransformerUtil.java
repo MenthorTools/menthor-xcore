@@ -92,8 +92,7 @@ public class TransformerUtil {
 			if(elem instanceof RefOntoUML.IntegerIntervalDimension) cs = DataTypeStereotype.DIMENSION;
 			if(elem instanceof RefOntoUML.IntegerOrdinalDimension) cs = DataTypeStereotype.DIMENSION;
 			if(elem instanceof RefOntoUML.IntegerRationalDimension) cs = DataTypeStereotype.DIMENSION;            			
-			if(elem instanceof RefOntoUML.MeasurementDomain) cs = DataTypeStereotype.DOMAIN;
-			if(elem instanceof RefOntoUML.DataType && !(elem instanceof RefOntoUML.PrimitiveType)) cs = DataTypeStereotype.DATA_TYPE;			            			
+			if(elem instanceof RefOntoUML.MeasurementDomain) cs = DataTypeStereotype.DOMAIN;			            			
 		}
 		return cs;
     }

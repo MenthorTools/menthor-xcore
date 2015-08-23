@@ -54,7 +54,7 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ClassStereotype STEREOTYPE_EDEFAULT = ClassStereotype.KIND;
+	protected static final ClassStereotype STEREOTYPE_EDEFAULT = ClassStereotype.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
@@ -134,7 +134,7 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 * @ordered
 	 */
-	protected static final QualityNature QUALITY_NATURE_EDEFAULT = QualityNature.NOMINAL;
+	protected static final QualityNature QUALITY_NATURE_EDEFAULT = QualityNature.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getQualityNature() <em>Quality Nature</em>}' attribute.
@@ -154,7 +154,7 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Existence EXISTENCE_EDEFAULT = Existence.PERMANENT;
+	protected static final Existence EXISTENCE_EDEFAULT = Existence.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getExistence() <em>Existence</em>}' attribute.
@@ -174,7 +174,7 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Classification CLASSIFICATION_EDEFAULT = Classification.INITIAL;
+	protected static final Classification CLASSIFICATION_EDEFAULT = Classification.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getClassification() <em>Classification</em>}' attribute.

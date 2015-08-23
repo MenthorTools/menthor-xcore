@@ -320,7 +320,7 @@ public interface DataType extends Type {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%net.menthor.onto2.ontouml.DataTypeStereotype%> _stereotype = this.getStereotype();\nreturn <%com.google.common.base.Objects%>.equal(_stereotype, <%net.menthor.onto2.ontouml.DataTypeStereotype%>.DATA_TYPE);'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _or = false;\n<%net.menthor.onto2.ontouml.DataTypeStereotype%> _stereotype = this.getStereotype();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_stereotype, <%net.menthor.onto2.ontouml.DataTypeStereotype%>.UNSET);\nif (_equals)\n{\n\t_or = true;\n} else\n{\n\t<%net.menthor.onto2.ontouml.DataTypeStereotype%> _stereotype_1 = this.getStereotype();\n\tboolean _equals_1 = <%com.google.common.base.Objects%>.equal(_stereotype_1, null);\n\t_or = _equals_1;\n}\nreturn _or;'"
 	 * @generated
 	 */
 	boolean isDataType();

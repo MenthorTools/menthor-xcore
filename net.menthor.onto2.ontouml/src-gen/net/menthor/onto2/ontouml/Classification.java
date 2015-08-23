@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Classification implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Initial</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,6 +50,21 @@ public enum Classification implements Enumerator {
 	 * @ordered
 	 */
 	FINAL(0, "Final", "Final");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Initial</b></em>' literal value.
@@ -79,6 +104,7 @@ public enum Classification implements Enumerator {
 	 */
 	private static final Classification[] VALUES_ARRAY =
 		new Classification[] {
+			UNSET,
 			INITIAL,
 			FINAL,
 		};
@@ -137,7 +163,7 @@ public enum Classification implements Enumerator {
 	 */
 	public static Classification get(int value) {
 		switch (value) {
-			case INITIAL_VALUE: return INITIAL;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

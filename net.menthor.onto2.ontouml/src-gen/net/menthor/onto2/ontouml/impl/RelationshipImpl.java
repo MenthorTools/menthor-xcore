@@ -63,7 +63,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final RelationshipStereotype STEREOTYPE_EDEFAULT = RelationshipStereotype.COMPONENT_OF;
+	protected static final RelationshipStereotype STEREOTYPE_EDEFAULT = RelationshipStereotype.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
@@ -83,7 +83,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Reflexivity REFLEXIVITY_EDEFAULT = Reflexivity.REFLEXIVE;
+	protected static final Reflexivity REFLEXIVITY_EDEFAULT = Reflexivity.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getReflexivity() <em>Reflexivity</em>}' attribute.
@@ -103,7 +103,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Symmetry SYMMETRY_EDEFAULT = Symmetry.SYMMETRIC;
+	protected static final Symmetry SYMMETRY_EDEFAULT = Symmetry.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getSymmetry() <em>Symmetry</em>}' attribute.
@@ -123,7 +123,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Transitivity TRANSITIVITY_EDEFAULT = Transitivity.TRANSITIVE;
+	protected static final Transitivity TRANSITIVITY_EDEFAULT = Transitivity.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getTransitivity() <em>Transitivity</em>}' attribute.
@@ -143,7 +143,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Ciclicity CICLICITY_EDEFAULT = Ciclicity.CYCLIC;
+	protected static final Ciclicity CICLICITY_EDEFAULT = Ciclicity.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getCiclicity() <em>Ciclicity</em>}' attribute.
@@ -173,7 +173,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TemporalNature TEMPORAL_NATURE_EDEFAULT = TemporalNature.STARTS;
+	protected static final TemporalNature TEMPORAL_NATURE_EDEFAULT = TemporalNature.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getTemporalNature() <em>Temporal Nature</em>}' attribute.
@@ -193,7 +193,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ParticipationNature PARTICIPATION_NATURE_EDEFAULT = ParticipationNature.CREATION;
+	protected static final ParticipationNature PARTICIPATION_NATURE_EDEFAULT = ParticipationNature.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getParticipationNature() <em>Participation Nature</em>}' attribute.

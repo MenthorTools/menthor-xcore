@@ -8,21 +8,21 @@ inv extensional('The meta-attribute "isExtensional" can only be set to classes s
 	isExtensional implies stereotype=ClassStereotype::Collective
 
 inv qualityNature('The meta-attribute "qualityNature" can only be set to classes stereotyped as "quality"'): 
-	not qualityNature.oclIsUndefined() implies stereotype=ClassStereotype::Quality
+	not qualityNature.oclIsUndefined() and qualityNature<>QualityNature::Unset implies stereotype=ClassStereotype::Quality
  
 inv existence('The meta-attribute "existence" can only be set to identity providers'): 
-	not existence.oclIsUndefined() implies isIdentityProviderClass()
+	not existence.oclIsUndefined() and existence<>Existence::Unset  implies isIdentityProviderClass()
 
 inv classification('The meta-attribute "classification" can only be set to anti-rigid types'): 
-	not classification.oclIsUndefined() implies isAntiRigid()
+	not classification.oclIsUndefined() and classification<>Classification::Unset implies isAntiRigid()
 
 context Relationship
 
 inv temporalNature('The meta-attribute "temporalNature" can only be set to relationships stereotyped as "temporal"'): 
-	not temporalNature.oclIsUndefined() implies stereotype=RelationshipStereotype::Temporal
+	not temporalNature.oclIsUndefined() and temporalNature<>TemporalNature::Unset implies stereotype=RelationshipStereotype::Temporal
 
 inv participationNature('The meta-attribute "participationNature" can only be set to relationships stereotyped as "participation"'): 
-	not participationNature.oclIsUndefined() implies stereotype=RelationshipStereotype::Participation
+	not participationNature.oclIsUndefined() and participationNature<>ParticipationNature::Unset implies stereotype=RelationshipStereotype::Participation
 
 context DataType
 
@@ -30,10 +30,10 @@ inv dimensions('The meta-attribute "dimensions" can only be set to dataTypes ste
 	dimensions->size()>0 implies stereotype=DataTypeStereotype::Domain
 
 inv scale('The meta-attribute "scale" can only be set to dataTypes stereotyped as "dimension"'): 
-	not scale.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+	not scale.oclIsUndefined() and scale<>Scale::Unset implies stereotype=DataTypeStereotype::Dimension
 
 inv measurement('The meta-attribute "measurement" can only be set to dataTypes stereotyped as "dimension"'): 
-	not measurement.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension
+	not measurement.oclIsUndefined() and measurement<>Measurement::Unset implies stereotype=DataTypeStereotype::Dimension
 
 inv ownerDomain('The meta-attribute "ownerDomain" can only be set to dataTypes stereotyped as "dimension"'): 
 	not ownerDomain.oclIsUndefined() implies stereotype=DataTypeStereotype::Dimension

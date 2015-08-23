@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum DataTypeStereotype implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Domain</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,17 +59,22 @@ public enum DataTypeStereotype implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENUMERATION(0, "Enumeration", "Enumeration"),
+	ENUMERATION(0, "Enumeration", "Enumeration");
 
 	/**
-	 * The '<em><b>Data Type</b></em>' literal object.
+	 * The '<em><b>Unset</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DATA_TYPE_VALUE
+	 * @see #UNSET
+	 * @model name="Unset"
 	 * @generated
 	 * @ordered
 	 */
-	DATA_TYPE(0, "DataType", "DataType");
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Domain</b></em>' literal value.
@@ -107,21 +122,6 @@ public enum DataTypeStereotype implements Enumerator {
 	public static final int ENUMERATION_VALUE = 0;
 
 	/**
-	 * The '<em><b>Data Type</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Data Type</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #DATA_TYPE
-	 * @model name="DataType"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int DATA_TYPE_VALUE = 0;
-
-	/**
 	 * An array of all the '<em><b>Data Type Stereotype</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,10 +129,10 @@ public enum DataTypeStereotype implements Enumerator {
 	 */
 	private static final DataTypeStereotype[] VALUES_ARRAY =
 		new DataTypeStereotype[] {
+			UNSET,
 			DOMAIN,
 			DIMENSION,
 			ENUMERATION,
-			DATA_TYPE,
 		};
 
 	/**
@@ -189,7 +189,7 @@ public enum DataTypeStereotype implements Enumerator {
 	 */
 	public static DataTypeStereotype get(int value) {
 		switch (value) {
-			case DOMAIN_VALUE: return DOMAIN;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

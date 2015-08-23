@@ -30,7 +30,7 @@
     <elements xsi:type="menthor:Class" name="Cerrado" isGeneralIn="//@elements.0/@elements.263" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="Cerrado" isGeneralIn="//@elements.0/@elements.264" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="CerradoRegion" isGeneralIn="//@elements.0/@elements.265" stereotype="Category" isAbstract="true"/>
-    <elements xsi:type="menthor:Class" name="City" isGeneralIn="//@elements.0/@elements.266"/>
+    <elements xsi:type="menthor:Class" name="City" isGeneralIn="//@elements.0/@elements.266" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="CityLand" isGeneralIn="//@elements.0/@elements.267" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="Classification" stereotype="Relator"/>
     <elements xsi:type="menthor:Class" name="ClassifiedEntity" isGeneralIn="//@elements.0/@elements.268" stereotype="Role"/>
@@ -51,10 +51,10 @@
     <elements xsi:type="menthor:Class" name="Community" isGeneralIn="//@elements.0/@elements.281" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="ConservationUnity" isGeneralIn="//@elements.0/@elements.282" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="CostalRegion" isGeneralIn="//@elements.0/@elements.283" stereotype="Category" isAbstract="true"/>
-    <elements xsi:type="menthor:Class" name="Country" isGeneralIn="//@elements.0/@elements.284"/>
+    <elements xsi:type="menthor:Class" name="Country" isGeneralIn="//@elements.0/@elements.284" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="DeforestedEnvironment" isGeneralIn="//@elements.0/@elements.285" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="DevoluteLand" isGeneralIn="//@elements.0/@elements.286" stereotype="SubKind"/>
-    <elements xsi:type="menthor:Class" name="Ecosystem" isSpecificIn="//@elements.0/@elements.327 //@elements.0/@elements.335 //@elements.0/@elements.336"/>
+    <elements xsi:type="menthor:Class" name="Ecosystem" isSpecificIn="//@elements.0/@elements.327 //@elements.0/@elements.335 //@elements.0/@elements.336" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="EcosystemType"/>
     <elements xsi:type="menthor:Class" name="Egg" isGeneralIn="//@elements.0/@elements.287" stereotype="Mixin" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="Embryo" isGeneralIn="//@elements.0/@elements.288" stereotype="Mixin" isAbstract="true"/>
@@ -92,7 +92,7 @@
     <elements xsi:type="menthor:Class" name="Igapo" isGeneralIn="//@elements.0/@elements.316" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="IndianLand" isGeneralIn="//@elements.0/@elements.317" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="InstitutionalContract" stereotype="Relator"/>
-    <elements xsi:type="menthor:Class" name="Instrument" isSpecificIn="//@elements.0/@elements.278"/>
+    <elements xsi:type="menthor:Class" name="Instrument" isSpecificIn="//@elements.0/@elements.278" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="InstrumentedCollection" isGeneralIn="//@elements.0/@elements.318" isSpecificIn="//@elements.0/@elements.291 //@elements.0/@elements.339 //@elements.0/@elements.386" stereotype="Relator"/>
     <elements xsi:type="menthor:Class" name="Juvenile" isGeneralIn="//@elements.0/@elements.319" stereotype="Mixin" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="LakeEnvironment" isGeneralIn="//@elements.0/@elements.320" stereotype="Mode"/>
@@ -102,7 +102,7 @@
     <elements xsi:type="menthor:Class" name="LifeStage" isSpecificIn="//@elements.0/@elements.239 //@elements.0/@elements.287 //@elements.0/@elements.288 //@elements.0/@elements.319 //@elements.0/@elements.329 //@elements.0/@elements.354 //@elements.0/@elements.390" stereotype="Mixin" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="LifeStageType"/>
     <elements xsi:type="menthor:Class" name="Litholic" isGeneralIn="//@elements.0/@elements.323" stereotype="SubKind"/>
-    <elements xsi:type="menthor:Class" name="Location" isGeneralIn="//@elements.0/@elements.324" isSpecificIn="//@elements.0/@elements.281 //@elements.0/@elements.282 //@elements.0/@elements.352 //@elements.0/@elements.353 //@elements.0/@elements.374 //@elements.0/@elements.384 //@elements.0/@elements.394"/>
+    <elements xsi:type="menthor:Class" name="Location" isGeneralIn="//@elements.0/@elements.324" isSpecificIn="//@elements.0/@elements.281 //@elements.0/@elements.282 //@elements.0/@elements.352 //@elements.0/@elements.353 //@elements.0/@elements.374 //@elements.0/@elements.384 //@elements.0/@elements.394" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="LowLuminosity" isGeneralIn="//@elements.0/@elements.325" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="Lowland" isGeneralIn="//@elements.0/@elements.326" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="Luminosity" isSpecificIn="//@elements.0/@elements.249 //@elements.0/@elements.311 //@elements.0/@elements.325" stereotype="Mode"/>
@@ -132,7 +132,7 @@
     <elements xsi:type="menthor:Class" name="PatanalRegion" isGeneralIn="//@elements.0/@elements.345" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="PeakEnvironment" isGeneralIn="//@elements.0/@elements.346" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="PebbleEnvironment" isGeneralIn="//@elements.0/@elements.347" stereotype="Mode"/>
-    <elements xsi:type="menthor:Class" name="Person" isGeneralIn="//@elements.0/@elements.348" isSpecificIn="//@elements.0/@elements.342 //@elements.0/@elements.344 //@elements.0/@elements.358"/>
+    <elements xsi:type="menthor:Class" name="Person" isGeneralIn="//@elements.0/@elements.348" isSpecificIn="//@elements.0/@elements.342 //@elements.0/@elements.344 //@elements.0/@elements.358" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="PhytophysiognomicRegion" isGeneralIn="//@elements.0/@elements.349" isSpecificIn="//@elements.0/@elements.242 //@elements.0/@elements.244 //@elements.0/@elements.246 //@elements.0/@elements.260 //@elements.0/@elements.265 //@elements.0/@elements.276 //@elements.0/@elements.283 //@elements.0/@elements.298 //@elements.0/@elements.345" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="PhytophysiognomicRegionType"/>
     <elements xsi:type="menthor:Class" name="Plant" isGeneralIn="//@elements.0/@elements.350" stereotype="Category" isAbstract="true"/>
@@ -143,7 +143,7 @@
     <elements xsi:type="menthor:Class" name="Rainy" isGeneralIn="//@elements.0/@elements.355" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="RandomCollection" isGeneralIn="//@elements.0/@elements.356" stereotype="Relator"/>
     <elements xsi:type="menthor:Class" name="RapidsEnvironment" isGeneralIn="//@elements.0/@elements.357" stereotype="Mode"/>
-    <elements xsi:type="menthor:Class" name="ResearchInstitution" isSpecificIn="//@elements.0/@elements.362"/>
+    <elements xsi:type="menthor:Class" name="ResearchInstitution" isSpecificIn="//@elements.0/@elements.362" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="Researcher" isGeneralIn="//@elements.0/@elements.358" isSpecificIn="//@elements.0/@elements.360" stereotype="Role"/>
     <elements xsi:type="menthor:Class" name="ResearcherParticipant" isGeneralIn="//@elements.0/@elements.359 //@elements.0/@elements.360" isSpecificIn="//@elements.0/@elements.361" stereotype="Role"/>
     <elements xsi:type="menthor:Class" name="ResponsibleForCollection" isGeneralIn="//@elements.0/@elements.361" stereotype="Role"/>
@@ -165,7 +165,7 @@
     <elements xsi:type="menthor:Class" name="Soil" isGeneralIn="//@elements.0/@elements.376" isSpecificIn="//@elements.0/@elements.270 //@elements.0/@elements.313 //@elements.0/@elements.315 //@elements.0/@elements.323 //@elements.0/@elements.366 //@elements.0/@elements.370" stereotype="Quantity"/>
     <elements xsi:type="menthor:Class" name="SpatialLocation" isSpecificIn="//@elements.0/@elements.279 //@elements.0/@elements.307 //@elements.0/@elements.308" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="Species" isGeneralIn="//@elements.0/@elements.377"/>
-    <elements xsi:type="menthor:Class" name="State" isGeneralIn="//@elements.0/@elements.378"/>
+    <elements xsi:type="menthor:Class" name="State" isGeneralIn="//@elements.0/@elements.378" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="StateLand" isGeneralIn="//@elements.0/@elements.379" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="Sunny" isGeneralIn="//@elements.0/@elements.380" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="SwampEnvironment" isGeneralIn="//@elements.0/@elements.381" stereotype="Mode"/>
@@ -181,19 +181,19 @@
     <elements xsi:type="menthor:Class" name="Unknown" isGeneralIn="//@elements.0/@elements.390" stereotype="Mixin" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="Unknown" isGeneralIn="//@elements.0/@elements.391" stereotype="Category" isAbstract="true"/>
     <elements xsi:type="menthor:Class" name="UrbanEnvironment" isGeneralIn="//@elements.0/@elements.392" stereotype="Mode"/>
-    <elements xsi:type="menthor:Class" name="Vegetation" isSpecificIn="//@elements.0/@elements.258 //@elements.0/@elements.261 //@elements.0/@elements.263 //@elements.0/@elements.297 //@elements.0/@elements.302 //@elements.0/@elements.316 //@elements.0/@elements.326 //@elements.0/@elements.363"/>
+    <elements xsi:type="menthor:Class" name="Vegetation" isSpecificIn="//@elements.0/@elements.258 //@elements.0/@elements.261 //@elements.0/@elements.263 //@elements.0/@elements.297 //@elements.0/@elements.302 //@elements.0/@elements.316 //@elements.0/@elements.326 //@elements.0/@elements.363" stereotype="Kind"/>
     <elements xsi:type="menthor:Class" name="VegetationEnvironment" isGeneralIn="//@elements.0/@elements.393" isSpecificIn="//@elements.0/@elements.245 //@elements.0/@elements.256 //@elements.0/@elements.301" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="Village" isGeneralIn="//@elements.0/@elements.394" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="Water" isGeneralIn="//@elements.0/@elements.395" isSpecificIn="//@elements.0/@elements.257 //@elements.0/@elements.304 //@elements.0/@elements.369" stereotype="Quantity"/>
     <elements xsi:type="menthor:Class" name="WeatherCondition" isSpecificIn="//@elements.0/@elements.273 //@elements.0/@elements.355 //@elements.0/@elements.380" stereotype="Mode"/>
     <elements xsi:type="menthor:Class" name="WhiteWater" isGeneralIn="//@elements.0/@elements.396" stereotype="SubKind"/>
     <elements xsi:type="menthor:Class" name="WholedEnvironment" isGeneralIn="//@elements.0/@elements.397" stereotype="Mode"/>
-    <elements xsi:type="menthor:DataType" name="GeographicCoordinate" stereotype="DataType"/>
-    <elements xsi:type="menthor:Relationship" name="">
+    <elements xsi:type="menthor:DataType" name="GeographicCoordinate"/>
+    <elements xsi:type="menthor:Relationship" name="" stereotype="ComponentOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="NonTransitive" ciclicity="Acyclic">
       <endPoints name="ecosystem" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.53"/>
       <endPoints name="abioticentity" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.0"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="Intransitive" ciclicity="Acyclic">
       <endPoints name="fauna" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.63"/>
       <endPoints name="animal" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.5"/>
     </elements>
@@ -213,7 +213,7 @@
       <endPoints name="bioticentity" upperBound="-1" endType="//@elements.0/@elements.16"/>
       <endPoints name="taxon" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.168"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="ComponentOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="NonTransitive" ciclicity="Acyclic">
       <endPoints name="ecosystem" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.53"/>
       <endPoints name="bioticentity" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.16"/>
     </elements>
@@ -225,15 +225,15 @@
       <endPoints name="location" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.101"/>
       <endPoints name="city" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.29"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="classification" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.31"/>
       <endPoints name="classifiedentity" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.32"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="classification" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.31"/>
       <endPoints name="objectclassifer" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.125"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="classification" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.31"/>
       <endPoints name="species" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.163"/>
     </elements>
@@ -241,27 +241,27 @@
       <endPoints name="climateregion" upperBound="-1" endType="//@elements.0/@elements.36"/>
       <endPoints name="climateregiontype" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.37"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="collection" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.43"/>
       <endPoints name="collectedentity" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.42"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="collection" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.43"/>
       <endPoints name="participantincollection" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.127"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="collection" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.43"/>
       <endPoints name="responsibleforcollection" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.145"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="collection" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.43"/>
       <endPoints name="resposibleinstitution" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.146"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="collection" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.43"/>
       <endPoints name="collectionlocation" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.45"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="instrumentedcollection" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.92"/>
       <endPoints name="collectionintrument" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.44"/>
     </elements>
@@ -277,23 +277,23 @@
       <endPoints name="ecosystem" upperBound="-1" endType="//@elements.0/@elements.53"/>
       <endPoints name="ecosystemtype" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.54"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="ComponentOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="NonTransitive" ciclicity="Acyclic">
       <endPoints name="ecosystem" upperBound="-1" endType="//@elements.0/@elements.53"/>
       <endPoints name="ecosystem" upperBound="-1" endType="//@elements.0/@elements.53"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization" reflexivity="Irreflexive" symmetry="AntiSymmetric" transitivity="Transitive" ciclicity="Acyclic">
       <endPoints name="environment" upperBound="-1" endType="//@elements.0/@elements.58"/>
       <endPoints name="spatiallocation" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.162"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization" reflexivity="Irreflexive" symmetry="AntiSymmetric" transitivity="Transitive" ciclicity="Acyclic">
       <endPoints name="weathercondition" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.184"/>
       <endPoints name="environment" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.58"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization" reflexivity="Irreflexive" symmetry="AntiSymmetric" transitivity="Transitive" ciclicity="Acyclic">
       <endPoints name="moonphase" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.121"/>
       <endPoints name="environment" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.58"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization" reflexivity="Irreflexive" symmetry="AntiSymmetric" transitivity="Transitive" ciclicity="Acyclic">
       <endPoints name="luminosity" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.104"/>
       <endPoints name="environment" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.58"/>
     </elements>
@@ -301,7 +301,7 @@
       <endPoints name="family" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.62"/>
       <endPoints name="genus" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.78"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="Intransitive" ciclicity="Acyclic">
       <endPoints name="flora" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.72"/>
       <endPoints name="plant" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.134"/>
     </elements>
@@ -317,7 +317,7 @@
       <endPoints name="geographicpoint" upperBound="-1" endType="//@elements.0/@elements.79"/>
       <endPoints name="location" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.187"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization" reflexivity="Irreflexive" symmetry="AntiSymmetric" transitivity="Transitive" ciclicity="Acyclic">
       <endPoints name="microenvironment" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.117"/>
       <endPoints name="geographicpoint" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.79"/>
     </elements>
@@ -325,7 +325,7 @@
       <endPoints name="geographicspace" upperBound="-1" endType="//@elements.0/@elements.80"/>
       <endPoints name="location" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.187"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Characterization" reflexivity="Irreflexive" symmetry="AntiSymmetric" transitivity="Transitive" ciclicity="Acyclic">
       <endPoints name="macroenvironment" upperBound="-1" endType="//@elements.0/@elements.106"/>
       <endPoints name="geographicspace" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.80"/>
     </elements>
@@ -333,11 +333,11 @@
       <endPoints name="vegetation" upperBound="-1" endType="//@elements.0/@elements.180"/>
       <endPoints name="geographicspace" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.80"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="institutionalcontract" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.90"/>
       <endPoints name="researchinstitution" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.142"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="Mediation" reflexivity="Irreflexive">
       <endPoints name="institutionalcontract" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.90"/>
       <endPoints name="researcher" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.143"/>
     </elements>
@@ -345,7 +345,7 @@
       <endPoints name="lifestage" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.98"/>
       <endPoints name="lifestagetype" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.99"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="ComponentOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="NonTransitive" ciclicity="Acyclic">
       <endPoints name="macroecosystem" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.105"/>
       <endPoints name="mesoecosystem" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.115"/>
     </elements>
@@ -353,7 +353,7 @@
       <endPoints name="macroenvironment" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.106"/>
       <endPoints name="macroenvironmenttype" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.107"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="ComponentOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="NonTransitive" ciclicity="Acyclic">
       <endPoints name="mesoecosystem" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.115"/>
       <endPoints name="microecosystem" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.116"/>
     </elements>
@@ -361,7 +361,7 @@
       <endPoints name="microenvironment" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.117"/>
       <endPoints name="microenvironmenttype" lowerBound="1" upperBound="-1" endType="//@elements.0/@elements.118"/>
     </elements>
-    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf">
+    <elements xsi:type="menthor:Relationship" name="" stereotype="MemberOf" reflexivity="NonReflexive" symmetry="AntiSymmetric" transitivity="Intransitive" ciclicity="Acyclic">
       <endPoints name="microbiota" lowerBound="1" upperBound="1" endType="//@elements.0/@elements.119"/>
       <endPoints name="microorganism" lowerBound="2" upperBound="-1" endType="//@elements.0/@elements.120"/>
     </elements>

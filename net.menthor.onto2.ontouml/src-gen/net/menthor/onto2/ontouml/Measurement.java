@@ -22,6 +22,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Measurement implements Enumerator {
 	/**
+	 * The '<em><b>Unset</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSET(0, "Unset", "Unset"),
+
+	/**
 	 * The '<em><b>Integer</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,6 +70,21 @@ public enum Measurement implements Enumerator {
 	 * @ordered
 	 */
 	STRING(0, "String", "String");
+
+	/**
+	 * The '<em><b>Unset</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Unset</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNSET
+	 * @model name="Unset"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSET_VALUE = 0;
 
 	/**
 	 * The '<em><b>Integer</b></em>' literal value.
@@ -129,6 +154,7 @@ public enum Measurement implements Enumerator {
 	 */
 	private static final Measurement[] VALUES_ARRAY =
 		new Measurement[] {
+			UNSET,
 			INTEGER,
 			REAL,
 			DECIMAL,
@@ -189,7 +215,7 @@ public enum Measurement implements Enumerator {
 	 */
 	public static Measurement get(int value) {
 		switch (value) {
-			case INTEGER_VALUE: return INTEGER;
+			case UNSET_VALUE: return UNSET;
 		}
 		return null;
 	}

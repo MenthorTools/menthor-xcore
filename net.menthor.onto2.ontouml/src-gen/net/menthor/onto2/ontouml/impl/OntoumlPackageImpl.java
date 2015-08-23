@@ -2,8 +2,6 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
-import java.util.ArrayList;
-
 import net.menthor.onto2.ontouml.Attribute;
 import net.menthor.onto2.ontouml.Ciclicity;
 import net.menthor.onto2.ontouml.ClassStereotype;
@@ -43,7 +41,6 @@ import net.menthor.onto2.ontouml.util.OntoumlValidator;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
@@ -305,13 +302,6 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * @generated
 	 */
 	private EEnum ciclicityEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType arrayListEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2776,15 +2766,6 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getArrayList() {
-		return arrayListEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public OntoumlFactory getOntoumlFactory() {
 		return (OntoumlFactory)getEFactoryInstance();
 	}
@@ -3093,9 +3074,6 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		symmetryEEnum = createEEnum(SYMMETRY);
 		transitivityEEnum = createEEnum(TRANSITIVITY);
 		ciclicityEEnum = createEEnum(CICLICITY);
-
-		// Create data types
-		arrayListEDataType = createEDataType(ARRAY_LIST);
 	}
 
 	/**
@@ -3125,7 +3103,6 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
-		addETypeParameter(arrayListEDataType, "E");
 
 		// Set bounds for type parameters
 
@@ -3615,6 +3592,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(primitiveStereotypeEEnum, PrimitiveStereotype.class, "PrimitiveStereotype");
+		addEEnumLiteral(primitiveStereotypeEEnum, PrimitiveStereotype.UNSET);
 		addEEnumLiteral(primitiveStereotypeEEnum, PrimitiveStereotype.BOOLEAN);
 		addEEnumLiteral(primitiveStereotypeEEnum, PrimitiveStereotype.STRING);
 		addEEnumLiteral(primitiveStereotypeEEnum, PrimitiveStereotype.REAL);
@@ -3629,6 +3607,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(constraintSteteotypeEEnum, ConstraintSteteotype.HISTORICAL);
 
 		initEEnum(classStereotypeEEnum, ClassStereotype.class, "ClassStereotype");
+		addEEnumLiteral(classStereotypeEEnum, ClassStereotype.UNSET);
 		addEEnumLiteral(classStereotypeEEnum, ClassStereotype.KIND);
 		addEEnumLiteral(classStereotypeEEnum, ClassStereotype.COLLECTIVE);
 		addEEnumLiteral(classStereotypeEEnum, ClassStereotype.QUANTITY);
@@ -3646,38 +3625,44 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(classStereotypeEEnum, ClassStereotype.HIGH_ORDER);
 
 		initEEnum(dataTypeStereotypeEEnum, DataTypeStereotype.class, "DataTypeStereotype");
+		addEEnumLiteral(dataTypeStereotypeEEnum, DataTypeStereotype.UNSET);
 		addEEnumLiteral(dataTypeStereotypeEEnum, DataTypeStereotype.DOMAIN);
 		addEEnumLiteral(dataTypeStereotypeEEnum, DataTypeStereotype.DIMENSION);
 		addEEnumLiteral(dataTypeStereotypeEEnum, DataTypeStereotype.ENUMERATION);
-		addEEnumLiteral(dataTypeStereotypeEEnum, DataTypeStereotype.DATA_TYPE);
 
 		initEEnum(scaleEEnum, Scale.class, "Scale");
+		addEEnumLiteral(scaleEEnum, Scale.UNSET);
 		addEEnumLiteral(scaleEEnum, Scale.INTERVAL);
 		addEEnumLiteral(scaleEEnum, Scale.RATIONAL);
 		addEEnumLiteral(scaleEEnum, Scale.ORDINAL);
 		addEEnumLiteral(scaleEEnum, Scale.NOMINAL);
 
 		initEEnum(measurementEEnum, Measurement.class, "Measurement");
+		addEEnumLiteral(measurementEEnum, Measurement.UNSET);
 		addEEnumLiteral(measurementEEnum, Measurement.INTEGER);
 		addEEnumLiteral(measurementEEnum, Measurement.REAL);
 		addEEnumLiteral(measurementEEnum, Measurement.DECIMAL);
 		addEEnumLiteral(measurementEEnum, Measurement.STRING);
 
 		initEEnum(qualityNatureEEnum, QualityNature.class, "QualityNature");
+		addEEnumLiteral(qualityNatureEEnum, QualityNature.UNSET);
 		addEEnumLiteral(qualityNatureEEnum, QualityNature.NOMINAL);
 		addEEnumLiteral(qualityNatureEEnum, QualityNature.PERCEIVABLE);
 		addEEnumLiteral(qualityNatureEEnum, QualityNature.NON_PERCEIVABLE);
 
 		initEEnum(classificationEEnum, Classification.class, "Classification");
+		addEEnumLiteral(classificationEEnum, Classification.UNSET);
 		addEEnumLiteral(classificationEEnum, Classification.INITIAL);
 		addEEnumLiteral(classificationEEnum, Classification.FINAL);
 
 		initEEnum(existenceEEnum, Existence.class, "Existence");
+		addEEnumLiteral(existenceEEnum, Existence.UNSET);
 		addEEnumLiteral(existenceEEnum, Existence.PERMANENT);
 		addEEnumLiteral(existenceEEnum, Existence.TRANSIENT);
 		addEEnumLiteral(existenceEEnum, Existence.ETERNAL);
 
 		initEEnum(relationshipStereotypeEEnum, RelationshipStereotype.class, "RelationshipStereotype");
+		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.UNSET);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.COMPONENT_OF);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.MEMBER_OF);
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.SUB_COLLECTION_OF);
@@ -3697,6 +3682,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(relationshipStereotypeEEnum, RelationshipStereotype.INSTANCE_OF);
 
 		initEEnum(temporalNatureEEnum, TemporalNature.class, "TemporalNature");
+		addEEnumLiteral(temporalNatureEEnum, TemporalNature.UNSET);
 		addEEnumLiteral(temporalNatureEEnum, TemporalNature.STARTS);
 		addEEnumLiteral(temporalNatureEEnum, TemporalNature.PRECEDES);
 		addEEnumLiteral(temporalNatureEEnum, TemporalNature.EQUALS);
@@ -3706,33 +3692,35 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(temporalNatureEEnum, TemporalNature.DURING);
 
 		initEEnum(participationNatureEEnum, ParticipationNature.class, "ParticipationNature");
+		addEEnumLiteral(participationNatureEEnum, ParticipationNature.UNSET);
 		addEEnumLiteral(participationNatureEEnum, ParticipationNature.CREATION);
 		addEEnumLiteral(participationNatureEEnum, ParticipationNature.CHANGE);
 		addEEnumLiteral(participationNatureEEnum, ParticipationNature.DESTRUCTION);
 
 		initEEnum(reflexivityEEnum, Reflexivity.class, "Reflexivity");
+		addEEnumLiteral(reflexivityEEnum, Reflexivity.UNSET);
 		addEEnumLiteral(reflexivityEEnum, Reflexivity.REFLEXIVE);
 		addEEnumLiteral(reflexivityEEnum, Reflexivity.IRREFLEXIVE);
 		addEEnumLiteral(reflexivityEEnum, Reflexivity.NON_REFLEXIVE);
 
 		initEEnum(symmetryEEnum, Symmetry.class, "Symmetry");
+		addEEnumLiteral(symmetryEEnum, Symmetry.UNSET);
 		addEEnumLiteral(symmetryEEnum, Symmetry.SYMMETRIC);
 		addEEnumLiteral(symmetryEEnum, Symmetry.ASSYMETRIC);
 		addEEnumLiteral(symmetryEEnum, Symmetry.ANTI_SYMMETRIC);
 		addEEnumLiteral(symmetryEEnum, Symmetry.NON_SYMMETRIC);
 
 		initEEnum(transitivityEEnum, Transitivity.class, "Transitivity");
+		addEEnumLiteral(transitivityEEnum, Transitivity.UNSET);
 		addEEnumLiteral(transitivityEEnum, Transitivity.TRANSITIVE);
 		addEEnumLiteral(transitivityEEnum, Transitivity.INTRANSITIVE);
 		addEEnumLiteral(transitivityEEnum, Transitivity.NON_TRANSITIVE);
 
 		initEEnum(ciclicityEEnum, Ciclicity.class, "Ciclicity");
+		addEEnumLiteral(ciclicityEEnum, Ciclicity.UNSET);
 		addEEnumLiteral(ciclicityEEnum, Ciclicity.CYCLIC);
 		addEEnumLiteral(ciclicityEEnum, Ciclicity.ACYCLIC);
 		addEEnumLiteral(ciclicityEEnum, Ciclicity.NON_CYCLIC);
-
-		// Initialize data types
-		initEDataType(arrayListEDataType, ArrayList.class, "ArrayList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
