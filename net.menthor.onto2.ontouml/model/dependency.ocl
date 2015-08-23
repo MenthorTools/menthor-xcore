@@ -5,32 +5,32 @@ package ontouml
 context Relationship
 
 inv	derivationDependency('Both sides of a Derivation must be set dependent'): 
-	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	isDerivation() implies (not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
 	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 
 inv temporalDependency('Both sides of a Temporal relationship must be set dependent'): 
-	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	isTemporal() implies (not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
 	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 							
 inv causationDependency('Both sides of a Causation must be set dependent'): 
-	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	isCausation() implies (not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
 	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 														
 inv subEventDependency('Both part and whole of a SubEventOf must be set dependent'): 
-	(not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
+	isSubEventOf() implies (not self.sourceEnd().oclIsUndefined()) and self.sourceEnd().isDependency
 	and (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 														
 inv mediationDependency('The mediated end (target) of a Mediation must be dependent'): 
-	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+	isMediation() implies (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 						
 inv characterizationDependency('The characterized end (target) of a Characterization must be set dependent.'): 
-	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+	isCharacterization() implies (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 							
 inv participationDependency('The participant end (target) of a Participation must be set dependent.'): 
-	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
+	isParticipation() implies (not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 
 inv instanceOfDependency('The high order end (target) of a InstanceOf must be set dependent iff the type end (source) is a rigid type.'): 
-	(not sourceClass().oclIsUndefined() and sourceClass().isRigid()) implies 
+	isInstanceOf() and (not sourceClass().oclIsUndefined()) and sourceClass().isRigid() implies 
 	(not self.targetEnd().oclIsUndefined()) and self.targetEnd().isDependency
 
 --==============================================

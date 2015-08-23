@@ -50,7 +50,7 @@ public interface Type extends Classifier {
 	 * * Returns all types directly connected to this type through a relationship.
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%java.util.ArrayList%><<%net.menthor.onto2.ontouml.Type%>> result = <%org.eclipse.xtext.xbase.lib.CollectionLiterals%>.<<%net.menthor.onto2.ontouml.Type%>>newArrayList();\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends();\nfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _ends)\n{\n\t<%net.menthor.onto2.ontouml.Classifier%> _endType = ep.getEndType();\n\tresult.add(((<%net.menthor.onto2.ontouml.Type%>) _endType));\n}\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Type%>>toEList(result);'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%java.util.ArrayList%><<%net.menthor.onto2.ontouml.Type%>> result = <%org.eclipse.xtext.xbase.lib.CollectionLiterals%>.<<%net.menthor.onto2.ontouml.Type%>>newArrayList();\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _ends = this.ends();\nfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _ends)\n{\n\t{\n\t\tfinal <%net.menthor.onto2.ontouml.Classifier%> type_ = ep.getEndType();\n\t\tboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(type_, null));\n\t\tif (_notEquals)\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Type%>) type_));\n\t\t}\n\t}\n}\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Type%>>toEList(result);'"
 	 * @generated
 	 */
 	EList<Type> relatedTypes();
@@ -62,7 +62,7 @@ public interface Type extends Classifier {
 	 * *Returns all types directly and indirectly connected to this type through a relationship.
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%java.util.ArrayList%><<%net.menthor.onto2.ontouml.Type%>> result = <%org.eclipse.xtext.xbase.lib.CollectionLiterals%>.<<%net.menthor.onto2.ontouml.Type%>>newArrayList();\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _allEnds = this.allEnds();\nfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _allEnds)\n{\n\t<%net.menthor.onto2.ontouml.Classifier%> _endType = ep.getEndType();\n\tresult.add(((<%net.menthor.onto2.ontouml.Type%>) _endType));\n}\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Type%>>toEList(result);'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%java.util.ArrayList%><<%net.menthor.onto2.ontouml.Type%>> result = <%org.eclipse.xtext.xbase.lib.CollectionLiterals%>.<<%net.menthor.onto2.ontouml.Type%>>newArrayList();\n<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _allEnds = this.allEnds();\nfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _allEnds)\n{\n\t{\n\t\tfinal <%net.menthor.onto2.ontouml.Classifier%> type_ = ep.getEndType();\n\t\tboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(type_, null));\n\t\tif (_notEquals)\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Type%>) type_));\n\t\t}\n\t}\n}\nreturn <%org.eclipse.emf.common.util.ECollections%>.<<%net.menthor.onto2.ontouml.Type%>>toEList(result);'"
 	 * @generated
 	 */
 	EList<Type> allRelatedTypes();

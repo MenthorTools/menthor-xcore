@@ -9,7 +9,7 @@ inv modeConnectedToCharacterization('A Mode (Mode, SubKind, Role, Phase, Categor
 
 inv qualityConnectedToStructuration('A Quality (Quality, SubKind, Role, Phase, Category, RoleMixin, PhaseMixin, Mixin) must be connected (directly or indirectly) to a Structuration'): 
 	self.isQualitativeIntrinsicMoment() implies self.allRelationships()->exists(r | r.isStructuration())
-
+--
 inv relatorConnectedToMediation('A Relator (Relator, SubKind, Role, Phase, Category, Mixin) must be connected (directly or indirectly) to a Mediation'): 
 	self.isTruthMaker() implies self.allRelationships()->exists(r | r.isMediation())
 

@@ -2,6 +2,8 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
+import com.google.common.base.Objects;
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.ArrayList;
@@ -277,13 +279,12 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public void allParents(final Classifier c, final EList<Classifier> result) {
-		EList<Generalization> _isSpecificIn = this.getIsSpecificIn();
+		EList<Generalization> _isSpecificIn = c.getIsSpecificIn();
 		for (final Generalization g : _isSpecificIn) {
 			{
-				Classifier _general = g.getGeneral();
-				result.add(_general);
-				Classifier _general_1 = g.getGeneral();
-				this.allParents(_general_1, result);
+				final Classifier parent = g.getGeneral();
+				result.add(parent);
+				this.allParents(parent, result);
 			}
 		}
 	}
@@ -306,13 +307,12 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public void allChildren(final Classifier c, final EList<Classifier> result) {
-		EList<Generalization> _isGeneralIn = this.getIsGeneralIn();
+		EList<Generalization> _isGeneralIn = c.getIsGeneralIn();
 		for (final Generalization g : _isGeneralIn) {
 			{
-				Classifier _specific = g.getSpecific();
-				result.add(_specific);
-				Classifier _specific_1 = g.getSpecific();
-				this.allChildren(_specific_1, result);
+				final Classifier child = g.getSpecific();
+				result.add(child);
+				this.allChildren(child, result);
 			}
 		}
 	}
@@ -364,11 +364,16 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 			if (_isEnd) {
 				EList<EndPoint> _endPoints = rel.getEndPoints();
 				for (final EndPoint ep : _endPoints) {
-					Classifier _endType = ep.getEndType();
-					boolean _equals = _endType.equals(this);
-					boolean _not = (!_equals);
-					if (_not) {
-						result.add(ep);
+					{
+						final Classifier type_ = ep.getEndType();
+						boolean _notEquals = (!Objects.equal(type_, null));
+						if (_notEquals) {
+							boolean _equals = type_.equals(this);
+							boolean _not = (!_equals);
+							if (_not) {
+								result.add(ep);
+							}
+						}
 					}
 				}
 			}
@@ -398,11 +403,16 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 			if (_and) {
 				EList<EndPoint> _endPoints = rel.getEndPoints();
 				for (final EndPoint ep : _endPoints) {
-					Classifier _endType = ep.getEndType();
-					boolean _equals_1 = _endType.equals(this);
-					boolean _not = (!_equals_1);
-					if (_not) {
-						result.add(ep);
+					{
+						final Classifier type_ = ep.getEndType();
+						boolean _notEquals = (!Objects.equal(type_, null));
+						if (_notEquals) {
+							boolean _equals_1 = type_.equals(this);
+							boolean _not = (!_equals_1);
+							if (_not) {
+								result.add(ep);
+							}
+						}
 					}
 				}
 			}

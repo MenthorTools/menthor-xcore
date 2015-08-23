@@ -55,7 +55,7 @@ abstract class Container extends NamedElement
 	/** Returns recursively all packages at this container. */
 	op void allPackages(Container c, Package[] result)
 	{		
-		for(ContainedElement e: elements){
+		for(ContainedElement e: c.elements){
 			if(e instanceof Package) { 
 				result.add(e);				
 				allPackages(e,result);
@@ -82,7 +82,7 @@ abstract class Container extends NamedElement
 	/** Returns recursively all relationships at this container */
 	op void allRelationships(Container c, Relationship[] result)
 	{		
-		for(ContainedElement e: elements){
+		for(ContainedElement e: c.elements){
 			if(e instanceof Relationship) { result.add(e); }
 			if(e instanceof Package){
 				allRelationships(e,result);								
@@ -109,7 +109,7 @@ abstract class Container extends NamedElement
 	/** Returns recursively all generalization sets at this container */
 	op void allGeneralizationSets(Container c, GeneralizationSet[] result)
 	{		
-		for(ContainedElement e: elements){
+		for(ContainedElement e:c.elements){
 			if(e instanceof GeneralizationSet) { result.add(e); }
 			if(e instanceof Package){
 				allGeneralizationSets(e,result);								
@@ -136,7 +136,7 @@ abstract class Container extends NamedElement
 	/** Returns recursively all classes at this container */
 	op void allClasses(Container c, Class[] result)
 	{		
-		for(ContainedElement e: elements){
+		for(ContainedElement e: c.elements){
 			if(e instanceof Class) { result.add(e); }
 			if(e instanceof Package){
 				allClasses(e,result);								
@@ -163,7 +163,7 @@ abstract class Container extends NamedElement
 	/** Returns recursively all dataTypes at this container */
 	op void allDataTypes(Container c, DataType[] result)
 	{		
-		for(ContainedElement e: elements){
+		for(ContainedElement e: c.elements){
 			if(e instanceof DataType) { result.add(e); }
 			if(e instanceof Package){
 				allDataTypes(e, result);								
@@ -190,7 +190,7 @@ abstract class Container extends NamedElement
 	/** Returns recursively all types (classes and dataTypes) at this container */
 	op void allTypes(Container c, Type[] result)
 	{		
-		for(ContainedElement e: elements){
+		for(ContainedElement e: c.elements){
 			if(e instanceof Type) { result.add(e); }
 			if(e instanceof Package){
 				allTypes(e, result);								
@@ -278,11 +278,13 @@ abstract class Classifier extends ContainedElement, NamedElement
 	/** All (direct and indirect) parents */
 	op void allParents(Classifier c, Classifier[] result) 
 	{		
-		for(Generalization g: isSpecificIn) { 
-			result.add(g.general);
-			allParents(g.general,result);					
+		for(Generalization g: c.isSpecificIn) {
+			val Classifier parent = g.general; 
+			result.add(parent);
+			allParents(parent,result);					
 		}		
 	}	
+	
 	/** All (direct and indirect) parents */
 	op Classifier[] allParents()
 	{
@@ -294,9 +296,10 @@ abstract class Classifier extends ContainedElement, NamedElement
 	/* All (direct and indirect) children */
 	op void allChildren(Classifier c, Classifier[] result) 
 	{		
-		for(Generalization g: isGeneralIn) { 
-			result.add(g.specific);							
-			allChildren(g.specific, result);								
+		for(Generalization g: c.isGeneralIn) { 
+			val Classifier child = g.specific;
+			result.add(child);							
+			allChildren(child, result);								
 		}		
 	} 
 	/* All (direct and indirect) children */
@@ -327,9 +330,12 @@ abstract class Classifier extends ContainedElement, NamedElement
 		for(Relationship rel: model.allRelationships){
 			if(rel.isEnd(this)){
 				for(EndPoint ep: rel.endPoints){
-					if(!ep.endType.equals(this)){
-						result.add(ep);
-					}	
+					val type_ = ep.endType;
+					if(type_!=null){
+						if(!type_.equals(this)){
+							result.add(ep);
+						}
+					}						
 				}
 			}			
 		}	
@@ -344,9 +350,12 @@ abstract class Classifier extends ContainedElement, NamedElement
 		for(Relationship rel: model.allRelationships){
 			if(rel.isEnd(this) && rel.stereotype.equals(stereo)){
 				for(EndPoint ep: rel.endPoints){
-					if(!ep.endType.equals(this)){
-						result.add(ep);
-					}	
+					val type_ = ep.endType;
+					if(type_!=null){
+						if(!type_.equals(this)){
+							result.add(ep);
+						}
+					}						
 				}
 			}			
 		}	
@@ -434,7 +443,10 @@ abstract class Type extends Classifier {
 	op Type[] relatedTypes(){
 		var result = newArrayList()
 		for(EndPoint ep: ends()){
-			result.add(ep.endType as Type)			
+			val type_ = ep.endType;
+			if(type_!=null){
+				result.add(type_ as Type)
+			}						
 		}
 		return result.toEList;
 	}
@@ -443,7 +455,10 @@ abstract class Type extends Classifier {
 	op Type[] allRelatedTypes(){
 		var result = newArrayList()
 		for(EndPoint ep: allEnds()){
-			result.add(ep.endType as Type)			
+			val type_ = ep.endType;
+			if(type_!=null){
+				result.add(type_ as Type)
+			}						
 		}
 		return result.toEList;
 	}
@@ -1097,7 +1112,7 @@ class Relationship extends Classifier
 	/** Returns the target (second end-class) of this relationship */
 	op Class partClass()  
 	{ 
-		if(isMeronymic()) { return partClass(); } 
+		if(isMeronymic()) { return targetClass(); } 
 		else return null;
 	}
 	
@@ -1140,7 +1155,10 @@ class Relationship extends Classifier
 	op boolean isEnd(Classifier c)
 	{
 		for(EndPoint ep: endPoints){
-			if(ep.endType.equals(c)) return true;
+			val type_ = ep.endType;
+			if(type_!=null){
+				if(type_.equals(c)) return true;
+			}			
 		}
 		return false;		
 	}	

@@ -50,7 +50,7 @@ public class OntoumlDiagnostician {
 		Model m = (Model) EcoreUtil.getObjectByType(modelResource.getContents(), OntoumlPackage.Literals.MODEL);
 		System.out.println("Model: Load Complete.");
 				
-		String oclPath = "model/ontouml.ocl";
+		String oclPath = "model/binproperties.ocl";
 		File file = new File(oclPath);
 		URI oclUri = URI.createFileURI(file.getAbsolutePath());
 		

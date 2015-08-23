@@ -945,7 +945,7 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	public net.menthor.onto2.ontouml.Class partClass() {
 		boolean _isMeronymic = this.isMeronymic();
 		if (_isMeronymic) {
-			return this.partClass();
+			return this.targetClass();
 		}
 		else {
 			return null;
@@ -1036,10 +1036,15 @@ public class RelationshipImpl extends ClassifierImpl implements Relationship {
 	public boolean isEnd(final Classifier c) {
 		EList<EndPoint> _endPoints = this.getEndPoints();
 		for (final EndPoint ep : _endPoints) {
-			Classifier _endType = ep.getEndType();
-			boolean _equals = _endType.equals(c);
-			if (_equals) {
-				return true;
+			{
+				final Classifier type_ = ep.getEndType();
+				boolean _notEquals = (!Objects.equal(type_, null));
+				if (_notEquals) {
+					boolean _equals = type_.equals(c);
+					if (_equals) {
+						return true;
+					}
+				}
 			}
 		}
 		return false;

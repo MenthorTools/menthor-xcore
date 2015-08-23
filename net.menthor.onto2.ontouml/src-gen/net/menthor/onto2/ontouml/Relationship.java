@@ -633,7 +633,7 @@ public interface Relationship extends Classifier {
 	 * * Returns the target (second end-class) of this relationship
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMeronymic = this.isMeronymic();\nif (_isMeronymic)\n{\n\treturn this.partClass();\n}\nelse\n{\n\treturn null;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='boolean _isMeronymic = this.isMeronymic();\nif (_isMeronymic)\n{\n\treturn this.targetClass();\n}\nelse\n{\n\treturn null;\n}'"
 	 * @generated
 	 */
 	net.menthor.onto2.ontouml.Class partClass();
@@ -705,7 +705,7 @@ public interface Relationship extends Classifier {
 	 * * Checks if there is at least one end-point in this relationship of classifier c.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" cUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _endPoints = this.getEndPoints();\nfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _endPoints)\n{\n\t<%net.menthor.onto2.ontouml.Classifier%> _endType = ep.getEndType();\n\tboolean _equals = _endType.equals(c);\n\tif (_equals)\n\t{\n\t\treturn true;\n\t}\n}\nreturn false;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.EndPoint%>> _endPoints = this.getEndPoints();\nfor (final <%net.menthor.onto2.ontouml.EndPoint%> ep : _endPoints)\n{\n\t{\n\t\tfinal <%net.menthor.onto2.ontouml.Classifier%> type_ = ep.getEndType();\n\t\tboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(type_, null));\n\t\tif (_notEquals)\n\t\t{\n\t\t\tboolean _equals = type_.equals(c);\n\t\t\tif (_equals)\n\t\t\t{\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t}\n}\nreturn false;'"
 	 * @generated
 	 */
 	boolean isEnd(Classifier c);

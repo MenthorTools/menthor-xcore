@@ -74,12 +74,12 @@ inv generalizeDataType('A dataType can only be generalized by another dataType')
 	specific.oclIsKindOf(DataType) implies general.oclIsKindOf(DataType)
 
 context Classifier
---
---inv noAncestorCycle('A Classifier cannot be an ancestor of itself.'): 
---	self.allParents()->excludes(self)
---
---inv noDescendantCycle('A Classifier cannot be a descendant of itself.'): 
---	self.allChildren()->excludes(self)
+
+inv noAncestorCycle('A Classifier cannot be an ancestor of itself.'): 
+	self.allParents()->excludes(self)
+
+inv noDescendantCycle('A Classifier cannot be a descendant of itself.'): 
+	self.allChildren()->excludes(self)
 
 inv classifierNoTwoDisjParents('A Classifier cannot specialize two or more disjoint parents simultaneously.'):
 	not self.parents()->exists(p1,p2| p1<>p2 implies p1.isDisjointOf(p2))

@@ -5,37 +5,37 @@ package ontouml
 context Relationship
 
 inv mediationTargetCardinality('The mediated end (target) of a Mediation must have minimum cardinality of 1.'): 
-	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
+	isMediation() implies (not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
  
 inv characterizationSourceCardinality('The characterizing end (source) of a Characterization must have (minimum and maximum) cardinality of exactly 1.'): 
-	(not self.sourceEnd().oclIsUndefined()) and (self.sourceEnd().lowerBound=1) and (self.sourceEnd().upperBound=1)
+	isCharacterization() implies (not self.sourceEnd().oclIsUndefined()) and (self.sourceEnd().lowerBound=1) and (self.sourceEnd().upperBound=1)
  
 inv characterizationTargetCardinality('The characterized end (target) of a Characterization must have minimum cardinality of 1.'): 
-	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
+	isCharacterization() implies (not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
  
 inv instanceOfTargetCardinality('The high order end (target) of a InstanceOf must have minimum cardinality of 1.'): 
-	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
+	isInstanceOf() implies (not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1)
  
 inv subCollectionPartCardinality('The subCollection end (part) of a SubCollectionOf must have maximium cardinality of 1.'): 
-	(not self.partEnd().oclIsUndefined()) and (self.partEnd().upperBound=1)
+	isSubCollectionOf() implies (not self.partEnd().oclIsUndefined()) and (self.partEnd().upperBound=1)
  
 inv subQuantityWholeCardinality('The amount of matter whole (source) of a SubQuantityOf must have maximum cardinality of 1.'): 
-	(not self.wholeEnd().oclIsUndefined()) and (self.wholeEnd().upperBound=1)
+	isSubQuantityOf() implies (not self.wholeEnd().oclIsUndefined()) and (self.wholeEnd().upperBound=1)
  
 inv subQuantityPartCardinality('The amount of matter part (target) of a SubQuantityOf must have maximum cardinality of 1.'): 
-	(not self.partEnd().oclIsUndefined()) and (self.partEnd().upperBound=1)
+	isSubQuantityOf() implies (not self.partEnd().oclIsUndefined()) and (self.partEnd().upperBound=1)
  
 inv structurationTargetCardinality('The structure (domain, dimension) end of a Structuration must have cardinality (maximum and minimum) of exactly 1.'): 
-	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1) and (self.targetEnd().upperBound=1)
+	isStructuration() implies (not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1) and (self.targetEnd().upperBound=1)
  
 inv derivationSourceCardinality('The material end of a Derivation must have minimum cardinality of 1.'): 
-	(not self.sourceEnd().oclIsUndefined()) and (self.sourceEnd().lowerBound=1)
+	isDerivation() implies (not self.sourceEnd().oclIsUndefined()) and (self.sourceEnd().lowerBound=1)
  
 inv derivationTargetCardinality('The relator end of a Derivation must have minimum cardinality of 1.'): 
-	(not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1) and (self.sourceEnd().upperBound=1)
+	isDerivation() implies (not self.targetEnd().oclIsUndefined()) and (self.targetEnd().lowerBound=1) and (self.sourceEnd().upperBound=1)
  
 inv quaPartOfWholeCardinality('The relator end (whole) of a QuaPartOf must have cardinality (maximum and minimum) of exactly 1.'): 
-	(not self.wholeEnd().oclIsUndefined()) and (self.wholeEnd().upperBound=1) and (self.wholeEnd().lowerBound=1)					
+	isQuaPartOf() implies (not self.wholeEnd().oclIsUndefined()) and (self.wholeEnd().upperBound=1) and (self.wholeEnd().lowerBound=1)					
 
 context Class
  

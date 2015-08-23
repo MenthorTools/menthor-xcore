@@ -63,7 +63,7 @@ public interface Container extends NamedElement {
 	 * * Returns recursively all packages at this container.
 	 * <!-- end-model-doc -->
 	 * @model cUnique="false" resultUnique="false" resultMany="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = this.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t{\n\t\tresult.add(((<%net.menthor.onto2.ontouml.Package%>)e));\n\t\tthis.allPackages(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t}\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = c.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t{\n\t\tresult.add(((<%net.menthor.onto2.ontouml.Package%>)e));\n\t\tthis.allPackages(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t}\n}'"
 	 * @generated
 	 */
 	void allPackages(Container c, EList<net.menthor.onto2.ontouml.Package> result);
@@ -96,7 +96,7 @@ public interface Container extends NamedElement {
 	 * * Returns recursively all relationships at this container
 	 * <!-- end-model-doc -->
 	 * @model cUnique="false" resultUnique="false" resultMany="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = this.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Relationship%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Relationship%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allRelationships(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = c.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Relationship%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Relationship%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allRelationships(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
 	 * @generated
 	 */
 	void allRelationships(Container c, EList<Relationship> result);
@@ -129,7 +129,7 @@ public interface Container extends NamedElement {
 	 * * Returns recursively all generalization sets at this container
 	 * <!-- end-model-doc -->
 	 * @model cUnique="false" resultUnique="false" resultMany="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = this.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.GeneralizationSet%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.GeneralizationSet%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allGeneralizationSets(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = c.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.GeneralizationSet%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.GeneralizationSet%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allGeneralizationSets(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
 	 * @generated
 	 */
 	void allGeneralizationSets(Container c, EList<GeneralizationSet> result);
@@ -162,7 +162,7 @@ public interface Container extends NamedElement {
 	 * * Returns recursively all classes at this container
 	 * <!-- end-model-doc -->
 	 * @model cUnique="false" resultUnique="false" resultMany="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = this.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Class%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Class%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allClasses(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = c.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Class%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Class%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allClasses(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
 	 * @generated
 	 */
 	void allClasses(Container c, EList<net.menthor.onto2.ontouml.Class> result);
@@ -195,7 +195,7 @@ public interface Container extends NamedElement {
 	 * * Returns recursively all dataTypes at this container
 	 * <!-- end-model-doc -->
 	 * @model cUnique="false" resultUnique="false" resultMany="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = this.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.DataType%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.DataType%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allDataTypes(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = c.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.DataType%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.DataType%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allDataTypes(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
 	 * @generated
 	 */
 	void allDataTypes(Container c, EList<DataType> result);
@@ -228,7 +228,7 @@ public interface Container extends NamedElement {
 	 * * Returns recursively all types (classes and dataTypes) at this container
 	 * <!-- end-model-doc -->
 	 * @model cUnique="false" resultUnique="false" resultMany="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = this.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Type%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Type%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allTypes(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.ContainedElement%>> _elements = c.getElements();\nfor (final <%net.menthor.onto2.ontouml.ContainedElement%> e : _elements)\n{\n\t{\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Type%>))\n\t\t{\n\t\t\tresult.add(((<%net.menthor.onto2.ontouml.Type%>)e));\n\t\t}\n\t\tif ((e instanceof <%net.menthor.onto2.ontouml.Package%>))\n\t\t{\n\t\t\tthis.allTypes(((<%net.menthor.onto2.ontouml.Container%>)e), result);\n\t\t}\n\t}\n}'"
 	 * @generated
 	 */
 	void allTypes(Container c, EList<Type> result);

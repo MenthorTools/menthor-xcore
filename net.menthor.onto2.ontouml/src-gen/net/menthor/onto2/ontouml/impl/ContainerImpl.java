@@ -104,7 +104,7 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public void allPackages(final net.menthor.onto2.ontouml.Container c, final EList<net.menthor.onto2.ontouml.Package> result) {
-		EList<ContainedElement> _elements = this.getElements();
+		EList<ContainedElement> _elements = c.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof net.menthor.onto2.ontouml.Package)) {
 				result.add(((net.menthor.onto2.ontouml.Package)e));
@@ -147,7 +147,7 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public void allRelationships(final net.menthor.onto2.ontouml.Container c, final EList<Relationship> result) {
-		EList<ContainedElement> _elements = this.getElements();
+		EList<ContainedElement> _elements = c.getElements();
 		for (final ContainedElement e : _elements) {
 			{
 				if ((e instanceof Relationship)) {
@@ -194,7 +194,7 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public void allGeneralizationSets(final net.menthor.onto2.ontouml.Container c, final EList<GeneralizationSet> result) {
-		EList<ContainedElement> _elements = this.getElements();
+		EList<ContainedElement> _elements = c.getElements();
 		for (final ContainedElement e : _elements) {
 			{
 				if ((e instanceof GeneralizationSet)) {
@@ -241,7 +241,7 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public void allClasses(final net.menthor.onto2.ontouml.Container c, final EList<net.menthor.onto2.ontouml.Class> result) {
-		EList<ContainedElement> _elements = this.getElements();
+		EList<ContainedElement> _elements = c.getElements();
 		for (final ContainedElement e : _elements) {
 			{
 				if ((e instanceof net.menthor.onto2.ontouml.Class)) {
@@ -288,7 +288,7 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public void allDataTypes(final net.menthor.onto2.ontouml.Container c, final EList<DataType> result) {
-		EList<ContainedElement> _elements = this.getElements();
+		EList<ContainedElement> _elements = c.getElements();
 		for (final ContainedElement e : _elements) {
 			{
 				if ((e instanceof DataType)) {
@@ -335,7 +335,7 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public void allTypes(final net.menthor.onto2.ontouml.Container c, final EList<Type> result) {
-		EList<ContainedElement> _elements = this.getElements();
+		EList<ContainedElement> _elements = c.getElements();
 		for (final ContainedElement e : _elements) {
 			{
 				if ((e instanceof Type)) {

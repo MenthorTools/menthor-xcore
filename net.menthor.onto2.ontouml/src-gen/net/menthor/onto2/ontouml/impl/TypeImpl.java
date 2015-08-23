@@ -2,6 +2,8 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
+import com.google.common.base.Objects;
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.ArrayList;
@@ -90,8 +92,13 @@ public abstract class TypeImpl extends ClassifierImpl implements Type {
 		ArrayList<Type> result = CollectionLiterals.<Type>newArrayList();
 		EList<EndPoint> _ends = this.ends();
 		for (final EndPoint ep : _ends) {
-			Classifier _endType = ep.getEndType();
-			result.add(((Type) _endType));
+			{
+				final Classifier type_ = ep.getEndType();
+				boolean _notEquals = (!Objects.equal(type_, null));
+				if (_notEquals) {
+					result.add(((Type) type_));
+				}
+			}
 		}
 		return ECollections.<Type>toEList(result);
 	}
@@ -105,8 +112,13 @@ public abstract class TypeImpl extends ClassifierImpl implements Type {
 		ArrayList<Type> result = CollectionLiterals.<Type>newArrayList();
 		EList<EndPoint> _allEnds = this.allEnds();
 		for (final EndPoint ep : _allEnds) {
-			Classifier _endType = ep.getEndType();
-			result.add(((Type) _endType));
+			{
+				final Classifier type_ = ep.getEndType();
+				boolean _notEquals = (!Objects.equal(type_, null));
+				if (_notEquals) {
+					result.add(((Type) type_));
+				}
+			}
 		}
 		return ECollections.<Type>toEList(result);
 	}
