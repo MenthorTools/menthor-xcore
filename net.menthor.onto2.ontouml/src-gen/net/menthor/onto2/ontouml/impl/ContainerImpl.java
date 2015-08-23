@@ -2,12 +2,10 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
-import java.lang.Iterable;
-
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import net.menthor.onto2.ontouml.ContainedElement;
 import net.menthor.onto2.ontouml.DataType;
@@ -26,6 +24,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,16 +88,14 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Package> packages() {
-		net.menthor.onto2.ontouml.Package[] result = null;
+		ArrayList<net.menthor.onto2.ontouml.Package> result = CollectionLiterals.<net.menthor.onto2.ontouml.Package>newArrayList();
 		EList<ContainedElement> _elements = this.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof net.menthor.onto2.ontouml.Package)) {
-				final net.menthor.onto2.ontouml.Package[] _converted_result = (net.menthor.onto2.ontouml.Package[])result;
-				((List<net.menthor.onto2.ontouml.Package>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((net.menthor.onto2.ontouml.Package)e));
+				result.add(((net.menthor.onto2.ontouml.Package)e));
 			}
 		}
-		final net.menthor.onto2.ontouml.Package[] _converted_result_1 = (net.menthor.onto2.ontouml.Package[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Package>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Package>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<net.menthor.onto2.ontouml.Package>toEList(result);
 	}
 
 	/**
@@ -121,12 +119,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Package> allPackages() {
-		net.menthor.onto2.ontouml.Package[] result = null;
-		final net.menthor.onto2.ontouml.Package[] _converted_result = (net.menthor.onto2.ontouml.Package[])result;
-		EList<net.menthor.onto2.ontouml.Package> _eList = ECollections.<net.menthor.onto2.ontouml.Package>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Package>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)));
+		ArrayList<net.menthor.onto2.ontouml.Package> result = CollectionLiterals.<net.menthor.onto2.ontouml.Package>newArrayList();
+		EList<net.menthor.onto2.ontouml.Package> _eList = ECollections.<net.menthor.onto2.ontouml.Package>toEList(result);
 		this.allPackages(this, _eList);
-		final net.menthor.onto2.ontouml.Package[] _converted_result_1 = (net.menthor.onto2.ontouml.Package[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Package>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Package>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<net.menthor.onto2.ontouml.Package>toEList(result);
 	}
 
 	/**
@@ -135,16 +131,14 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<Relationship> relationships() {
-		Relationship[] result = null;
+		ArrayList<Relationship> result = CollectionLiterals.<Relationship>newArrayList();
 		EList<ContainedElement> _elements = this.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof Relationship)) {
-				final Relationship[] _converted_result = (Relationship[])result;
-				((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((Relationship)e));
+				result.add(((Relationship)e));
 			}
 		}
-		final Relationship[] _converted_result_1 = (Relationship[])result;
-		return ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Relationship>toEList(result);
 	}
 
 	/**
@@ -172,12 +166,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<Relationship> allRelationships() {
-		Relationship[] result = null;
-		final Relationship[] _converted_result = (Relationship[])result;
-		EList<Relationship> _eList = ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)));
+		ArrayList<Relationship> result = CollectionLiterals.<Relationship>newArrayList();
+		EList<Relationship> _eList = ECollections.<Relationship>toEList(result);
 		this.allRelationships(this, _eList);
-		final Relationship[] _converted_result_1 = (Relationship[])result;
-		return ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Relationship>toEList(result);
 	}
 
 	/**
@@ -186,16 +178,14 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<GeneralizationSet> generalizationSets() {
-		GeneralizationSet[] result = null;
+		ArrayList<GeneralizationSet> result = CollectionLiterals.<GeneralizationSet>newArrayList();
 		EList<ContainedElement> _elements = this.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof GeneralizationSet)) {
-				final GeneralizationSet[] _converted_result = (GeneralizationSet[])result;
-				((List<GeneralizationSet>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((GeneralizationSet)e));
+				result.add(((GeneralizationSet)e));
 			}
 		}
-		final GeneralizationSet[] _converted_result_1 = (GeneralizationSet[])result;
-		return ECollections.<GeneralizationSet>toEList(((Iterable<? extends GeneralizationSet>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<GeneralizationSet>toEList(result);
 	}
 
 	/**
@@ -223,12 +213,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<GeneralizationSet> allGeneralizationSets() {
-		GeneralizationSet[] result = null;
-		final GeneralizationSet[] _converted_result = (GeneralizationSet[])result;
-		EList<GeneralizationSet> _eList = ECollections.<GeneralizationSet>toEList(((Iterable<? extends GeneralizationSet>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)));
+		ArrayList<GeneralizationSet> result = CollectionLiterals.<GeneralizationSet>newArrayList();
+		EList<GeneralizationSet> _eList = ECollections.<GeneralizationSet>toEList(result);
 		this.allGeneralizationSets(this, _eList);
-		final GeneralizationSet[] _converted_result_1 = (GeneralizationSet[])result;
-		return ECollections.<GeneralizationSet>toEList(((Iterable<? extends GeneralizationSet>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<GeneralizationSet>toEList(result);
 	}
 
 	/**
@@ -237,16 +225,14 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Class> classes() {
-		net.menthor.onto2.ontouml.Class[] result = null;
+		ArrayList<net.menthor.onto2.ontouml.Class> result = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 		EList<ContainedElement> _elements = this.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof net.menthor.onto2.ontouml.Class)) {
-				final net.menthor.onto2.ontouml.Class[] _converted_result = (net.menthor.onto2.ontouml.Class[])result;
-				((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((net.menthor.onto2.ontouml.Class)e));
+				result.add(((net.menthor.onto2.ontouml.Class)e));
 			}
 		}
-		final net.menthor.onto2.ontouml.Class[] _converted_result_1 = (net.menthor.onto2.ontouml.Class[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(result);
 	}
 
 	/**
@@ -274,12 +260,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Class> allClasses() {
-		net.menthor.onto2.ontouml.Class[] result = null;
-		final net.menthor.onto2.ontouml.Class[] _converted_result = (net.menthor.onto2.ontouml.Class[])result;
-		EList<net.menthor.onto2.ontouml.Class> _eList = ECollections.<net.menthor.onto2.ontouml.Class>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)));
+		ArrayList<net.menthor.onto2.ontouml.Class> result = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
+		EList<net.menthor.onto2.ontouml.Class> _eList = ECollections.<net.menthor.onto2.ontouml.Class>toEList(result);
 		this.allClasses(this, _eList);
-		final net.menthor.onto2.ontouml.Class[] _converted_result_1 = (net.menthor.onto2.ontouml.Class[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(result);
 	}
 
 	/**
@@ -288,16 +272,14 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<DataType> dataTypes() {
-		DataType[] result = null;
+		ArrayList<DataType> result = CollectionLiterals.<DataType>newArrayList();
 		EList<ContainedElement> _elements = this.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof DataType)) {
-				final DataType[] _converted_result = (DataType[])result;
-				((List<DataType>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((DataType)e));
+				result.add(((DataType)e));
 			}
 		}
-		final DataType[] _converted_result_1 = (DataType[])result;
-		return ECollections.<DataType>toEList(((Iterable<? extends DataType>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<DataType>toEList(result);
 	}
 
 	/**
@@ -325,12 +307,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<DataType> allDataTypes() {
-		DataType[] result = null;
-		final DataType[] _converted_result = (DataType[])result;
-		EList<DataType> _eList = ECollections.<DataType>toEList(((Iterable<? extends DataType>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)));
+		ArrayList<DataType> result = CollectionLiterals.<DataType>newArrayList();
+		EList<DataType> _eList = ECollections.<DataType>toEList(result);
 		this.allDataTypes(this, _eList);
-		final DataType[] _converted_result_1 = (DataType[])result;
-		return ECollections.<DataType>toEList(((Iterable<? extends DataType>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<DataType>toEList(result);
 	}
 
 	/**
@@ -339,16 +319,14 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<Type> types() {
-		Type[] result = null;
+		ArrayList<Type> result = CollectionLiterals.<Type>newArrayList();
 		EList<ContainedElement> _elements = this.getElements();
 		for (final ContainedElement e : _elements) {
 			if ((e instanceof Type)) {
-				final Type[] _converted_result = (Type[])result;
-				((List<Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((Type)e));
+				result.add(((Type)e));
 			}
 		}
-		final Type[] _converted_result_1 = (Type[])result;
-		return ECollections.<Type>toEList(((Iterable<? extends Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Type>toEList(result);
 	}
 
 	/**
@@ -376,12 +354,10 @@ public abstract class ContainerImpl extends NamedElementImpl implements net.ment
 	 * @generated
 	 */
 	public EList<Type> allTypes() {
-		Type[] result = null;
-		final Type[] _converted_result = (Type[])result;
-		EList<Type> _eList = ECollections.<Type>toEList(((Iterable<? extends Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)));
+		ArrayList<Type> result = CollectionLiterals.<Type>newArrayList();
+		EList<Type> _eList = ECollections.<Type>toEList(result);
 		this.allTypes(this, _eList);
-		final Type[] _converted_result_1 = (Type[])result;
-		return ECollections.<Type>toEList(((Iterable<? extends Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Type>toEList(result);
 	}
 
 	/**

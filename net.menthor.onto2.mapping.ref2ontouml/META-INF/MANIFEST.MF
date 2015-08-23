@@ -12,7 +12,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources,
  org.eclipse.jdt.core,
  org.eclipse.core.expressions,
- net.menthor.onto2.ontouml
+ net.menthor.onto2.ontouml,
+ org.eclipse.ocl.pivot;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Name: %pluginName

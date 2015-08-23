@@ -2,12 +2,10 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
-import java.lang.Iterable;
-
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.EndPoint;
@@ -32,6 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 /**
  * <!-- begin-user-doc -->
@@ -247,15 +247,13 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Classifier> children() {
-		Classifier[] list = null;
+		ArrayList<Classifier> list = CollectionLiterals.<Classifier>newArrayList();
 		EList<Generalization> _isGeneralIn = this.getIsGeneralIn();
 		for (final Generalization g : _isGeneralIn) {
-			final Classifier[] _converted_list = (Classifier[])list;
 			Classifier _specific = g.getSpecific();
-			((List<Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list)).add(_specific);
+			list.add(_specific);
 		}
-		final Classifier[] _converted_list_1 = (Classifier[])list;
-		return ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list_1)));
+		return ECollections.<Classifier>toEList(list);
 	}
 
 	/**
@@ -264,15 +262,13 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Classifier> parents() {
-		Classifier[] list = null;
+		ArrayList<Classifier> list = CollectionLiterals.<Classifier>newArrayList();
 		EList<Generalization> _isSpecificIn = this.getIsSpecificIn();
 		for (final Generalization g : _isSpecificIn) {
-			final Classifier[] _converted_list = (Classifier[])list;
 			Classifier _general = g.getGeneral();
-			((List<Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list)).add(_general);
+			list.add(_general);
 		}
-		final Classifier[] _converted_list_1 = (Classifier[])list;
-		return ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list_1)));
+		return ECollections.<Classifier>toEList(list);
 	}
 
 	/**
@@ -298,12 +294,10 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Classifier> allParents() {
-		Classifier[] list = null;
-		final Classifier[] _converted_list = (Classifier[])list;
-		EList<Classifier> _eList = ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list)));
+		ArrayList<Classifier> list = CollectionLiterals.<Classifier>newArrayList();
+		EList<Classifier> _eList = ECollections.<Classifier>toEList(list);
 		this.allParents(this, _eList);
-		final Classifier[] _converted_list_1 = (Classifier[])list;
-		return ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list_1)));
+		return ECollections.<Classifier>toEList(list);
 	}
 
 	/**
@@ -329,12 +323,10 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Classifier> allChildren() {
-		Classifier[] list = null;
-		final Classifier[] _converted_list = (Classifier[])list;
-		EList<Classifier> _eList = ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list)));
+		ArrayList<Classifier> list = CollectionLiterals.<Classifier>newArrayList();
+		EList<Classifier> _eList = ECollections.<Classifier>toEList(list);
 		this.allChildren(this, _eList);
-		final Classifier[] _converted_list_1 = (Classifier[])list;
-		return ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_list_1)));
+		return ECollections.<Classifier>toEList(list);
 	}
 
 	/**
@@ -343,7 +335,7 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Classifier> siblings() {
-		Classifier[] result = null;
+		ArrayList<Classifier> result = CollectionLiterals.<Classifier>newArrayList();
 		EList<Classifier> _parents = this.parents();
 		for (final Classifier p : _parents) {
 			EList<Classifier> _children = p.children();
@@ -351,13 +343,11 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 				boolean _equals = sibling.equals(this);
 				boolean _not = (!_equals);
 				if (_not) {
-					final Classifier[] _converted_result = (Classifier[])result;
-					((List<Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(sibling);
+					result.add(sibling);
 				}
 			}
 		}
-		final Classifier[] _converted_result_1 = (Classifier[])result;
-		return ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Classifier>toEList(result);
 	}
 
 	/**
@@ -366,7 +356,7 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<EndPoint> ends() {
-		EndPoint[] result = null;
+		ArrayList<EndPoint> result = CollectionLiterals.<EndPoint>newArrayList();
 		Model _model = this.getModel();
 		EList<Relationship> _allRelationships = _model.allRelationships();
 		for (final Relationship rel : _allRelationships) {
@@ -378,14 +368,12 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 					boolean _equals = _endType.equals(this);
 					boolean _not = (!_equals);
 					if (_not) {
-						final EndPoint[] _converted_result = (EndPoint[])result;
-						((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(ep);
+						result.add(ep);
 					}
 				}
 			}
 		}
-		final EndPoint[] _converted_result_1 = (EndPoint[])result;
-		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<EndPoint>toEList(result);
 	}
 
 	/**
@@ -394,7 +382,7 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<EndPoint> ends(final RelationshipStereotype stereo) {
-		EndPoint[] result = null;
+		ArrayList<EndPoint> result = CollectionLiterals.<EndPoint>newArrayList();
 		Model _model = this.getModel();
 		EList<Relationship> _allRelationships = _model.allRelationships();
 		for (final Relationship rel : _allRelationships) {
@@ -414,14 +402,12 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 					boolean _equals_1 = _endType.equals(this);
 					boolean _not = (!_equals_1);
 					if (_not) {
-						final EndPoint[] _converted_result = (EndPoint[])result;
-						((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(ep);
+						result.add(ep);
 					}
 				}
 			}
 		}
-		final EndPoint[] _converted_result_1 = (EndPoint[])result;
-		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<EndPoint>toEList(result);
 	}
 
 	/**
@@ -430,18 +416,15 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<EndPoint> allEnds() {
-		EndPoint[] result = null;
-		final EndPoint[] _converted_result = (EndPoint[])result;
+		ArrayList<EndPoint> result = CollectionLiterals.<EndPoint>newArrayList();
 		EList<EndPoint> _ends = this.ends();
-		((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);
+		result.addAll(_ends);
 		EList<Classifier> _allParents = this.allParents();
 		for (final Classifier p : _allParents) {
-			final EndPoint[] _converted_result_1 = (EndPoint[])result;
 			EList<EndPoint> _ends_1 = p.ends();
-			((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);
+			result.addAll(_ends_1);
 		}
-		final EndPoint[] _converted_result_2 = (EndPoint[])result;
-		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+		return ECollections.<EndPoint>toEList(result);
 	}
 
 	/**
@@ -450,18 +433,15 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<EndPoint> allEnds(final RelationshipStereotype stereo) {
-		EndPoint[] result = null;
-		final EndPoint[] _converted_result = (EndPoint[])result;
+		ArrayList<EndPoint> result = CollectionLiterals.<EndPoint>newArrayList();
 		EList<EndPoint> _ends = this.ends(stereo);
-		((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_ends);
+		result.addAll(_ends);
 		EList<Classifier> _allParents = this.allParents();
 		for (final Classifier p : _allParents) {
-			final EndPoint[] _converted_result_1 = (EndPoint[])result;
 			EList<EndPoint> _ends_1 = p.ends(stereo);
-			((List<EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_ends_1);
+			result.addAll(_ends_1);
 		}
-		final EndPoint[] _converted_result_2 = (EndPoint[])result;
-		return ECollections.<EndPoint>toEList(((Iterable<? extends EndPoint>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+		return ECollections.<EndPoint>toEList(result);
 	}
 
 	/**
@@ -470,18 +450,16 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Relationship> relationships() {
-		Relationship[] result = null;
+		ArrayList<Relationship> result = CollectionLiterals.<Relationship>newArrayList();
 		Model _model = this.getModel();
 		EList<Relationship> _allRelationships = _model.allRelationships();
 		for (final Relationship rel : _allRelationships) {
 			boolean _isEnd = rel.isEnd(this);
 			if (_isEnd) {
-				final Relationship[] _converted_result = (Relationship[])result;
-				((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(rel);
+				result.add(rel);
 			}
 		}
-		final Relationship[] _converted_result_1 = (Relationship[])result;
-		return ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Relationship>toEList(result);
 	}
 
 	/**
@@ -490,18 +468,15 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @generated
 	 */
 	public EList<Relationship> allRelationships() {
-		Relationship[] result = null;
-		final Relationship[] _converted_result = (Relationship[])result;
+		ArrayList<Relationship> result = CollectionLiterals.<Relationship>newArrayList();
 		EList<Relationship> _relationships = this.relationships();
-		((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).addAll(_relationships);
+		result.addAll(_relationships);
 		EList<Classifier> _allParents = this.allParents();
 		for (final Classifier p : _allParents) {
-			final Relationship[] _converted_result_1 = (Relationship[])result;
 			EList<Relationship> _relationships_1 = p.relationships();
-			((List<Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_relationships_1);
+			result.addAll(_relationships_1);
 		}
-		final Relationship[] _converted_result_2 = (Relationship[])result;
-		return ECollections.<Relationship>toEList(((Iterable<? extends Relationship>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+		return ECollections.<Relationship>toEList(result);
 	}
 
 	/**

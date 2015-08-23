@@ -2,6 +2,8 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
+import java.util.ArrayList;
+
 import net.menthor.onto2.ontouml.Attribute;
 import net.menthor.onto2.ontouml.Ciclicity;
 import net.menthor.onto2.ontouml.ClassStereotype;
@@ -41,6 +43,7 @@ import net.menthor.onto2.ontouml.util.OntoumlValidator;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
@@ -302,6 +305,13 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * @generated
 	 */
 	private EEnum ciclicityEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType arrayListEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2766,6 +2776,15 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getArrayList() {
+		return arrayListEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public OntoumlFactory getOntoumlFactory() {
 		return (OntoumlFactory)getEFactoryInstance();
 	}
@@ -3074,6 +3093,9 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		symmetryEEnum = createEEnum(SYMMETRY);
 		transitivityEEnum = createEEnum(TRANSITIVITY);
 		ciclicityEEnum = createEEnum(CICLICITY);
+
+		// Create data types
+		arrayListEDataType = createEDataType(ARRAY_LIST);
 	}
 
 	/**
@@ -3103,6 +3125,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
+		addETypeParameter(arrayListEDataType, "E");
 
 		// Set bounds for type parameters
 
@@ -3707,6 +3730,9 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(ciclicityEEnum, Ciclicity.CYCLIC);
 		addEEnumLiteral(ciclicityEEnum, Ciclicity.ACYCLIC);
 		addEEnumLiteral(ciclicityEEnum, Ciclicity.NON_CYCLIC);
+
+		// Initialize data types
+		initEDataType(arrayListEDataType, ArrayList.class, "ArrayList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

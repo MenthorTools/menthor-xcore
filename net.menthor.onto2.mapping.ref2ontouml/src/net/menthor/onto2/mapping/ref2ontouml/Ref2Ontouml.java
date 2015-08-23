@@ -2,11 +2,11 @@ package net.menthor.onto2.mapping.ref2ontouml;
 
 import java.io.IOException;
 
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.ocl.pivot.utilities.ParserException;
+
 import net.menthor.onto2.ontouml.Model;
 import net.menthor.onto2.ontouml.util.OntoumlResource;
-import net.menthor.onto2.ontouml.util.OntoumlDiagnostician;
-
-import org.eclipse.emf.ecore.resource.Resource;
 
 public class Ref2Ontouml {
 
@@ -30,16 +30,11 @@ public class Ref2Ontouml {
 		}
 	}
 	
-	public static void run(RefOntoUML.Package refmodel, String ontoPath) throws IOException
+	public static void run(RefOntoUML.Package refmodel, String ontoPath) throws IOException, ParserException
 	{	
 		Transformer t = new Transformer(refmodel);		
 		Model ontomodel = t.run();		
 		OntoumlResource.save(ontoPath,ontomodel);		
 		System.out.println("Ref2Ontouml: Executed succesfully.");
-		
-		OntoumlDiagnostician checker = new OntoumlDiagnostician();
-		checker.run(ontomodel);
-		System.out.println(checker.getResult());
-		System.out.println("Syntactical Verification: Executed succesfully.");
 	}
 }

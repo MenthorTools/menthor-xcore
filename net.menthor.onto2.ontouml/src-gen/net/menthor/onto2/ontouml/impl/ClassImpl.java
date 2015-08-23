@@ -4,11 +4,9 @@ package net.menthor.onto2.ontouml.impl;
 
 import com.google.common.base.Objects;
 
-import java.lang.Iterable;
-
 import java.lang.reflect.InvocationTargetException;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import net.menthor.onto2.ontouml.ClassStereotype;
 import net.menthor.onto2.ontouml.Classification;
@@ -25,6 +23,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 /**
  * <!-- begin-user-doc -->
@@ -918,10 +918,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isQuantity_1 = c.isQuantity();
 				if (_isQuantity_1) {
@@ -978,10 +977,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isKind_1 = c.isKind();
 				if (_isKind_1) {
@@ -1038,10 +1036,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isCollective_1 = c.isCollective();
 				if (_isCollective_1) {
@@ -1098,10 +1095,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isMomentClass_1 = c.isMomentClass();
 				if (_isMomentClass_1) {
@@ -1158,10 +1154,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isRelator_1 = c.isRelator();
 				if (_isRelator_1) {
@@ -1218,10 +1213,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isMode_1 = c.isMode();
 				if (_isMode_1) {
@@ -1278,10 +1272,9 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			net.menthor.onto2.ontouml.Class[] providers = null;
-			final net.menthor.onto2.ontouml.Class[] _converted_providers = (net.menthor.onto2.ontouml.Class[])providers;
+			ArrayList<net.menthor.onto2.ontouml.Class> providers = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 			EList<net.menthor.onto2.ontouml.Class> _identityProviders = this.identityProviders();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_providers)).addAll(_identityProviders);
+			providers.addAll(_identityProviders);
 			for (final net.menthor.onto2.ontouml.Class c : providers) {
 				boolean _isQuality_1 = c.isQuality();
 				if (_isQuality_1) {
@@ -1318,19 +1311,17 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Class> identityProvidersAtAllParents() {
-		net.menthor.onto2.ontouml.Class[] result = null;
+		ArrayList<net.menthor.onto2.ontouml.Class> result = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 		EList<Classifier> _allParents = this.allParents();
 		for (final Classifier p : _allParents) {
 			if ((p instanceof net.menthor.onto2.ontouml.Class)) {
 				boolean _isIdentityProviderClass = ((net.menthor.onto2.ontouml.Class)p).isIdentityProviderClass();
 				if (_isIdentityProviderClass) {
-					final net.menthor.onto2.ontouml.Class[] _converted_result = (net.menthor.onto2.ontouml.Class[])result;
-					((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((net.menthor.onto2.ontouml.Class)p));
+					result.add(((net.menthor.onto2.ontouml.Class)p));
 				}
 			}
 		}
-		final net.menthor.onto2.ontouml.Class[] _converted_result_1 = (net.menthor.onto2.ontouml.Class[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(result);
 	}
 
 	/**
@@ -1339,14 +1330,13 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Class> identityProvidersAtAllChildren() {
-		net.menthor.onto2.ontouml.Class[] result = null;
+		ArrayList<net.menthor.onto2.ontouml.Class> result = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 		EList<Classifier> _allChildren = this.allChildren();
 		for (final Classifier p : _allChildren) {
 			if ((p instanceof net.menthor.onto2.ontouml.Class)) {
 				boolean _isIdentityProviderClass = ((net.menthor.onto2.ontouml.Class)p).isIdentityProviderClass();
 				if (_isIdentityProviderClass) {
-					final net.menthor.onto2.ontouml.Class[] _converted_result = (net.menthor.onto2.ontouml.Class[])result;
-					((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((net.menthor.onto2.ontouml.Class)p));
+					result.add(((net.menthor.onto2.ontouml.Class)p));
 				}
 				boolean _or = false;
 				boolean _or_1 = false;
@@ -1364,14 +1354,12 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 					_or = _isSubKind;
 				}
 				if (_or) {
-					final net.menthor.onto2.ontouml.Class[] _converted_result_1 = (net.menthor.onto2.ontouml.Class[])result;
 					EList<net.menthor.onto2.ontouml.Class> _identityProvidersAtAllParents = ((net.menthor.onto2.ontouml.Class)p).identityProvidersAtAllParents();
-					((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_identityProvidersAtAllParents);
+					result.addAll(_identityProvidersAtAllParents);
 				}
 			}
 		}
-		final net.menthor.onto2.ontouml.Class[] _converted_result_2 = (net.menthor.onto2.ontouml.Class[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)));
+		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(result);
 	}
 
 	/**
@@ -1380,11 +1368,10 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 	 * @generated
 	 */
 	public EList<net.menthor.onto2.ontouml.Class> identityProviders() {
-		net.menthor.onto2.ontouml.Class[] result = null;
+		ArrayList<net.menthor.onto2.ontouml.Class> result = CollectionLiterals.<net.menthor.onto2.ontouml.Class>newArrayList();
 		boolean _isIdentityProviderClass = this.isIdentityProviderClass();
 		if (_isIdentityProviderClass) {
-			final net.menthor.onto2.ontouml.Class[] _converted_result = (net.menthor.onto2.ontouml.Class[])result;
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(this);
+			result.add(this);
 		}
 		boolean _or = false;
 		boolean _or_1 = false;
@@ -1402,26 +1389,22 @@ public class ClassImpl extends TypeImpl implements net.menthor.onto2.ontouml.Cla
 			_or = _isSubKind;
 		}
 		if (_or) {
-			final net.menthor.onto2.ontouml.Class[] _converted_result_1 = (net.menthor.onto2.ontouml.Class[])result;
 			EList<net.menthor.onto2.ontouml.Class> _identityProvidersAtAllParents = this.identityProvidersAtAllParents();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)).addAll(_identityProvidersAtAllParents);
+			result.addAll(_identityProvidersAtAllParents);
 		}
 		boolean _isMixinClass = this.isMixinClass();
 		if (_isMixinClass) {
-			final net.menthor.onto2.ontouml.Class[] _converted_result_2 = (net.menthor.onto2.ontouml.Class[])result;
 			EList<net.menthor.onto2.ontouml.Class> _identityProvidersAtAllChildren = this.identityProvidersAtAllChildren();
-			((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_2)).addAll(_identityProvidersAtAllChildren);
+			result.addAll(_identityProvidersAtAllChildren);
 			EList<Classifier> _allParents = this.allParents();
 			for (final Classifier p : _allParents) {
 				if ((p instanceof net.menthor.onto2.ontouml.Class)) {
-					final net.menthor.onto2.ontouml.Class[] _converted_result_3 = (net.menthor.onto2.ontouml.Class[])result;
 					EList<net.menthor.onto2.ontouml.Class> _identityProvidersAtAllChildren_1 = ((net.menthor.onto2.ontouml.Class)p).identityProvidersAtAllChildren();
-					((List<net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_3)).addAll(_identityProvidersAtAllChildren_1);
+					result.addAll(_identityProvidersAtAllChildren_1);
 				}
 			}
 		}
-		final net.menthor.onto2.ontouml.Class[] _converted_result_4 = (net.menthor.onto2.ontouml.Class[])result;
-		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(((Iterable<? extends net.menthor.onto2.ontouml.Class>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_4)));
+		return ECollections.<net.menthor.onto2.ontouml.Class>toEList(result);
 	}
 
 	/**

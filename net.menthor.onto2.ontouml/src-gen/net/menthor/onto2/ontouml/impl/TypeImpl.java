@@ -2,12 +2,10 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
-import java.lang.Iterable;
-
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import net.menthor.onto2.ontouml.Attribute;
 import net.menthor.onto2.ontouml.Classifier;
@@ -25,6 +23,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 /**
  * <!-- begin-user-doc -->
@@ -87,15 +87,13 @@ public abstract class TypeImpl extends ClassifierImpl implements Type {
 	 * @generated
 	 */
 	public EList<Type> relatedTypes() {
-		Type[] result = null;
+		ArrayList<Type> result = CollectionLiterals.<Type>newArrayList();
 		EList<EndPoint> _ends = this.ends();
 		for (final EndPoint ep : _ends) {
-			final Type[] _converted_result = (Type[])result;
 			Classifier _endType = ep.getEndType();
-			((List<Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((Type) _endType));
+			result.add(((Type) _endType));
 		}
-		final Type[] _converted_result_1 = (Type[])result;
-		return ECollections.<Type>toEList(((Iterable<? extends Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Type>toEList(result);
 	}
 
 	/**
@@ -104,15 +102,13 @@ public abstract class TypeImpl extends ClassifierImpl implements Type {
 	 * @generated
 	 */
 	public EList<Type> allRelatedTypes() {
-		Type[] result = null;
+		ArrayList<Type> result = CollectionLiterals.<Type>newArrayList();
 		EList<EndPoint> _allEnds = this.allEnds();
 		for (final EndPoint ep : _allEnds) {
-			final Type[] _converted_result = (Type[])result;
 			Classifier _endType = ep.getEndType();
-			((List<Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(((Type) _endType));
+			result.add(((Type) _endType));
 		}
-		final Type[] _converted_result_1 = (Type[])result;
-		return ECollections.<Type>toEList(((Iterable<? extends Type>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Type>toEList(result);
 	}
 
 	/**

@@ -2,12 +2,10 @@
  */
 package net.menthor.onto2.ontouml.impl;
 
-import java.lang.Iterable;
-
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.Comment;
@@ -32,6 +30,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 /**
  * <!-- begin-user-doc -->
@@ -321,15 +321,13 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 	 * @generated
 	 */
 	public EList<Classifier> specifics() {
-		Classifier[] result = null;
+		ArrayList<Classifier> result = CollectionLiterals.<Classifier>newArrayList();
 		EList<Generalization> _generalizations = this.getGeneralizations();
 		for (final Generalization g : _generalizations) {
-			final Classifier[] _converted_result = (Classifier[])result;
 			Classifier _specific = g.getSpecific();
-			((List<Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result)).add(_specific);
+			result.add(_specific);
 		}
-		final Classifier[] _converted_result_1 = (Classifier[])result;
-		return ECollections.<Classifier>toEList(((Iterable<? extends Classifier>)org.eclipse.xtext.xbase.lib.Conversions.doWrapArray(_converted_result_1)));
+		return ECollections.<Classifier>toEList(result);
 	}
 
 	/**

@@ -9,9 +9,15 @@ import net.menthor.onto2.ontouml.Model;
 import net.menthor.onto2.ontouml.OntoumlPackage;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.BasicExtendedMetaData;
+import org.eclipse.emf.ecore.util.ExtendedMetaData;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
@@ -46,4 +52,20 @@ public class OntoumlResource {
     	resource.save(Collections.emptyMap());
 	    return resource;		   	
 	}
+	
+	public static EPackage readEcore (String ecorePath)
+	{	
+		ResourceSet ecoreResourceSet = new ResourceSetImpl();		
+		URI ecoreURI = URI.createFileURI(ecorePath);		
+		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
+		ecoreResourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
+		ecoreResourceSet.getPackageRegistry().put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);				
+		final ExtendedMetaData extendedMetaData = new BasicExtendedMetaData(ecoreResourceSet.getPackageRegistry());
+		ecoreResourceSet.getLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA,  extendedMetaData);		
+	    Resource ecoreResource = ecoreResourceSet.getResource(ecoreURI,true);
+	    EPackage ecoremodel = (EPackage) ecoreResource.getContents().get(0);	    
+	    ecoreResource.getResourceSet().getPackageRegistry().put(ecoremodel.getNsURI(),ecoremodel);
+	    EPackage.Registry.INSTANCE.put(ecoremodel.getNsURI(), ecoremodel);	    
+	    return ecoremodel;
+	}	
 }
