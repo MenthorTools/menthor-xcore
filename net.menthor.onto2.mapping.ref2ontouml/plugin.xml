@@ -8,7 +8,7 @@
             locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
          <command
                commandId="net.menthor.onto2.mapping.ref2ontouml.convert"
-               icon="icon/menthor.png"
+               icon="icon/menthor.gif"
                label="Convert to OntoUML 2.0"
                style="push">
             <visibleWhen
