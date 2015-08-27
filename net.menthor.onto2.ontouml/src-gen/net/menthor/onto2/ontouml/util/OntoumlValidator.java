@@ -11,7 +11,7 @@ import net.menthor.onto2.ontouml.Classification;
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.Comment;
 import net.menthor.onto2.ontouml.Constraint;
-import net.menthor.onto2.ontouml.ConstraintSteteotype;
+import net.menthor.onto2.ontouml.ConstraintStereotype;
 import net.menthor.onto2.ontouml.ContainedElement;
 import net.menthor.onto2.ontouml.Container;
 import net.menthor.onto2.ontouml.DataType;
@@ -166,8 +166,8 @@ public class OntoumlValidator extends EObjectValidator {
 				return validateGeneralization((Generalization)value, diagnostics, context);
 			case OntoumlPackage.PRIMITIVE_STEREOTYPE:
 				return validatePrimitiveStereotype((PrimitiveStereotype)value, diagnostics, context);
-			case OntoumlPackage.CONSTRAINT_STETEOTYPE:
-				return validateConstraintSteteotype((ConstraintSteteotype)value, diagnostics, context);
+			case OntoumlPackage.CONSTRAINT_STEREOTYPE:
+				return validateConstraintStereotype((ConstraintStereotype)value, diagnostics, context);
 			case OntoumlPackage.CLASS_STEREOTYPE:
 				return validateClassStereotype((ClassStereotype)value, diagnostics, context);
 			case OntoumlPackage.DATA_TYPE_STEREOTYPE:
@@ -406,7 +406,7 @@ public class OntoumlValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateConstraintSteteotype(ConstraintSteteotype constraintSteteotype, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateConstraintStereotype(ConstraintStereotype constraintStereotype, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

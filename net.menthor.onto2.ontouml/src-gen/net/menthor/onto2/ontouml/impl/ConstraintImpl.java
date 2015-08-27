@@ -3,7 +3,7 @@
 package net.menthor.onto2.ontouml.impl;
 
 import net.menthor.onto2.ontouml.Constraint;
-import net.menthor.onto2.ontouml.ConstraintSteteotype;
+import net.menthor.onto2.ontouml.ConstraintStereotype;
 import net.menthor.onto2.ontouml.OntoumlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -37,7 +37,7 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ConstraintSteteotype STEREOTYPE_EDEFAULT = ConstraintSteteotype.INVARIANT;
+	protected static final ConstraintStereotype STEREOTYPE_EDEFAULT = ConstraintStereotype.UNSET;
 
 	/**
 	 * The cached value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
@@ -47,7 +47,7 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * @generated
 	 * @ordered
 	 */
-	protected ConstraintSteteotype stereotype = STEREOTYPE_EDEFAULT;
+	protected ConstraintStereotype stereotype = STEREOTYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getContext() <em>Context</em>}' attribute.
@@ -133,7 +133,7 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstraintSteteotype getStereotype() {
+	public ConstraintStereotype getStereotype() {
 		return stereotype;
 	}
 
@@ -142,8 +142,8 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStereotype(ConstraintSteteotype newStereotype) {
-		ConstraintSteteotype oldStereotype = stereotype;
+	public void setStereotype(ConstraintStereotype newStereotype) {
+		ConstraintStereotype oldStereotype = stereotype;
 		stereotype = newStereotype == null ? STEREOTYPE_EDEFAULT : newStereotype;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CONSTRAINT__STEREOTYPE, oldStereotype, stereotype));
@@ -241,7 +241,7 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
-				setStereotype((ConstraintSteteotype)newValue);
+				setStereotype((ConstraintStereotype)newValue);
 				return;
 			case OntoumlPackage.CONSTRAINT__CONTEXT:
 				setContext((String)newValue);

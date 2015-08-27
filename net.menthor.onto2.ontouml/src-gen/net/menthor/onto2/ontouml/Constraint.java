@@ -31,7 +31,7 @@ package net.menthor.onto2.ontouml;
 public interface Constraint extends ContainedElement {
 	/**
 	 * Returns the value of the '<em><b>Stereotype</b></em>' attribute.
-	 * The literals are from the enumeration {@link net.menthor.onto2.ontouml.ConstraintSteteotype}.
+	 * The literals are from the enumeration {@link net.menthor.onto2.ontouml.ConstraintStereotype}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Stereotype</em>' attribute isn't clear,
@@ -39,24 +39,24 @@ public interface Constraint extends ContainedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Stereotype</em>' attribute.
-	 * @see net.menthor.onto2.ontouml.ConstraintSteteotype
-	 * @see #setStereotype(ConstraintSteteotype)
+	 * @see net.menthor.onto2.ontouml.ConstraintStereotype
+	 * @see #setStereotype(ConstraintStereotype)
 	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getConstraint_Stereotype()
 	 * @model unique="false"
 	 * @generated
 	 */
-	ConstraintSteteotype getStereotype();
+	ConstraintStereotype getStereotype();
 
 	/**
 	 * Sets the value of the '{@link net.menthor.onto2.ontouml.Constraint#getStereotype <em>Stereotype</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Stereotype</em>' attribute.
-	 * @see net.menthor.onto2.ontouml.ConstraintSteteotype
+	 * @see net.menthor.onto2.ontouml.ConstraintStereotype
 	 * @see #getStereotype()
 	 * @generated
 	 */
-	void setStereotype(ConstraintSteteotype value);
+	void setStereotype(ConstraintStereotype value);
 
 	/**
 	 * Returns the value of the '<em><b>Context</b></em>' attribute.

@@ -941,13 +941,22 @@ public interface OntoumlPackage extends EPackage {
 	int CLASSIFIER__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSIFIER__ALIAS = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__DEFINITIONS = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+	int CLASSIFIER__DEFINITIONS = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Synonyms</b></em>' attribute list.
@@ -956,7 +965,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__SYNONYMS = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
+	int CLASSIFIER__SYNONYMS = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -965,7 +974,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__TEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
+	int CLASSIFIER__TEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Is General In</b></em>' reference list.
@@ -974,7 +983,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__IS_GENERAL_IN = CONTAINED_ELEMENT_FEATURE_COUNT + 4;
+	int CLASSIFIER__IS_GENERAL_IN = CONTAINED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Is Specific In</b></em>' reference list.
@@ -983,7 +992,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__IS_SPECIFIC_IN = CONTAINED_ELEMENT_FEATURE_COUNT + 5;
+	int CLASSIFIER__IS_SPECIFIC_IN = CONTAINED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Classifier</em>' class.
@@ -992,7 +1001,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 6;
+	int CLASSIFIER_FEATURE_COUNT = CONTAINED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -1201,6 +1210,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int TYPE__NAME = CLASSIFIER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__ALIAS = CLASSIFIER__ALIAS;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -1919,6 +1937,15 @@ public interface OntoumlPackage extends EPackage {
 	int DATA_TYPE__NAME = TYPE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE__ALIAS = TYPE__ALIAS;
+
+	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2503,6 +2530,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__ALIAS = TYPE__ALIAS;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -3342,6 +3378,15 @@ public interface OntoumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP__NAME = CLASSIFIER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ALIAS = CLASSIFIER__ALIAS;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' attribute list.
@@ -4346,14 +4391,14 @@ public interface OntoumlPackage extends EPackage {
 	int PRIMITIVE_STEREOTYPE = 19;
 
 	/**
-	 * The meta object id for the '{@link net.menthor.onto2.ontouml.ConstraintSteteotype <em>Constraint Steteotype</em>}' enum.
+	 * The meta object id for the '{@link net.menthor.onto2.ontouml.ConstraintStereotype <em>Constraint Stereotype</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.menthor.onto2.ontouml.ConstraintSteteotype
-	 * @see net.menthor.onto2.ontouml.impl.OntoumlPackageImpl#getConstraintSteteotype()
+	 * @see net.menthor.onto2.ontouml.ConstraintStereotype
+	 * @see net.menthor.onto2.ontouml.impl.OntoumlPackageImpl#getConstraintStereotype()
 	 * @generated
 	 */
-	int CONSTRAINT_STETEOTYPE = 20;
+	int CONSTRAINT_STEREOTYPE = 20;
 
 	/**
 	 * The meta object id for the '{@link net.menthor.onto2.ontouml.ClassStereotype <em>Class Stereotype</em>}' enum.
@@ -4851,6 +4896,17 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getClassifier();
+
+	/**
+	 * Returns the meta object for the attribute '{@link net.menthor.onto2.ontouml.Classifier#getAlias <em>Alias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alias</em>'.
+	 * @see net.menthor.onto2.ontouml.Classifier#getAlias()
+	 * @see #getClassifier()
+	 * @generated
+	 */
+	EAttribute getClassifier_Alias();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link net.menthor.onto2.ontouml.Classifier#getDefinitions <em>Definitions</em>}'.
@@ -7065,14 +7121,14 @@ public interface OntoumlPackage extends EPackage {
 	EEnum getPrimitiveStereotype();
 
 	/**
-	 * Returns the meta object for enum '{@link net.menthor.onto2.ontouml.ConstraintSteteotype <em>Constraint Steteotype</em>}'.
+	 * Returns the meta object for enum '{@link net.menthor.onto2.ontouml.ConstraintStereotype <em>Constraint Stereotype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Constraint Steteotype</em>'.
-	 * @see net.menthor.onto2.ontouml.ConstraintSteteotype
+	 * @return the meta object for enum '<em>Constraint Stereotype</em>'.
+	 * @see net.menthor.onto2.ontouml.ConstraintStereotype
 	 * @generated
 	 */
-	EEnum getConstraintSteteotype();
+	EEnum getConstraintStereotype();
 
 	/**
 	 * Returns the meta object for enum '{@link net.menthor.onto2.ontouml.ClassStereotype <em>Class Stereotype</em>}'.
@@ -7532,6 +7588,14 @@ public interface OntoumlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CLASSIFIER = eINSTANCE.getClassifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Alias</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASSIFIER__ALIAS = eINSTANCE.getClassifier_Alias();
 
 		/**
 		 * The meta object literal for the '<em><b>Definitions</b></em>' attribute list feature.
@@ -9278,14 +9342,14 @@ public interface OntoumlPackage extends EPackage {
 		EEnum PRIMITIVE_STEREOTYPE = eINSTANCE.getPrimitiveStereotype();
 
 		/**
-		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.ConstraintSteteotype <em>Constraint Steteotype</em>}' enum.
+		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.ConstraintStereotype <em>Constraint Stereotype</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see net.menthor.onto2.ontouml.ConstraintSteteotype
-		 * @see net.menthor.onto2.ontouml.impl.OntoumlPackageImpl#getConstraintSteteotype()
+		 * @see net.menthor.onto2.ontouml.ConstraintStereotype
+		 * @see net.menthor.onto2.ontouml.impl.OntoumlPackageImpl#getConstraintStereotype()
 		 * @generated
 		 */
-		EEnum CONSTRAINT_STETEOTYPE = eINSTANCE.getConstraintSteteotype();
+		EEnum CONSTRAINT_STEREOTYPE = eINSTANCE.getConstraintStereotype();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.ClassStereotype <em>Class Stereotype</em>}' enum.

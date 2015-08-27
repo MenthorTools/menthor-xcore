@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link net.menthor.onto2.ontouml.Classifier#getAlias <em>Alias</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getSynonyms <em>Synonyms</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Classifier#getText <em>Text</em>}</li>
@@ -29,6 +30,32 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Classifier extends ContainedElement, NamedElement {
+	/**
+	 * Returns the value of the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Alias</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Alias</em>' attribute.
+	 * @see #setAlias(String)
+	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getClassifier_Alias()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getAlias();
+
+	/**
+	 * Sets the value of the '{@link net.menthor.onto2.ontouml.Classifier#getAlias <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Alias</em>' attribute.
+	 * @see #getAlias()
+	 * @generated
+	 */
+	void setAlias(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Definitions</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.

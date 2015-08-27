@@ -218,6 +218,7 @@
     </genClasses>
     <genClasses ecoreClass="ontouml.ecore#//Package"/>
     <genClasses image="false" ecoreClass="ontouml.ecore#//Classifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Classifier/alias"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Classifier/definitions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Classifier/synonyms"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ontouml.ecore#//Classifier/text"/>

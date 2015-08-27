@@ -4,18 +4,24 @@ import org.eclipse.emf.ecore.EObject;
 
 import net.menthor.onto2.ontouml.Attribute;
 import net.menthor.onto2.ontouml.Class;
+import net.menthor.onto2.ontouml.ClassStereotype;
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.Comment;
 import net.menthor.onto2.ontouml.Constraint;
+import net.menthor.onto2.ontouml.ConstraintStereotype;
 import net.menthor.onto2.ontouml.DataType;
+import net.menthor.onto2.ontouml.DataTypeStereotype;
 import net.menthor.onto2.ontouml.EndPoint;
+import net.menthor.onto2.ontouml.Package;
 import net.menthor.onto2.ontouml.Generalization;
 import net.menthor.onto2.ontouml.GeneralizationSet;
 import net.menthor.onto2.ontouml.Literal;
 import net.menthor.onto2.ontouml.Model;
 import net.menthor.onto2.ontouml.NamedElement;
+import net.menthor.onto2.ontouml.PrimitiveStereotype;
 import net.menthor.onto2.ontouml.Property;
 import net.menthor.onto2.ontouml.Relationship;
+import net.menthor.onto2.ontouml.RelationshipStereotype;
 
 
 /** 
@@ -37,33 +43,42 @@ public class OntoumlPrintHelper {
 		if(elem==null) return "Null";
 		if(elem instanceof Class){ 
 			Class c = (Class)elem; 
-			if(c.getStereotype()!=null) return c.getStereotype().getName();
+			if(c.getStereotype()!=null && c.getStereotype()!=ClassStereotype.UNSET) {				
+				return c.getStereotype().getName();
+			}
 			else return "Class";
 		}
 		if(elem instanceof Relationship){ 
 			Relationship r = (Relationship)elem;
-			if(r.getStereotype()!=null) return r.getStereotype().getName();
+			if(r.getStereotype()!=null && r.getStereotype()!=RelationshipStereotype.UNSET) {
+				return r.getStereotype().getName();
+			}
 			else return "Relationship";
 		}
 		if(elem instanceof DataType){ 
 			DataType d = (DataType)elem; 
-			if(d.getStereotype()!=null) return d.getStereotype().getName();
+			if(d.getStereotype()!=null && d.getStereotype()!=DataTypeStereotype.UNSET) {
+				return d.getStereotype().getName();
+			}
 			else return "DataType";
 		}
 		if(elem instanceof Attribute){ 
 			Attribute a = (Attribute)elem; 
-			if(a.getStereotype()!=null) return a.getStereotype().getName();
+			if(a.getStereotype()!=null && a.getStereotype()!=PrimitiveStereotype.UNSET) {
+				return a.getStereotype().getName();
+			}
 			else return "Attribute";
 		}
 		if(elem instanceof Constraint) { 
 			Constraint c = (Constraint)elem;
-			if(c.getStereotype()!=null) return c.getStereotype().getName();
+			if(c.getStereotype()!=null && c.getStereotype()!= ConstraintStereotype.UNSET) {
+				return c.getStereotype().getName();
+			}
 			else return "Constraint";
 		}
-		if(elem instanceof EndPoint) return "EndPoint";
-		if((elem instanceof Property) && !(elem instanceof Attribute) && !(elem instanceof EndPoint)) { return "Property"; }		
-		if(elem instanceof Package) return "Package";		
+		if(elem instanceof EndPoint) return "EndPoint";		
 		if(elem instanceof Model) return "Model";
+		if(elem instanceof Package) return "Package";
 		if(elem instanceof GeneralizationSet) return "GeneralizationSet";				
 		if(elem instanceof Generalization) return "Generalization";
 		if(elem instanceof Comment) return "Comment";		
@@ -77,9 +92,29 @@ public class OntoumlPrintHelper {
 	 */
 	public static String getStereotype(EObject elem, boolean addGuillemets)
 	{
-		//Changed to unicode because on mac this character appear like "?"
-		if(addGuillemets) return "\u00AB"+getStereotype(elem)+"\u00BB";		
-		return getStereotype(elem);
+		boolean hasStereotypeDefined=false;
+		if(elem instanceof Class && ((Class)elem).getStereotype()!=null && ((Class)elem).getStereotype()!=ClassStereotype.UNSET){
+			hasStereotypeDefined=true;
+		}
+		else if(elem instanceof Relationship && ((Relationship)elem).getStereotype()!=null && ((Relationship)elem).getStereotype()!=RelationshipStereotype.UNSET){
+			hasStereotypeDefined=true;
+		}
+		else if(elem instanceof DataType && ((DataType)elem).getStereotype()!=null && ((DataType)elem).getStereotype()!=DataTypeStereotype.UNSET){
+			hasStereotypeDefined=true;
+		}
+		else if(elem instanceof Constraint && ((Constraint)elem).getStereotype()!=null && ((Constraint)elem).getStereotype()!=ConstraintStereotype.UNSET){
+			hasStereotypeDefined=true;
+		}
+		else if(elem instanceof Attribute && ((Attribute)elem).getStereotype()!=null && ((Attribute)elem).getStereotype()!=PrimitiveStereotype.UNSET){
+			hasStereotypeDefined=true;
+		}
+		if(hasStereotypeDefined) {
+			//Changed to unicode because on mac this character appear like "?"
+			if(addGuillemets) return "\u00AB"+getStereotype(elem)+"\u00BB";
+			return getStereotype(elem);
+		}else{					
+			return getStereotype(elem);
+		}
 	}
 	
 	/** Return the name of this element */

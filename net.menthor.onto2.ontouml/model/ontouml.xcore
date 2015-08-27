@@ -246,6 +246,7 @@ class Package extends Container, ContainedElement { }
 /** A "Classifier" is a "Type" (i.e., a Class or a DataType) or a Relationship. */ 
 abstract class Classifier extends ContainedElement, NamedElement 
 {
+	String[?] alias
 	String[*] definitions
 	String[*] synonyms
 	String[?] text
@@ -499,9 +500,9 @@ class Attribute extends Property
 
 /** Possible constraint stereotypes are static "Invariants" and "Derivations", 
  *  and dynamic "Temporal" or "Historical". */
-enum ConstraintSteteotype
+enum ConstraintStereotype
 {
-	Invariant, Derivation, Temporal, Historical
+	Unset, Invariant, Derivation, Temporal, Historical
 }
 
 /** A "Constraint" is a constraint usually written in OCL.
@@ -509,7 +510,7 @@ enum ConstraintSteteotype
  *  And also, temporal invariants and definition of historical relationships. */
 class Constraint extends ContainedElement
 {
-	ConstraintSteteotype stereotype
+	ConstraintStereotype stereotype
 	String context
 	String[?] name
 	String ruleAsString

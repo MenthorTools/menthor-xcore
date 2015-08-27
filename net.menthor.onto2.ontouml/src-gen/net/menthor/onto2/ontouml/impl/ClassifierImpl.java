@@ -44,6 +44,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
  * </p>
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassifierImpl#getName <em>Name</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.impl.ClassifierImpl#getAlias <em>Alias</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassifierImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassifierImpl#getSynonyms <em>Synonyms</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ClassifierImpl#getText <em>Text</em>}</li>
@@ -73,6 +74,26 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlias() <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlias()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIAS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAlias() <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlias()
+	 * @generated
+	 * @ordered
+	 */
+	protected String alias = ALIAS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDefinitions() <em>Definitions</em>}' attribute list.
@@ -172,6 +193,27 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CLASSIFIER__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAlias() {
+		return alias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlias(String newAlias) {
+		String oldAlias = alias;
+		alias = newAlias;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CLASSIFIER__ALIAS, oldAlias, alias));
 	}
 
 	/**
@@ -598,6 +640,8 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		switch (featureID) {
 			case OntoumlPackage.CLASSIFIER__NAME:
 				return getName();
+			case OntoumlPackage.CLASSIFIER__ALIAS:
+				return getAlias();
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				return getDefinitions();
 			case OntoumlPackage.CLASSIFIER__SYNONYMS:
@@ -623,6 +667,9 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		switch (featureID) {
 			case OntoumlPackage.CLASSIFIER__NAME:
 				setName((String)newValue);
+				return;
+			case OntoumlPackage.CLASSIFIER__ALIAS:
+				setAlias((String)newValue);
 				return;
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				getDefinitions().clear();
@@ -658,6 +705,9 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 			case OntoumlPackage.CLASSIFIER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case OntoumlPackage.CLASSIFIER__ALIAS:
+				setAlias(ALIAS_EDEFAULT);
+				return;
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				getDefinitions().clear();
 				return;
@@ -687,6 +737,8 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		switch (featureID) {
 			case OntoumlPackage.CLASSIFIER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case OntoumlPackage.CLASSIFIER__ALIAS:
+				return ALIAS_EDEFAULT == null ? alias != null : !ALIAS_EDEFAULT.equals(alias);
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 				return definitions != null && !definitions.isEmpty();
 			case OntoumlPackage.CLASSIFIER__SYNONYMS:
@@ -792,6 +844,8 @@ public abstract class ClassifierImpl extends ContainedElementImpl implements Cla
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", alias: ");
+		result.append(alias);
 		result.append(", definitions: ");
 		result.append(definitions);
 		result.append(", synonyms: ");

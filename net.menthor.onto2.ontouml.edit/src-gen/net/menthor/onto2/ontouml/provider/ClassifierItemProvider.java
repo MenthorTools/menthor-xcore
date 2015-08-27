@@ -46,6 +46,7 @@ public class ClassifierItemProvider extends ContainedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addAliasPropertyDescriptor(object);
 			addDefinitionsPropertyDescriptor(object);
 			addSynonymsPropertyDescriptor(object);
 			addTextPropertyDescriptor(object);
@@ -69,6 +70,28 @@ public class ClassifierItemProvider extends ContainedElementItemProvider {
 				 getString("_UI_NamedElement_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_name_feature", "_UI_NamedElement_type"),
 				 OntoumlPackage.Literals.NAMED_ELEMENT__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Alias feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAliasPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Classifier_alias_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Classifier_alias_feature", "_UI_Classifier_type"),
+				 OntoumlPackage.Literals.CLASSIFIER__ALIAS,
 				 true,
 				 false,
 				 false,
@@ -215,6 +238,7 @@ public class ClassifierItemProvider extends ContainedElementItemProvider {
 
 		switch (notification.getFeatureID(Classifier.class)) {
 			case OntoumlPackage.CLASSIFIER__NAME:
+			case OntoumlPackage.CLASSIFIER__ALIAS:
 			case OntoumlPackage.CLASSIFIER__DEFINITIONS:
 			case OntoumlPackage.CLASSIFIER__SYNONYMS:
 			case OntoumlPackage.CLASSIFIER__TEXT:

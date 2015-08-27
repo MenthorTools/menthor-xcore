@@ -9,7 +9,7 @@ import net.menthor.onto2.ontouml.Classification;
 import net.menthor.onto2.ontouml.Classifier;
 import net.menthor.onto2.ontouml.Comment;
 import net.menthor.onto2.ontouml.Constraint;
-import net.menthor.onto2.ontouml.ConstraintSteteotype;
+import net.menthor.onto2.ontouml.ConstraintStereotype;
 import net.menthor.onto2.ontouml.ContainedElement;
 import net.menthor.onto2.ontouml.DataType;
 import net.menthor.onto2.ontouml.DataTypeStereotype;
@@ -203,7 +203,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum constraintSteteotypeEEnum = null;
+	private EEnum constraintStereotypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -696,7 +696,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassifier_Definitions() {
+	public EAttribute getClassifier_Alias() {
 		return (EAttribute)classifierEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -705,7 +705,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassifier_Synonyms() {
+	public EAttribute getClassifier_Definitions() {
 		return (EAttribute)classifierEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -714,7 +714,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClassifier_Text() {
+	public EAttribute getClassifier_Synonyms() {
 		return (EAttribute)classifierEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -723,8 +723,17 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getClassifier_Text() {
+		return (EAttribute)classifierEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getClassifier_IsGeneralIn() {
-		return (EReference)classifierEClass.getEStructuralFeatures().get(3);
+		return (EReference)classifierEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -733,7 +742,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * @generated
 	 */
 	public EReference getClassifier_IsSpecificIn() {
-		return (EReference)classifierEClass.getEStructuralFeatures().get(4);
+		return (EReference)classifierEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2631,8 +2640,8 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getConstraintSteteotype() {
-		return constraintSteteotypeEEnum;
+	public EEnum getConstraintStereotype() {
+		return constraintStereotypeEEnum;
 	}
 
 	/**
@@ -2831,6 +2840,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		packageEClass = createEClass(PACKAGE);
 
 		classifierEClass = createEClass(CLASSIFIER);
+		createEAttribute(classifierEClass, CLASSIFIER__ALIAS);
 		createEAttribute(classifierEClass, CLASSIFIER__DEFINITIONS);
 		createEAttribute(classifierEClass, CLASSIFIER__SYNONYMS);
 		createEAttribute(classifierEClass, CLASSIFIER__TEXT);
@@ -3059,7 +3069,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 
 		// Create enums
 		primitiveStereotypeEEnum = createEEnum(PRIMITIVE_STEREOTYPE);
-		constraintSteteotypeEEnum = createEEnum(CONSTRAINT_STETEOTYPE);
+		constraintStereotypeEEnum = createEEnum(CONSTRAINT_STEREOTYPE);
 		classStereotypeEEnum = createEEnum(CLASS_STEREOTYPE);
 		dataTypeStereotypeEEnum = createEEnum(DATA_TYPE_STEREOTYPE);
 		scaleEEnum = createEEnum(SCALE);
@@ -3213,6 +3223,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		initEClass(packageEClass, net.menthor.onto2.ontouml.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(classifierEClass, Classifier.class, "Classifier", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClassifier_Alias(), theEcorePackage.getEString(), "alias", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassifier_Definitions(), theEcorePackage.getEString(), "definitions", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassifier_Synonyms(), theEcorePackage.getEString(), "synonyms", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassifier_Text(), theEcorePackage.getEString(), "text", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3294,7 +3305,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		initEOperation(getAttribute__IsString(), theEcorePackage.getEBoolean(), "isString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConstraint_Stereotype(), this.getConstraintSteteotype(), "stereotype", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConstraint_Stereotype(), this.getConstraintStereotype(), "stereotype", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraint_Context(), theEcorePackage.getEString(), "context", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraint_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraint_RuleAsString(), theEcorePackage.getEString(), "ruleAsString", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3600,11 +3611,12 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		addEEnumLiteral(primitiveStereotypeEEnum, PrimitiveStereotype.DATE);
 		addEEnumLiteral(primitiveStereotypeEEnum, PrimitiveStereotype.DATE_TIME);
 
-		initEEnum(constraintSteteotypeEEnum, ConstraintSteteotype.class, "ConstraintSteteotype");
-		addEEnumLiteral(constraintSteteotypeEEnum, ConstraintSteteotype.INVARIANT);
-		addEEnumLiteral(constraintSteteotypeEEnum, ConstraintSteteotype.DERIVATION);
-		addEEnumLiteral(constraintSteteotypeEEnum, ConstraintSteteotype.TEMPORAL);
-		addEEnumLiteral(constraintSteteotypeEEnum, ConstraintSteteotype.HISTORICAL);
+		initEEnum(constraintStereotypeEEnum, ConstraintStereotype.class, "ConstraintStereotype");
+		addEEnumLiteral(constraintStereotypeEEnum, ConstraintStereotype.UNSET);
+		addEEnumLiteral(constraintStereotypeEEnum, ConstraintStereotype.INVARIANT);
+		addEEnumLiteral(constraintStereotypeEEnum, ConstraintStereotype.DERIVATION);
+		addEEnumLiteral(constraintStereotypeEEnum, ConstraintStereotype.TEMPORAL);
+		addEEnumLiteral(constraintStereotypeEEnum, ConstraintStereotype.HISTORICAL);
 
 		initEEnum(classStereotypeEEnum, ClassStereotype.class, "ClassStereotype");
 		addEEnumLiteral(classStereotypeEEnum, ClassStereotype.UNSET);
