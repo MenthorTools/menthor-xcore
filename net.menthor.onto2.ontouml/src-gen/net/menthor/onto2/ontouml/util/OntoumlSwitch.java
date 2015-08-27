@@ -177,6 +177,7 @@ public class OntoumlSwitch<T> extends Switch<T> {
 				Constraint constraint = (Constraint)theEObject;
 				T result = caseConstraint(constraint);
 				if (result == null) result = caseContainedElement(constraint);
+				if (result == null) result = caseNamedElement(constraint);
 				if (result == null) result = caseElement(constraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

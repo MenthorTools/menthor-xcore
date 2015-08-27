@@ -1764,13 +1764,22 @@ public interface OntoumlPackage extends EPackage {
 	int CONSTRAINT__COMMENTS = CONTAINED_ELEMENT__COMMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Stereotype</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__STEREOTYPE = CONTAINED_ELEMENT_FEATURE_COUNT + 0;
+	int CONSTRAINT__STEREOTYPE = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' attribute.
@@ -1779,25 +1788,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__CONTEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 1;
+	int CONSTRAINT__CONTEXT = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__NAME = CONTAINED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Rule As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT__RULE_AS_STRING = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
+	int CONSTRAINT__EXPRESSION = CONTAINED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
@@ -5387,26 +5387,15 @@ public interface OntoumlPackage extends EPackage {
 	EAttribute getConstraint_Context();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.menthor.onto2.ontouml.Constraint#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link net.menthor.onto2.ontouml.Constraint#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see net.menthor.onto2.ontouml.Constraint#getName()
+	 * @return the meta object for the attribute '<em>Expression</em>'.
+	 * @see net.menthor.onto2.ontouml.Constraint#getExpression()
 	 * @see #getConstraint()
 	 * @generated
 	 */
-	EAttribute getConstraint_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link net.menthor.onto2.ontouml.Constraint#getRuleAsString <em>Rule As String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rule As String</em>'.
-	 * @see net.menthor.onto2.ontouml.Constraint#getRuleAsString()
-	 * @see #getConstraint()
-	 * @generated
-	 */
-	EAttribute getConstraint_RuleAsString();
+	EAttribute getConstraint_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.onto2.ontouml.Literal <em>Literal</em>}'.
@@ -7974,20 +7963,12 @@ public interface OntoumlPackage extends EPackage {
 		EAttribute CONSTRAINT__CONTEXT = eINSTANCE.getConstraint_Context();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Expression</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONSTRAINT__NAME = eINSTANCE.getConstraint_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Rule As String</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONSTRAINT__RULE_AS_STRING = eINSTANCE.getConstraint_RuleAsString();
+		EAttribute CONSTRAINT__EXPRESSION = eINSTANCE.getConstraint_Expression();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.impl.LiteralImpl <em>Literal</em>}' class.

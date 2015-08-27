@@ -4,6 +4,7 @@ package net.menthor.onto2.ontouml.impl;
 
 import net.menthor.onto2.ontouml.Constraint;
 import net.menthor.onto2.ontouml.ConstraintStereotype;
+import net.menthor.onto2.ontouml.NamedElement;
 import net.menthor.onto2.ontouml.OntoumlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -20,15 +21,35 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getContext <em>Context</em>}</li>
- *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getName <em>Name</em>}</li>
- *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getRuleAsString <em>Rule As String</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.impl.ConstraintImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ConstraintImpl extends ContainedElementImpl implements Constraint {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getStereotype() <em>Stereotype</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,44 +91,24 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	protected String context = CONTEXT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String EXPRESSION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRuleAsString() <em>Rule As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRuleAsString()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RULE_AS_STRING_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRuleAsString() <em>Rule As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRuleAsString()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ruleAsString = RULE_AS_STRING_EDEFAULT;
+	protected String expression = EXPRESSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,6 +127,27 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	@Override
 	protected EClass eStaticClass() {
 		return OntoumlPackage.Literals.CONSTRAINT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CONSTRAINT__NAME, oldName, name));
 	}
 
 	/**
@@ -175,8 +197,8 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getExpression() {
+		return expression;
 	}
 
 	/**
@@ -184,32 +206,11 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setExpression(String newExpression) {
+		String oldExpression = expression;
+		expression = newExpression;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CONSTRAINT__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRuleAsString() {
-		return ruleAsString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRuleAsString(String newRuleAsString) {
-		String oldRuleAsString = ruleAsString;
-		ruleAsString = newRuleAsString;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CONSTRAINT__RULE_AS_STRING, oldRuleAsString, ruleAsString));
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoumlPackage.CONSTRAINT__EXPRESSION, oldExpression, expression));
 	}
 
 	/**
@@ -220,14 +221,14 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case OntoumlPackage.CONSTRAINT__NAME:
+				return getName();
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				return getStereotype();
 			case OntoumlPackage.CONSTRAINT__CONTEXT:
 				return getContext();
-			case OntoumlPackage.CONSTRAINT__NAME:
-				return getName();
-			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
-				return getRuleAsString();
+			case OntoumlPackage.CONSTRAINT__EXPRESSION:
+				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -240,17 +241,17 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case OntoumlPackage.CONSTRAINT__NAME:
+				setName((String)newValue);
+				return;
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				setStereotype((ConstraintStereotype)newValue);
 				return;
 			case OntoumlPackage.CONSTRAINT__CONTEXT:
 				setContext((String)newValue);
 				return;
-			case OntoumlPackage.CONSTRAINT__NAME:
-				setName((String)newValue);
-				return;
-			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
-				setRuleAsString((String)newValue);
+			case OntoumlPackage.CONSTRAINT__EXPRESSION:
+				setExpression((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -264,17 +265,17 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case OntoumlPackage.CONSTRAINT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				setStereotype(STEREOTYPE_EDEFAULT);
 				return;
 			case OntoumlPackage.CONSTRAINT__CONTEXT:
 				setContext(CONTEXT_EDEFAULT);
 				return;
-			case OntoumlPackage.CONSTRAINT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
-				setRuleAsString(RULE_AS_STRING_EDEFAULT);
+			case OntoumlPackage.CONSTRAINT__EXPRESSION:
+				setExpression(EXPRESSION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -288,16 +289,48 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case OntoumlPackage.CONSTRAINT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 				return stereotype != STEREOTYPE_EDEFAULT;
 			case OntoumlPackage.CONSTRAINT__CONTEXT:
 				return CONTEXT_EDEFAULT == null ? context != null : !CONTEXT_EDEFAULT.equals(context);
-			case OntoumlPackage.CONSTRAINT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
-				return RULE_AS_STRING_EDEFAULT == null ? ruleAsString != null : !RULE_AS_STRING_EDEFAULT.equals(ruleAsString);
+			case OntoumlPackage.CONSTRAINT__EXPRESSION:
+				return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (derivedFeatureID) {
+				case OntoumlPackage.CONSTRAINT__NAME: return OntoumlPackage.NAMED_ELEMENT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (baseFeatureID) {
+				case OntoumlPackage.NAMED_ELEMENT__NAME: return OntoumlPackage.CONSTRAINT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -310,14 +343,14 @@ public class ConstraintImpl extends ContainedElementImpl implements Constraint {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (stereotype: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", stereotype: ");
 		result.append(stereotype);
 		result.append(", context: ");
 		result.append(context);
-		result.append(", name: ");
-		result.append(name);
-		result.append(", ruleAsString: ");
-		result.append(ruleAsString);
+		result.append(", expression: ");
+		result.append(expression);
 		result.append(')');
 		return result.toString();
 	}

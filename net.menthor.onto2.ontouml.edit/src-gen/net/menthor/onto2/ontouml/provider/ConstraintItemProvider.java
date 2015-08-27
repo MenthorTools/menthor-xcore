@@ -45,10 +45,10 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 			addStereotypePropertyDescriptor(object);
 			addContextPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addRuleAsStringPropertyDescriptor(object);
+			addExpressionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -98,6 +98,28 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Expression feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExpressionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Constraint_expression_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Constraint_expression_feature", "_UI_Constraint_type"),
+				 OntoumlPackage.Literals.CONSTRAINT__EXPRESSION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,31 +130,9 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Constraint_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Constraint_name_feature", "_UI_Constraint_type"),
-				 OntoumlPackage.Literals.CONSTRAINT__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Rule As String feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRuleAsStringPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Constraint_ruleAsString_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Constraint_ruleAsString_feature", "_UI_Constraint_type"),
-				 OntoumlPackage.Literals.CONSTRAINT__RULE_AS_STRING,
+				 getString("_UI_NamedElement_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_name_feature", "_UI_NamedElement_type"),
+				 OntoumlPackage.Literals.NAMED_ELEMENT__NAME,
 				 true,
 				 false,
 				 false,
@@ -170,10 +170,10 @@ public class ConstraintItemProvider extends ContainedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Constraint.class)) {
+			case OntoumlPackage.CONSTRAINT__NAME:
 			case OntoumlPackage.CONSTRAINT__STEREOTYPE:
 			case OntoumlPackage.CONSTRAINT__CONTEXT:
-			case OntoumlPackage.CONSTRAINT__NAME:
-			case OntoumlPackage.CONSTRAINT__RULE_AS_STRING:
+			case OntoumlPackage.CONSTRAINT__EXPRESSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

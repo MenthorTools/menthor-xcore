@@ -1119,17 +1119,8 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConstraint_Name() {
+	public EAttribute getConstraint_Expression() {
 		return (EAttribute)constraintEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getConstraint_RuleAsString() {
-		return (EAttribute)constraintEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2891,8 +2882,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		constraintEClass = createEClass(CONSTRAINT);
 		createEAttribute(constraintEClass, CONSTRAINT__STEREOTYPE);
 		createEAttribute(constraintEClass, CONSTRAINT__CONTEXT);
-		createEAttribute(constraintEClass, CONSTRAINT__NAME);
-		createEAttribute(constraintEClass, CONSTRAINT__RULE_AS_STRING);
+		createEAttribute(constraintEClass, CONSTRAINT__EXPRESSION);
 
 		literalEClass = createEClass(LITERAL);
 		createEAttribute(literalEClass, LITERAL__VALUE);
@@ -3130,6 +3120,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		propertyEClass.getESuperTypes().add(this.getNamedElement());
 		attributeEClass.getESuperTypes().add(this.getProperty());
 		constraintEClass.getESuperTypes().add(this.getContainedElement());
+		constraintEClass.getESuperTypes().add(this.getNamedElement());
 		literalEClass.getESuperTypes().add(this.getElement());
 		dataTypeEClass.getESuperTypes().add(this.getType());
 		classEClass.getESuperTypes().add(this.getType());
@@ -3307,8 +3298,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstraint_Stereotype(), this.getConstraintStereotype(), "stereotype", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraint_Context(), theEcorePackage.getEString(), "context", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConstraint_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConstraint_RuleAsString(), theEcorePackage.getEString(), "ruleAsString", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConstraint_Expression(), theEcorePackage.getEString(), "expression", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLiteral_Value(), theEcorePackage.getEString(), "value", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

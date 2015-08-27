@@ -508,12 +508,11 @@ enum ConstraintStereotype
 /** A "Constraint" is a constraint usually written in OCL.
  *  Here we support static invariants and derivations from standard OCL
  *  And also, temporal invariants and definition of historical relationships. */
-class Constraint extends ContainedElement
+class Constraint extends ContainedElement, NamedElement
 {
 	ConstraintStereotype stereotype
 	String context
-	String[?] name
-	String ruleAsString
+	String expression
 }
 
 /** A Class Stereotype can be a Kind, Collective, Quantity,

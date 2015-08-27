@@ -20,15 +20,14 @@ package net.menthor.onto2.ontouml;
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.Constraint#getStereotype <em>Stereotype</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.Constraint#getContext <em>Context</em>}</li>
- *   <li>{@link net.menthor.onto2.ontouml.Constraint#getName <em>Name</em>}</li>
- *   <li>{@link net.menthor.onto2.ontouml.Constraint#getRuleAsString <em>Rule As String</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.Constraint#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @see net.menthor.onto2.ontouml.OntoumlPackage#getConstraint()
  * @model
  * @generated
  */
-public interface Constraint extends ContainedElement {
+public interface Constraint extends ContainedElement, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Stereotype</b></em>' attribute.
 	 * The literals are from the enumeration {@link net.menthor.onto2.ontouml.ConstraintStereotype}.
@@ -85,55 +84,29 @@ public interface Constraint extends ContainedElement {
 	void setContext(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Expression</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Expression</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getConstraint_Name()
+	 * @return the value of the '<em>Expression</em>' attribute.
+	 * @see #setExpression(String)
+	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getConstraint_Expression()
 	 * @model unique="false"
 	 * @generated
 	 */
-	String getName();
+	String getExpression();
 
 	/**
-	 * Sets the value of the '{@link net.menthor.onto2.ontouml.Constraint#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link net.menthor.onto2.ontouml.Constraint#getExpression <em>Expression</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Expression</em>' attribute.
+	 * @see #getExpression()
 	 * @generated
 	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Rule As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rule As String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rule As String</em>' attribute.
-	 * @see #setRuleAsString(String)
-	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getConstraint_RuleAsString()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getRuleAsString();
-
-	/**
-	 * Sets the value of the '{@link net.menthor.onto2.ontouml.Constraint#getRuleAsString <em>Rule As String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rule As String</em>' attribute.
-	 * @see #getRuleAsString()
-	 * @generated
-	 */
-	void setRuleAsString(String value);
+	void setExpression(String value);
 
 } // Constraint
