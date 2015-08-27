@@ -213,7 +213,7 @@ public class OntoumlPrintHelper {
 		if (elem instanceof Attribute)
 		{
 			Attribute p = (Attribute)elem;
-			return getStereotype(p)+" ("+getName(p)+")"+" ["+getMultiplicity(p,true,"..")+"]";			
+			return getStereotypeAndName(p,true,false)+ " ["+getMultiplicity(p,true,"..")+"]";			
 		}	
 		if (elem instanceof EndPoint)
 		{
@@ -233,7 +233,7 @@ public class OntoumlPrintHelper {
 		if(elem instanceof Constraint)
 		{
 			Constraint p = (Constraint)elem;
-			return getStereotype(p)+" ("+p.getName()+")";
+			return getStereotypeAndName(p,true,false);
 		}
 		return getStereotypeAndName(elem, true, false);
 	}
@@ -292,7 +292,7 @@ public class OntoumlPrintHelper {
 		if(elem instanceof Constraint)
 		{
 			Constraint p = (Constraint)elem;
-			return getStereotype(p)+" ("+p.getName()+")";
+			return getStereotypeAndName(p,true,false);
 		}
 		return getStereotypeAndName(elem, true, false);
 	}
