@@ -24,7 +24,7 @@ public class DefaultHandler extends AbstractHandler {
             if (f.getFileExtension().compareTo("mouml") == 0)
             {                        		
 				String ontoPath = f.getLocation().toString();
-				String noExtPath = ontoPath.substring(0, ontoPath.length()-11);
+				String noExtPath = ontoPath.substring(0, ontoPath.length()-6);
 				String refPath = noExtPath.concat(".refontouml");
 				
 				/** Transformation */
