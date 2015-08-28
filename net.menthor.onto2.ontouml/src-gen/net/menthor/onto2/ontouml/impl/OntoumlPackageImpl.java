@@ -615,7 +615,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getContainedElement__GetModel__Container() {
+	public EOperation getContainedElement__GetModel() {
 		return containedElementEClass.getEOperations().get(0);
 	}
 
@@ -624,7 +624,7 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getContainedElement__GetModel() {
+	public EOperation getContainedElement__GetModel__Container() {
 		return containedElementEClass.getEOperations().get(1);
 	}
 
@@ -2818,8 +2818,8 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		containedElementEClass = createEClass(CONTAINED_ELEMENT);
 		createEReference(containedElementEClass, CONTAINED_ELEMENT__HOLDER);
 		createEReference(containedElementEClass, CONTAINED_ELEMENT__COMMENTS);
-		createEOperation(containedElementEClass, CONTAINED_ELEMENT___GET_MODEL__CONTAINER);
 		createEOperation(containedElementEClass, CONTAINED_ELEMENT___GET_MODEL);
+		createEOperation(containedElementEClass, CONTAINED_ELEMENT___GET_MODEL__CONTAINER);
 
 		commentEClass = createEClass(COMMENT);
 		createEAttribute(commentEClass, COMMENT__CONTENT);
@@ -3191,10 +3191,10 @@ public class OntoumlPackageImpl extends EPackageImpl implements OntoumlPackage {
 		initEReference(getContainedElement_Holder(), this.getContainer(), this.getContainer_Elements(), "holder", null, 1, 1, ContainedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainedElement_Comments(), this.getComment(), this.getComment_Owner(), "comments", null, 0, -1, ContainedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getContainedElement__GetModel(), this.getModel(), "getModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		op = initEOperation(getContainedElement__GetModel__Container(), this.getModel(), "getModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getContainer(), "c", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getContainedElement__GetModel(), this.getModel(), "getModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComment_Content(), theEcorePackage.getEString(), "content", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

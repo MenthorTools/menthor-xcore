@@ -16,8 +16,8 @@ import net.menthor.onto2.ontouml.OntoumlFactory;
  * <ul>
  *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#general() <em>General</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.GeneralizationSet#specifics() <em>Specifics</em>}</li>
- *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel() <em>Get Model</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}</li>
  * </ul>
  * </p>
  * @generated

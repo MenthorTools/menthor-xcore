@@ -376,7 +376,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINED_ELEMENT___GET_MODEL__CONTAINER = ELEMENT_OPERATION_COUNT + 0;
+	int CONTAINED_ELEMENT___GET_MODEL = ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -385,7 +385,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINED_ELEMENT___GET_MODEL = ELEMENT_OPERATION_COUNT + 1;
+	int CONTAINED_ELEMENT___GET_MODEL__CONTAINER = ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Contained Element</em>' class.
@@ -883,7 +883,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE___GET_MODEL__CONTAINER = CONTAINER_OPERATION_COUNT + 0;
+	int PACKAGE___GET_MODEL = CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -892,7 +892,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE___GET_MODEL = CONTAINER_OPERATION_COUNT + 1;
+	int PACKAGE___GET_MODEL__CONTAINER = CONTAINER_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Package</em>' class.
@@ -1010,7 +1010,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
+	int CLASSIFIER___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -1019,7 +1019,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
+	int CLASSIFIER___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
 
 	/**
 	 * The operation id for the '<em>Children</em>' operation.
@@ -1290,7 +1290,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE___GET_MODEL__CONTAINER = CLASSIFIER___GET_MODEL__CONTAINER;
+	int TYPE___GET_MODEL = CLASSIFIER___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -1299,7 +1299,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE___GET_MODEL = CLASSIFIER___GET_MODEL;
+	int TYPE___GET_MODEL__CONTAINER = CLASSIFIER___GET_MODEL__CONTAINER;
 
 	/**
 	 * The operation id for the '<em>Children</em>' operation.
@@ -1815,7 +1815,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
+	int CONSTRAINT___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -1824,7 +1824,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
+	int CONSTRAINT___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
 
 	/**
 	 * The number of operations of the '<em>Constraint</em>' class.
@@ -2105,7 +2105,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE___GET_MODEL__CONTAINER = TYPE___GET_MODEL__CONTAINER;
+	int DATA_TYPE___GET_MODEL = TYPE___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -2114,7 +2114,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE___GET_MODEL = TYPE___GET_MODEL;
+	int DATA_TYPE___GET_MODEL__CONTAINER = TYPE___GET_MODEL__CONTAINER;
 
 	/**
 	 * The operation id for the '<em>Children</em>' operation.
@@ -2673,7 +2673,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___GET_MODEL__CONTAINER = TYPE___GET_MODEL__CONTAINER;
+	int CLASS___GET_MODEL = TYPE___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -2682,7 +2682,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS___GET_MODEL = TYPE___GET_MODEL;
+	int CLASS___GET_MODEL__CONTAINER = TYPE___GET_MODEL__CONTAINER;
 
 	/**
 	 * The operation id for the '<em>Children</em>' operation.
@@ -3521,7 +3521,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___GET_MODEL__CONTAINER = CLASSIFIER___GET_MODEL__CONTAINER;
+	int RELATIONSHIP___GET_MODEL = CLASSIFIER___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -3530,7 +3530,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP___GET_MODEL = CLASSIFIER___GET_MODEL;
+	int RELATIONSHIP___GET_MODEL__CONTAINER = CLASSIFIER___GET_MODEL__CONTAINER;
 
 	/**
 	 * The operation id for the '<em>Children</em>' operation.
@@ -4251,7 +4251,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_SET___GET_MODEL__CONTAINER = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int GENERALIZATION_SET___GET_MODEL = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -4260,7 +4260,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_SET___GET_MODEL = NAMED_ELEMENT_OPERATION_COUNT + 1;
+	int GENERALIZATION_SET___GET_MODEL__CONTAINER = NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>General</em>' operation.
@@ -4360,7 +4360,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
+	int GENERALIZATION___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
 
 	/**
 	 * The operation id for the '<em>Get Model</em>' operation.
@@ -4369,7 +4369,7 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION___GET_MODEL = CONTAINED_ELEMENT___GET_MODEL;
+	int GENERALIZATION___GET_MODEL__CONTAINER = CONTAINED_ELEMENT___GET_MODEL__CONTAINER;
 
 	/**
 	 * The number of operations of the '<em>Generalization</em>' class.
@@ -4806,16 +4806,6 @@ public interface OntoumlPackage extends EPackage {
 	EReference getContainedElement_Comments();
 
 	/**
-	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Model</em>' operation.
-	 * @see net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container)
-	 * @generated
-	 */
-	EOperation getContainedElement__GetModel__Container();
-
-	/**
 	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.ContainedElement#getModel() <em>Get Model</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4824,6 +4814,16 @@ public interface OntoumlPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getContainedElement__GetModel();
+
+	/**
+	 * Returns the meta object for the '{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Model</em>' operation.
+	 * @see net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container)
+	 * @generated
+	 */
+	EOperation getContainedElement__GetModel__Container();
 
 	/**
 	 * Returns the meta object for class '{@link net.menthor.onto2.ontouml.Comment <em>Comment</em>}'.
@@ -7504,7 +7504,7 @@ public interface OntoumlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTAINED_ELEMENT___GET_MODEL__CONTAINER = eINSTANCE.getContainedElement__GetModel__Container();
+		EOperation CONTAINED_ELEMENT___GET_MODEL = eINSTANCE.getContainedElement__GetModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Model</b></em>' operation.
@@ -7512,7 +7512,7 @@ public interface OntoumlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTAINED_ELEMENT___GET_MODEL = eINSTANCE.getContainedElement__GetModel();
+		EOperation CONTAINED_ELEMENT___GET_MODEL__CONTAINER = eINSTANCE.getContainedElement__GetModel__Container();
 
 		/**
 		 * The meta object literal for the '{@link net.menthor.onto2.ontouml.impl.CommentImpl <em>Comment</em>}' class.

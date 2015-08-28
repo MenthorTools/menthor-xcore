@@ -8,6 +8,10 @@ package net.menthor.onto2.ontouml;
  * A representation of the model object '<em><b>Named Element</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * * A named Element
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

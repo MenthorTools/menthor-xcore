@@ -10,12 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * =======================================================================================================
- *  OntoUML2.0
+ * * ========================================================================================================
+ *    TODO:
  * 
- * 	@author: John Guerson
- * 	@author: Tiago Prince Sales
- *  @co-author: Joao Paulo Andrade Almeida
+ *  - (JP) Name Spaces like in UML (with package imports)
+ *  - (JP) Create a separate meta-model for "occurrences" of the elements in views (similar to occurrences and definitions in ARIS)
+ *         Keep this meta-model for definitions and create a meta-model for occurrences. This will enable a strict separation between model and views
+ *  - (TS) Rule to enforce sub-setting and redefinition constraints
  *  ========================================================================================================
  * <!-- end-model-doc -->
  *

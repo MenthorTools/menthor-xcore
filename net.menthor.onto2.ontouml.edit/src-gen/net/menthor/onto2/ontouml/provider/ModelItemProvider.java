@@ -6,7 +6,6 @@ package net.menthor.onto2.ontouml.provider;
 import java.util.Collection;
 import java.util.List;
 import net.menthor.onto2.ontouml.util.OntoumlPrintHelper;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;

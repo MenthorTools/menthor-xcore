@@ -12,14 +12,6 @@
   
 package net.menthor.onto2.ontouml 
 
-/** ======================================================================================================= 
- *  OntoUML2.0 
- * 
- * 	@author: John Guerson	
- * 	@author: Tiago Prince Sales 	  
- *  @co-author: Joao Paulo Andrade Almeida
- *  ======================================================================================================== */
- 
 /** ======================================================================================================== 
  *    TODO:
  *  
@@ -27,22 +19,22 @@ package net.menthor.onto2.ontouml
  *  - (JP) Create a separate meta-model for "occurrences" of the elements in views (similar to occurrences and definitions in ARIS)
  *         Keep this meta-model for definitions and create a meta-model for occurrences. This will enable a strict separation between model and views
  *  - (TS) Rule to enforce sub-setting and redefinition constraints
- *  - (TS) Implement the following operations: overlapSiblings(), disjointSiblings()
  *  ======================================================================================================== */  
 	 
 @Ecore(validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
 
 abstract class Element { }
 
+/** A named Element */
 abstract class NamedElement extends Element { String name }
 
-/** A "Container" is a "NamedElement" that can contain a set of: 
- *  Packages, Relationships, Classes, DataTypes, Generalization Sets, Generalizations and Constraints */
+/** A Container is a NamedElement that can contain a set of: 
+ *  Packages, Relationships, Classes, DataTypes, Generalization Sets, Generalizations and Constraints. This is an abstract class. */
 abstract class Container extends NamedElement 
 { 
 	contains unordered unique ContainedElement[*] elements opposite holder
 	
-	/* Returns the packages at this container. */  
+	/* Returns the packages at this particular container. It does not search in depth. */  
 	op Package[] packages()
 	{
 		var result = newArrayList()
@@ -52,7 +44,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	}
 	
-	/** Returns recursively all packages at this container. */
+	/** Returns recursively (searching in depth) all packages at this container. */
 	op void allPackages(Container c, Package[] result)
 	{		
 		for(ContainedElement e: c.elements){
@@ -62,6 +54,8 @@ abstract class Container extends NamedElement
 			}				
 		}		
 	}	
+	
+	/** Returns recursively (searching in depth) all packages at this container. */
 	op Package[] allPackages()
 	{
 		var result = newArrayList()
@@ -69,7 +63,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	} 
 	
-	/* Returns the relationships at this container */
+	/* Returns the relationships at this particular container. It does not search in depth. */
 	op Relationship[] relationships() 
 	{	
 		var result = newArrayList()
@@ -79,7 +73,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	}
 	
-	/** Returns recursively all relationships at this container */
+	/** Returns recursively (searching in depth) all relationships at this container. */
 	op void allRelationships(Container c, Relationship[] result)
 	{		
 		for(ContainedElement e: c.elements){
@@ -89,6 +83,8 @@ abstract class Container extends NamedElement
 			}
 		}
 	}	
+	
+	/** Returns recursively (searching in depth) all relationships at this container. */
 	op Relationship[] allRelationships()
 	{
 		var result = newArrayList()
@@ -96,7 +92,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	} 
 	
-	/* Returns the generalization sets at this container */
+	/* Returns the generalization sets at this particular container. It does not search in depth. */
 	op GeneralizationSet[] generalizationSets()
 	{
 		var result = newArrayList()
@@ -106,7 +102,7 @@ abstract class Container extends NamedElement
 		return result.toEList;		
 	} 
 	 
-	/** Returns recursively all generalization sets at this container */
+	/** Returns recursively (seraching in depth) all generalization sets at this container. */
 	op void allGeneralizationSets(Container c, GeneralizationSet[] result)
 	{		
 		for(ContainedElement e:c.elements){
@@ -116,6 +112,8 @@ abstract class Container extends NamedElement
 			}
 		}
 	}	
+	
+	/** Returns recursively (seraching in depth) all generalization sets at this container. */
 	op GeneralizationSet[] allGeneralizationSets()
 	{
 		var result = newArrayList()
@@ -123,7 +121,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	} 
 	
-	/* Returns the classes at this container */
+	/* Returns the classes at this particular container. It does not search in depth. */
 	op Class[] classes()
 	{
 		var result = newArrayList()
@@ -133,7 +131,7 @@ abstract class Container extends NamedElement
 		return result.toEList;		
 	}
 	
-	/** Returns recursively all classes at this container */
+	/** Returns recursively (searching in depth) all classes at this container. */
 	op void allClasses(Container c, Class[] result)
 	{		
 		for(ContainedElement e: c.elements){
@@ -143,6 +141,8 @@ abstract class Container extends NamedElement
 			}
 		}
 	}	
+	
+	/** Returns recursively (searching in depth) all classes at this container. */
 	op Class[] allClasses()
 	{
 		var result = newArrayList()
@@ -150,7 +150,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	}
 	
-	/* Returns the dataTypes at this container */
+	/* Returns the dataTypes at this particular container. It does not search in depth. */
 	op DataType[] dataTypes()
 	{
 		var result = newArrayList()
@@ -160,7 +160,7 @@ abstract class Container extends NamedElement
 		return result.toEList;		
 	}
 	
-	/** Returns recursively all dataTypes at this container */
+	/** Returns recursively (searching in depth) all dataTypes at this container. */
 	op void allDataTypes(Container c, DataType[] result)
 	{		
 		for(ContainedElement e: c.elements){
@@ -170,6 +170,8 @@ abstract class Container extends NamedElement
 			}
 		}
 	}	 
+	
+	/** Returns recursively (searching in depth) all dataTypes at this container. */
 	op DataType[] allDataTypes()
 	{
 		var result = newArrayList()
@@ -177,7 +179,7 @@ abstract class Container extends NamedElement
 		return result.toEList;
 	}	
 
-	/* Returns the types (classes and dataTypes) at this container */
+	/* Returns the types (classes and dataTypes) at this particular container. */
 	op Type[] types()
 	{
 		var result = newArrayList()
@@ -187,7 +189,7 @@ abstract class Container extends NamedElement
 		return result.toEList;		
 	}
 	
-	/** Returns recursively all types (classes and dataTypes) at this container */
+	/** Returns recursively (searching in depth) all types (classes and dataTypes) at this container */
 	op void allTypes(Container c, Type[] result)
 	{		
 		for(ContainedElement e: c.elements){
@@ -197,6 +199,8 @@ abstract class Container extends NamedElement
 			}
 		}
 	}	 
+	
+	/** Returns recursively (searching in depth) all types (classes and dataTypes) at this container */
 	op Type[] allTypes()
 	{
 		var result = newArrayList()
@@ -205,33 +209,36 @@ abstract class Container extends NamedElement
 	}	
 }
 
-/** A "ContainedElement" is an "Element" that has one Container and possibly a set of Comments. */ 
+/** A ContainedElement is an Element that has one Container and possibly a set of Comments. This is an abstract class.*/ 
 abstract class ContainedElement extends Element 
 { 
+	/** The element in which this element is contained */
 	container Container[1] holder opposite elements	
 	contains Comment[*] comments opposite owner	
 	
-	/** Returns the root from a given container */
-	op Model getModel(Container c)
-	{
-		if(c instanceof Model) { return c; }
-		else { if(c instanceof ContainedElement) return getModel(c.holder); }
-	}
 	/** Returns the root container */
 	op Model getModel()
 	{
 		return getModel(holder);
 	}
+	
+	/** Returns the root container but starting from a given container */
+	op Model getModel(Container c)
+	{
+		if(c instanceof Model) { return c; }
+		else { if(c instanceof ContainedElement) return getModel(c.holder); }
+	}
 }
 
-/** A "Comment" is a text which has a "ContainedElement" owner. */
+/** A Comment is a text which has a ContainedElement as owner. */
 class Comment extends Element 
 { 
-	String content
+	/** String content of a comment */
+	String content	
 	container ContainedElement[1] owner opposite comments
 }
 
-/** A "Model" is just a "Container". */
+/** A Model is just a Container and cannot be contained by other containers. */
 class Model extends Container 
 {	
 	op boolean initializeValidator(org.eclipse.emf.ecore.EDiagnosticChain diagnostics, org.eclipse.emf.ecore.EMap<Object, Object> context)
@@ -240,13 +247,16 @@ class Model extends Container
     }
 }
 
-/** A "Package" is both a "Container" and a "ContainedElement". */
+/** A Package is both a Container and a ContainedElement. It allows nested packages, that is, packages inside packages */
 class Package extends Container, ContainedElement { }
 
-/** A "Classifier" is a "Type" (i.e., a Class or a DataType) or a Relationship. */ 
+/** A Classifier is a Relationship or a Type (i.e., a Class or a DataType)*/ 
 abstract class Classifier extends ContainedElement, NamedElement 
 {
+	/** Every classifier has an alias, a name for display used  
+	 *  to store an unique name for the class, useful for transformations */
 	String[?] alias
+	
 	String[*] definitions
 	String[*] synonyms
 	String[?] text
@@ -408,6 +418,7 @@ abstract class Classifier extends ContainedElement, NamedElement
 		return result.toEList;		
 	}
 
+	/** Checks if this classifier is disjoint of the parents of a given classifier, i.e., checks if they don't have overlapping parents */
 	op boolean isDisjointOfParentsOf(Classifier c){
 		for(Classifier o: c.allParents()){			
 			if(this.allParents().contains(o)) return false;
@@ -416,6 +427,7 @@ abstract class Classifier extends ContainedElement, NamedElement
 		return true;
 	}	
 	
+	/** Checks if this classifier is disjoint of the children of a given classifier, i.e., checks if they don't have overlapping siblings */
 	op boolean isDisjointOfChildrenOf(Classifier c){
 		for(Classifier o: c.allChildren()){			
 			if(this.allParents().contains(o)) return false;

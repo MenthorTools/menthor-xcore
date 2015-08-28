@@ -9,7 +9,7 @@ package net.menthor.onto2.ontouml;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * A "Package" is both a "Container" and a "ContainedElement".
+ * * A Package is both a Container and a ContainedElement. It allows nested packages, that is, packages inside packages
  * <!-- end-model-doc -->
  *
  *

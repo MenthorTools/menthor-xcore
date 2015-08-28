@@ -9,7 +9,7 @@ package net.menthor.onto2.ontouml;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * A "Comment" is a text which has a "ContainedElement" owner.
+ * * A Comment is a text which has a ContainedElement as owner.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -28,11 +28,10 @@ public interface Comment extends Element {
 	/**
 	 * Returns the value of the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * String content of a comment
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Content</em>' attribute.
 	 * @see #setContent(String)
 	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getComment_Content()

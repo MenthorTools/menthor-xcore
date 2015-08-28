@@ -335,6 +335,16 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Model getModel() {
+		net.menthor.onto2.ontouml.Container _holder = this.getHolder();
+		return this.getModel(_holder);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Model getModel(final net.menthor.onto2.ontouml.Container c) {
 		if ((c instanceof Model)) {
 			return ((Model)c);
@@ -346,16 +356,6 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 			}
 		}
 		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Model getModel() {
-		net.menthor.onto2.ontouml.Container _holder = this.getHolder();
-		return this.getModel(_holder);
 	}
 
 	/**
@@ -567,8 +567,8 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ContainedElement.class) {
 			switch (baseOperationID) {
-				case OntoumlPackage.CONTAINED_ELEMENT___GET_MODEL__CONTAINER: return OntoumlPackage.GENERALIZATION_SET___GET_MODEL__CONTAINER;
 				case OntoumlPackage.CONTAINED_ELEMENT___GET_MODEL: return OntoumlPackage.GENERALIZATION_SET___GET_MODEL;
+				case OntoumlPackage.CONTAINED_ELEMENT___GET_MODEL__CONTAINER: return OntoumlPackage.GENERALIZATION_SET___GET_MODEL__CONTAINER;
 				default: return -1;
 			}
 		}
@@ -587,10 +587,10 @@ public class GeneralizationSetImpl extends NamedElementImpl implements Generaliz
 				return general();
 			case OntoumlPackage.GENERALIZATION_SET___SPECIFICS:
 				return specifics();
-			case OntoumlPackage.GENERALIZATION_SET___GET_MODEL__CONTAINER:
-				return getModel((net.menthor.onto2.ontouml.Container)arguments.get(0));
 			case OntoumlPackage.GENERALIZATION_SET___GET_MODEL:
 				return getModel();
+			case OntoumlPackage.GENERALIZATION_SET___GET_MODEL__CONTAINER:
+				return getModel((net.menthor.onto2.ontouml.Container)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

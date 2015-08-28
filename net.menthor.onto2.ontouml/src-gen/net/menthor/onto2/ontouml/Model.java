@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * A "Model" is just a "Container".
+ * * A Model is just a Container and cannot be contained by other containers.
  * <!-- end-model-doc -->
  *
  *

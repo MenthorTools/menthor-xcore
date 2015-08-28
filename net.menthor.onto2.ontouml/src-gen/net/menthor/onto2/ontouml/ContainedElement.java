@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * A "ContainedElement" is an "Element" that has one Container and possibly a set of Comments.
+ * * A ContainedElement is an Element that has one Container and possibly a set of Comments. This is an abstract class.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -30,11 +30,10 @@ public interface ContainedElement extends Element {
 	 * Returns the value of the '<em><b>Holder</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link net.menthor.onto2.ontouml.Container#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Holder</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * The element in which this element is contained
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Holder</em>' container reference.
 	 * @see #setHolder(Container)
 	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getContainedElement_Holder()
@@ -76,18 +75,6 @@ public interface ContainedElement extends Element {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Returns the root from a given container
-	 * <!-- end-model-doc -->
-	 * @model unique="false" cUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if ((c instanceof <%net.menthor.onto2.ontouml.Model%>))\n{\n\treturn ((<%net.menthor.onto2.ontouml.Model%>)c);\n}\nelse\n{\n\tif ((c instanceof <%net.menthor.onto2.ontouml.ContainedElement%>))\n\t{\n\t\t<%net.menthor.onto2.ontouml.Container%> _holder = ((<%net.menthor.onto2.ontouml.ContainedElement%>)c).getHolder();\n\t\treturn this.getModel(_holder);\n\t}\n}\nreturn null;'"
-	 * @generated
-	 */
-	Model getModel(Container c);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
 	 * * Returns the root container
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
@@ -95,5 +82,17 @@ public interface ContainedElement extends Element {
 	 * @generated
 	 */
 	Model getModel();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Returns the root container but starting from a given container
+	 * <!-- end-model-doc -->
+	 * @model unique="false" cUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if ((c instanceof <%net.menthor.onto2.ontouml.Model%>))\n{\n\treturn ((<%net.menthor.onto2.ontouml.Model%>)c);\n}\nelse\n{\n\tif ((c instanceof <%net.menthor.onto2.ontouml.ContainedElement%>))\n\t{\n\t\t<%net.menthor.onto2.ontouml.Container%> _holder = ((<%net.menthor.onto2.ontouml.ContainedElement%>)c).getHolder();\n\t\treturn this.getModel(_holder);\n\t}\n}\nreturn null;'"
+	 * @generated
+	 */
+	Model getModel(Container c);
 
 } // ContainedElement

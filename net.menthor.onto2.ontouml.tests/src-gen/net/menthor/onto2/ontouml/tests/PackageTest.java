@@ -13,8 +13,8 @@ import net.menthor.onto2.ontouml.OntoumlFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}</li>
  *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel() <em>Get Model</em>}</li>
+ *   <li>{@link net.menthor.onto2.ontouml.ContainedElement#getModel(net.menthor.onto2.ontouml.Container) <em>Get Model</em>}</li>
  * </ul>
  * </p>
  * @generated

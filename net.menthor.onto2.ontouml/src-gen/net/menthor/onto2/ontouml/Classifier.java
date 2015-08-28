@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * A "Classifier" is a "Type" (i.e., a Class or a DataType) or a Relationship.
+ * * A Classifier is a Relationship or a Type (i.e., a Class or a DataType)
  * <!-- end-model-doc -->
  *
  * <p>
@@ -33,11 +33,11 @@ public interface Classifier extends ContainedElement, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Alias</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Alias</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Every classifier has an alias, a name for display used
+	 *  to store an unique name for the class, useful for transformations
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Alias</em>' attribute.
 	 * @see #setAlias(String)
 	 * @see net.menthor.onto2.ontouml.OntoumlPackage#getClassifier_Alias()
@@ -313,6 +313,9 @@ public interface Classifier extends ContainedElement, NamedElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Checks if this classifier is disjoint of the parents of a given classifier, i.e., checks if they don't have overlapping parents
+	 * <!-- end-model-doc -->
 	 * @model unique="false" cUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = c.allParents();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> o : _allParents)\n{\n\t{\n\t\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents_1 = this.allParents();\n\t\tboolean _contains = _allParents_1.contains(o);\n\t\tif (_contains)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t\tboolean _equals = this.equals(o);\n\t\tif (_equals)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t}\n}\nreturn true;'"
 	 * @generated
@@ -322,6 +325,9 @@ public interface Classifier extends ContainedElement, NamedElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * * Checks if this classifier is disjoint of the children of a given classifier, i.e., checks if they don't have overlapping siblings
+	 * <!-- end-model-doc -->
 	 * @model unique="false" cUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allChildren = c.allChildren();\nfor (final <%net.menthor.onto2.ontouml.Classifier%> o : _allChildren)\n{\n\t{\n\t\t<%org.eclipse.emf.common.util.EList%><<%net.menthor.onto2.ontouml.Classifier%>> _allParents = this.allParents();\n\t\tboolean _contains = _allParents.contains(o);\n\t\tif (_contains)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t\tboolean _equals = this.equals(o);\n\t\tif (_equals)\n\t\t{\n\t\t\treturn false;\n\t\t}\n\t}\n}\nreturn true;'"
 	 * @generated
