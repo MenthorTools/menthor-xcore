@@ -1,4 +1,4 @@
-# ontouml
+# ontouml xcore metamodel
 
 Requirements:
 - Eclipse Modeling Tools (Mars recommended)
